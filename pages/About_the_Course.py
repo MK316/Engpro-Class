@@ -13,8 +13,8 @@ with tab1:
 with tab2:
     st.caption("Spring 2025")
     # URL of the raw markdown file on GitHub
-    markdown_url = "https://github.com/MK316/Engpro-Class/blob/main/README.md"
-    #https://raw.githubusercontent.com/MK316/Engpro-Class/refs/heads/main/README.md
+    markdown_url = "https://raw.githubusercontent.com/MK316/Engpro-Class/refs/heads/main/README.md"
+    
     try:
         response = requests.get(markdown_url)
         response.raise_for_status()  # Raises an HTTPError for bad responses
