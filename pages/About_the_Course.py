@@ -1,7 +1,7 @@
 import streamlit as st
 
 # Create tabs for different sections of the course
-tab1, tab2, tab3, tab4, tab5 = st.tabs(["Course Overview", "Schedule", "Evaluation", "Assignments", "Downloads"])
+tab1, tab2, tab3, tab4, tab5 = st.tabs(["Course Overview", "Schedule", "Evaluation", "Assignments", "Links"])
 
 # Content for the Course Overview tab
 with tab1:
@@ -25,5 +25,5 @@ with tab4:
 
 # Content for the Downloads tab
 with tab5:
-    st.header("Downloads")
-    st.write("Provide downloadable resources here. This could include syllabi, lecture slides, reading materials, additional resources, etc.")
+    st.header("Links")
+    st.write("Provide online resources here. This could include syllabi, lecture slides, reading materials, additional resources, etc.")
