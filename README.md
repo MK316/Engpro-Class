@@ -1,8 +1,8 @@
 ## 🌱 Course Schedule
 
-| Week | Date | Topic(s) | Assign | Links |
+| Week | Date | Topic(s) | Assign/activities | Links |
 |------|------|----------|--------|-------|
-|  W01    |      |          |        |       |
+|  W01    |      |Introduction| Grouping       |       |
 |  W02    |      |          |        |       |
 |  W03    |      |          |        |       |
 |  W04    |      |          |        |       |
