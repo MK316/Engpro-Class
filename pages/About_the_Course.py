@@ -76,7 +76,7 @@ with tabs[4]:
 with tabs[5]:
     st.header("Calendar")
     # Dropdown for selecting a month
-    month_option = st.selectbox("Select a Month", options=["March", "April", "May", "June"], index=0, format_func=lambda x: datetime.strptime(x, '%B').strftime('%B'))
+    month_option = st.selectbox("Select a Month", options=["March", "April", "May", "June"], index=0)
     # Dictionary to map month names to their corresponding numbers
     month_to_number = {"March": 3, "April": 4, "May": 5, "June": 6}
     # Get selected month number
@@ -84,8 +84,11 @@ with tabs[5]:
     # Generate the calendar for the selected month
     year = 2025  # Define the year
     cal = calendar.monthcalendar(year, month_number)
-    # Display the calendar as a markdown
-    cal_str = f"### {month_option} {year}\n" + '\n'.join(['| ' + ' | '.join(f"{day:2}" if day != 0 else '  ' for day in week) + ' |' for week in cal])
-    st.markdown(cal_str)
-    st.markdown("""|Su|Mo|Tu|We|Th|Fr|Sa|
-|---|---|---|---|---|---|---|""")
+    # Display the calendar as a table using HTML
+    cal_html = "<table class='calendar-table'><thead><tr>"
+    cal_html += "".join(f"<th>{day}</th>" for day in ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"])
+    cal_html += "</tr></thead><tbody>"
+    for week in cal:
+        cal_html += "<tr>" + "".join(f"<td>{day if day != 0 else ''}</td>" for day in week) + "</tr>"
+    cal_html += "</tbody></table>"
+    st.markdown(cal_html, unsafe_allow_html=True)
