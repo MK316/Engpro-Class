@@ -75,8 +75,7 @@ with tabs[4]:
 
 # Content for the Calendar tab
 with tabs[5]:
-    st.header("Calendar")
-    # Dropdown for selecting a month
+   # Dropdown for selecting a month
     month_option = st.selectbox("Select a Month", options=["March", "April", "May", "June"], index=0)
     # Dictionary to map month names to their corresponding numbers
     month_to_number = {"March": 3, "April": 4, "May": 5, "June": 6}
