@@ -27,7 +27,3 @@ with tab4:
 with tab5:
     st.header("Downloads")
     st.write("Provide downloadable resources here. This could include syllabi, lecture slides, reading materials, additional resources, etc.")
-
-# Run the app
-if __name__ == "__main__":
-    st.run()
