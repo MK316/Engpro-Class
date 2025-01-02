@@ -73,6 +73,7 @@ with tabs[4]:
     st.header("Links")
     st.write("Provide useful links here. This could include additional reading materials, online resources, and related external websites.")
 
+# Content for the Calendar tab
 with tabs[5]:
     st.header("Calendar")
     # Dropdown for selecting a month
