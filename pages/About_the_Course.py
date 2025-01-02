@@ -16,7 +16,7 @@ tabs = st.tabs(["🍐 Course Overview", "🍓 Schedule", "🍏 Evaluation", "�
 
 # Content for the Course Overview tab
 with tabs[0]:
-    st.header("Course Overview")
+    st.caption("🔎 Course Overview")
     
     st.markdown("""
     <div class="justify-text">
