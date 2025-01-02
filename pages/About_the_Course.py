@@ -6,7 +6,6 @@ tabs = st.tabs(["Course Overview", "Schedule", "Evaluation", "Assignments", "Lin
 
 # Content for the Course Overview tab
 with tabs[0]:
-    st.header("Course Overview")
     
     st.markdown("""
     **Course Overview**
