@@ -4,11 +4,22 @@ import calendar
 from datetime import datetime
 
 # Include custom CSS to justify text in the markdown
+# Include custom CSS to justify text in the markdown
 st.markdown("""
 <style>
 .justify-text p {
     text-align: justify;
     text-justify: inter-word;
+}
+.calendar-table {
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+}
+.calendar-table td, .calendar-table th {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
 }
 </style>
 """, unsafe_allow_html=True)
