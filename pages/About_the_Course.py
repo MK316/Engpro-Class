@@ -1,4 +1,5 @@
 import streamlit as st
+import requests
 
 # Create tabs for different sections of the course
 tab1, tab2, tab3, tab4, tab5 = st.tabs(["Course Overview", "Schedule", "Evaluation", "Assignments", "Links"])
