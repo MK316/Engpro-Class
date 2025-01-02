@@ -21,14 +21,11 @@ with tabs[0]:
     st.markdown("""
     <div class="justify-text">
 
+    This course is specifically designed for future English teachers, aiming to enhance their English language proficiency with an emphasis on developing clear and intelligible pronunciation. It includes a series of targeted activities that improve speaking and listening skills, complemented by a variety of authentic materials such as TED Talks and online videos, enhanced by digital resources and advanced AI technologies.
+    
+    The curriculum provides an in-depth study of English linguistic features, focusing on pronunciation. Instruction covers the International Phonetic Alphabet (IPA) and the importance of stress and intonation in communication. Practical applications complement this theoretical knowledge, fostering a holistic approach to mastering English pronunciation.
 
-    This course is designed to enhance participants' proficiency in the English language, with a specific emphasis on developing clear and intelligible pronunciation. It features a comprehensive series of activities focused on improving both speaking and listening skills. These structured exercises are aimed at fostering a deeper understanding of phonetic nuances and improving communicative clarity.
-
-    Participants will engage with a wide range of authentic materials, including TED Talks and online videos, which serve as foundational tools for practicing language comprehension and spoken English. The integration of digital resources and advanced AI technologies enhances the learning experience, allowing for innovative approaches to language acquisition and application.
-
-    The curriculum includes an in-depth study of key linguistic features of English, with a special focus on pronunciation. Instruction covers the International Phonetic Alphabet (IPA) and delves into the significance of stress and intonation in effective communication. This theoretical knowledge is complemented by practical applications, ensuring a holistic approach to mastering English pronunciation.
-
-    Assignments are strategically designed to reinforce the concepts taught, providing participants with opportunities to apply their knowledge in practical settings. By the end of the course, participants will have acquired a thorough understanding of English pronunciation, equipping them with the essential skills to teach English proficiently and confidently in various educational environments.
+    Assignments are crafted to reinforce learned concepts and encourage the development of teaching methodologies. By the course's end, participants will not only master English pronunciation but also be equipped with effective strategies to teach these skills in various educational settings.
     </div>
     """, unsafe_allow_html=True)
 
