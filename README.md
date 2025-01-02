@@ -1,4 +1,4 @@
-# Course Schedule
+### Course Schedule
 
 | Week | Date | Topic(s) | Assign | Links |
 |------|------|----------|--------|-------|
