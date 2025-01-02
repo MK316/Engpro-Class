@@ -87,7 +87,7 @@ with tabs[5]:
     cal = calendar.monthcalendar(year, month_number)
     # Display the calendar as a table using HTML
     cal_html = "<table class='calendar-table'><thead><tr>"
-    cal_html += "".join(f"<th>{day}</th>" for day in ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"])
+    cal_html += "".join(f"<th>{day}</th>" for day in ["Mon", "Tu", "Wed", "Thur", "Fri", "Sat", "Sun"])
     cal_html += "</tr></thead><tbody>"
     for week in cal:
         cal_html += "<tr>" + "".join(f"<td>{day if day != 0 else ''}</td>" for day in week) + "</tr>"
