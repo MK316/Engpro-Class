@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 
 # Create tabs for different sections of the course
-tab1, tab2, tab3, tab4, tab5 = st.tabs(["Course Overview", "Schedule", "Evaluation", "Assignments", "Links"])
+tabs = st.tabs(["Course Overview", "Schedule", "Evaluation", "Assignments", "Links"])
 
 # Content for the Course Overview tab
 with tabs[0]:
@@ -21,7 +21,7 @@ with tabs[0]:
     """)
 
 # Content for the Schedule tab
-with tab2:
+with tabs[1]:
     st.caption("Spring 2025")
     # URL of the raw markdown file on GitHub
     markdown_url = "https://raw.githubusercontent.com/MK316/Engpro-Class/refs/heads/main/README.md"
@@ -37,16 +37,16 @@ with tab2:
         st.error(f"Request failed: {e}")
 
 # Content for the Evaluation tab
-with tab3:
+with tabs[2]:
     st.header("Evaluation")
     st.write("Describe the evaluation criteria and grading methods. Include information on exams, projects, participation, etc.")
 
 # Content for the Assignments tab
-with tab4:
+with tabs[3]:
     st.header("Assignments")
     st.write("List the assignments for the course here. Provide due dates, requirements, submission guidelines, etc.")
 
-# Content for the Downloads tab
-with tab5:
+# Content for the Links tab
+with tabs[4]:
     st.header("Links")
     st.write("Provide online resources here. This could include syllabi, lecture slides, reading materials, additional resources, etc.")
