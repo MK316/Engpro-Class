@@ -11,7 +11,18 @@ with tab1:
 # Content for the Schedule tab
 with tab2:
     st.header("Schedule")
-    st.write("Detail the course schedule here. Include dates, topics to be covered each week, and other relevant details.")
+    # URL of the raw markdown file on GitHub
+    markdown_url = "https://raw.githubusercontent.com/MK316/Engpro-Class/refs/heads/main/README.md"
+    
+    try:
+        response = requests.get(markdown_url)
+        response.raise_for_status()  # Raises an HTTPError for bad responses
+        markdown_content = response.text
+        st.markdown(markdown_content, unsafe_allow_html=True)
+    except requests.exceptions.HTTPError as err:
+        st.error(f"Failed to retrieve Markdown content: {err}")
+    except requests.exceptions.RequestException as e:
+        st.error(f"Request failed: {e}")
 
 # Content for the Evaluation tab
 with tab3:
