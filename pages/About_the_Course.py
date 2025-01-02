@@ -11,7 +11,7 @@ with tab1:
 
 # Content for the Schedule tab
 with tab2:
-    st.header("Schedule")
+    st.caption("Spring 2025")
     # URL of the raw markdown file on GitHub
     markdown_url = "https://raw.githubusercontent.com/MK316/Engpro-Class/refs/heads/main/README.md"
     
