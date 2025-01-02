@@ -1,14 +1,26 @@
 import streamlit as st
 import requests
 
+# Include custom CSS to justify text in the markdown
+st.markdown("""
+<style>
+.justify-text p {
+    text-align: justify;
+    text-justify: inter-word;
+}
+</style>
+""", unsafe_allow_html=True)
+
 # Create tabs for different sections of the course
 tabs = st.tabs(["Course Overview", "Schedule", "Evaluation", "Assignments", "Links"])
 
 # Content for the Course Overview tab
 with tabs[0]:
+    st.header("Course Overview")
     
     st.markdown("""
-    **Course Overview**
+    <div class="justify-text">
+
 
     This course is designed to enhance participants' proficiency in the English language, with a specific emphasis on developing clear and intelligible pronunciation. It features a comprehensive series of activities focused on improving both speaking and listening skills. These structured exercises are aimed at fostering a deeper understanding of phonetic nuances and improving communicative clarity.
 
@@ -17,35 +29,7 @@ with tabs[0]:
     The curriculum includes an in-depth study of key linguistic features of English, with a special focus on pronunciation. Instruction covers the International Phonetic Alphabet (IPA) and delves into the significance of stress and intonation in effective communication. This theoretical knowledge is complemented by practical applications, ensuring a holistic approach to mastering English pronunciation.
 
     Assignments are strategically designed to reinforce the concepts taught, providing participants with opportunities to apply their knowledge in practical settings. By the end of the course, participants will have acquired a thorough understanding of English pronunciation, equipping them with the essential skills to teach English proficiently and confidently in various educational environments.
-    """)
+    </div>
+    """, unsafe_allow_html=True)
 
-# Content for the Schedule tab
-with tabs[1]:
-    st.caption("Spring 2025")
-    # URL of the raw markdown file on GitHub
-    markdown_url = "https://raw.githubusercontent.com/MK316/Engpro-Class/refs/heads/main/README.md"
-    
-    try:
-        response = requests.get(markdown_url)
-        response.raise_for_status()  # Raises an HTTPError for bad responses
-        markdown_content = response.text
-        st.markdown(markdown_content, unsafe_allow_html=True)
-    except requests.exceptions.HTTPError as err:
-        st.error(f"Failed to retrieve Markdown content: {err}")
-    except requests.exceptions.RequestException as e:
-        st.error(f"Request failed: {e}")
-
-# Content for the Evaluation tab
-with tabs[2]:
-    st.header("Evaluation")
-    st.write("Describe the evaluation criteria and grading methods. Include information on exams, projects, participation, etc.")
-
-# Content for the Assignments tab
-with tabs[3]:
-    st.header("Assignments")
-    st.write("List the assignments for the course here. Provide due dates, requirements, submission guidelines, etc.")
-
-# Content for the Links tab
-with tabs[4]:
-    st.header("Links")
-    st.write("Provide online resources here. This could include syllabi, lecture slides, reading materials, additional resources, etc.")
+# Code for other tabs...
