@@ -75,20 +75,42 @@ with tabs[4]:
 
 # Content for the Calendar tab
 with tabs[5]:
-   # Dropdown for selecting a month
+    # Dropdown for selecting a month
     month_option = st.selectbox("Select a Month", options=["March", "April", "May", "June"], index=0)
     # Dictionary to map month names to their corresponding numbers
     month_to_number = {"March": 3, "April": 4, "May": 5, "June": 6}
     # Get selected month number
     month_number = month_to_number[month_option]
-    # Generate the calendar for the selected month
     year = 2025  # Define the year
+
+    # Define a list of holidays as tuples (day, month)
+    holidays = [
+        (1, 3),  # Example: March 1
+        (25, 5),  # Example: May 25
+        # Add more holidays as needed
+    ]
+
+    # Generate the calendar for the selected month
     cal = calendar.monthcalendar(year, month_number)
+
     # Display the calendar as a table using HTML
     cal_html = "<table class='calendar-table'><thead><tr>"
     cal_html += "".join(f"<th>{day}</th>" for day in ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"])
     cal_html += "</tr></thead><tbody>"
+
     for week in cal:
-        cal_html += "<tr>" + "".join(f"<td>{day if day != 0 else ''}</td>" for day in week) + "</tr>"
+        cal_html += "<tr>"
+        for day in week:
+            if day == 0:  # Empty cell for days outside the month
+                cal_html += "<td></td>"
+            else:
+                # Check if the day is a holiday
+                if (day, month_number) in holidays:
+                    cal_html += f"<td style='color: red; font-weight: bold;'>{day}</td>"
+                else:
+                    cal_html += f"<td>{day}</td>"
+        cal_html += "</tr>"
     cal_html += "</tbody></table>"
+
     st.markdown(cal_html, unsafe_allow_html=True)
+
