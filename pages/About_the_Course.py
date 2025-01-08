@@ -46,7 +46,7 @@ with tabs[0]:
 with tabs[1]:
     st.caption("Spring 2025")
     # URL of the raw markdown file on GitHub
-    markdown_url = "https://raw.githubusercontent.com/MK316/Engpro-Class/refs/heads/main/README.md"
+    markdown_url = "https://raw.githubusercontent.com/MK316/Engpro-Class/refs/heads/main/pages/readme.md"
     
     try:
         response = requests.get(markdown_url)
