@@ -34,7 +34,7 @@ with tabs[0]:
         st.audio(data["url"], format="audio/mp3")
 
     # Button to show the worksheet image
-    if st.button("Show example worksheet"):
+    if st.button("🎯 Show example worksheet"):
         worksheet_url = "https://github.com/MK316/Engpro-Class/raw/main/images/P1-04example.png"
         st.image(worksheet_url, caption="Example Worksheet (p.14)", use_container_width=True)
 
