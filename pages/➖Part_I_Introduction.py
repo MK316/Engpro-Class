@@ -57,7 +57,6 @@ with tabs[1]:
 
     
 with tabs[2]:
-    st.header("Basics 3")
     st.markdown("### Symbols (IPA) to represent English consonants")
 
     if st.button("🎯 Show: 3. English consonants (IPA symbols)"):
@@ -68,5 +67,21 @@ with tabs[2]:
         st.image(worksheet_url03, caption="Example Worksheet (p.16)", use_container_width=True)
 
 with tabs[3]:
-    st.header("Basics 4")
-    st.write("Content for Basics 4 goes here.")
+    st.markdown("### Dictionaries for pronunciation?")
+
+    # GitHub raw URLs for the MP3 files with descriptions
+    audio_files = {
+        "Getting help from dictioinaries:": {
+            "url": "https://github.com/MK316/Engpro-Class/raw/main/audio/P1-05.mp3",
+            "desc": "If you don’t have someone to help you with English pronunciation in person, you’ll need a good reference. Most dictionaries give some basic info on how to pronounce words, but their pronunciations don’t always match what you hear in everyday speech. That’s because sounds change depending on the words around them and the way people actually speak. So, think of a dictionary pronunciation guide as just that—a guide. It’s based on certain rules, but real-world pronunciation can be more flexible:"
+        },
+        "1) The symbols...": {
+            "url": "https://github.com/MK316/Engpro-Class/raw/main/audio/p18-02.mp3",
+            "desc": "1) The symbols in a dictionary represent one possible pronunciation when words are pronounced in isolation (also known as the citation form or emphasized form). For this reason, some dictionaries may present more than one pronunciation form, including variations that account for dialectal differences."
+        },
+        "2) When and how individual sounds change...": {
+            "url": "https://github.com/MK316/Engpro-Class/raw/main/audio/p18-03.wav",
+            "desc": "You'll learn when and how individual sounds are subject to change according to the sound rules in English. Let's take English tapping rule, for example. The /t/ sound may become a tap or flap in most American English speech when it occurs between two vowels, with the second vowel being unstressed. e.g., butter, heater, beater, better, and letter; cutter, Peter, meter, creator, and waiter."
+        },
+      
+    }
