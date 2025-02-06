@@ -43,6 +43,11 @@ with tabs[1]:
     st.header("Basics 2")
     st.write("Content for Basics 2 goes here.")
 
+    # Button to show the worksheet image
+    if st.button("🎯 Show English vowels (table with examples)"):
+        worksheet_url = "https://github.com/MK316/Engpro-Class/raw/main/images/P1-04vowelchart.png"
+        st.image(worksheet_url, caption="Example Worksheet (p.15)", use_container_width=True)
+        
 with tabs[2]:
     st.header("Basics 3")
     st.write("Content for Basics 3 goes here.")
