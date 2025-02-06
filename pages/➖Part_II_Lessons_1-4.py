@@ -1,3 +1,5 @@
+import streamlit as st
+
 # Create four tabs
 tabs = st.tabs(["💧 Lesson 1", "💧 Lesson 2", "💧 Lesson 3", "💧 Lesson 4"])
 
