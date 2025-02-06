@@ -51,11 +51,6 @@ with tabs[1]:
     st.caption("Vowel example: daughter, coffee, law, house, etc.")
     st.caption("Stress example: a.  Caˈribbean (AE)	b.  ˌCaribˈbean (BE)")
 
-    # Add a YouTube video
-    st.write("2. Pronunciation differences: American vs. British")
-    youtube_url = "https://www.youtube.com/watch?v=DKEM-juLxmM"
-    st.video(youtube_url)
-
     if st.button("🎯 Show Video"):
         youtube_url = "https://www.youtube.com/watch?v=DKEM-juLxmM"
         st.video(youtube_url)
