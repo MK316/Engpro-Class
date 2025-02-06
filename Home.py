@@ -3,8 +3,8 @@ from PIL import Image
 import requests
 from io import BytesIO
 
-st.caption("English Pronunciation Practice")
-st.title("Coming Soon")
+st.caption('"Confidence is a habit that can be developed by acting as if you already had the confidence you desire to have." - Brian Tracy (writer and motivational public speaker)')
+st.markdown("### English Pronunication (Spring 2025)")
 
 # Add an image from GitHub
 image_url = "https://github.com/MK316/Engpro-Class/raw/main/data/engpro-cover.png"
