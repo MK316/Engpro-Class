@@ -85,7 +85,7 @@ with tabs[3]:
         },
         "3) Examples of dictionary pronunciation symbols...": {
             "url": "https://github.com/MK316/Engpro-Class/raw/main/audio/p19-01.mp3",
-            "desc": "You'll learn when and how individual sounds are subject to change according to the sound rules in English. Let's take English tapping rule, for example. The /t/ sound may become a tap or flap in most American English speech when it occurs between two vowels, with the second vowel being unstressed. e.g., butter, heater, beater, better, and letter; cutter, Peter, meter, creator, and waiter."
+            "desc": "You'll find this worksheet in page 19. Guess the word from the given sound symbols on the left. I'll pronounce each twice and you recover the word by reading the symbols. "
         },
       
     }
