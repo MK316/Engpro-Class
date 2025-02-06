@@ -69,6 +69,7 @@ with tabs[2]:
     - Final presentation (30%)
     - Attendance & Class Participation (15%)
     """)
+    st.caption("Students can earn up to 105% in total, with an additional 5% available through extra credit.")
 # Content for the Assignments tab
 with tabs[3]:
     st.header("Assignments")
