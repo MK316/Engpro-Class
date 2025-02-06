@@ -7,15 +7,15 @@ tabs = st.tabs(["💧 Contents", "💧 App1", "💧 App2", "💧 App3"])
 with tabs[0]:
     st.markdown("### 🐾 Table of contents ")
     st.markdown("""
-    1. **Lesson 1**: Pronouncing English vowels  
-    2. **Lesson 2**: Stress and rhythm in English  
-    3. **Lesson 3**: Consonant articulation  
-    4. **Lesson 4**: Connected speech patterns  
-    5. **Lesson 5**: Vowel [ɑ] and spelling confusion
-    6. **Lesson 6**: Vowels in ‘but’, ‘bought’, ‘boat’
-    7. **Lesson 7**: Diphthong vowels in English
-    8. **Lesson 8**: Unstressed vowel (schwa vowel) as in ‘ago’, ‘upon’, ‘company’
-    9. **Lesson 9**: R-colored vowels as in ‘perfect’ and ‘percent’
+    - **Lesson 1**: Pronouncing English vowels  
+    - **Lesson 2**: Stress and rhythm in English  
+    - **Lesson 3**: Consonant articulation  
+    - **Lesson 4**: Connected speech patterns  
+    - **Lesson 5**: Vowel [ɑ] and spelling confusion
+    - **Lesson 6**: Vowels in ‘but’, ‘bought’, ‘boat’
+    - **Lesson 7**: Diphthong vowels in English
+    - **Lesson 8**: Unstressed vowel (schwa vowel) as in ‘ago’, ‘upon’, ‘company’
+    - **Lesson 9**: R-colored vowels as in ‘perfect’ and ‘percent’
 
     """)
 with tabs[1]:
