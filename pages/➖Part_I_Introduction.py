@@ -5,13 +5,13 @@ tabs = st.tabs(["📗 Basics 1", "📗 Basics 2", "📗 Basics 3", "📗 Basics 
 
 # Content for each tab
 with tabs[0]:
-    st.header("Basics 1: Pronunciation Practice")
+    st.header("Basics 1: Understanding English sounds")
 
     # GitHub raw URLs for the MP3 files
     audio_files = {
-        "Word 1: Example": "https://github.com/MK316/Engpro-Class/blob/main/audio/P1-01.mp3",
-        "Word 2: Sample": "https://github.com/MK316/Engpro-Class/blob/main/audio/P1-02.mp3",
-        "Word 3: Practice": "https://github.com/MK316/Engpro-Class/blob/main/audio/P1-03.mp3",
+        "1: Unique set of sounds:": "https://github.com/MK316/Engpro-Class/raw/main/audio/P1-01.mp3",
+        "2: Speech gestures...": "https://github.com/MK316/Engpro-Class/raw/main/audio/P1-02.mp3",
+        "3: How we approach...": "https://github.com/MK316/Engpro-Class/raw/main/audio/P1-03.mp3",
     }
 
     # Display each word with its playable audio
