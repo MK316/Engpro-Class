@@ -5,7 +5,7 @@ tabs = st.tabs(["💧 Contents", "💧 App1", "💧 App2", "💧 App3"])
 
 # Content for each tab
 with tabs[0]:
-    st.markdown("### 📒 ")
+    st.markdown("### 🐾 Table of contents ")
     st.markdown("""
     1. **Lesson 1**: Pronouncing English vowels  
     2. **Lesson 2**: Stress and rhythm in English  
