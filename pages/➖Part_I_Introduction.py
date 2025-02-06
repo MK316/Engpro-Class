@@ -40,7 +40,7 @@ with tabs[0]:
 
     
 with tabs[1]:
-    st.markdown("### English sounds: symbols (IPA) to represent English vowels")
+    st.markdown("### Symbols (IPA) to represent English vowels")
 
 
     # Button to show the worksheet image
@@ -55,18 +55,17 @@ with tabs[1]:
         youtube_url = "https://www.youtube.com/watch?v=DKEM-juLxmM"
         st.video(youtube_url)
 
+    
+with tabs[2]:
+    st.header("Basics 3")
+    st.markdown("### Symbols (IPA) to represent English consonants")
+
     if st.button("🎯 Show: 3. English consonants (IPA symbols)"):
         worksheet_url02 = "https://github.com/MK316/Engpro-Class/raw/main/images/P1-consonantchart.png"
         st.image(worksheet_url02, caption="Example Worksheet (p.16)", use_container_width=True)
     if st.button("🎯 Show: 4. English consonants (Additional IPA symbols)"):
         worksheet_url03 = "https://github.com/MK316/Engpro-Class/raw/main/images/P1-consonantchart2.png"
         st.image(worksheet_url03, caption="Example Worksheet (p.16)", use_container_width=True)
-    st.write("Additional symbols via rules")  
-
-    
-with tabs[2]:
-    st.header("Basics 3")
-    st.write("Content for Basics 3 goes here.")
 
 with tabs[3]:
     st.header("Basics 4")
