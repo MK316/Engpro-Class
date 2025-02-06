@@ -5,11 +5,11 @@ tabs = st.tabs(["💧 Lesson 1", "💧 Lesson 2", "💧 Lesson 3", "💧 Lesson 
 
 # Content for each tab
 with tabs[0]:
-    st.markdown("### Pronouncing English vowels")
+    st.markdown("### Lesson 1: Pronouncing English vowels")
 with tabs[1]:
-    st.markdown("### Tense and lax ‘i’ - sheep vs. ship")
+    st.markdown("### Lesson 2: Tense and lax ‘i’ - sheep vs. ship")
 with tabs[2]:
-    st.markdown("### Tense and lax ‘u’ - pool vs. pull")
+    st.markdown("### Lesson 3: Tense and lax ‘u’ - pool vs. pull")
 with tabs[3]:
-    st.markdown("### Vowel pair in ‘bed’ and ‘bad’")
+    st.markdown("### Lesson 4: Vowel pair in ‘bed’ and ‘bad’")
 
