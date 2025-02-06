@@ -83,6 +83,10 @@ with tabs[3]:
             "url": "https://github.com/MK316/Engpro-Class/raw/main/audio/p18-03.wav",
             "desc": "You'll learn when and how individual sounds are subject to change according to the sound rules in English. Let's take English tapping rule, for example. The /t/ sound may become a tap or flap in most American English speech when it occurs between two vowels, with the second vowel being unstressed. e.g., butter, heater, beater, better, and letter; cutter, Peter, meter, creator, and waiter."
         },
+        "3) Examples of dictionary pronunciation symbols...": {
+            "url": "https://github.com/MK316/Engpro-Class/raw/main/audio/p18-03.wav",
+            "desc": "You'll learn when and how individual sounds are subject to change according to the sound rules in English. Let's take English tapping rule, for example. The /t/ sound may become a tap or flap in most American English speech when it occurs between two vowels, with the second vowel being unstressed. e.g., butter, heater, beater, better, and letter; cutter, Peter, meter, creator, and waiter."
+        },
       
     }
 
@@ -91,3 +95,7 @@ with tabs[3]:
         st.subheader(title)
         st.write(data["desc"])  # Add description under each title
         st.audio(data["url"], format="audio/mp3")
+
+    if st.button("🎯 Show: Dictionary transcription of words"):
+        worksheet_url04 = "https://github.com/MK316/Engpro-Class/raw/main/images/p19-01.png"
+        st.image(worksheet_url04, caption="Example Worksheet (p.19)", use_container_width=True)
