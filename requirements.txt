@@ -1,2 +1,9 @@
 streamlit
 requests
+pandas
+numpy
+matplotlib
+qrcode
+PIL
+wordcloud
+streamlit.components.v1
