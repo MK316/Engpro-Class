@@ -45,7 +45,7 @@ with tabs[1]:
 
     # Button to show the worksheet image
     if st.button("🎯 Show English vowels (table with examples)"):
-        worksheet_url = "https://github.com/MK316/Engpro-Class/raw/main/images/P1-04vowelchart.png"
+        worksheet_url = "https://github.com/MK316/Engpro-Class/raw/main/images/P1-vowelchart.png"
         st.image(worksheet_url, caption="Example Worksheet (p.15)", use_container_width=True)
         
 with tabs[2]:
