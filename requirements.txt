@@ -4,6 +4,5 @@ pandas
 numpy
 matplotlib
 qrcode
-PIL
+Pillow
 wordcloud
-streamlit.components.v1
