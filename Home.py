@@ -12,6 +12,6 @@ image_url = "https://github.com/MK316/Engpro-Class/raw/main/data/engpro-cover.pn
 # Load and resize the image
 response = requests.get(image_url)
 img = Image.open(BytesIO(response.content))
-img = img.resize((400, 500))  # Set custom width and height
+img = img.resize((500, 500))  # Set custom width and height
 
 st.image(img, caption="Practice Makes Perfect")
