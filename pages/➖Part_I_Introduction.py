@@ -85,3 +85,9 @@ with tabs[3]:
         },
       
     }
+
+    # Display each title with description and playable audio
+    for title, data in audio_files.items():
+        st.subheader(title)
+        st.write(data["desc"])  # Add description under each title
+        st.audio(data["url"], format="audio/mp3")
