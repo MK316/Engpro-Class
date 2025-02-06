@@ -82,7 +82,7 @@ with tabs[3]:
     - HW#4
     - HW#5
     """)
-    st.caption("
+    st.caption("Details will be announced in time.")
 # Content for the Links tab
 with tabs[4]:
     st.header("Links")
