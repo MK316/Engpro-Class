@@ -9,17 +9,21 @@ with tabs[0]:
 
     # GitHub raw URLs for the MP3 files with descriptions
     audio_files = {
-        "1: Unique set of sounds:": {
+        "1. Unique set of sounds:": {
             "url": "https://github.com/MK316/Engpro-Class/raw/main/audio/P1-01.mp3",
             "desc": "Every language has its own unique set of sounds. When learning a second language, the first step is figuring out which sounds are familiar—similar to the ones in our native language—and which ones are completely new. Once we know that, we can focus on practicing the new sounds by learning how to shape our mouth and move our tongue in the right way."
         },
-        "2: Speech gestures...": {
+        "2. Speech gestures...": {
             "url": "https://github.com/MK316/Engpro-Class/raw/main/audio/P1-02.mp3",
             "desc": "Even small changes in how we shape our mouth or move our tongue can make a big difference in how sounds are produced and understood. These changes might completely change the meaning of a word, make speech sound accented, or sometimes have no effect on the actual sounds—but they can still impact things like tone and expressiveness. "
         },
-        "3: How we approach...": {
+        "3. How we approach...": {
             "url": "https://github.com/MK316/Engpro-Class/raw/main/audio/P1-03.mp3",
             "desc": "In this course, we'll learn how to pronounce individual English sounds by understanding how they’re made and practicing them. We’ll also work on putting sounds together to form words and using tone and rhythm to communicate naturally with English speakers."
+        },
+        "4. Letters and sounds...": {
+            "url": "https://github.com/MK316/Engpro-Class/raw/main/audio/P1-04.mp3",
+            "desc": "Here's a question: Do we really need to learn IPA symbols? Isn't knowing how to spell words enough? Note that English spelling can be pretty tricky—it often doesn't tell us much about how words are actually pronounced. For example, let's take the word sigh. How many letters does it have? Now, how many different sounds do you hear?"
         },
     }
 
