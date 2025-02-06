@@ -34,7 +34,7 @@ with tabs[0]:
         st.audio(data["url"], format="audio/mp3")
 
     # Button to show the worksheet image
-    if st.button("🎯 Show example worksheet"):
+    if st.button("🎯 Show: 1. Example worksheet"):
         worksheet_url = "https://github.com/MK316/Engpro-Class/raw/main/images/P1-04example.png"
         st.image(worksheet_url, caption="Example Worksheet (p.14)", use_container_width=True)
 
@@ -44,16 +44,23 @@ with tabs[1]:
 
 
     # Button to show the worksheet image
-    if st.button("🎯 Show English vowels (table with examples)"):
-        worksheet_url = "https://github.com/MK316/Engpro-Class/raw/main/images/P1-vowelchart.png"
-        st.image(worksheet_url, caption="Example Worksheet (p.15)", use_container_width=True)
+    if st.button("🎯 Show: 2. English vowels (IPA symbols)"):
+        worksheet_url01 = "https://github.com/MK316/Engpro-Class/raw/main/images/P1-vowelchart.png"
+        st.image(worksheet_url01, caption="Example Worksheet (p.15)", use_container_width=True)
     st.write("1. Vowel sounds and stress can also vary depending on the region.")  
     st.caption("Vowel example: daughter, coffee, law, house, etc.")
     st.caption("Stress example: a.  Caˈribbean (AE)	b.  ˌCaribˈbean (BE)")
 
-    if st.button("🎯 Show Video"):
+    if st.button("🎯 Show: 3. Video showing different pronunciation b/w American and British"):
         youtube_url = "https://www.youtube.com/watch?v=DKEM-juLxmM"
         st.video(youtube_url)
+
+    if st.button("🎯 Show: 4. English consonants (IPA symbols)"):
+        worksheet_url02 = "https://github.com/MK316/Engpro-Class/raw/main/images/P1-consomantchart.png"
+        st.image(worksheet_url02, caption="Example Worksheet (p.16)", use_container_width=True)
+        worksheet_url03 = "https://github.com/MK316/Engpro-Class/raw/main/images/P1-consomantchart2.png"
+        st.image(worksheet_url03, caption="Example Worksheet (p.16)", use_container_width=True)
+    st.write("Additional symbols via rules")  
 
     
 with tabs[2]:
