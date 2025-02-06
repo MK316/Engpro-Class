@@ -56,10 +56,10 @@ with tabs[1]:
         st.video(youtube_url)
 
     if st.button("🎯 Show: 3. English consonants (IPA symbols)"):
-        worksheet_url02 = "https://github.com/MK316/Engpro-Class/raw/main/images/P1-consomantchart.png"
+        worksheet_url02 = "https://github.com/MK316/Engpro-Class/raw/main/images/P1-consonantchart.png"
         st.image(worksheet_url02, caption="Example Worksheet (p.16)", use_container_width=True)
     if st.button("🎯 Show: 4. English consonants (Additional IPA symbols)"):
-        worksheet_url03 = "https://github.com/MK316/Engpro-Class/raw/main/images/P1-consomantchart2.png"
+        worksheet_url03 = "https://github.com/MK316/Engpro-Class/raw/main/images/P1-consonantchart2.png"
         st.image(worksheet_url03, caption="Example Worksheet (p.16)", use_container_width=True)
     st.write("Additional symbols via rules")  
 
