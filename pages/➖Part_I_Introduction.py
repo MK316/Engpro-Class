@@ -40,14 +40,22 @@ with tabs[0]:
 
     
 with tabs[1]:
-    st.header("Basics 2")
+    st.header("English sounds: symbols (IPA) to represent English vowels")
     st.write("Content for Basics 2 goes here.")
 
     # Button to show the worksheet image
     if st.button("🎯 Show English vowels (table with examples)"):
         worksheet_url = "https://github.com/MK316/Engpro-Class/raw/main/images/P1-vowelchart.png"
         st.image(worksheet_url, caption="Example Worksheet (p.15)", use_container_width=True)
-        
+    st.write("Vowel sounds and stress can also vary depending on the region.")  
+    st.caption("Vowel example: daughter, coffee, law, house, etc.")
+    st.caption("Stress example: Caribbean")
+
+    # Add a YouTube video
+    st.write("Pronunciation differences: American vs. British")
+    youtube_url = "https://www.youtube.com/watch?v=DKEM-juLxmM"
+    st.video(youtube_url)
+    
 with tabs[2]:
     st.header("Basics 3")
     st.write("Content for Basics 3 goes here.")
