@@ -62,7 +62,13 @@ with tabs[1]:
 with tabs[2]:
     st.header("Evaluation")
     st.write("This section outlines the evaluation criteria and methods, such as grading rubrics, tests, projects, and participation requirements.")
-
+    # Bulleted List using Markdown
+    st.markdown("""
+    - 5 Homeworks (20%)
+    - Written midterm (40%)
+    - Final presentation (30%)
+    - Attendance & Class Participation (15%)
+    """)
 # Content for the Assignments tab
 with tabs[3]:
     st.header("Assignments")
