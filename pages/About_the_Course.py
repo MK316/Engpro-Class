@@ -73,8 +73,16 @@ with tabs[2]:
 # Content for the Assignments tab
 with tabs[3]:
     st.header("Assignments")
-    st.write("List and detail the assignments for the course here, providing due dates, submission guidelines, and grading criteria.")
-
+    st.write("List and detail the assignments for the course here, providing due dates and submission guidelines.")
+    # Bulleted List using Markdown
+    st.markdown("""
+    - HW#1
+    - HW#2
+    - HW#3
+    - HW#4
+    - HW#5
+    """)
+    st.caption("
 # Content for the Links tab
 with tabs[4]:
     st.header("Links")
