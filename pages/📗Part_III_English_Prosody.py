@@ -11,8 +11,6 @@ with tabs[0]:
     2. **Lesson 11**: Stress and rhythm in English  
     3. **Lesson 12**: Consonant articulation  
     4. **Lesson 13**: Connected speech patterns  
-    5. **Lesson 14**: Vowel [ɑ] and spelling confusion
-
     """)
 with tabs[1]:
     st.markdown("### 📒 Lesson 2: Tense and lax ‘i’ - sheep vs. ship")
