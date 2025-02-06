@@ -55,6 +55,11 @@ with tabs[1]:
     st.write("2. Pronunciation differences: American vs. British")
     youtube_url = "https://www.youtube.com/watch?v=DKEM-juLxmM"
     st.video(youtube_url)
+
+    if st.button("🎯 Show Video"):
+        youtube_url = "https://www.youtube.com/watch?v=DKEM-juLxmM"
+        st.video(youtube_url)
+
     
 with tabs[2]:
     st.header("Basics 3")
