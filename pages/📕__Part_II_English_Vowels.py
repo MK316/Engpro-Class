@@ -96,5 +96,5 @@ with tabs[3]:
 
 with tabs[4]:
     st.markdown("""
-    - 3D vowels: https://icspeech.com/vowel-sounds.html [click](https://icspeech.com/vowel-sounds.html)
+    - 3D vowels: https://icspeech.com/vowel-sounds.html
     """)
