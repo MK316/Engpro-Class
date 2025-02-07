@@ -1,6 +1,7 @@
 import streamlit as st
 from gtts import gTTS
 from PIL import Image
+import random
 import io
 
 # Create four tabs
