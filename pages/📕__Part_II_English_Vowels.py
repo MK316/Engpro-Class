@@ -22,20 +22,43 @@ with tabs[0]:
 
     """)
 # Text-to-Speech tab
+# Define the list of sentences
+sentences = [
+    "The quick brown fox jumps over lazy dogs near the bright city.",
+    "Tom bought a colorful, vivid kite for flying on windy days.",
+    "Many students receive good grades when they study history and biology.",
+    "He thought the small children should play outside in sunny weather.",
+    "A joyful crowd cheered as the wise, old man spoke profoundly.",
+    "Jessica left her black sketchbook at the espresso stand.",
+    "오늘은 날씨가 참 좋네요.",
+    "재원이는 제주도에 놀러갔어요."
+]
 with tabs[1]:
+    selected_sentence = st.selectbox("Choose a sentence to generate audio:", sentences)
+
+    if st.button("Generate Audio"):
+        # Detect language based on content
+        lang = 'ko' if any(char > '\u1100' and char < '\u11ff' for char in selected_sentence) else 'en'
+        
+        # Generate the audio using gTTS
+        tts = gTTS(text=selected_sentence, lang=lang)
+        audio_data = io.BytesIO()
+        tts.write_to_fp(audio_data)
+        audio_data.seek(0)
+
+        # Display the audio player with the generated audio
+        st.audio(audio_data, format='audio/mp3', start_time=0)
     st.subheader("Text-to-Speech Converter (using Google TTS)")
-    st.markdown("""
-    Sample sentences:
-    
-    1. The quick brown fox jumps over lazy dogs near the bright city.
-    2. Tom bought a colorful, vivid kite for flying on windy days.
-    3. Many students receive good grades when they study history and biology.
-    4. He thought the small children should play outside in sunny weather.
-    5. A joyful crowd cheered as the wise, old man spoke profoundly.
-    6. Jessica left her black sketchbook at the espresso stand.
-    7. 오늘은 날씨가 참 좋네요.
-    8. 재원이는 제주도에 놀러갔어요.
-    """)
+    st.caption("Sample sentences:")    
+    st.caption("1. The quick brown fox jumps over lazy dogs near the bright city.")
+    st.caption("2. Tom bought a colorful, vivid kite for flying on windy days.")
+    st.caption("3. Many students receive good grades when they study history and biology.")
+    st.caption("4. He thought the small children should play outside in sunny weather.")
+    st.caption("5. A joyful crowd cheered as the wise, old man spoke profoundly.")
+    st.caption(" 6. Jessica left her black sketchbook at the espresso stand.")
+    st.caption("7. 오늘은 날씨가 참 좋네요.")
+    st.caption("8. 재원이는 제주도에 놀러갔어요.")
+
     
     text_input = st.text_area("Enter the text you want to convert to speech:")
     language = st.selectbox("Choose a language: 🇰🇷 🇺🇸 🇬🇧 🇷🇺 🇫🇷 🇪🇸 🇯🇵 ", ["English (American)", "Korean", "English (British)", "Russian", "Spanish", "French", "Japanese"])
