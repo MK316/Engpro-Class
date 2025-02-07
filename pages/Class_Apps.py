@@ -15,7 +15,7 @@ def create_wordcloud(text):
     return wordcloud
 
 # Streamlit tabs
-tabs = st.tabs(["📈 QR", "⏳ Timer", "👥 Grouping", "🔊 Text-to-Speech", "⛅ Word Cloud", "TypeIPA"])
+tabs = st.tabs(["📈 QR", "⏳ Timer", "👥 Grouping", "🔊 Text-to-Speech", "⛅ Word Cloud", "🌀 TypeIPA"])
 
 # QR Code tab
 with tabs[0]:
