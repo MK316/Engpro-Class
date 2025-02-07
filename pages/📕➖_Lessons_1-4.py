@@ -66,10 +66,10 @@ with tabs[1]:
     col1, col2 = st.columns(2)
     with col1:
         st.image("https://github.com/MK316/Engpro-Class/raw/main/images/sheep.png",
-                 width=200, caption="Image on the Left")
+                 width=300, caption="Image on the Left")
     with col2:
         st.image("https://github.com/MK316/Engpro-Class/raw/main/images/ship.png",
-                 width=200, caption="Image on the Right")
+                 width=300, caption="Image on the Right")
 
     # Button to generate and play audio
     if st.button("Audio"):
