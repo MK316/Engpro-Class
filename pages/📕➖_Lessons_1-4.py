@@ -133,7 +133,25 @@ with tabs[1]:
             st.caption(word_lists["End"])
 
     st.markdown("### B. Warming-up: Lax [ ɪ ]")
-    
+    # Word lists for lax [ɪ]
+    lax_word_lists = {
+        "Beginning": "is, itch, it, pin, sin, bit, pitch, mitt, give, win, gym, gift, with, lips, guilt, build, quick, this, symbol, syrup, little",
+        "Middle": "vivid, limit, visit, habit, polish, mimic, permit, business, spirit, profit, mystic, logic, gossip"
+    }
+
+    # Creating a single row for all buttons for lax [ɪ]
+    col_beginning_lax, col_middle_lax = st.columns(2)
+    with col_beginning_lax:
+        if st.button("Play words at the Beginning of words", key="begin_lax"):
+            audio_data = generate_audio(lax_word_lists["Beginning"])
+            st.audio(audio_data.getvalue(), format='audio/mp3')
+            st.caption("At the beginning of words: " + lax_word_lists["Beginning"])
+
+    with col_middle_lax:
+        if st.button("Play words in the Middle of words", key="middle_lax"):
+            audio_data = generate_audio(lax_word_lists["Middle"])
+            st.audio(audio_data.getvalue(), format='audio/mp3')
+            st.caption("In the middle of words: " + lax_word_lists["Middle"])
 # You can configure other tabs as needed
 with tabs[2]:
     st.markdown("### 📒 Lesson 3: Tense and lax ‘u’ - pool vs. pull")
