@@ -1,5 +1,6 @@
 import streamlit as st
 from gtts import gTTS
+from PIL import Image
 import io
 
 # Create four tabs
@@ -44,7 +45,10 @@ with tabs[0]:
 
     st.markdown("#### B. Diphthong vowels (=double vowels)")
     st.caption("Diphthong vowels start with one sound and glide into a different vowel. The smooth movement between these two ‘targets’ is crucial for correct pronunciation of diphthong vowels. This is not a sequence of two vowels: e.g., “I” in English and ‘아이’ in Korean are not exactly the same.")
-    st.image("https://github.com/MK316/Engpro-Class/raw/main/images/Vowelchart.png")
+    
+    st.button("Show chart: diphthong vowels")
+    st.caption("Image from Ladefoged & Johnson (2015; p.46), A course in phonetics")
+    st.image("https://github.com/MK316/Engpro-Class/raw/main/images/Vowelchart.png", caption="Vowel chart")
 
 with tabs[1]:
     st.markdown("### 📒 Lesson 2: Tense and lax ‘i’ - sheep vs. ship")
