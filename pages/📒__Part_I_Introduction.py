@@ -1,7 +1,7 @@
 import streamlit as st
 
 # Create four tabs
-tabs = st.tabs(["📗 Basics 1", "📗 Basics 2", "📗 Basics 3", "📗 Basics 4"])
+tabs = st.tabs(["📗 Basics 1", "📗 Basics 2", "📗 Basics 3", "📗 Basics 4","TypeIPA"])
 
 # Content for each tab
 with tabs[0]:
@@ -99,3 +99,11 @@ with tabs[3]:
     if st.button("🎯 Show: Dictionary transcription of words"):
         worksheet_url04 = "https://github.com/MK316/Engpro-Class/raw/main/images/p19-01.png"
         st.image(worksheet_url04, caption="Example Worksheet (p.19)", use_container_width=True)
+with tabs[4]:
+    st.caption("https://ipa.typeit.org/")
+    
+    # URL you want to embed
+    url_to_embed = "https://ipa.typeit.org/"
+    
+    # Embed the URL using an iframe
+    components.iframe(url_to_embed, width=700, height=800, scrolling=True)
