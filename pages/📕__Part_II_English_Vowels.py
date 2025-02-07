@@ -5,7 +5,7 @@ import io
 
 
 # Create four tabs
-tabs = st.tabs(["💧 Contents", "💧 Audio-samples", "💧 TTS", "🌀 Type IPA"])
+tabs = st.tabs(["💧 Contents", "💧 Audio-samples", "💧 TTS", "🌀 Type IPA", "Useful links"])
 
 # Content for each tab
 with tabs[0]:
@@ -93,3 +93,8 @@ with tabs[3]:
     
     # Embed the URL using an iframe
     components.iframe(url_to_embed, width=600, height=600, scrolling=True)
+
+with tabs[4]:
+    st.markdown("""
+    - 3D vowels: https://icspeech.com/vowel-sounds.html [click](https://icspeech.com/vowel-sounds.html)
+    """)
