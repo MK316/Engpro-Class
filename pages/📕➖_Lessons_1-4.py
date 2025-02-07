@@ -6,6 +6,13 @@ import io
 # Create four tabs
 tabs = st.tabs(["💧 Lesson 1", "💧 Lesson 2", "💧 Lesson 3", "💧 Lesson 4"])
 
+if 'show_image' not in st.session_state:
+    st.session_state.show_image = False
+
+# Define a function to toggle the visibility state
+def toggle_image():
+    st.session_state.show_image = not st.session_state.show_image
+
 # Content for each tab
 with tabs[0]:
     st.markdown("### 📒 Lesson 1: Pronouncing English vowels")
@@ -46,9 +53,12 @@ with tabs[0]:
     st.markdown("#### B. Diphthong vowels (=double vowels)")
     st.caption("Diphthong vowels start with one sound and glide into a different vowel. The smooth movement between these two ‘targets’ is crucial for correct pronunciation of diphthong vowels. This is not a sequence of two vowels: e.g., “I” in English and ‘아이’ in Korean are not exactly the same.")
     
-    st.button("Show chart: diphthong vowels")
-    st.caption("Image from Ladefoged & Johnson (2015; p.46), A course in phonetics")
-    st.image("https://github.com/MK316/Engpro-Class/raw/main/images/Vowelchart.png", caption="Vowel chart")
+    button = st.button("Show chart: diphthong vowels", on_click=toggle_image)
+
+    # Conditional display of the image based on the session state
+    if st.session_state.show_image:
+        st.image("https://github.com/MK316/Engpro-Class/raw/main/images/Vowelchart.png", caption="Vowel chart")
+        st.caption("Image from Ladefoged & Johnson (2015; p.46), A course in phonetics")
 
 with tabs[1]:
     st.markdown("### 📒 Lesson 2: Tense and lax ‘i’ - sheep vs. ship")
