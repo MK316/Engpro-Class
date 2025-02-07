@@ -173,7 +173,7 @@ with tabs[3]:
         st.audio(speech.getvalue(), format='audio/mp3')
 
 # Word Cloud tab
-with tabs[3]:
+with tabs[4]:
     st.subheader("🌌 Word Cloud Generator")
 
     # Input text for generating the word cloud
