@@ -55,20 +55,25 @@ with tabs[4]:
     tts_button = st.button("Convert Text to Speech")
     
     if tts_button and text_input:
-        # Map human-readable language selection to language codes
+        # Map human-readable language selection to language codes and optionally to TLDs for English
         lang_codes = {
-            "Korean": "ko",
-            "English (American)": "en-us",
-            "English (British)": "en-uk",
-            "Russian": "ru",
-            "Spanish": "es",
-            "French": "fr",
-            "Japanese": "ja"
+            "Korean": ("ko", None),
+            "English (American)": ("en", 'com'),
+            "English (British)": ("en", 'co.uk'),
+            "Russian": ("ru", None),
+            "Spanish": ("es", None),
+            "French": ("fr", None),
+            "Japanese": ("ja", None)
         }
-        language_code = lang_codes[language]
+        language_code, tld = lang_codes[language]
 
-        # Use gTTS to convert text to speech
-        tts = gTTS(text=text_input, lang=language_code, slow=False)
+        # Assuming you have a version of gTTS that supports tld or you have modified it:
+        # This check ensures that the tld parameter is only used when not None.
+        if tld:
+            tts = gTTS(text=text_input, lang=language_code, tld=tld, slow=False)
+        else:
+            tts = gTTS(text=text_input, lang=language_code, slow=False)
+        
         speech = io.BytesIO()
         tts.write_to_fp(speech)
         speech.seek(0)
@@ -76,4 +81,3 @@ with tabs[4]:
         # Display the audio file
         st.audio(speech.getvalue(), format='audio/mp3')
 
-# Continue with your existing code for other tabs...
