@@ -15,7 +15,7 @@ def create_wordcloud(text):
     return wordcloud
 
 # Streamlit tabs
-tabs = st.tabs(["📈 QR", "⏳ Timer", "👥 Grouping", "🔊 Text-to-Speech", "⛅ Word Cloud"])
+tabs = st.tabs(["📈 QR", "⏳ Timer", "👥 Grouping", "🔊 Text-to-Speech", "⛅ Word Cloud", "TypeIPA"])
 
 # QR Code tab
 with tabs[0]:
@@ -190,3 +190,11 @@ with tabs[4]:
             st.pyplot(fig)
         else:
             st.warning("Please enter some text to generate a word cloud.")
+with tabs[5]:
+    st.caption("https://ipa.typeit.org/")
+    
+    # URL you want to embed
+    url_to_embed = "https://ipa.typeit.org/"
+    
+    # Embed the URL using an iframe
+    components.iframe(url_to_embed, width=800, height=800, scrolling=True)
