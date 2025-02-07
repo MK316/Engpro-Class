@@ -15,10 +15,12 @@ def create_wordcloud(text):
 # Streamlit tabs
 tabs = st.tabs(["📈 QR", "⏳ Timer", "👥 Grouping", "⛅ Word Cloud"])
 
+
 # QR Code tab
 with tabs[0]:
     st.subheader("QR Code Generator")
     qr_link = st.text_input("Enter a link to generate a QR code:")
+    caption = st.text_input("Enter a caption for your QR code:")  # Allows user to type a caption
 
     # Adding a 'Generate QR Code' button
     generate_qr_button = st.button("Generate QR Code")
@@ -40,8 +42,8 @@ with tabs[0]:
         qr_img = qr_img.convert('RGB')  # Convert to RGB to be compatible with st.image
         qr_img = qr_img.resize((600, 600))  # Resize the image
 
-        # Display the resized image using Streamlit
-        st.image(qr_img, caption="Generated QR Code", use_container_width=False, width=400)
+        # Display the resized image with the user-provided caption
+        st.image(qr_img, caption=caption, use_container_width=False, width=400)
 
 # Timer tab
 with tabs[1]:
