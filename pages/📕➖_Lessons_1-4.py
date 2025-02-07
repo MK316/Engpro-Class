@@ -62,6 +62,31 @@ with tabs[0]:
 
 with tabs[1]:
     st.markdown("### 📒 Lesson 2: Tense and lax ‘i’ - sheep vs. ship")
+    # Using columns to place images side-by-side
+    col1, col2 = st.columns(2)
+    with col1:
+        st.image("https://github.com/MK316/Engpro-Class/raw/main/images/sheep.png",
+                 width=200, caption="Image on the Left")
+    with col2:
+        st.image("https://github.com/MK316/Engpro-Class/raw/main/images/ship.png",
+                 width=200, caption="Image on the Right")
+
+    # Button to generate and play audio
+    if st.button("Audio"):
+        # Sentence to be generated
+        sentence = "The children are cleaning the ship"  # or "The children are cleaning the sheep"
+        tts = gTTS(text=sentence, lang='en')
+        audio_data = io.BytesIO()
+        tts.write_to_fp(audio_data)
+        audio_data.seek(0)
+
+        # Display the audio player
+        st.audio(audio_data.getvalue(), format='audio/mp3')
+        
+        # Display the sentence as caption below the audio
+        st.caption(sentence)
+
+# You can configure other tabs as needed
 with tabs[2]:
     st.markdown("### 📒 Lesson 3: Tense and lax ‘u’ - pool vs. pull")
 with tabs[3]:
