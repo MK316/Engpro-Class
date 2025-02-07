@@ -204,3 +204,7 @@ with tabs[3]:
     st.markdown("### 📒 Lesson 4: Vowel pair in ‘bed’ and ‘bad’")
 with tabs[4]:
     st.title("Listening practice")
+    st.markdown("""
+    - [Lesson 1](https://engpro-listening.streamlit.app/)
+    - [Lesson 2](https://engpro-listening.streamlit.app/)
+    """)
