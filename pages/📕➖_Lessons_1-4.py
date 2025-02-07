@@ -6,7 +6,7 @@ import time
 import io
 
 # Create four tabs
-tabs = st.tabs(["💧 Lesson 1", "💧 Lesson 2", "💧 Lesson 3", "💧 Lesson 4"])
+tabs = st.tabs(["💧 Lesson 1", "💧 Lesson 2", "💧 Lesson 3", "💧 Lesson 4", "Listening practice"])
 
 if 'show_image' not in st.session_state:
     st.session_state.show_image = False
@@ -202,4 +202,5 @@ with tabs[2]:
     st.markdown("### 📒 Lesson 3: Tense and lax ‘u’ - pool vs. pull")
 with tabs[3]:
     st.markdown("### 📒 Lesson 4: Vowel pair in ‘bed’ and ‘bad’")
-
+with tabs[4]:
+    st.title("Listening practice")
