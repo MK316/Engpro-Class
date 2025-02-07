@@ -83,5 +83,12 @@ with tabs[2]:
 
         # Display the audio file
         st.audio(speech.getvalue(), format='audio/mp3')
+
 with tabs[3]:
-    st.caption("To appear")
+    st.write("IPA")
+    
+    # URL you want to embed
+    url_to_embed = "https://ipa.typeit.org/"
+    
+    # Embed the URL using an iframe
+    components.iframe(url_to_embed, width=700, height=500, scrolling=True)
