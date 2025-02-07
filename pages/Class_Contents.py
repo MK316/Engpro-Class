@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.title("📖 Workbook")
+st.title("📖 Workbook structure")
 st.caption("🍰 This class utilizes a specially designed workbook, assembled from detailed handouts, as the primary textbook. In addition to the textbook, we use audiovisual materials that aid in pronunciation training and self-study apps developed for independent learning as resources.")
 
 #st.write("The English Pronunciation course is designed for first-year English Education majors and aims to train future teachers who will learn and teach English as a foreign language. It focuses on making them aware of the role and importance of pronunciation in communication and developing their ability to train themselves by acquiring phonetic knowledge. To this end, the course uses a workbook that allows for systematic learning of practical knowledge rather than theoretical content, including the individual sounds, intonation, and rhythm of English.")
