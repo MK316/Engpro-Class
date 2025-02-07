@@ -121,7 +121,7 @@ with tabs[1]:
             st.caption(word_lists["Beginning"])
 
     with col_middle:
-        if st.button("Play words at the Middle"):
+        if st.button("Play words in the Middle"):
             audio_data = generate_audio(word_lists["Middle"])
             st.audio(audio_data.getvalue(), format='audio/mp3')
             st.caption(word_lists["Middle"])
@@ -142,16 +142,19 @@ with tabs[1]:
     # Creating a single row for all buttons for lax [ɪ]
     col_beginning_lax, col_middle_lax = st.columns(2)
     with col_beginning_lax:
-        if st.button("Play words at the Beginning of words", key="begin_lax"):
+        if st.button("Play words at the Beginning", key="begin_lax"):
             audio_data = generate_audio(lax_word_lists["Beginning"])
             st.audio(audio_data.getvalue(), format='audio/mp3')
             st.caption("At the beginning of words: " + lax_word_lists["Beginning"])
 
     with col_middle_lax:
-        if st.button("Play words in the Middle of words", key="middle_lax"):
+        if st.button("Play words in the Middle", key="middle_lax"):
             audio_data = generate_audio(lax_word_lists["Middle"])
             st.audio(audio_data.getvalue(), format='audio/mp3')
             st.caption("In the middle of words: " + lax_word_lists["Middle"])
+    with col_end_lax:
+        if st.button("No words at the End", key="middle_lax"):
+           st.caption("No words end with lax 'i'")
 # You can configure other tabs as needed
 with tabs[2]:
     st.markdown("### 📒 Lesson 3: Tense and lax ‘u’ - pool vs. pull")
