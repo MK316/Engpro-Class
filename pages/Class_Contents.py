@@ -6,7 +6,7 @@ st.write("The English Pronunciation course is designed for first-year English Ed
 st.write("The content covered in the course is divided into four parts, each focusing on the following topics as the course progresses:")
 st.markdown("---")
 
-st.write("📒 Part 1. Introduction with 4 basics")
+st.write("📒 Part 1. Introduction")
 
 st.caption("Part 1 of the course covers four fundamental topics: understanding English sounds and gestures, using IPA symbols to represent vowels and consonants, and interpreting dictionary entries for pronunciation and phonetic details. This section equips future teachers with essential skills for effective communication and teaching of English pronunciation.")
 
