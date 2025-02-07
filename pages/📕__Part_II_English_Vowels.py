@@ -46,20 +46,7 @@ with tabs[1]:
         tts.write_to_fp(audio_data)
         audio_data.seek(0)
 
-        # Display the audio player with the generated audio
-        st.audio(audio_data, format='audio/mp3', start_time=0)
-    st.subheader("Text-to-Speech Converter (using Google TTS)")
-    st.caption("Sample sentences:")    
-    st.caption("1. The quick brown fox jumps over lazy dogs near the bright city.")
-    st.caption("2. Tom bought a colorful, vivid kite for flying on windy days.")
-    st.caption("3. Many students receive good grades when they study history and biology.")
-    st.caption("4. He thought the small children should play outside in sunny weather.")
-    st.caption("5. A joyful crowd cheered as the wise, old man spoke profoundly.")
-    st.caption(" 6. Jessica left her black sketchbook at the espresso stand.")
-    st.caption("7. 오늘은 날씨가 참 좋네요.")
-    st.caption("8. 재원이는 제주도에 놀러갔어요.")
 
-    
     text_input = st.text_area("Enter the text you want to convert to speech:")
     language = st.selectbox("Choose a language: 🇰🇷 🇺🇸 🇬🇧 🇷🇺 🇫🇷 🇪🇸 🇯🇵 ", ["English (American)", "Korean", "English (British)", "Russian", "Spanish", "French", "Japanese"])
 
