@@ -41,7 +41,11 @@ with tabs[0]:
         
         # Display the audio player with the generated audio
         st.audio(audio_data.getvalue(), format='audio/mp3')
-        
+
+    st.markdown("#### B. Diphthong vowels (=double vowels)")
+    st.caption("Diphthong vowels start with one sound and glide into a different vowel. The smooth movement between these two ‘targets’ is crucial for correct pronunciation of diphthong vowels. This is not a sequence of two vowels: e.g., “I” in English and ‘아이’ in Korean are not exactly the same.")
+    st.image("https://github.com/MK316/Engpro-Class/raw/main/images/Vowelchart.png")
+
 with tabs[1]:
     st.markdown("### 📒 Lesson 2: Tense and lax ‘i’ - sheep vs. ship")
 with tabs[2]:
