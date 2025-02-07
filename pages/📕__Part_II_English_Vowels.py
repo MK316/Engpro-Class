@@ -12,9 +12,9 @@ with tabs[0]:
     st.markdown("### 🐾 Table of contents ")
     st.markdown("""
     - **Lesson 1**: Pronouncing English vowels  
-    - **Lesson 2**: Stress and rhythm in English  
-    - **Lesson 3**: Consonant articulation  
-    - **Lesson 4**: Connected speech patterns  
+    - **Lesson 2**: Tense and lax ‘i’ - sheep vs. ship  
+    - **Lesson 3**: Tense and lax ‘u’ - pool vs. pull  
+    - **Lesson 4**: Vowel pair in ‘bed’ and ‘bad’  
     - **Lesson 5**: Vowel [ɑ] and spelling confusion
     - **Lesson 6**: Vowels in ‘but’, ‘bought’, ‘boat’
     - **Lesson 7**: Diphthong vowels in English
