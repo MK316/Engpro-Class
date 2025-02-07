@@ -5,7 +5,7 @@ import io
 
 
 # Create four tabs
-tabs = st.tabs(["💧 Contents", "💧 Audio-samples", "💧 TTS", "💧 Type IPA"])
+tabs = st.tabs(["💧 Contents", "💧 Audio-samples", "💧 TTS", "🌀 Type IPA"])
 
 # Content for each tab
 with tabs[0]:
