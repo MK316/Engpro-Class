@@ -112,12 +112,25 @@ with tabs[1]:
         audio_data.seek(0)
         return audio_data
 
-    # Buttons for each word list category
-    for category in word_lists:
-        if st.button(f"Play words at the {category}"):
-            audio_data = generate_audio(word_lists[category])
-            st.audio(audio_data.getvalue(), format='audio/mp3', start_time=0)
-            st.caption(f"Words at the {category}: {word_lists[category]}")
+    # Creating a single row for all buttons
+    col_beginning, col_middle, col_end = st.columns(3)
+    with col_beginning:
+        if st.button("Play words at the Beginning"):
+            audio_data = generate_audio(word_lists["Beginning"])
+            st.audio(audio_data.getvalue(), format='audio/mp3')
+            st.caption("Words at the Beginning: " + word_lists["Beginning"])
+
+    with col_middle:
+        if st.button("Play words at the Middle"):
+            audio_data = generate_audio(word_lists["Middle"])
+            st.audio(audio_data.getvalue(), format='audio/mp3')
+            st.caption("Words at the Middle: " + word_lists["Middle"])
+
+    with col_end:
+        if st.button("Play words at the End"):
+            audio_data = generate_audio(word_lists["End"])
+            st.audio(audio_data.getvalue(), format='audio/mp3')
+            st.caption("Words at the End: " + word_lists["End"])
 
     st.markdown("### B. Warming-up: Lax [ ɪ ]")
     
