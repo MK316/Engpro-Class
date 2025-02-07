@@ -23,7 +23,7 @@ with tabs[0]:
     """)
 # Text-to-Speech tab
 with tabs[1]:
-    st.subheader("Text-to-Speech Converter (using Google TTS")
+    st.subheader("Text-to-Speech Converter (using Google TTS)")
     st.markdown("""
     Sample sentences:
     
