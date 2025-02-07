@@ -8,7 +8,10 @@ st.markdown("---")
 
 st.markdown("""
 Part 1. Introduction with 4 basics
+
 Part 2. English vowels
+
 Part 3. English prosody
+
 Part 4. English consonants and sound rules
 """)
