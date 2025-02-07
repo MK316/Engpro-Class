@@ -205,6 +205,6 @@ with tabs[3]:
 with tabs[4]:
     st.title("Listening practice")
     st.markdown("""
-    - [Lesson 1](https://engpro-listening.streamlit.app/)
-    - [Lesson 2](https://engpro-listening.streamlit.app/)
+    - [Lesson 1](https://engpro-listening.streamlit.app/Lesson_01)
+    - [Lesson 2](https://engpro-listening.streamlit.app/Lesson_02)
     """)
