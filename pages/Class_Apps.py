@@ -48,10 +48,10 @@ with tabs[0]:
 
 # Text-to-Speech tab
 with tabs[4]:
-    st.subheader("Text-to-Speech Converter")
+    st.subheader("Text-to-Speech Converter (using Google TTS")
     text_input = st.text_area("Enter the text you want to convert to speech:")
     language = st.selectbox("Choose a language:", ["Korean", "English (American)", "English (British)", "Russian", "Spanish", "French", "Japanese"])
-
+    st.caption("Multi-lingual: 🇰🇷 🇺🇸 🇬🇧 🇷🇺 🇫🇷 🇪🇸 🇯🇵 ")
     tts_button = st.button("Convert Text to Speech")
     
     if tts_button and text_input:
