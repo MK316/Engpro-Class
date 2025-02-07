@@ -2,6 +2,7 @@ import streamlit as st
 from gtts import gTTS
 from PIL import Image
 import random
+import time
 import io
 
 # Create four tabs
@@ -93,6 +94,33 @@ with tabs[1]:
         # Display the sentence as caption below the audio
         st.caption(chosen_sentence)
 
+    st.markdown("#### A. Warming-up: Tense [ i ]")
+    # Word lists
+    word_lists = {
+        "Beginning": "eat, equal, easy, each",
+        "Middle": "please, deep, peach, need",
+        "End": "key, agree, pea, knee, tea"
+    }
+
+    # Generate and play audio with 2 seconds gap between words
+    def generate_audio(word_list):
+        # Creating a single string with pauses between words
+        words_with_pause = ' '.join([word + '...' for word in word_list.split(', ')])
+        tts = gTTS(text=words_with_pause, lang='en', tld='com')
+        audio_data = io.BytesIO()
+        tts.write_to_fp(audio_data)
+        audio_data.seek(0)
+        return audio_data
+
+    # Buttons for each word list category
+    for category in word_lists:
+        if st.button(f"Play words at the {category}"):
+            audio_data = generate_audio(word_lists[category])
+            st.audio(audio_data.getvalue(), format='audio/mp3', start_time=0)
+            st.caption(f"Words at the {category}: {word_lists[category]}")
+
+    st.markdown("### B. Warming-up: Lax [ ɪ ]")
+    
 # You can configure other tabs as needed
 with tabs[2]:
     st.markdown("### 📒 Lesson 3: Tense and lax ‘u’ - pool vs. pull")
