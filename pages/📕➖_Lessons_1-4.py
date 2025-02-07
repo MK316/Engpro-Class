@@ -71,11 +71,17 @@ with tabs[1]:
         st.image("https://github.com/MK316/Engpro-Class/raw/main/images/ship.png",
                  width=300, caption="Image on the Right")
 
+    # List of sentences to choose from
+    sentences = [
+        "The children are cleaning the ship",
+        "The children are cleaning the sheep"
+    ]
+
     # Button to generate and play audio
     if st.button("Audio"):
-        # Sentence to be generated
-        sentence = "The children are cleaning the ship"  # or "The children are cleaning the sheep"
-        tts = gTTS(text=sentence, lang='en')
+        # Randomly choose a sentence to be generated
+        chosen_sentence = random.choice(sentences)
+        tts = gTTS(text=chosen_sentence, lang='en')
         audio_data = io.BytesIO()
         tts.write_to_fp(audio_data)
         audio_data.seek(0)
