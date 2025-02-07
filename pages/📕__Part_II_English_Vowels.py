@@ -45,7 +45,8 @@ with tabs[1]:
         audio_data = io.BytesIO()
         tts.write_to_fp(audio_data)
         audio_data.seek(0)
-
+        # Display the audio file
+        st.audio(speech.getvalue(), format='audio/mp3')
 
 
 with tabs[2]:
