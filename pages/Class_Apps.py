@@ -197,4 +197,4 @@ with tabs[5]:
     url_to_embed = "https://ipa.typeit.org/"
     
     # Embed the URL using an iframe
-    components.iframe(url_to_embed, width=800, height=800, scrolling=True)
+    components.iframe(url_to_embed, width=600, height=600, scrolling=True)
