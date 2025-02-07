@@ -136,7 +136,7 @@ with tabs[1]:
     # Word lists for lax [ɪ]
     lax_word_lists = {
         "Beginning": "is, itch, it, pin, sin, bit, pitch, mitt, give, win, gym, gift, with, lips, guilt, build, quick, this, symbol, syrup, little",
-        "Middle": "vivid, limit, visit, habit, polish, mimic, permit, business, spirit, profit, mystic, logic, gossip"
+        "Middle": "vivid, limit, visit, habit, polish, mimic, permit, business, spirit, profit, mystic, logic, gossip",
         "End": "No words end with lax vowel in English"
     }
 
