@@ -14,11 +14,21 @@ with tabs[0]:
     frame_sentence = "I say {} again."
     target_words = ["heed", "hid", "head", "had", "who'd", "hood", "hawed", "hod", "hud", "ago"]
     
+    # Adding an option to pronounce all words together
+    target_words_extended = target_words + ["all words together"]
+
     # Dropdown to select the target word
-    selected_word = st.selectbox("Choose a word to insert into the sentence:", target_words)
+    selected_word = st.selectbox("Choose a word to insert into the sentence or select 'all words together':", target_words_extended)
     
-    # Generate the full sentence by inserting the selected word into the frame
-    full_sentence = frame_sentence.format(selected_word)
+    # Check if the user selected "all words together"
+    if selected_word == "all words together":
+        # Generate a sentence concatenating all words
+        all_words_sentence = " ".join([frame_sentence.format(word) for word in target_words])
+        full_sentence = all_words_sentence
+    else:
+        # Generate the full sentence by inserting the selected word into the frame
+        full_sentence = frame_sentence.format(selected_word)
+    
     st.write("Generated Sentence: ", full_sentence)
     
     # Button to generate and play audio
