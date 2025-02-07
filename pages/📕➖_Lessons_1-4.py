@@ -137,24 +137,27 @@ with tabs[1]:
     lax_word_lists = {
         "Beginning": "is, itch, it, pin, sin, bit, pitch, mitt, give, win, gym, gift, with, lips, guilt, build, quick, this, symbol, syrup, little",
         "Middle": "vivid, limit, visit, habit, polish, mimic, permit, business, spirit, profit, mystic, logic, gossip"
+        "End": "No words end with lax vowel in English"
     }
 
     # Creating a single row for all buttons for lax [ɪ]
-    col_beginning_lax, col_middle_lax = st.columns(2)
+    col_beginning_lax, col_middle_lax, col_end_lax = st.columns(3)
     with col_beginning_lax:
         if st.button("Play words at the Beginning", key="begin_lax"):
             audio_data = generate_audio(lax_word_lists["Beginning"])
             st.audio(audio_data.getvalue(), format='audio/mp3')
-            st.caption("At the beginning of words: " + lax_word_lists["Beginning"])
+            st.caption(lax_word_lists["Beginning"])
 
     with col_middle_lax:
         if st.button("Play words in the Middle", key="middle_lax"):
             audio_data = generate_audio(lax_word_lists["Middle"])
             st.audio(audio_data.getvalue(), format='audio/mp3')
-            st.caption("In the middle of words: " + lax_word_lists["Middle"])
+            st.caption(lax_word_lists["Middle"])
     with col_end_lax:
         if st.button("No words at the End", key="middle_lax"):
-           st.caption("No words end with lax 'i'")
+            audio_data = generate_audio(lax_word_lists["Middle"])
+            st.audio(audio_data.getvalue(), format='audio/mp3')
+            st.caption(lax_word_lists["End"])
 # You can configure other tabs as needed
 with tabs[2]:
     st.markdown("### 📒 Lesson 3: Tense and lax ‘u’ - pool vs. pull")
