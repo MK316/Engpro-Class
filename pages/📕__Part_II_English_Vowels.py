@@ -32,6 +32,9 @@ with tabs[1]:
     3. Many students receive good grades when they study history and biology.
     4. He thought the small children should play outside in sunny weather.
     5. A joyful crowd cheered as the wise, old man spoke profoundly.
+    6. Jessica left her black sketchbook at the espresso stand.
+    7. 오늘은 날씨가 참 좋네요.
+    8. 재원이는 제주도에 놀러갔어요.
     """)
     
     text_input = st.text_area("Enter the text you want to convert to speech:")
