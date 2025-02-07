@@ -91,7 +91,7 @@ with tabs[1]:
         st.audio(audio_data.getvalue(), format='audio/mp3')
         
         # Display the sentence as caption below the audio
-        st.caption(sentence)
+        st.caption(chosen_sentence)
 
 # You can configure other tabs as needed
 with tabs[2]:
