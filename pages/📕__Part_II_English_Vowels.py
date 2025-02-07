@@ -4,7 +4,7 @@ import io
 
 
 # Create four tabs
-tabs = st.tabs(["💧 Contents", "💧 TTS", "💧 App2", "💧 App3"])
+tabs = st.tabs(["💧 Contents", "💧 Audio-samples", "💧 TTS", "💧 App3"])
 
 # Content for each tab
 with tabs[0]:
@@ -47,6 +47,8 @@ with tabs[1]:
         audio_data.seek(0)
 
 
+
+with tabs[2]:
     text_input = st.text_area("Enter the text you want to convert to speech:")
     language = st.selectbox("Choose a language: 🇰🇷 🇺🇸 🇬🇧 🇷🇺 🇫🇷 🇪🇸 🇯🇵 ", ["English (American)", "Korean", "English (British)", "Russian", "Spanish", "French", "Japanese"])
 
@@ -78,7 +80,5 @@ with tabs[1]:
 
         # Display the audio file
         st.audio(speech.getvalue(), format='audio/mp3')
-with tabs[2]:
-    st.markdown("### 📒 Lesson 3: Tense and lax ‘u’ - pool vs. pull")
 with tabs[3]:
     st.markdown("### 📒 Lesson 4: Vowel pair in ‘bed’ and ‘bad’")
