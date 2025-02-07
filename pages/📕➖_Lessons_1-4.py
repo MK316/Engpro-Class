@@ -154,8 +154,8 @@ with tabs[1]:
             st.audio(audio_data.getvalue(), format='audio/mp3')
             st.caption(lax_word_lists["Middle"])
     with col_end_lax:
-        if st.button("No words at the End", key="middle_lax"):
-            audio_data = generate_audio(lax_word_lists["Middle"])
+        if st.button("No words at the End", key="end_lax"):
+            audio_data = generate_audio(lax_word_lists["End"])
             st.audio(audio_data.getvalue(), format='audio/mp3')
             st.caption(lax_word_lists["End"])
 # You can configure other tabs as needed
