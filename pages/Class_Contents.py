@@ -7,7 +7,7 @@ st.write("The content covered in the course is divided into four parts, each foc
 st.markdown("---")
 
 st.write("📒 Part 1. Introduction")
-st.write("Four basics before we begin.")
+st.write("Four key fundamentals to start")
 st.caption("Part 1 of the course covers four fundamental topics: understanding English sounds and gestures, using IPA symbols to represent vowels and consonants, and interpreting dictionary entries for pronunciation and phonetic details. This section equips future teachers with essential skills for effective communication and teaching of English pronunciation.")
 
 st.write("📕 Part 2. English vowels")
