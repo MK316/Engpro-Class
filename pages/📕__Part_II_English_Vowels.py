@@ -33,6 +33,8 @@ sentences = [
     "오늘은 날씨가 참 좋네요.",
     "재원이는 제주도에 놀러갔어요."
 ]
+
+# Audio-samples tab
 with tabs[1]:
     selected_sentence = st.selectbox("Choose a sentence to generate audio:", sentences)
 
@@ -45,10 +47,10 @@ with tabs[1]:
         audio_data = io.BytesIO()
         tts.write_to_fp(audio_data)
         audio_data.seek(0)
-        # Display the audio file
-        st.audio(speech.getvalue(), format='audio/mp3')
+        # Correctly display the audio file
+        st.audio(audio_data.getvalue(), format='audio/mp3')
 
-
+# TTS tab
 with tabs[2]:
     text_input = st.text_area("Enter the text you want to convert to speech:")
     language = st.selectbox("Choose a language: 🇰🇷 🇺🇸 🇬🇧 🇷🇺 🇫🇷 🇪🇸 🇯🇵 ", ["English (American)", "Korean", "English (British)", "Russian", "Spanish", "French", "Japanese"])
@@ -56,30 +58,24 @@ with tabs[2]:
     tts_button = st.button("Convert Text to Speech")
     
     if tts_button and text_input:
-        # Map human-readable language selection to language codes and optionally to TLDs for English
         lang_codes = {
-            "English (American)": ("en", 'com'),
-            "Korean": ("ko", None),
-            "English (British)": ("en", 'co.uk'),
-            "Russian": ("ru", None),
-            "Spanish": ("es", None),
-            "French": ("fr", None),
-            "Japanese": ("ja", None)
+            "English (American)": "en",
+            "Korean": "ko",
+            "English (British)": "en-gb",
+            "Russian": "ru",
+            "Spanish": "es",
+            "French": "fr",
+            "Japanese": "ja"
         }
-        language_code, tld = lang_codes[language]
+        language_code = lang_codes[language]
 
-        # Assuming you have a version of gTTS that supports tld or you have modified it:
-        # This check ensures that the tld parameter is only used when not None.
-        if tld:
-            tts = gTTS(text=text_input, lang=language_code, tld=tld, slow=False)
-        else:
-            tts = gTTS(text=text_input, lang=language_code, slow=False)
-        
+        tts = gTTS(text=text_input, lang=language_code, slow=False)
         speech = io.BytesIO()
         tts.write_to_fp(speech)
         speech.seek(0)
 
         # Display the audio file
         st.audio(speech.getvalue(), format='audio/mp3')
+
 with tabs[3]:
     st.markdown("### 📒 Lesson 4: Vowel pair in ‘bed’ and ‘bad’")
