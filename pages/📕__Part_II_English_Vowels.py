@@ -24,16 +24,26 @@ with tabs[0]:
 # Text-to-Speech tab
 with tabs[1]:
     st.subheader("Text-to-Speech Converter (using Google TTS")
+    st.markdown("""
+    Sample sentences:
+    
+    1. The quick brown fox jumps over lazy dogs near the bright city.
+    2. Tom bought a colorful, vivid kite for flying on windy days.
+    3. Many students receive good grades when they study history and biology.
+    4. He thought the small children should play outside in sunny weather.
+    5. A joyful crowd cheered as the wise, old man spoke profoundly.
+    """)
+    
     text_input = st.text_area("Enter the text you want to convert to speech:")
-    language = st.selectbox("Choose a language: 🇰🇷 🇺🇸 🇬🇧 🇷🇺 🇫🇷 🇪🇸 🇯🇵 ", ["Korean", "English (American)", "English (British)", "Russian", "Spanish", "French", "Japanese"])
+    language = st.selectbox("Choose a language: 🇰🇷 🇺🇸 🇬🇧 🇷🇺 🇫🇷 🇪🇸 🇯🇵 ", ["English (American)", "Korean", "English (British)", "Russian", "Spanish", "French", "Japanese"])
 
     tts_button = st.button("Convert Text to Speech")
     
     if tts_button and text_input:
         # Map human-readable language selection to language codes and optionally to TLDs for English
         lang_codes = {
-            "Korean": ("ko", None),
             "English (American)": ("en", 'com'),
+            "Korean": ("ko", None),
             "English (British)": ("en", 'co.uk'),
             "Russian": ("ru", None),
             "Spanish": ("es", None),
