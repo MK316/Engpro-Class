@@ -86,7 +86,7 @@ with tabs[2]:
         st.audio(speech.getvalue(), format='audio/mp3')
 
 with tabs[3]:
-    st.write("IPA")
+    st.caption("https://ipa.typeit.org/")
     
     # URL you want to embed
     url_to_embed = "https://ipa.typeit.org/"
