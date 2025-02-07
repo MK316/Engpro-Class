@@ -6,12 +6,18 @@ st.write("The English Pronunciation course is designed for first-year English Ed
 st.write("The content covered in the course is divided into four parts, each focusing on the following topics as the course progresses:")
 st.markdown("---")
 
-st.markdown("""
-📒 Part 1. Introduction with 4 basics
+st.write("📒 Part 1. Introduction with 4 basics")
 
-📕 Part 2. English vowels
+st.caption("Part 1 of the course covers four fundamental topics: understanding English sounds and gestures, using IPA symbols to represent vowels and consonants, and interpreting dictionary entries for pronunciation and phonetic details. This section equips future teachers with essential skills for effective communication and teaching of English pronunciation.")
 
-📗 Part 3. English prosody
+st.write("📕 Part 2. English vowels")
+st.write("Lessons 1~9")
+st.caption("Part 2 introduces and practices English vowels, highlighting contrastive analysis between learners' native vowels and English. It emphasizes the perception and articulatory differences to help learners distinguish and accurately produce English vowel sounds.")
 
-📙 Part 4. English consonants and sound rules
-""")
+st.write("📗 Part 3. English prosody")
+st.write("Lessons 10~13")
+st.caption("Part 3 explores English prosody, focusing on word stress, thought grouping, intonation, and rhythm to enhance speech fluency and comprehension.")
+
+st.write("📙 Part 4. English consonants and sound rules")
+st.write("Lessons 14~20")
+st.caption("Part IV focuses on mastering English consonants, particularly challenging sounds for learners. It includes practice on sound linking rules, consonant clusters, and sound changes between citation and conversational forms.")
