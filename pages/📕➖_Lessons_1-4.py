@@ -158,6 +158,45 @@ with tabs[1]:
             audio_data = generate_audio(lax_word_lists["End"])
             st.audio(audio_data.getvalue(), format='audio/mp3')
             st.caption(lax_word_lists["End"])
+
+    # C. Contrast
+    st.markdown("### C. Contrast between tense and lax 'i'")
+
+    # List of word pairs with descriptions
+    word_pairs = [
+        ("each", "itch"),
+        ("peach", "pitch"),
+        ("eat", "it"),
+        ("scene", "sin"),
+        ("heel", "hill"),
+        ("cheap", "chip"),
+        ("heat", "hit"),
+        ("meat", "mitt"),
+        ("seat", "sit"),
+        ("lean", "Lynn"),
+        ("wheel", "will"),
+        ("Seeley (pron.)", "silly")
+    ]
+  
+    # Create a dropdown to select the word pair
+    options = [f"Number {i+1}. {pair[0]} versus {pair[1]}" for i, pair in enumerate(word_pairs)]
+    selected_option = st.selectbox("Choose a word pair to hear the contrast:", options)
+    
+    # Function to generate audio
+    def generate_contrast_audio(pair_description):
+        tts = gTTS(text=pair_description, lang='en')
+        audio_data = io.BytesIO()
+        tts.write_to_fp(audio_data)
+        audio_data.seek(0)
+        return audio_data
+    
+    if st.button("Generate and Play Audio"):
+        # Get the index from the selected option to find the correct word pair
+        index = options.index(selected_option)
+        pair_description = f"Number {index+1}. {word_pairs[index][0]} versus {word_pairs[index][1]}"
+        audio_data = generate_contrast_audio(pair_description)
+        st.audio(audio_data.getvalue(), format='audio/mp3')
+        st.caption(pair_description)
 # You can configure other tabs as needed
 with tabs[2]:
     st.markdown("### 📒 Lesson 3: Tense and lax ‘u’ - pool vs. pull")
