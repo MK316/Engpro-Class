@@ -114,9 +114,9 @@ with tabs[0]:
     }
 
     sentences2 = {
-        "1. invalid (Noun/Adjective)": "The hospital provides special care for an **invalid**, as they require constant medical attention, but his insurance claim was deemed **invalid** due to missing documents.",
-        "2. desert (Noun/Verb)": "The stranded travelers feared they would be left in the **desert** without water, but the guide refused **to desert** them in such a dangerous situation.",
-        "3. conflict (Noun/Verb)": "The ongoing **conflict** between the two nations has led to trade restrictions, yet neither side wants **to conflict** with international laws.",
+        "1. invalid (Noun/Adjective)": "The hospital provides special care for **an invalid**, as they require constant medical attention, but his insurance claim was deemed **invalid** due to missing documents.",
+        "2. desert (Noun/Verb)": "The stranded travelers feared they would be left in **the desert** without water, but the guide refused **to desert** them in such a dangerous situation.",
+        "3. conflict (Noun/Verb)": "**The ongoing conflict** between the two nations has led to trade restrictions, yet neither side wants **to conflict** with international laws.",
         "4. conduct (Noun/Verb)": "The professor’s strict **conduct** in class ensures discipline, while students are expected **to conduct** themselves professionally during discussions.",
         "5. content (Noun/Verb)": "She carefully examined **the content** of the report before submission, making sure it would **content** the board members.",
         "6. contest (Noun/Verb)": "The debate tournament included **a heated contest** among schools, but the losing team decided **to contest** the final results.",
