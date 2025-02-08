@@ -16,6 +16,10 @@ with tabs[0]:
     * **Note**: The following guidelines indicate where you can pause, but this does not mean that you must stop at every indicated point. Instead, it should be understood as a suggestion that you *may* pause there before proceeding to the next thought group.
     """)
 
+    st.markdown("##### 🎥 Video")
+    youtube_url = "https://www.youtube.com/watch?v=Yd24_1n-8PM"
+    st.video(youtube_url)
+    
     # Define Thought Grouping Rules
     thought_grouping_examples = {
         "[1] When subjects are long (more than 2 key words), insert a short pause after the subject.": [
