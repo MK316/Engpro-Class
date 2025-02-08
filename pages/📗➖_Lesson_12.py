@@ -188,7 +188,7 @@ with tabs[1]:
     st.markdown("""
     ##### B. Yes/No question
     """)
-    st.image("https://github.com/MK316/Engpro-Class/raw/main/images/Inton-yesno.jpg")
+    st.image("https://github.com/MK316/Engpro-Class/raw/main/images/inton-yesno.jpg")
 
     # Define the sentences for Yes/No questions
     sentences_yesno = {
