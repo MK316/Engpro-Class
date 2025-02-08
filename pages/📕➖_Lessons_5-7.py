@@ -129,6 +129,8 @@ with tabs[1]:
             audio_data = generate_audio(sentence_coat)
             st.audio(audio_data.getvalue(), format='audio/mp3')
 
+    st.markdown("---")
+    
     # Practice Section
     st.markdown("### 🎤 Practice Words by Position")
     vowel_practice = {
@@ -168,6 +170,8 @@ with tabs[1]:
                 if st.button(f"Play End Words ({vowel})", key=f"audio_{vowel}_end"):
                     audio_data = generate_audio(positions['End'])
                     st.audio(audio_data.getvalue(), format='audio/mp3')
+
+    st.markdown("---")
 
     # Contrast Practice Section
     st.markdown("### 🔊 Contrast Practice")
