@@ -166,11 +166,11 @@ with tabs[1]:
     col1, col2 = st.columns(2)
     with col1:
         st.markdown("### **[ɝ] (stressed)**")
-        st.image("https://github.com/MK316/Engpro-Class/raw/main/images/perfect.jpg", caption="'Perfect'")
+        st.image("https://github.com/MK316/Engpro-Class/raw/main/images/perfect.jpg", caption="/ˈpɝfɛkt/")
 
     with col2:
         st.markdown("### **[ɚ] (unstressed)**")
-        st.image("https://github.com/MK316/Engpro-Class/raw/main/images/perfume.jpg", caption="Per'fume")
+        st.image("https://github.com/MK316/Engpro-Class/raw/main/images/perfume.jpg", caption="/pɚˈfjum/")
 
     # Warming-up practice
     st.markdown("## **A. Warming up: [ɝ] (stressed)**")
