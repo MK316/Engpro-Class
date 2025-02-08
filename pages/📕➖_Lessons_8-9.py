@@ -52,6 +52,9 @@ with tabs[0]:
         if foot_type == "Iambic (Weak-Strong)":
             st.write("🎵 Weak - Strong | Weak - Strong | Weak - Strong")
             time.sleep(0.5)
+            # Use a pre-recorded audio file for melody beats
+            beat_audio_url = "https://github.com/MK316/Engpro-Class/raw/main/audio/iambic.wav"
+            st.audio(beat_audio_url, format='audio/wav')
             for _ in range(3):
                 st.write("• (weak)   ➝   ● (strong)")
                 time.sleep(1)
@@ -59,8 +62,8 @@ with tabs[0]:
             st.write("🎵 Strong - Weak | Strong - Weak | Strong - Weak")
             time.sleep(0.5)
             # Use a pre-recorded audio file for melody beats
-            beat_audio_url = "https://raw.githubusercontent.com/MK316/Engpro-Class/main/audio/trochaic_beat.mp3"
-            st.audio(beat_audio_url, format='audio/mp3')
+            beat_audio_url = "https://raw.githubusercontent.com/MK316/Engpro-Class/main/audio/trochaic.wav"
+            st.audio(beat_audio_url, format='audio/wav')
             st.write("If the audio does not play, check if the file URL is accessible.")
 
 # Placeholder for Lesson 9
