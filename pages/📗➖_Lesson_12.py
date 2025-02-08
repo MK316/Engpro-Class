@@ -192,11 +192,9 @@ with tabs[1]:
 
     # Define the sentences for Yes/No questions
     sentences_yesno = {
-        "a. Who will help him?": "Who will help him?",
-        "b. When are you leaving?": "When are you leaving?",
-        "c. Where are you going?": "Where are you going?",
-        "d. How do you know?": "How do you know?",
-        "e. Which book is yours?": "Which book is yours?"
+        "a. Are you hungry?": "Are you hungry?",
+        "b. Do you have a minute?": "Do you have a minute?",
+        "c.Can I ask you a question?": "Can I ask you a question?",
     }
     
     # User selects a sentence
@@ -219,15 +217,78 @@ with tabs[1]:
             audio_data = generate_audio(sentences_yesno[selected_sentence])  # Corrected dictionary reference
             st.audio(audio_data.getvalue(), format='audio/mp3')
 
-
-
+   
+    st.markdown("---")
+    st.markdown("""
+    ##### C. Wh-question
+    """)
+    st.image("https://github.com/MK316/Engpro-Class/raw/main/images/inton-wh.jpg")
     
+    # Define the sentences for Yes/No questions
+    sentences_wh = {
+        "a. Who will help him?": "Who will help him?",
+        "b. When are you leaving?": "When are you leaving?",
+        "c. Where are you going?": "Where are you going?",
+        "d. How do you know?": "How do you know?",
+        "e. Which book is yours?": "Which book is yours?"
+    }
+    
+    # User selects a sentence
+    selected_sentence = st.selectbox("Choose a sentence:", list(sentences_wh.keys()))
+    
+    # Function to generate and play audio
+    def generate_audio(text):
+        tts = gTTS(text=text, lang='en')
+        audio_data = io.BytesIO()
+        tts.write_to_fp(audio_data)
+        audio_data.seek(0)
+        return audio_data
+    
+    # Display the selected sentence
+    if selected_sentence:
+        st.write(f"**Sentence:** {sentences_wh[selected_sentence]}")  # Corrected dictionary reference
+    
+        # Generate and play audio
+        if st.button("🔊 Play Sentence", key="wh"):
+            audio_data = generate_audio(sentences_wh[selected_sentence])  # Corrected dictionary reference
+            st.audio(audio_data.getvalue(), format='audio/mp3')
+
     st.markdown("---")
 
+    st.markdown("""
+    ##### D. Two or more choices
+    """)
+    st.image("https://github.com/MK316/Engpro-Class/raw/main/images/inton-choice.jpg")
+    
+    # Define the sentences for Yes/No questions
+    sentences_choice = {
+        "a. Would you like coffee or tea?": "Would you like coffee or tea?",
+        "b. Are you leaving tomorrow or Sunday?": "Are you leaving tomorrow or Sunday?",
+        "c. She speaks French but not Spanish.": "She speaks French but not Spanish.",
+        "d. Do you want to go London, Paris, or New York?": "Do you want to go London, Paris, or New York?",
+    }
+    
+    # User selects a sentence
+    selected_sentence = st.selectbox("Choose a sentence:", list(sentences_choice.keys()))
+    
+    # Function to generate and play audio
+    def generate_audio(text):
+        tts = gTTS(text=text, lang='en')
+        audio_data = io.BytesIO()
+        tts.write_to_fp(audio_data)
+        audio_data.seek(0)
+        return audio_data
+    
+    # Display the selected sentence
+    if selected_sentence:
+        st.write(f"**Sentence:** {sentences_choice[selected_sentence]}")  # Corrected dictionary reference
+    
+        # Generate and play audio
+        if st.button("🔊 Play Sentence", key="choice"):
+            audio_data = generate_audio(sentences_choice[selected_sentence])  # Corrected dictionary reference
+            st.audio(audio_data.getvalue(), format='audio/mp3')
 
 
-
-    st.markdown("---")
 
 
 with tabs[2]:
