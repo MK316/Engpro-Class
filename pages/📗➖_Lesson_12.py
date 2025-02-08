@@ -188,7 +188,7 @@ with tabs[1]:
     ##### B. Yes/No question
     st.image("https://github.com/MK316/Engpro-Class/raw/main/images/Inton-yesno.jpg")
 
-    # Define the sentences
+    # Define the sentences for Yes/No questions
     sentences_yesno = {
         "a. Who will help him?": "Who will help him?",
         "b. When are you leaving?": "When are you leaving?",
@@ -197,9 +197,8 @@ with tabs[1]:
         "e. Which book is yours?": "Which book is yours?"
     }
     
-    
     # User selects a sentence
-    selected_sentence = st.selectbox("Choose a sentence:", list(sentences.keys()))
+    selected_sentence = st.selectbox("Choose a sentence:", list(sentences_yesno.keys()))
     
     # Function to generate and play audio
     def generate_audio(text):
@@ -211,11 +210,11 @@ with tabs[1]:
     
     # Display the selected sentence
     if selected_sentence:
-#        st.write(f"**Sentence:** {sentences[selected_sentence]}")
+        st.write(f"**Sentence:** {sentences_yesno[selected_sentence]}")  # Corrected dictionary reference
     
         # Generate and play audio
         if st.button("🔊 Play Sentence", key="yesno"):
-            audio_data = generate_audio(sentences[selected_sentence])
+            audio_data = generate_audio(sentences_yesno[selected_sentence])  # Corrected dictionary reference
             st.audio(audio_data.getvalue(), format='audio/mp3')
 
 
