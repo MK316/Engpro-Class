@@ -132,7 +132,7 @@ with tabs[1]:
     Example)
     """)
 
-    st.image("https://github.com/MK316/Engpro-Class/blob/main/images/LHLH.jpg", caption="Seoul dialect")
+    st.image("https://github.com/MK316/Engpro-Class/raw/main/images/LHLH.jpg", caption="Seoul dialect")
 
     st.markdown("""
     5. English intonation patterns are formed by the alternation of stress and accent in a sentence. By placing stress and accent on the appropriate words according to their meanings, you can learn these patterns. 
