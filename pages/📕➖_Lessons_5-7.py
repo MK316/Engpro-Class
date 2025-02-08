@@ -92,14 +92,27 @@ with tabs[0]:
         st.audio(audio_data.getvalue(), format='audio/mp3')
         st.caption(f"{selected_list}: {animal_lists[selected_list][0]}")
         
-
-
-
+#######################################################################
 with tabs[1]:
     st.markdown("### 📒 Lesson 6: Vowels in ‘but’, ‘bought’, ‘boat’")
 
+    col3, col4, col5 = st.columns(3)
+    with col3:
+        st.image("https://github.com/MK316/Engpro-Class/raw/main/images/cut.jpg",
+                 width=300, caption="[ʌ]")
+    with col4:
+        st.image("https://github.com/MK316/Engpro-Class/raw/main/images/caught.jpg",
+                 width=300, caption="[ɔ]")
+    with col5:
+        st.image("https://github.com/MK316/Engpro-Class/raw/main/images/coat.jpg",
+                 width=300, caption="[oʊ]")
+
+
+
+#######################################################################
 with tabs[2]:
     st.markdown("### 📒 Lesson 7: Diphthong vowels in English")
+#######################################################################
 with tabs[3]:
     st.markdown("""
     - Lesson 5
