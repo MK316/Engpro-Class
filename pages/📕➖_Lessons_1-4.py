@@ -435,4 +435,6 @@ with tabs[4]:
     st.markdown("""
     - [Lesson 1](https://engpro-listening.streamlit.app/Lesson_01)
     - [Lesson 2](https://engpro-listening.streamlit.app/Lesson_02)
+    - [Lesson 3](https://engpro-listening.streamlit.app/Lesson_03)
+    - [Lesson 4](https://engpro-listening.streamlit.app/Lesson_04)
     """)
