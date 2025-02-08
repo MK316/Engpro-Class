@@ -174,17 +174,17 @@ with tabs[1]:
 
     # Define the practice passages
     practice_passages = {
-        "Digital Literacy": """Digital literacy refers to the ability to use digital tools effectively for communication, research, and problem-solving. 
+        "1. Digital Literacy": """Digital literacy refers to the ability to use digital tools effectively for communication, research, and problem-solving. 
         In today’s world, digital competence is essential for students and educators alike. 
         Being digitally literate means not only knowing how to use technology but also understanding how to evaluate online information critically. 
         With the rapid development of artificial intelligence and automation, digital literacy has become a fundamental skill for academic success and professional growth.""",
     
-        "Language Education": """Language education plays a crucial role in developing communication skills and cultural understanding. 
+        "2. Language Education": """Language education plays a crucial role in developing communication skills and cultural understanding. 
         Learning a language is not just about memorizing vocabulary and grammar rules, but also about practicing speaking, listening, reading, and writing in meaningful contexts. 
         Modern language teaching methods incorporate interactive activities, digital resources, and real-world applications to help learners become proficient users of the language. 
         Teachers need to provide opportunities for students to engage in authentic communication and critical thinking.""",
     
-        "Teacher Qualification": """The qualifications of a teacher significantly influence the quality of education students receive. 
+        "3. Teacher Qualification": """The qualifications of a teacher significantly influence the quality of education students receive. 
         A well-qualified teacher must possess subject knowledge, teaching skills, and the ability to foster an engaging learning environment. 
         In many educational systems, obtaining certification and undergoing continuous professional development are required for teachers to maintain high teaching standards. 
         Effective teachers not only impart knowledge but also inspire students to become lifelong learners and independent thinkers."""
@@ -192,20 +192,20 @@ with tabs[1]:
     
     # Pre-recorded audio file URLs for Male and Female voices
     audio_files_male = {
-        "Digital Literacy": "https://github.com/MK316/Engpro-Class/raw/main/audio/DL-M.mp3",
-        "Language Education": "https://github.com/MK316/Engpro-Class/raw/main/audio/Edu-M.mp3",
-        "Teacher Qualification": "https://github.com/MK316/Engpro-Class/raw/main/audio/Teacher-M.mp3"
+        "1. Digital Literacy": "https://github.com/MK316/Engpro-Class/raw/main/audio/DL-M.mp3",
+        "2. Language Education": "https://github.com/MK316/Engpro-Class/raw/main/audio/Edu-M.mp3",
+        "3. Teacher Qualification": "https://github.com/MK316/Engpro-Class/raw/main/audio/Teacher-M.mp3"
     }
     
     audio_files_female = {
-        "Digital Literacy": "https://github.com/MK316/Engpro-Class/raw/main/audio/DL-F.mp3",
-        "Language Education": "https://github.com/MK316/Engpro-Class/raw/main/audio/Edu-F.mp3",
-        "Teacher Qualification": "https://github.com/MK316/Engpro-Class/raw/main/audio/Teacher-F.mp3"
+        "1. Digital Literacy": "https://github.com/MK316/Engpro-Class/raw/main/audio/DL-F.mp3",
+        "2. Language Education": "https://github.com/MK316/Engpro-Class/raw/main/audio/Edu-F.mp3",
+        "3. Teacher Qualification": "https://github.com/MK316/Engpro-Class/raw/main/audio/Teacher-F.mp3"
     }
     
     # Display Practice Passage Selection
-    st.markdown("### ✰ PRACTICE: Select a Passage to Listen")
-    selected_passage = st.selectbox("Choose a passage:", list(practice_passages.keys()))
+    st.markdown("### ✰ PRACTICE: Select a Passage to Listen/practice")
+    selected_passage = st.selectbox("Choose a passage: 3 topics", list(practice_passages.keys()))
     
     # Display the selected passage
     st.write(practice_passages[selected_passage])
