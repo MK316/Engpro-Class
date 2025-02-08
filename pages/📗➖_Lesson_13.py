@@ -12,7 +12,8 @@ with tabs[0]:
 
     st.write("""
     * When words are combined to form a sentence, certain words are further grouped into smaller units and pronounced together to convey the intended meaning more effectively. These smaller units are known as **thought groups**.
-    * There are no fixed rules for forming thought groups, as the grouping depends on the speaker's intended meaning. However, there are some tips for creating basic thought groups.
+    * There are no fixed rules for forming thought groups, as the grouping depends on the speaker's intended meaning. However, there are some tips for creating basic thought groups.  
+
     _**Note**_: The following guidelines indicate where you can pause, but this does not mean that you must stop at every indicated point. Instead, it should be understood as a suggestion that you *may* pause there before proceeding to the next thought group.
     """)
 
