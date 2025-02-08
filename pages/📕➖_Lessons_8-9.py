@@ -14,7 +14,7 @@ with tabs[0]:
     st.markdown("#### 📒 Lesson 8: Unstressed vowel (schwa vowel)")
 
     # Introduction
-    st.markdown("#### Understanding Iambic and Trochaic beat (Foot)")
+    st.markdown("#### 1. Understanding Iambic and Trochaic beat (Foot)")
     st.write("English words follow different rhythmic patterns. The **iambic foot** consists of a weak (short) syllable followed by a strong (long) syllable, while the **trochaic foot** follows a strong-weak pattern.")
 
     # User selection for foot type
@@ -62,7 +62,7 @@ with tabs[0]:
     selected_words = word_patterns[foot_type]
     words_text = ", ".join(selected_words)
     st.markdown("---")
-    st.markdown(f"#### 1. 🎧 Listen to {foot_type} Words")
+    st.markdown(f"#### 2. 🎧 Listen to {foot_type} Words")
 
     def generate_audio(text):
         tts = gTTS(text=text, lang='en')
@@ -78,7 +78,7 @@ with tabs[0]:
 
     st.markdown("---")
     # Rhythmic Beat Practice
-    st.markdown(f"#### 2. 🎧 Practice {foot_type} with Beats")
+    st.markdown(f"#### 3. 🎧 Practice {foot_type} with Beats")
     st.write("Tap along with the beats to feel the rhythm pattern!")
 
     if st.button("Start Beat Practice"):
