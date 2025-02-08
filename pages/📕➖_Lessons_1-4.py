@@ -349,7 +349,6 @@ with tabs[3]:
     
     st.markdown("#### Articulation Tips")
     st.write("The [æ] vowel is articulated with a lower jaw position than the [ɛ] vowel.")
-    st.write("Try to make the jaw position similar to the Korean [a] sound ‘아’.")
     
     st.markdown("#### A. Warming-up: [ɛ]")
     word_lists_e = {
