@@ -163,8 +163,6 @@ with tabs[1]:
         "d. The boss gave him a raise.": "The boss gave him a raise."
     }
     
-    # Title
-    st.write("Select a sentence to hear the pronunciation.")
     
     # User selects a sentence
     selected_sentence = st.selectbox("Choose a sentence:", list(sentences.keys()))
