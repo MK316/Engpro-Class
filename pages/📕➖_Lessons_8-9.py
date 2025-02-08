@@ -8,7 +8,7 @@ tabs = st.tabs(["Lesson8", "Lesson9", "Listening"])
 
 # Lesson 8 Content
 with tabs[0]:
-    st.markdown("#### 📒 Lesson 8: Unstressed vowel (schwa vowel) as in ‘ago’, ‘upon’, ‘company’")
+    st.markdown("#### 📒 Lesson 8: Unstressed vowel (schwa vowel)")
 
     # Introduction
     st.markdown("#### Understanding Iambic and Trochaic beat (Foot)")
