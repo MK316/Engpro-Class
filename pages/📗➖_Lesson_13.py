@@ -138,13 +138,7 @@ with tabs[0]:
 
 
 
-    # Function to Generate Audio for Sentences
-    def generate_audio(text):
-        tts = gTTS(text=text, lang='en')
-        audio_data = io.BytesIO()
-        tts.write_to_fp(audio_data)
-        audio_data.seek(0)
-        return audio_data
+
     st.markdown("---")
     
     # Let User Select a Sentence for Audio Playback
