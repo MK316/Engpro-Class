@@ -199,7 +199,7 @@ with tabs[1]:
         st.caption(pair_description)
 # You can configure other tabs as needed
 with tabs[2]:
-    st.markdown("### 📒 Lesson 3: Tense and lax ‘u’ - pool vs. pull")
+    st.markdown("### 📒 Lesson 3: Tense and lax ‘u’ - suit vs. soot")
 
     # Using columns to place images side-by-side
     col1, col2 = st.columns(2)
@@ -211,16 +211,16 @@ with tabs[2]:
                  width=300, caption="Image on the Right")
 
     # List of sentences to choose from
-    sentences = [
-        "The children are cleaning the ship",
-        "The children are cleaning the sheep"
+    sentences_u = [
+        "He is cleaning the suit damanged by the fire.",
+        "He is cleaning the soot damanged by the fire."
     ]
 
     # Button to generate and play audio
     if st.button("Audio"):
         # Randomly choose a sentence to be generated
-        chosen_sentence = random.choice(sentences)
-        tts = gTTS(text=chosen_sentence, lang='en')
+        chosen_sentence_u = random.choice(sentences_u)
+        tts = gTTS(text=chosen_sentence_u, lang='en')
         audio_data = io.BytesIO()
         tts.write_to_fp(audio_data)
         audio_data.seek(0)
