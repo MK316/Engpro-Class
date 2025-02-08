@@ -97,7 +97,7 @@ with tabs[0]:
     - These are known as homographs (words that are spelled the same but have different meanings)
     - See the examples below:
     """)
-
+    st.image("https://github.com/MK316/Engpro-Class/raw/main/images/L10-words2.jpg")
 
 with tabs[1]:
     st.markdown("### 📒 Lesson 15: ")
