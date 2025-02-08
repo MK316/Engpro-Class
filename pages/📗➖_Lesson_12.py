@@ -97,9 +97,10 @@ with tabs[0]:
     # User selects a sentence
     selected_sentence = st.selectbox("Choose a sentence:", list(sentence_pairs.keys()))
     
-    # Function to generate and play audio
-    def generate_audio(text):
-        tts = gTTS(text=text, lang='en')
+    # Function to generate and play combined audio
+    def generate_combined_audio(contraction, full_form):
+        combined_text = f"{contraction}... {full_form}"  # Adding pause with ellipsis
+        tts = gTTS(text=combined_text, lang='en')
         audio_data = io.BytesIO()
         tts.write_to_fp(audio_data)
         audio_data.seek(0)
@@ -112,15 +113,10 @@ with tabs[0]:
         st.write(f"**Contraction Form:** {contraction}")
         st.write(f"**Full Form:** {full_form}")
     
-        # Generate audio for both forms
-        if st.button("🔊 Play Contraction Form"):
-            audio_data = generate_audio(contraction)
+        # Generate audio for both forms in a single file
+        if st.button("🔊 Play Both Forms"):
+            audio_data = generate_combined_audio(contraction, full_form)
             st.audio(audio_data.getvalue(), format='audio/mp3')
-    
-        if st.button("🔊 Play Full Form"):
-            audio_data = generate_audio(full_form)
-            st.audio(audio_data.getvalue(), format='audio/mp3')
-
 
 with tabs[1]:
     st.markdown("### 📒 Lesson 15: ")
