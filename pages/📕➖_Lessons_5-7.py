@@ -202,8 +202,18 @@ with tabs[2]:
     st.image("https://github.com/MK316/Engpro-Class/raw/main/images/diphthong.jpg", caption="I don't know how that boy won the game last night, but it was impressive!")
 
     diphthong_text="I don't know how that boy won the game last night, but it was impressive!"
+
+    # Function to generate audio
+    def generate_audio(text):
+        tts = gTTS(text=text, lang='en')
+        audio_data = io.BytesIO()
+        tts.write_to_fp(audio_data)
+        audio_data.seek(0)
+        return audio_data
+
+    # Play audio button
     if st.button("Play Contrast Audio", key="diphthong"):
-        audio_data_1 = generate_audio()
+        audio_data_1 = generate_audio(diphthong_text)
         st.audio(audio_data_1.getvalue(), format='audio/mp3')
 #######################################################################
 with tabs[3]:
