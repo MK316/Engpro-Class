@@ -150,8 +150,90 @@ with tabs[0]:
     st.image("https://github.com/MK316/Engpro-Class/raw/main/images/stress1.jpg", caption="Stress also changes the vowel quality")
     
 # Placeholder for Lesson 9
+# Lesson 9 Content
 with tabs[1]:
-    st.markdown("### 📒 Lesson 9: R-colored vowels as in ‘perfect’ and ‘percent’")
+    st.markdown("#### 📒 Lesson 9: R-colored vowels in American English")
+    st.caption("Workbook page 54")
+    
+    # Explanation of R-colored vowels
+    st.markdown("""
+    **[1]** In American English, when an ‘r’ sound follows a vowel within a syllable, they behave as one unit.  
+    **[2]** Most British English speakers do not pronounce ‘r’ **after a vowel**, while American English speakers do pronounce ‘r’ together with the vowel.  
+    **[3]** When ‘r’ is pronounced in conjunction with a vowel, we use the symbols **[ɝ] (stressed)** and **[ɚ] (unstressed)** depending on the presence or absence of stress.  
+    """)
+
+    # Visual representation of [ɝ] vs. [ɚ]
+    col1, col2 = st.columns(2)
+    with col1:
+        st.markdown("### **[ɝ] (stressed)**")
+        st.image("https://github.com/MK316/Engpro-Class/raw/main/images/perfect.jpg", caption="'Perfect'")
+
+    with col2:
+        st.markdown("### **[ɚ] (unstressed)**")
+        st.image("https://github.com/MK316/Engpro-Class/raw/main/images/perfume.jpg", caption="Per'fume")
+
+    # Warming-up practice
+    st.markdown("## **A. Warming up: [ɝ] (stressed)**")
+    
+    stressed_words = {
+        "At the beginning of words": "earth, earn, irk, herb, early, urgent, urban",
+        "In the middle of words": "turn, burn, learn, heard, verb, word, curve, third, Thursday, circus, bird, firm, hurt, term",
+        "At the end of words": "sir, her, fur, prefer, defer, occur"
+    }
+
+    unstressed_words = {
+        "At the beginning of words": "NA",
+        "In the middle of words": "perhaps, surprise, flowerpot, understood",
+        "At the end of words": "baker, mirror, butter, weather, sooner, failure, nature, grammar, dollar"
+    }
+
+    # Audio generation function
+    def generate_audio(text):
+        tts = gTTS(text=text, lang='en')
+        audio_data = io.BytesIO()
+        tts.write_to_fp(audio_data)
+        audio_data.seek(0)
+        return audio_data
+
+    # Display buttons to play audio with words by position
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        if st.button("Play Beginning Words [ɝ]", key="begin_ɝ"):
+            audio_data = generate_audio(stressed_words["At the beginning of words"])
+            st.audio(audio_data.getvalue(), format='audio/mp3')
+            st.caption(stressed_words["At the beginning of words"])
+
+    with col2:
+        if st.button("Play Middle Words [ɝ]", key="middle_ɝ"):
+            audio_data = generate_audio(stressed_words["In the middle of words"])
+            st.audio(audio_data.getvalue(), format='audio/mp3')
+            st.caption(stressed_words["In the middle of words"])
+
+    with col3:
+        if st.button("Play End Words [ɝ]", key="end_ɝ"):
+            audio_data = generate_audio(stressed_words["At the end of words"])
+            st.audio(audio_data.getvalue(), format='audio/mp3')
+            st.caption(stressed_words["At the end of words"])
+
+    st.markdown("## **B. Warming up: [ɚ] (unstressed)**")
+
+    col4, col5, col6 = st.columns(3)
+    with col4:
+        if st.button("Play Beginning Words [ɚ]", key="begin_ɚ"):
+            st.write("No words start with this vowel.")
+    
+    with col5:
+        if st.button("Play Middle Words [ɚ]", key="middle_ɚ"):
+            audio_data = generate_audio(unstressed_words["In the middle of words"])
+            st.audio(audio_data.getvalue(), format='audio/mp3')
+            st.caption(unstressed_words["In the middle of words"])
+
+    with col6:
+        if st.button("Play End Words [ɚ]", key="end_ɚ"):
+            audio_data = generate_audio(unstressed_words["At the end of words"])
+            st.audio(audio_data.getvalue(), format='audio/mp3')
+            st.caption(unstressed_words["At the end of words"])
+
 
 # Placeholder for Listening
 with tabs[2]:
