@@ -430,6 +430,14 @@ with tabs[3]:
         audio_data = generate_contrast_audio(pair_description)
         st.audio(audio_data.getvalue(), format='audio/mp3')
         st.caption(pair_description)
+
+    st.markdown("### Watch video: 'Ask' words between American and British accents")
+    
+    # YouTube Video Embed
+    youtube_url = "https://www.youtube.com/watch?v=DKEM-juLxmM"
+    st.video(youtube_url)
+
+###################################################################
 with tabs[4]:
     st.title("Listening practice")
     st.markdown("""
