@@ -231,16 +231,16 @@ with tabs[2]:
         # Display the sentence as caption below the audio
         st.caption(chosen_sentence)
 
-    st.markdown("#### A. Warming-up: Tense [ i ]")
+    st.markdown("#### A. Warming-up: Tense [ u ]")
     # Word lists
-    word_lists = {
-        "Beginning": "eat, equal, easy, each",
-        "Middle": "please, deep, peach, need",
-        "End": "key, agree, pea, knee, tea"
+    word_lists_u = {
+        "Beginning": "None is available.",
+        "Middle": "food, lose, knew, pool, loose, June, group, room, mood, truth, Tuesday, duty, school, suit",
+        "End": "shoe, canoe, through, boo, you"
     }
 
     # Generate and play audio with 2 seconds gap between words
-    def generate_audio(word_list):
+    def generate_audio(word_list_u):
         # Creating a single string with pauses between words
         words_with_pause = ' '.join([word + '...' for word in word_list.split(', ')])
         tts = gTTS(text=words_with_pause, lang='en', tld='com')
@@ -253,27 +253,27 @@ with tabs[2]:
     col_beginning, col_middle, col_end = st.columns(3)
     with col_beginning:
         if st.button("Play words at the Beginning"):
-            audio_data = generate_audio(word_lists["Beginning"])
+            audio_data = generate_audio(word_lists_u["Beginning"])
             st.audio(audio_data.getvalue(), format='audio/mp3')
             st.caption(word_lists["Beginning"])
 
     with col_middle:
         if st.button("Play words in the Middle"):
-            audio_data = generate_audio(word_lists["Middle"])
+            audio_data = generate_audio(word_lists_u["Middle"])
             st.audio(audio_data.getvalue(), format='audio/mp3')
             st.caption(word_lists["Middle"])
 
     with col_end:
         if st.button("Play words at the End"):
-            audio_data = generate_audio(word_lists["End"])
+            audio_data = generate_audio(word_lists_u["End"])
             st.audio(audio_data.getvalue(), format='audio/mp3')
             st.caption(word_lists["End"])
 
-    st.markdown("### B. Warming-up: Lax [ ɪ ]")
-    # Word lists for lax [ɪ]
+    st.markdown("### B. Warming-up: Lax [ ʊ ]")
+    # Word lists for lax [ʊ]
     lax_word_lists = {
-        "Beginning": "is, itch, it, pin, sin, bit, pitch, mitt, give, win, gym, gift, with, lips, guilt, build, quick, this, symbol, syrup, little",
-        "Middle": "vivid, limit, visit, habit, polish, mimic, permit, business, spirit, profit, mystic, logic, gossip",
+        "Beginning": "No words begin with this vowel in English",
+        "Middle": "cook, book, good, took, look, brook, stood, hood, woman,would, should, could,cookie, cushion, pudding,push, pull, bullet, wood",
         "End": "No words end with lax vowel in English"
     }
 
@@ -300,24 +300,19 @@ with tabs[2]:
     st.markdown("### C. Contrast between tense and lax 'i'")
 
     # List of word pairs with descriptions
-    word_pairs = [
-        ("each", "itch"),
-        ("peach", "pitch"),
-        ("eat", "it"),
-        ("scene", "sin"),
-        ("heel", "hill"),
-        ("cheap", "chip"),
-        ("heat", "hit"),
-        ("meat", "mitt"),
-        ("seat", "sit"),
-        ("lean", "Lynn"),
-        ("wheel", "will"),
-        ("Seeley (pron.)", "silly")
+    word_pairs_u = [
+    ("fool", "full"),
+    ("suit", "soot"),
+    ("Luke", "look"),
+    ("pool", "pull"),
+    ("wooed", "wood"),
+    ("shoed", "should"),
+    ("cooed", "could")
     ]
   
     # Create a dropdown to select the word pair
-    options = [f"Number {i+1}. {pair[0]} versus {pair[1]}" for i, pair in enumerate(word_pairs)]
-    selected_option = st.selectbox("Choose a word pair to hear the contrast:", options)
+    options_u = [f"Number {i+1}. {pair[0]} versus {pair[1]}" for i, pair in enumerate(word_pairs_u)]
+    selected_option_u = st.selectbox("Choose a word pair to hear the contrast:", options_u)
     
     # Function to generate audio
     def generate_contrast_audio(pair_description):
@@ -329,8 +324,8 @@ with tabs[2]:
     
     if st.button("Generate and Play Audio"):
         # Get the index from the selected option to find the correct word pair
-        index = options.index(selected_option)
-        pair_description = f"Number {index+1}. {word_pairs[index][0]} versus {word_pairs[index][1]}"
+        index = options.index(selected_option_u)
+        pair_description = f"Number {index+1}. {word_pairs_u[index][0]} versus {word_pairs_u[index][1]}"
         audio_data = generate_contrast_audio(pair_description)
         st.audio(audio_data.getvalue(), format='audio/mp3')
         st.caption(pair_description)
