@@ -2,8 +2,6 @@ import streamlit as st
 from gtts import gTTS
 import io
 import time
-from pydub import AudioSegment
-from pydub.playback import play
 
 # Create tabs
 tabs = st.tabs(["Lesson8", "Lesson9", "Listening"])
@@ -60,16 +58,9 @@ with tabs[0]:
         else:
             st.write("🎵 Strong - Weak | Strong - Weak | Strong - Weak")
             time.sleep(0.5)
-            # Generate melody beats
-            mi = AudioSegment.sine(frequency=659, duration=1000)
-            do = AudioSegment.sine(frequency=523, duration=300)
-            beat_audio = mi + do
-            full_audio = beat_audio * 3
-            # Export and play the melody in Streamlit
-            audio_data = io.BytesIO()
-            full_audio.export(audio_data, format="mp3")
-            audio_data.seek(0)
-            st.audio(audio_data.getvalue(), format='audio/mp3')
+            # Use a pre-recorded audio file for melody beats
+            beat_audio_url = "https://github.com/MK316/Engpro-Class/raw/main/audio/trochaic_beat.mp3"
+            st.audio(beat_audio_url, format='audio/mp3')
 
 # Placeholder for Lesson 9
 with tabs[1]:
