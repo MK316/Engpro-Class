@@ -9,7 +9,7 @@ import soundfile as sf
 
 
 # Create four tabs
-tabs = st.tabs(["📗 Lesson 11", "❄️ App1", "❄️ App2", "❄️ App3"])
+tabs = st.tabs(["📗 Lesson 11", "❄️ Pitch-contour-app", "❄️ App2", "❄️ App3"])
 
 # Content for each tab
 with tabs[0]:
