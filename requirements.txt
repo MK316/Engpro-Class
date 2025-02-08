@@ -8,3 +8,4 @@ Pillow
 wordcloud
 gtts
 pydub
+librosa
