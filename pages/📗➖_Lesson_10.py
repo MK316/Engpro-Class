@@ -52,6 +52,7 @@ with tabs[0]:
     st.markdown("#### B. How to manifest stressed syllables?") 
     st.write("Characteristics of Stressed Syllables: Stressed syllables are typically: longer in duration, louder in intensity, and higher in pitch than unstressed syllables in a word. However, the pitch may not always be higher, as it can vary depending on the intended meaning of the word within a specific sentence.")
     st.image("https://github.com/MK316/Engpro-Class/raw/main/images/banana.jpg", caption="Example 'banana'")
+    st.image("https://github.com/MK316/Engpro-Class/raw/main/images/banana-spec.jpg", caption="Spectrogram of 'banana'")
 
 
 with tabs[1]:
