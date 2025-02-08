@@ -185,7 +185,9 @@ with tabs[1]:
             st.audio(audio_data.getvalue(), format='audio/mp3')
 
     st.markdown("---")
+    st.markdown("""
     ##### B. Yes/No question
+    """)
     st.image("https://github.com/MK316/Engpro-Class/raw/main/images/Inton-yesno.jpg")
 
     # Define the sentences for Yes/No questions
