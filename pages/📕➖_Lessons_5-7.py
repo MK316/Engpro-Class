@@ -60,6 +60,39 @@ with tabs[0]:
         audio_data = generate_audio(text1)
         st.audio(audio_data.getvalue(), format='audio/mp3')    
 
+    # More practice: names of animal
+    # Define animal lists and corresponding image URLs
+    animal_lists = {
+        "List 1": ("Leopard, Giraffe, Dolphin, Sea Otter, Octopus", "https://github.com/MK316/Animal-Images/raw/main/animal01.jpg"),
+        "List 2": ("Squirrel, Chameleon, Penguin, Ocelot, Hippopotamus", "https://github.com/MK316/Animal-Images/raw/main/animal02.jpg"),
+        "List 3": ("Jaguar, Tortoise, Rhinoceros, Kangaroo, Wolf", "https://github.com/MK316/Animal-Images/raw/main/animal03.jpg"),
+        "List 4": ("Coyote, Camel, Zebra, Buffalo, Alligator", "https://github.com/MK316/Animal-Images/raw/main/animal04.jpg")
+    }
+    
+    st.markdown("### Choose an Animal List to Hear the Pronunciation")
+    
+    # Dropdown to select the list
+    selected_list = st.selectbox("Select an animal list:", list(animal_lists.keys()))
+    
+    # Function to generate and play audio
+    def generate_audio(text):
+        tts = gTTS(text=text, lang='en')
+        audio_data = io.BytesIO()
+        tts.write_to_fp(audio_data)
+        audio_data.seek(0)
+        return audio_data
+    
+    # Display the corresponding image for the selected list
+    st.image(animal_lists[selected_list][1], caption=f"{selected_list} - Animals")
+    
+    if st.button("Generate and Play Audio", key="audio_animal_list"):
+        audio_data = generate_audio(animal_lists[selected_list][0])
+        st.audio(audio_data.getvalue(), format='audio/mp3')
+        st.caption(f"{selected_list}: {animal_lists[selected_list][0]}")
+        
+
+
+
 with tabs[1]:
     st.markdown("### 📒 Lesson 6: Vowels in ‘but’, ‘bought’, ‘boat’")
 
