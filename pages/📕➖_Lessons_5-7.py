@@ -34,8 +34,8 @@ with tabs[0]:
         return audio_data
     
     # Prepare the text for audio pronunciation
-    word_list_text = "o spelling: cop, cod, lock, comedy, contrary, company, copy, oxen, option, on, odd, honest, shop, rocket, block, cot, top, fox, spot, opera, follow, constitution. "
-    word_list_text += "a spelling: father, arm, want, wallet, dark, wasp, watch, March."
+    word_list_text = "O-spelling words: cop, cod, lock, comedy, contrary, company, copy, oxen, option, on, odd, honest, shop, rocket, block, cot, top, fox, spot, opera, follow, constitution. "
+    word_list_text += "A-spelling words: father, arm, want, wallet, dark, wasp, watch, March."
     
     if st.button("Generate and Play Audio", key="audio_word_list"):
         audio_data = generate_audio(word_list_text)
