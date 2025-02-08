@@ -18,6 +18,12 @@ with tabs[0]:
     st.write(" - Korean: 가나다라 마바사아 자차카타 파하 (Syllable-timed)")
     st.write(" - English: A B C song (Stress-timed)")
 
+
+    # 🎥 Embedded YouTube Video for Rhythm
+    st.markdown("#### 🎥 Watch: Understanding Rhythm in English")
+    youtube_url = "https://www.youtube.com/watch?v=CHmwmGJ3HbE"  # Replace with actual video link
+    st.video(youtube_url)
+    
     # Section 2: Contractions in English
     st.markdown("#### 🔹 Contractions in Spoken English")
     st.write("""
