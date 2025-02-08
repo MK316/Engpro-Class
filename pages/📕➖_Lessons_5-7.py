@@ -199,12 +199,12 @@ with tabs[1]:
 #######################################################################
 with tabs[2]:
     st.markdown("### 📒 Lesson 7: Diphthong vowels in English")
-
-    st.caption("I don't know how that boy won the game last night, but it was impressive!")
     st.image("https://github.com/MK316/Engpro-Class/raw/main/images/diphthong.jpg", caption="I don't know how that boy won the game last night, but it was impressive!")
 
-
-
+    diphthong_text="I don't know how that boy won the game last night, but it was impressive!"
+    if st.button("Play Contrast Audio", key="diphthong"):
+        audio_data = generate_audio()
+        st.audio(audio_data.getvalue(), format='audio/mp3')
 #######################################################################
 with tabs[3]:
     st.markdown("""
