@@ -22,7 +22,8 @@ with tabs[0]:
     st.video(youtube_url)
 
 
-    # Custom CSS to apply blue color to specific parts
+
+    # Custom CSS for blue-colored highlights
     st.markdown("""
         <style>
         .highlight { color: blue; font-weight: bold; }
@@ -52,8 +53,26 @@ with tabs[0]:
             "I can see my house / <span class='highlight'>from here.</span>",
             "He thought / <span class='highlight'>that he is smart.</span>",
             "We didn’t go / <span class='highlight'>because it started to rain.</span>"
+        ],
+        "[5] Verb + Object (simple object)": [
+            "He teaches <span class='highlight'>English.</span>",
+            "We drank <span class='highlight'>beer.</span>",
+            "I like <span class='highlight'>football.</span>",
+            "He’s been calling her / <span class='highlight'>all day.</span>"
+        ],
+        "[6] Punctuation Rules - commas, colons, semi-colons, parentheses, etc.": [
+            "Mr. Brown, <span class='highlight'>my new neighbor</span>, called me yesterday.",
+            "Sam, <span class='highlight'>a convicted felon</span>, was sentenced to life in prison.",
+            "He is very nice; <span class='highlight'>in my opinion</span>, he is the nicest person in the classroom."
         ]
     }
+    
+    # Display Thought Grouping Rules and Example Sentences with Styling
+    for rule, examples in thought_grouping_examples.items():
+        st.markdown(f"#### {rule}")
+        for example in examples:
+            st.markdown(f"- {example}", unsafe_allow_html=True)  # Render styled text
+
     
     # Display Thought Grouping Rules and Example Sentences with Styling
     for rule, examples in thought_grouping_examples.items():
