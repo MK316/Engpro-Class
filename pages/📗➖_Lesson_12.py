@@ -288,7 +288,8 @@ with tabs[1]:
             audio_data = generate_audio(sentences_choice[selected_sentence])  # Corrected dictionary reference
             st.audio(audio_data.getvalue(), format='audio/mp3')
 
-
+    st.image("https://github.com/MK316/Engpro-Class/raw/main/images/L13-notes.jpg")
+    
 
 
 with tabs[2]:
