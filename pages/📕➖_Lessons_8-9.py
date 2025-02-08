@@ -20,7 +20,7 @@ with tabs[0]:
     foot_type = st.radio("Choose a rhythm pattern:", ["Iambic (Weak-Strong)", "Trochaic (Strong-Weak)"])
 
     # Visualization of rhythmic pattern
-    st.markdown("### 🔵 Visualization of Iambic and Trochaic Patterns")
+    st.markdown("**Visualization of Iambic and Trochaic Patterns**")
     fig, ax = plt.subplots(figsize=(6, 2))
     
     # Define positions and sizes for circles based on selected foot type
@@ -29,8 +29,11 @@ with tabs[0]:
         sizes = [200, 500] * 3  # Small-Large repetition
     else:
         sizes = [500, 200] * 3  # Large-Small repetition
-    
-    colors = ['gray', 'orange'] * 3  # Alternating colors for weak-strong or strong-weak pattern
+
+    if foot_type == "Iambic (Weak-Strong)":
+        colors = ['gray', 'orange'] * 3  # Small-Large repetition
+    else:
+        colors = ['orange', 'gray'] * 3  # Large-Small repetition
     
     for pos, size, color in zip(positions, sizes, colors):
         ax.scatter(pos, 1, s=size, color=color)
