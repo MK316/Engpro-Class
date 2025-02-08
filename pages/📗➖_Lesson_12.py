@@ -146,14 +146,14 @@ with tabs[1]:
 
     st.markdown("---")
     st.markdown("""
-    #### Intonation by sentence types
+    #### 📘 Intonation by sentence types
     ##### A. Declarative sentence (description or statement)
     : The final rise-fall intonation is crucial to signal that your sentence is completed, serving a **‘finality’** function.
     _Note:_Ending sentences with a rise in tone can make you appear uncertain or lacking confidence.
     """)
     st.image("https://github.com/MK316/Engpro-Class/raw/main/images/Inton-dec.jpg")
 
-    st.markdown("##### Audio samples")
+    st.markdown("##### 🎧 Audio samples")
     
     # Define the sentences
     sentences = {
