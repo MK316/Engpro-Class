@@ -9,3 +9,4 @@ wordcloud
 gtts
 pydub
 librosa
+soundfile
