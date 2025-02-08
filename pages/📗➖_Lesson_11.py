@@ -14,8 +14,49 @@ with tabs[0]:
 
     st.write("My name is Jane Smith. (H* vs. L* carry different meanings)")
     st.markdown("##### 2. The final key word within a sentence receives the most emphasis in English.")
-    
+    st.markdown("""
+    A. Steve is my **cousin**.
+    B. He is at the **store**.
+    C. Today is **Saturday**.
+    """)
+    st.markdown("##### 3. Function words are not accented unless they are intentionally emphasized.")
+    st.markdown("""
+    - Function words: articles (a, the), prepositions (for, of, in, to, etc.),
+    - pronouns (I, her, he, she, you, they, etc.)
+    - conjunctions (but, and, as, etc.)
+    - helping verbs (is, was, are, were, has, can, etc.)
+    """)
 
+# Example sentences
+example_sentences = {
+    "1) Today is Thursday.": "Today is Thursday.",
+    "2) The lecture will start in a moment.": "The lecture will start in a moment.",
+    "3) You’ll see him sooner or later.": "You’ll see him sooner or later.",
+    "4) I wanna be a singer.": "I wanna be a singer.",
+    "5) To tell the truth, I was quite nervous before giving the presentation.": 
+    "To tell the truth, I was quite nervous before giving the presentation."
+}
+
+    # Title
+    st.markdown("##### 🎧 Listen to the Sentences")
+    
+    # User selects a sentence
+    selected_example_sentence = st.selectbox("Choose a sentence to hear the pronunciation:", list(example_sentences.keys()))
+    
+    # Function to generate and play audio
+    def generate_audio(text):
+        tts = gTTS(text=text, lang='en')
+        audio_data = io.BytesIO()
+        tts.write_to_fp(audio_data)
+        audio_data.seek(0)
+        return audio_data
+    
+    # Button to generate and play the selected sentence
+    if st.button("Play Selected Sentence"):
+        audio_data = generate_audio(example_sentences[selected_example_sentence])
+        st.audio(audio_data.getvalue(), format='audio/mp3')
+        st.write(f"**Sentence:** {example_sentences[selected_example_sentence]}")
+    
 with tabs[1]:
     st.markdown("### 📒 Lesson 15: ")
 with tabs[2]:
