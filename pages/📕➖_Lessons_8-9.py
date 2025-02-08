@@ -50,16 +50,16 @@ with tabs[0]:
 
     if st.button("Start Beat Practice"):
         if foot_type == "Iambic (Weak-Strong)":
-            st.write("🎵 Weak - Strong | Weak - Strong | Weak - Strong")
+            st.write("🎵 ago | away | along | amaze| contain")
             time.sleep(0.5)
             # Use a pre-recorded audio file for melody beats
             beat_audio_url = "https://github.com/MK316/Engpro-Class/raw/main/audio/iambic.wav"
             st.audio(beat_audio_url, format='audio/wav')
-            for _ in range(3):
+            for _ in range(5):
                 st.write("• (weak)   ➝   ● (strong)")
                 time.sleep(1)
         else:
-            st.write("🎵 Strong - Weak | Strong - Weak | Strong - Weak")
+            st.write("🎵 soda | sofa | zebra | papa | column")
             time.sleep(0.5)
             # Use a pre-recorded audio file for melody beats
             beat_audio_url = "https://raw.githubusercontent.com/MK316/Engpro-Class/main/audio/trochaic.wav"
