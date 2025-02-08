@@ -21,32 +21,31 @@ with tabs[0]:
     youtube_url = "https://www.youtube.com/watch?v=Yd24_1n-8PM"
     st.video(youtube_url)
     
-    # Define Thought Grouping Rules
+    # Define Thought Grouping Rules with Red Highlighting
     thought_grouping_examples = {
         "[1] When subjects are long (more than 2 key words), insert a short pause after the subject.": [
             "I went shopping.", 
             "The lady was my mom’s friend.", 
-            "**My younger brother** / will visit me tomorrow."
+            "<span style='color:red; font-weight:bold;'>My younger brother</span> / will visit me tomorrow."
         ],
         "[2] Article + Adjective + Noun = one thought group": [
             "A big dog / is chasing / a little cat.",
-            "He is / **a brilliant student.**"
+            "He is / <span style='color:red; font-weight:bold;'>a brilliant student.</span>"
         ],
         "[3] Auxiliary verb + main verb = one thought group": [
-            "He **was bringing** a cake. (He’s bringing a cake.)",
-            "He **has been doing** great. (He’s been doing great.)",
-            "I **should have seen** a doctor.",
-            "**Would you be interested** in my story?"
+            "He <span style='color:red; font-weight:bold;'>was bringing</span> a cake. (He’s bringing a cake.)",
+            "He <span style='color:red; font-weight:bold;'>has been doing</span> great. (He’s been doing great.)",
+            "I <span style='color:red; font-weight:bold;'>should have seen</span> a doctor.",
+            "<span style='color:red; font-weight:bold;'>Would you be interested</span> in my story?"
         ],
         "[4] Put a pause before prepositional phrases or conjunctions.": [
-            "The boy / ran / **into the room.**",
-            "He devoted his life / for the peace / **of all mankind.**",
-            "I can see my house / **from here.**",
-            "He thought / **that he is smart.**",
-            "We didn’t go / **because it started to rain.**"
+            "The boy / ran / <span style='color:red; font-weight:bold;'>into the room.</span>",
+            "He devoted his life / for the peace / <span style='color:red; font-weight:bold;'>of all mankind.</span>",
+            "I can see my house / <span style='color:red; font-weight:bold;'>from here.</span>",
+            "He thought / <span style='color:red; font-weight:bold;'>that he is smart.</span>",
+            "We didn’t go / <span style='color:red; font-weight:bold;'>because it started to rain.</span>"
         ]
     }
-
     # Display Thought Grouping Rules and Example Sentences
     for rule, examples in thought_grouping_examples.items():
         st.markdown(f"#### {rule}")
