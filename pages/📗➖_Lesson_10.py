@@ -60,12 +60,12 @@ with tabs[0]:
     st.write("Primary stress is indicated with an accent mark ( ́ ) or an upper bar ( ˈ ) in dictionaries. Secondary stress is marked with an grave mark ( ̀ ) or a lower bar ( ˌ ) in dictionaries.")
     st.image("https://github.com/MK316/Engpro-Class/raw/main/images/L10-words.jpg", caption="Practice words")
 
-# Word lists categorized by stress pattern
-stress_words = {
-    "First syllable": ["accident", "strawberry", "seventy", "personal", "elephant", "February", "salary"],
-    "Second syllable": ["acceptance", "vanilla", "examine", "translation", "gorilla", "December", "employer"],
-    "Third syllable": ["accidental", "absolute", "seventeen", "personnel", "kangaroo", "gasoline", "employee"]
-}
+    # Word lists categorized by stress pattern
+    stress_words = {
+        "First syllable": ["accident", "strawberry", "seventy", "personal", "elephant", "February", "salary"],
+        "Second syllable": ["acceptance", "vanilla", "examine", "translation", "gorilla", "December", "employer"],
+        "Third syllable": ["accidental", "absolute", "seventeen", "personnel", "kangaroo", "gasoline", "employee"]
+    }
 
     # Function to generate and play audio
     def generate_audio(words):
