@@ -63,10 +63,10 @@ with tabs[0]:
     # More practice: names of animal
     # Define animal lists and corresponding image URLs
     animal_lists = {
-        "List 1": ("Leopard, Giraffe, Dolphin, Sea Otter, Octopus", "https://github.com/MK316/Animal-Images/raw/main/animal01.jpg"),
-        "List 2": ("Squirrel, Chameleon, Penguin, Ocelot, Hippopotamus", "https://github.com/MK316/Animal-Images/raw/main/animal02.jpg"),
-        "List 3": ("Jaguar, Tortoise, Rhinoceros, Kangaroo, Wolf", "https://github.com/MK316/Animal-Images/raw/main/animal03.jpg"),
-        "List 4": ("Coyote, Camel, Zebra, Buffalo, Alligator", "https://github.com/MK316/Animal-Images/raw/main/animal04.jpg")
+        "List 1": ("Leopard, Giraffe, Dolphin, Sea Otter, Octopus", "https://github.com/MK316/Engpro-Class/raw/main/images/animal01.jpg"),
+        "List 2": ("Squirrel, Chameleon, Penguin, Ocelot, Hippopotamus", "https://github.com/MK316/Engpro-Class/raw/main/images/animal02.jpg"),
+        "List 3": ("Jaguar, Tortoise, Rhinoceros, Kangaroo, Wolf", "https://github.com/MK316/Engpro-Class/raw/main/images/animal03.jpg"),
+        "List 4": ("Coyote, Camel, Zebra, Buffalo, Alligator", "https://github.com/MK316/Engpro-Class/raw/main/images/animal04.jpg")
     }
     
     st.markdown("### Choose an Animal List to Hear the Pronunciation")
