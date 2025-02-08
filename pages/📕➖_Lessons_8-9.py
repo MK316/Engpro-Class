@@ -59,12 +59,15 @@ with tabs[0]:
                 st.write("• (weak)   ➝   ● (strong)")
                 time.sleep(1)
         else:
-            st.write("🎵 soda | sofa | zebra | papa | column")
+            st.write("🎵 soda | nation | zebra | papa | open")
             time.sleep(0.5)
             # Use a pre-recorded audio file for melody beats
-            beat_audio_url = "https://raw.githubusercontent.com/MK316/Engpro-Class/main/audio/trochaic.wav"
+            beat_audio_url = "https://github.com/MK316/Engpro-Class/raw/main/audio/trochaic.wav"
             st.audio(beat_audio_url, format='audio/wav')
-            st.write("If the audio does not play, check if the file URL is accessible.")
+            for _ in range(5):
+                st.write("● (strong)   ➝   • (weak)")
+                time.sleep(1.5)
+
 
 # Placeholder for Lesson 9
 with tabs[1]:
