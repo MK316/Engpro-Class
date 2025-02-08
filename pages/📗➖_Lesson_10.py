@@ -66,8 +66,9 @@ with tabs[0]:
     }
 
     # Display word lists and audio buttons
-    col1, col2, col3 = st.columns(3)
     st.markdown("##### Practice: Stress by position")
+    col1, col2, col3 = st.columns(3)
+
     with col1:
         st.markdown("#### 🔹1st Syllable")
         st.write(", ".join(stress_words["First syllable"]))
