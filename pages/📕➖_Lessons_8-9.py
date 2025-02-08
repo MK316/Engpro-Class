@@ -1,5 +1,6 @@
 import streamlit as st
 import matplotlib.pyplot as plt
+from matplotlib.patches import Ellipse
 import numpy as np
 from gtts import gTTS
 import io
@@ -23,20 +24,21 @@ with tabs[0]:
     st.markdown("**Visualization of Iambic and Trochaic Patterns**")
     fig, ax = plt.subplots(figsize=(6, 2))
     
-    # Define positions based on selected foot type
+    # Define positions for circles
     positions = np.linspace(0, 10, 6)
     
     # Define correct sizes and colors
     if foot_type == "Iambic (Weak-Strong)":
-        sizes = [200, 600] * 3  # Small -> Large repetition
+        sizes = [(0.5, 0.5), (1.2, 0.5)] * 3  # Small (circle) -> Large (wide ellipse)
         colors = ['gray', 'orange'] * 3  # Small = Gray, Large = Orange
     else:
-        sizes = [600, 200] * 3  # Large -> Small repetition
+        sizes = [(1.2, 0.5), (0.5, 0.5)] * 3  # Large (wide ellipse) -> Small (circle)
         colors = ['orange', 'gray'] * 3  # Large = Orange, Small = Gray
     
-    # Plot circles with correct sizes and colors
-    for pos, size, color in zip(positions, sizes, colors):
-        ax.scatter(pos, 1, s=size, color=color, alpha=0.8)  # Add transparency for better visibility
+    # Plot ellipses with correct sizes and colors
+    for pos, (width, height), color in zip(positions, sizes, colors):
+        ellipse = Ellipse((pos, 1), width=width, height=height, color=color, alpha=0.8)
+        ax.add_patch(ellipse)
     
     ax.set_xlim(-1, 11)
     ax.set_ylim(0, 2)
