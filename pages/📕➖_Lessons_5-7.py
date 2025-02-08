@@ -9,10 +9,10 @@ with tabs[0]:
      # Using columns to place images side-by-side
     col1, col2 = st.columns(2)
     with col1:
-        st.image("https://github.com/MK316/Engpro-Class/blob/main/images/a.jpg",
+        st.image("https://github.com/MK316/Engpro-Class/raw/main/images/a.jpg",
                  width=300, caption="[a]")
     with col2:
-        st.image("https://github.com/MK316/Engpro-Class/blob/main/images/bigA.jpg",
+        st.image("https://github.com/MK316/Engpro-Class/raw/main/images/bigA.jpg",
                  width=300, caption="[ɑ]")
 
 
