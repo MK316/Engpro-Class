@@ -321,6 +321,29 @@ with tabs[3]:
     with col2:
         st.image("https://github.com/MK316/Engpro-Class/raw/main/images/laughed.jpg",
                  width=300, caption="Image on the Right") 
+
+     # List of sentences to choose from
+    sentences_e = [
+        "She finally left after hearing the unexpected news.",
+        "She finally laughed after hearing the unexpected news."
+    ]
+
+    # Button to generate and play audio
+    if st.button("Audio"):
+        # Randomly choose a sentence to be generated
+        chosen_sentence_e = random.choice(sentences_e)
+        tts = gTTS(text=chosen_sentence_e, lang='en')
+        audio_data = io.BytesIO()
+        tts.write_to_fp(audio_data)
+        audio_data.seek(0)
+
+        # Display the audio player
+        st.audio(audio_data.getvalue(), format='audio/mp3')
+        
+        # Display the sentence as caption below the audio
+        st.caption(chosen_sentence_e)
+
+
     
     st.markdown("#### Articulation Tips")
     st.write("The [æ] vowel is articulated with a lower jaw position than the [ɛ] vowel.")
