@@ -129,6 +129,29 @@ with tabs[1]:
             audio_data = generate_audio(sentence_coat)
             st.audio(audio_data.getvalue(), format='audio/mp3')
 
+    # Practice Section
+    st.markdown("### 🎤 Practice Words by Position")
+    vowel_practice = {
+        "[ʌ]": {
+            "Beginning": "up, of, us",
+            "Middle": "lucky, hug, much, rough",
+            "End": "None"
+        },
+        "[ɔ]": {
+            "Beginning": "off, all, also",
+            "Middle": "boss, long, across",
+            "End": "law, raw"
+        }
+    }
+    
+    for vowel, positions in vowel_practice.items():
+        st.markdown(f"#### {vowel} Words")
+        for position, words in positions.items():
+            if words != "None":
+                st.write(f"**{position}:** {words}")
+                if st.button(f"Play {position} Words ({vowel})", key=f"audio_{vowel}_{position}"):
+                    audio_data = generate_audio(words)
+                    st.audio(audio_data.getvalue(), format='audio/mp3')
 
 
 #######################################################################
