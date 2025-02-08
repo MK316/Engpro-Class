@@ -218,7 +218,7 @@ with tabs[2]:
 
     st.markdown("**game, night, how, don't, boy**")
 
-    st.markdown("### 🔍 Practice: Clear articulation of diphthongs")
+    st.markdown("#### 🔍 Practice: Clear articulation of diphthongs")
     # Sentences for audio generation
     sentences = {
         "A. Oh, really!": "Oh, really!",
@@ -227,8 +227,6 @@ with tabs[2]:
         "D. It’s very cold in here.": "It’s very cold in here.",
         "E. You don’t have to.": "You don’t have to."
     }
-
-    st.markdown("### 🎧 Practice Sentences")
 
     # Generate audio for each sentence
     for key, text in sentences.items():
