@@ -28,8 +28,7 @@ with tabs[0]:
 
         In the next class, we will further explore stress patterns in phrases and sentences.""",
 
-        "[4] Characteristics of Stressed Syllables": """Stressed syllables are typically: longer in duration, louder in intensity, and higher in pitch than unstressed syllables in a word.  
-        However, the pitch may not always be higher, as it can vary depending on the intended meaning of the word within a specific sentence."""
+        "[4] Characteristics of Stressed Syllables": """Stressed syllables are typically: longer in duration, louder in intensity, and higher in pitch than unstressed syllables in a word. However, the pitch may not always be higher, as it can vary depending on the intended meaning of the word within a specific sentence."""
     }
 
     
