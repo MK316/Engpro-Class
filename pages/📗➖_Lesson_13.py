@@ -4,7 +4,7 @@ import io
 
 
 # Create four tabs
-tabs = st.tabs(["📙 Lesson 13", "❄️ App", "❄️ App", "❄️ App"])
+tabs = st.tabs(["📙 Lesson 13", "❄️ More practice"])
 
 # Content for each tab
 with tabs[0]:
@@ -220,16 +220,3 @@ with tabs[1]:
     with col2:
         if st.button("🔊 Female Voice"):
             st.audio(audio_files_female[selected_passage], format='audio/mp3')
-
-
-
-
-    st.markdown("---")
-
-
-    st.markdown("---")
-
-with tabs[2]:
-    st.markdown("### 📒 Lesson 16: ")
-with tabs[3]:
-    st.markdown("### 📒 Lesson 17: ")
