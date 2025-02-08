@@ -23,20 +23,20 @@ with tabs[0]:
     st.markdown("**Visualization of Iambic and Trochaic Patterns**")
     fig, ax = plt.subplots(figsize=(6, 2))
     
-    # Define positions and sizes for circles based on selected foot type
+    # Define positions based on selected foot type
     positions = np.linspace(0, 10, 6)
-    if foot_type == "Iambic (Weak-Strong)":
-        sizes = [200, (600, 300)] * 3  # Small -> Wide repetition
-    else:
-        sizes = [(600, 300), 200] * 3  # Wide -> Small repetition
-
-    if foot_type == "Iambic (Weak-Strong)":
-        colors = ['gray', 'orange'] * 3  # Small-Large repetition
-    else:
-        colors = ['orange', 'gray'] * 3  # Large-Small repetition
     
+    # Define correct sizes and colors
+    if foot_type == "Iambic (Weak-Strong)":
+        sizes = [200, 600] * 3  # Small -> Large repetition
+        colors = ['gray', 'orange'] * 3  # Small = Gray, Large = Orange
+    else:
+        sizes = [600, 200] * 3  # Large -> Small repetition
+        colors = ['orange', 'gray'] * 3  # Large = Orange, Small = Gray
+    
+    # Plot circles with correct sizes and colors
     for pos, size, color in zip(positions, sizes, colors):
-        ax.scatter(pos, 1, s=size, color=color)
+        ax.scatter(pos, 1, s=size, color=color, alpha=0.8)  # Add transparency for better visibility
     
     ax.set_xlim(-1, 11)
     ax.set_ylim(0, 2)
