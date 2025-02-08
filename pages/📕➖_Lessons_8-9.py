@@ -1,4 +1,6 @@
 import streamlit as st
+import matplotlib.pyplot as plt
+import numpy as np
 from gtts import gTTS
 import io
 import time
@@ -17,6 +19,27 @@ with tabs[0]:
     # User selection for foot type
     foot_type = st.radio("Choose a rhythm pattern:", ["Iambic (Weak-Strong)", "Trochaic (Strong-Weak)"])
 
+    # Visualization of rhythmic pattern
+    st.markdown("### 🔵 Visualization of Iambic and Trochaic Patterns")
+    fig, ax = plt.subplots(figsize=(6, 2))
+    
+    # Define positions and sizes for circles
+    positions = np.linspace(0, 10, 6)
+    sizes = [200, 500] * 3  # Small-Large repetition
+    colors = ['orange'] * len(sizes)
+    
+    for pos, size, color in zip(positions, sizes, colors):
+        ax.scatter(pos, 1, s=size, color=color)
+    
+    ax.set_xlim(-1, 11)
+    ax.set_ylim(0, 2)
+    ax.set_xticks([])
+    ax.set_yticks([])
+    ax.set_frame_on(False)
+    
+    st.pyplot(fig)
+
+    
     # Examples of Iambic and Trochaic Words
     word_patterns = {
         "Iambic (Weak-Strong)": [
