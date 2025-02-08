@@ -171,8 +171,46 @@ with tabs[0]:
 
     
 with tabs[1]:
-    st.markdown("### 📒 Lesson 15: ")
+    # Display practice passages
+    st.markdown("### ✰ PRACTICE: Select a Passage to Listen")
+
+    # Define the practice passages
+    practice_passages = {
+        "Digital Literacy": """Digital literacy refers to the ability to use digital tools effectively for communication, research, and problem-solving. 
+        In today’s world, digital competence is essential for students and educators alike. 
+        Being digitally literate means not only knowing how to use technology but also understanding how to evaluate online information critically. 
+        With the rapid development of artificial intelligence and automation, digital literacy has become a fundamental skill for academic success and professional growth.""",
     
+        "Language Education": """Language education plays a crucial role in developing communication skills and cultural understanding. 
+        Learning a language is not just about memorizing vocabulary and grammar rules, but also about practicing speaking, listening, reading, and writing in meaningful contexts. 
+        Modern language teaching methods incorporate interactive activities, digital resources, and real-world applications to help learners become proficient users of the language. 
+        Teachers need to provide opportunities for students to engage in authentic communication and critical thinking.""",
+    
+        "Teacher Qualification": """The qualifications of a teacher significantly influence the quality of education students receive. 
+        A well-qualified teacher must possess subject knowledge, teaching skills, and the ability to foster an engaging learning environment. 
+        In many educational systems, obtaining certification and undergoing continuous professional development are required for teachers to maintain high teaching standards. 
+        Effective teachers not only impart knowledge but also inspire students to become lifelong learners and independent thinkers."""
+    }
+
+
+    
+    # User selects a passage
+    selected_passage = st.selectbox("Choose a passage to hear the pronunciation:", list(practice_passages.keys()))
+    
+    # Display the selected passage
+    st.write(practice_passages[selected_passage])
+    
+    # Pre-recorded audio file URLs (stored on GitHub)
+    audio_files = {
+        "Digital Literacy": "https://github.com/MK316/Engpro-Class/raw/main/audio/digital_literacy.mp3",
+        "Language Education": "https://github.com/MK316/Engpro-Class/raw/main/audio/language_education.mp3",
+        "Teacher Qualification": "https://github.com/MK316/Engpro-Class/raw/main/audio/teacher_qualification.mp3"
+    }
+    
+    # Play audio for the selected passage
+    if st.button("🔊 Play Selected Passage"):
+        st.audio(audio_files[selected_passage], format='audio/mp3')
+
 
 
     st.markdown("---")
