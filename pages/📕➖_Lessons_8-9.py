@@ -100,7 +100,7 @@ with tabs[0]:
         st.audio(audio_data.getvalue(), format='audio/mp3')
 
     st.markdown("---")
-    st.markdown("### Warming up: [ə]")
+    st.markdown("### A. Warming up: [ə]")
 
     # Word lists by position
     word_lists = {
@@ -139,6 +139,15 @@ with tabs[0]:
             audio_data = generate_audio(word_lists["At the end of words"])
             st.audio(audio_data.getvalue(), format='audio/mp3')
 
+    st.markdown("---")
+    st.markdown("### B. Schwa vowel [ə] in spelling: 'a, e, i, o, u, y'")
+    st.markdown("**arrive, oven, liquid, occur, upon**")
+    st.markdown("**ashamed, belief, typical, lesson, column**")
+
+    st.markdown("---")
+    st.markdown("### C. Stressed vs. unstressed vowel duration")
+    st.image("https://github.com/MK316/Engpro-Class/raw/main/images/stress1.jpg", caption="Stress also changes the vowel quality")
+    
 # Placeholder for Lesson 9
 with tabs[1]:
     st.markdown("### 📒 Lesson 9: R-colored vowels as in ‘perfect’ and ‘percent’")
