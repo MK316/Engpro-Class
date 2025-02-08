@@ -112,7 +112,19 @@ with tabs[0]:
         "9. increase (Noun/Verb)": "The company saw an increase in sales last quarter, but the CEO plans to increase investment in research to sustain growth.",
         "10. exploit (Noun/Verb)": "His book is an inspiring exploit of adventure and survival, but critics argue that he tried to exploit the story for financial gain."
     }
-    
+
+        sentences2 = {
+        "1. invalid (Noun/Adjective)": "The hospital provides special care for an **invalid**, as they require constant medical attention, but his insurance claim was deemed **invalid** due to missing documents.",
+        "2. desert (Noun/Verb)": "The stranded travelers feared they would be left in the desert without water, but the guide refused to desert them in such a dangerous situation.",
+        "3. conflict (Noun/Verb)": "The ongoing conflict between the two nations has led to trade restrictions, yet neither side wants to conflict with international laws.",
+        "4. conduct (Noun/Verb)": "The professor’s strict conduct in class ensures discipline, while students are expected to conduct themselves professionally during discussions.",
+        "5. content (Noun/Verb)": "She carefully examined the content of the report before submission, making sure it would content the board members.",
+        "6. contest (Noun/Verb)": "The debate tournament included a heated contest among schools, but the losing team decided to contest the final results.",
+        "7. permit (Noun/Verb)": "The government must issue a permit before construction begins, but the residents plan to permit only eco-friendly projects.",
+        "8. object (Noun/Verb)": "The lawyer presented a strong case with clear legal objectives, but the defendant chose to object to the allegations made against him.",
+        "9. increase (Noun/Verb)": "The company saw an increase in sales last quarter, but the CEO plans to increase investment in research to sustain growth.",
+        "10. exploit (Noun/Verb)": "His book is an inspiring exploit of adventure and survival, but critics argue that he tried to exploit the story for financial gain."
+    }
     # User selection for the sentence to play
     st.markdown("### 🎧 Sentence Stress Practice")
     selected_sentence = st.selectbox("Choose a sentence to hear the pronunciation:", list(sentences.keys()))
@@ -129,7 +141,7 @@ with tabs[0]:
     if st.button("Play Selected Sentence"):
         audio_data = generate_audio(sentences[selected_sentence])
         st.audio(audio_data.getvalue(), format='audio/mp3')
-        st.write(f"**Sentence:** {sentences[selected_sentence]}")
+        st.write(f"**Sentence:** {sentences2[selected_sentence]}")
 
 
 
