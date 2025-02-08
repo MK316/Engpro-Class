@@ -140,17 +140,7 @@ with tabs[0]:
 
 
     st.markdown("---")
-    
-    # Let User Select a Sentence for Audio Playback
-    st.markdown("#### 🎧 Practice Thought Grouping with Audio")
-    all_sentences = [sent for ex in thought_grouping_examples.values() for sent in ex]
-    
-    selected_sentence = st.selectbox("Choose a sentence to hear the pronunciation:", all_sentences)
 
-    if st.button("🔊 Play Selected Sentence"):
-        audio_data = generate_audio(selected_sentence)
-        st.audio(audio_data.getvalue(), format='audio/mp3')
-        st.write(f"**Sentence:** {selected_sentence}")
 
 
 
