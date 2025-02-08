@@ -85,8 +85,8 @@ with tabs[0]:
         return audio_data
     
     # Display the corresponding image for the selected list
-    st.image(animal_lists[selected_list][1], caption=f"{selected_list} - Animals")
-    
+    # st.image(animal_lists[selected_list][1], caption=f"{selected_list} - Animals")
+    st.image(animal_lists[selected_list][1], caption=animal_lists[selected_list][0])
     if st.button("Generate and Play Audio", key="audio_animal_list"):
         audio_data = generate_audio(animal_lists[selected_list][0])
         st.audio(audio_data.getvalue(), format='audio/mp3')
