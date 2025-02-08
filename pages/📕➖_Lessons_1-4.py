@@ -80,7 +80,7 @@ with tabs[1]:
     ]
 
     # Button to generate and play audio
-    if st.button("Audio"):
+    if st.button("Random Audio"):
         # Randomly choose a sentence to be generated
         chosen_sentence = random.choice(sentences)
         tts = gTTS(text=chosen_sentence, lang='en')
@@ -217,7 +217,7 @@ with tabs[2]:
     ]
 
     # Button to generate and play audio
-    if st.button("Audio", key="audio_lesson3"):
+    if st.button("Random Audio", key="audio_lesson3"):
         chosen_sentence_u = random.choice(sentences_u)
         tts = gTTS(text=chosen_sentence_u, lang='en')
         audio_data = io.BytesIO()
@@ -329,7 +329,7 @@ with tabs[3]:
     ]
     
     # Button to generate and play audio
-    if st.button("Audio", key="audio_sentence_e"):
+    if st.button("Random Audio", key="audio_sentence_e"):
         # Randomly choose a sentence to be generated
         chosen_sentence_e = random.choice(sentences_e)
         
