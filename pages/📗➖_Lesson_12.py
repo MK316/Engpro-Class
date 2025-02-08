@@ -2,7 +2,7 @@ import streamlit as st
 from gtts import gTTS
 import io
 # Create four tabs
-tabs = st.tabs(["📙 Lesson 12-1", "📙 Lesson 12-2", "❄️ Lesson 16", "❄️ Lesson 17"])
+tabs = st.tabs(["📙 Lesson 12-1", "📙 Lesson 12-2", "❄️ Intonation contour", "❄️ APP"])
 
 # Content for each tab
 with tabs[0]:
