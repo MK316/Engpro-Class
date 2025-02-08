@@ -171,9 +171,9 @@ with tabs[1]:
     with col2:
         st.markdown("### **[ɚ] (unstressed)**")
         st.image("https://github.com/MK316/Engpro-Class/raw/main/images/perfume.jpg", caption="/pɚˈfjum/")
-
+    st.markdown("---")
     # Warming-up practice
-    st.markdown("## **A. Warming up: [ɝ] (stressed)**")
+    st.markdown("### **A. Warming up: [ɝ] (stressed)**")
     
     stressed_words = {
         "At the beginning of words": "earth, earn, irk, herb, early, urgent, urban",
@@ -214,8 +214,8 @@ with tabs[1]:
             audio_data = generate_audio(stressed_words["At the end of words"])
             st.audio(audio_data.getvalue(), format='audio/mp3')
             st.caption(stressed_words["At the end of words"])
-
-    st.markdown("## **B. Warming up: [ɚ] (unstressed)**")
+    st.markdown("---")
+    st.markdown("#### **B. Warming up: [ɚ] (unstressed)**")
 
     col4, col5, col6 = st.columns(3)
     with col4:
