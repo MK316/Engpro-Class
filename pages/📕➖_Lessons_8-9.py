@@ -48,37 +48,8 @@ with tabs[0]:
     
     st.pyplot(fig)
 
-    
-    # Examples of Iambic and Trochaic Words
-    word_patterns = {
-        "Iambic (Weak-Strong)": [
-            "about", "around", "again", "asleep", "today"
-        ],
-        "Trochaic (Strong-Weak)": [
-            "happy", "doctor", "mother", "table", "yellow"
-        ]
-    }
-
-    selected_words = word_patterns[foot_type]
-    words_text = ", ".join(selected_words)
-    st.markdown("---")
-    st.markdown(f"#### 2. 🎧 Listen to {foot_type} Words")
-
-    def generate_audio(text):
-        tts = gTTS(text=text, lang='en')
-        audio_data = io.BytesIO()
-        tts.write_to_fp(audio_data)
-        audio_data.seek(0)
-        return audio_data
-
-    st.write(f"**Words:** {words_text}")
-    if st.button(f"Play All {foot_type} Words"):
-        audio_data = generate_audio(words_text)
-        st.audio(audio_data.getvalue(), format='audio/mp3')
-
-    st.markdown("---")
-    # Rhythmic Beat Practice
-    st.markdown(f"#### 3. 🎧 Practice {foot_type} with Beats")
+      # Rhythmic Beat Practice
+    st.markdown(f"#### 2. 🎧 Practice {foot_type} with Beats")
     st.write("Tap along with the beats to feel the rhythm pattern!")
 
     if st.button("Start Beat Practice"):
@@ -100,6 +71,35 @@ with tabs[0]:
             for _ in range(5):
                 st.write("● (strong)   ➝   • (weak)")
                 time.sleep(1.5)
+  
+    # Examples of Iambic and Trochaic Words
+    word_patterns = {
+        "Iambic (Weak-Strong)": [
+            "about", "around", "again", "asleep", "today"
+        ],
+        "Trochaic (Strong-Weak)": [
+            "happy", "doctor", "mother", "table", "yellow"
+        ]
+    }
+
+    selected_words = word_patterns[foot_type]
+    words_text = ", ".join(selected_words)
+    st.markdown("---")
+    st.markdown(f"#### 3. 🎧 Listen to {foot_type} Words")
+
+    def generate_audio(text):
+        tts = gTTS(text=text, lang='en')
+        audio_data = io.BytesIO()
+        tts.write_to_fp(audio_data)
+        audio_data.seek(0)
+        return audio_data
+
+    st.write(f"**Words:** {words_text}")
+    if st.button(f"Play All {foot_type} Words"):
+        audio_data = generate_audio(words_text)
+        st.audio(audio_data.getvalue(), format='audio/mp3')
+
+    st.markdown("---")
 
 
 # Placeholder for Lesson 9
