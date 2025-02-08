@@ -24,9 +24,7 @@ with tabs[0]:
     
         "[3] Importance of Stress Placement": """Stress placement is crucial for clear English pronunciation. 
         Placing stress on the wrong syllable can confuse listeners and reduce speech intelligibility. 
-        Therefore, practicing stress placement in words and phrases is essential. 
-
-        In the next class, we will further explore stress patterns in phrases and sentences.""",
+        Therefore, practicing stress placement in words and phrases is essential.""",
 
         "[4] Characteristics of Stressed Syllables": """Stressed syllables are typically: longer in duration, louder in intensity, and higher in pitch than unstressed syllables in a word. However, the pitch may not always be higher, as it can vary depending on the intended meaning of the word within a specific sentence."""
     }
