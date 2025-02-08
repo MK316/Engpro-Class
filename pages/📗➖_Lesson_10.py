@@ -47,12 +47,14 @@ with tabs[0]:
 
         # Display the audio player
         st.audio(audio_data.getvalue(), format="audio/mp3")
-        
+
+    st.markdown("---")    
     st.markdown("#### B. How to Manifest Stressed Syllables") 
     st.write("Characteristics of Stressed Syllables: Stressed syllables are typically longer in duration, louder in intensity, and higher in pitch than unstressed syllables in a word. However, the pitch may not always be higher, as it can vary depending on the intended meaning of the word within a specific sentence.")
     st.image("https://github.com/MK316/Engpro-Class/raw/main/images/banana.jpg", caption="Example 'banana'")
     st.image("https://github.com/MK316/Engpro-Class/raw/main/images/banana-spec.jpg", caption="Spectrogram of 'banana'")
 
+    st.markdown("---")    
     st.markdown("#### C. Words Can Have More Than One Stress")
     st.write("When a word consists of more than two syllables, it can have more than one stress. In such cases, there are primary (main) stresses and secondary stresses, which are weaker than the primary stress.")
     st.write("Primary stress is indicated with an accent mark ( ́ ) or an upper bar ( ˈ ) in dictionaries. Secondary stress is marked with a grave mark ( ̀ ) or a lower bar ( ˌ ) in dictionaries.")
@@ -65,6 +67,7 @@ with tabs[0]:
         "Third syllable": ["accidental", "absolute", "seventeen", "personnel", "kangaroo", "gasoline", "employee"]
     }
 
+    st.markdown("---")    
     # Display word lists and audio buttons
     st.markdown("#### Practice: Stress by position")
     col1, col2, col3 = st.columns(3)
@@ -90,6 +93,7 @@ with tabs[0]:
             audio = generate_audio(", ".join(stress_words["Third syllable"]))
             st.audio(audio.getvalue(), format='audio/mp3')
 
+    st.markdown("---")        
     st.markdown("#### D. English stress can have the following characteristics")
     st.markdown("""
     1. By placing stress on the correct syllables, you can ensure that your pronunciation is more easily understood by listeners.
