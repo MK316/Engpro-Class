@@ -142,7 +142,31 @@ with tabs[0]:
     st.markdown("---")
 
 
-
+    # PRACTICE PHRASE
+    st.markdown("##### ✰ PRACTICE")
+    
+    practice_text = """When the sunlight strikes raindrops in the air, they act as a prism and form a rainbow. 
+    The rainbow is a division of white light into many beautiful colors. These take the shape of a long round arch, 
+    with its path high above, and its two ends apparently beyond the horizon. 
+    There is, according to legend, a boiling pot of gold at one end. People look, but no one ever finds it. 
+    When a man looks for something beyond his reach, his friends say he is looking for the pot of gold at the end of the rainbow."""
+    
+    # Display the practice text
+    st.write(practice_text)
+    
+    # Function to generate audio for the practice phrase
+    def generate_practice_audio(text):
+        tts = gTTS(text=text, lang='en')
+        audio_data = io.BytesIO()
+        tts.write_to_fp(audio_data)
+        audio_data.seek(0)
+        return audio_data
+    
+    # Button to generate and play the practice phrase audio
+    if st.button("🔊 Play Practice Phrase"):
+        practice_audio = generate_practice_audio(practice_text)
+        st.audio(practice_audio.getvalue(), format='audio/mp3')
+    
 
 
     
