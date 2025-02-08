@@ -55,10 +55,10 @@ with tabs[0]:
             "We didn’t go / <span class='highlight'>because it started to rain.</span>"
         ],
         "[5] Verb + Object (simple object)": [
-            "He teaches <span class='highlight'>English.</span>",
-            "We drank <span class='highlight'>beer.</span>",
-            "I like <span class='highlight'>football.</span>",
-            "He’s been calling her / <span class='highlight'>all day.</span>"
+            "He <span class='highlight'>teaches English.</span>",
+            "We <span class='highlight'>drank beer.</span>",
+            "I <span class='highlight'>like football.</span>",
+            "<span class='highlight'>He’s been calling her </span>/ all day."
         ],
         "[6] Punctuation Rules - commas, colons, semi-colons, parentheses, etc.": [
             "Mr. Brown, <span class='highlight'>my new neighbor</span>, called me yesterday.",
@@ -66,12 +66,6 @@ with tabs[0]:
             "He is very nice; <span class='highlight'>in my opinion</span>, he is the nicest person in the classroom."
         ]
     }
-    
-    # Display Thought Grouping Rules and Example Sentences with Styling
-    for rule, examples in thought_grouping_examples.items():
-        st.markdown(f"#### {rule}")
-        for example in examples:
-            st.markdown(f"- {example}", unsafe_allow_html=True)  # Render styled text
 
     
     # Display Thought Grouping Rules and Example Sentences with Styling
