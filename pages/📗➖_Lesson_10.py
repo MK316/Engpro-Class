@@ -151,7 +151,7 @@ with tabs[0]:
     st.markdown("""
     ||A + N| Compound noun|
     |--|--|--|
-    |1| bed room|bed room|
+    |1| bed room|bedroom|
     |2| green house | greenhouse|
     |3| dark room | darkroom|
     |4| blue bird | bluebird|
