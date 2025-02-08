@@ -65,31 +65,7 @@ if st.button("Play Selected Sentence"):
     st.audio(audio_data.getvalue(), format='audio/mp3')
     st.write(f"**Sentence:** {example_sentences[selected_example_sentence]}")
 
-    # Save generated audio for pitch analysis
-    temp_audio_path = "temp_audio.wav"
-    with open(temp_audio_path, "wb") as f:
-        f.write(audio_data.getvalue())
 
-    # Load and Downsample Audio for Faster Processing
-    y, sr = librosa.load(temp_audio_path, sr=8000)  # Downsampling to 8kHz for speed
-
-    # Extract Pitch (Fundamental Frequency)
-    f0, voiced_flag, voiced_probs = librosa.pyin(y, fmin=50, fmax=300)
-    
-    # Convert time array to match pitch points
-    times = np.linspace(0, len(y) / sr, len(f0))
-
-    # Plot the Pitch Contour
-    st.markdown("##### 📈 Pitch Contour of the Sentence")
-    fig, ax = plt.subplots(figsize=(6, 2))
-    
-    ax.plot(times, f0, marker="o", markersize=3, color="blue", label="Pitch Contour")
-    ax.set_xlabel("Time (s)")
-    ax.set_ylabel("Frequency (Hz)")
-    ax.set_title("Pitch Contour")
-    ax.legend()
-    
-    st.pyplot(fig)
 
 with tabs[1]:
     st.markdown("### 📒 Lesson 15: ")
