@@ -20,7 +20,7 @@ with tabs[0]:
     foot_type = st.radio("Choose a rhythm pattern:", ["Iambic (Weak-Strong)", "Trochaic (Strong-Weak)"])
 
     # Visualization of rhythmic pattern
-    st.markdown("### 🔵 Visualization of Iambic and Trochaic Patterns")
+    st.markdown("🔵 **Visualization of Iambic and Trochaic Patterns**")
     fig, ax = plt.subplots(figsize=(6, 2))
     
     # Define positions and sizes for circles
