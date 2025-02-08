@@ -127,7 +127,6 @@ with tabs[1]:
     1. When learning English, we often bring our native intonation and rhythm into our English speech, frequently resulting in a foreign accent.
     2. Intonation refers to the melody, rise, and fall of the voice when speaking. Each language uses pitch fluctuation differently, creating unique melody and intonation patterns.
     3. By mastering English intonation patterns, we can sound more like native speakers and communicate more effectively.
-    """)
     4. Korean intonation to compare: 
 
     Example)
