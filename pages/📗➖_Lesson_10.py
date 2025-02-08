@@ -69,21 +69,21 @@ with tabs[0]:
     col1, col2, col3 = st.columns(3)
 
     with col1:
-        st.markdown("#### 🔹 First Syllable Stress")
+        st.markdown("#### 🔹1st Syllable Stress")
         st.write(", ".join(stress_words["First syllable"]))
         if st.button("Play First Syllable Words", key="first_syllable"):
             audio = generate_audio(", ".join(stress_words["First syllable"]))
             st.audio(audio.getvalue(), format='audio/mp3')
 
     with col2:
-        st.markdown("#### 🔹 Second Syllable Stress")
+        st.markdown("#### 🔹2nd Syllable Stress")
         st.write(", ".join(stress_words["Second syllable"]))
         if st.button("Play Second Syllable Words", key="second_syllable"):
             audio = generate_audio(", ".join(stress_words["Second syllable"]))
             st.audio(audio.getvalue(), format='audio/mp3')
 
     with col3:
-        st.markdown("#### 🔹 Third Syllable Stress")
+        st.markdown("#### 🔹3rd Syllable Stress")
         st.write(", ".join(stress_words["Third syllable"]))
         if st.button("Play Third Syllable Words", key="third_syllable"):
             audio = generate_audio(", ".join(stress_words["Third syllable"]))
