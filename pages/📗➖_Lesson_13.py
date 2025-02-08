@@ -20,6 +20,14 @@ with tabs[0]:
     st.markdown("##### 🎥 Video")
     youtube_url = "https://www.youtube.com/watch?v=Yd24_1n-8PM"
     st.video(youtube_url)
+
+    # Custom CSS to apply red color to specific parts
+    st.markdown("""
+        <style>
+        .highlight { color: red; font-weight: bold; }
+        </style>
+    """, unsafe_allow_html=True)
+
     
     # Define Thought Grouping Rules with Red Highlighting
     thought_grouping_examples = {
