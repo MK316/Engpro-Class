@@ -30,49 +30,112 @@ with tabs[0]:
         </style>
     """, unsafe_allow_html=True)
     
-    # Define Thought Grouping Rules with Proper Formatting
+    # Define Thought Grouping Rules with Styled Display and Separate Audio Text
     thought_grouping_examples = {
-        "[1] When subjects are long (more than 2 key words), insert a short pause after the subject.": [
-            "I went shopping.", 
-            "The lady was my mom’s friend.", 
-            " <span class='highlight'>My younger brother</span> / will visit me tomorrow."
-        ],
-        "[2] Article + Adjective + Noun = one thought group": [
-            "A big dog / is chasing / a little cat.",
-            "He is / <span class='highlight'>a brilliant student.</span>"
-        ],
-        "[3] Auxiliary verb + main verb = one thought group": [
-            "He <span class='highlight'>was bringing</span> a cake. (He’s bringing a cake.)",
-            "He <span class='highlight'>has been doing</span> great. (He’s been doing great.)",
-            "I <span class='highlight'>should have seen</span> a doctor.",
-            "<span class='highlight'>Would you be interested</span> in my story?"
-        ],
-        "[4] Put a pause before prepositional phrases or conjunctions.": [
-            "The boy / ran / <span class='highlight'>into the room.</span>",
-            "He devoted his life / for the peace / <span class='highlight'>of all mankind.</span>",
-            "I can see my house / <span class='highlight'>from here.</span>",
-            "He thought / <span class='highlight'>that he is smart.</span>",
-            "We didn’t go / <span class='highlight'>because it started to rain.</span>"
-        ],
-        "[5] Verb + Object (simple object)": [
-            "He <span class='highlight'>teaches English.</span>",
-            "We <span class='highlight'>drank beer.</span>",
-            "I <span class='highlight'>like football.</span>",
-            "<span class='highlight'>He’s been calling her </span>/ all day."
-        ],
-        "[6] Punctuation Rules - commas, colons, semi-colons, parentheses, etc.": [
-            "Mr. Brown<span class='highlight'>, my new neighbor,</span> called me yesterday.",
-            "Sam<span class='highlight'>, a convicted felon,</span> was sentenced to life in prison.",
-            "He is very nice<span class='highlight'>; in my opinion,</span> he is the nicest person in the classroom."
-        ]
+        "[1] When subjects are long (more than 2 key words), insert a short pause after the subject.": {
+            "display": [
+                "I went shopping.", 
+                "The lady was my mom’s friend.", 
+                " <span class='highlight'>My younger brother</span> / will visit me tomorrow."
+            ],
+            "audio": [
+                "I went shopping.", 
+                "The lady was my mom’s friend.", 
+                "My younger brother will visit me tomorrow."
+            ]
+        },
+        "[2] Article + Adjective + Noun = one thought group": {
+            "display": [
+                "A big dog / is chasing / a little cat.",
+                "He is / <span class='highlight'>a brilliant student.</span>"
+            ],
+            "audio": [
+                "A big dog is chasing a little cat.",
+                "He is a brilliant student."
+            ]
+        },
+        "[3] Auxiliary verb + main verb = one thought group": {
+            "display": [
+                "He <span class='highlight'>was bringing</span> a cake. (He’s bringing a cake.)",
+                "He <span class='highlight'>has been doing</span> great. (He’s been doing great.)",
+                "I <span class='highlight'>should have seen</span> a doctor.",
+                "<span class='highlight'>Would you be interested</span> in my story?"
+            ],
+            "audio": [
+                "He was bringing a cake.",
+                "He has been doing great.",
+                "I should have seen a doctor.",
+                "Would you be interested in my story?"
+            ]
+        },
+        "[4] Put a pause before prepositional phrases or conjunctions.": {
+            "display": [
+                "The boy / ran / <span class='highlight'>into the room.</span>",
+                "He devoted his life / for the peace / <span class='highlight'>of all mankind.</span>",
+                "I can see my house / <span class='highlight'>from here.</span>",
+                "He thought / <span class='highlight'>that he is smart.</span>",
+                "We didn’t go / <span class='highlight'>because it started to rain.</span>"
+            ],
+            "audio": [
+                "The boy ran into the room.",
+                "He devoted his life for the peace of all mankind.",
+                "I can see my house from here.",
+                "He thought that he is smart.",
+                "We didn’t go because it started to rain."
+            ]
+        },
+        "[5] Verb + Object (simple object)": {
+            "display": [
+                "He <span class='highlight'>teaches English.</span>",
+                "We <span class='highlight'>drank beer.</span>",
+                "I <span class='highlight'>like football.</span>",
+                "<span class='highlight'>He’s been calling her </span>/ all day."
+            ],
+            "audio": [
+                "He teaches English.",
+                "We drank beer.",
+                "I like football.",
+                "He’s been calling her all day."
+            ]
+        },
+        "[6] Punctuation Rules - commas, colons, semi-colons, parentheses, etc.": {
+            "display": [
+                "Mr. Brown<span class='highlight'>, my new neighbor,</span> called me yesterday.",
+                "Sam<span class='highlight'>, a convicted felon,</span> was sentenced to life in prison.",
+                "He is very nice<span class='highlight'>; in my opinion,</span> he is the nicest person in the classroom."
+            ],
+            "audio": [
+                "Mr. Brown, my new neighbor, called me yesterday.",
+                "Sam, a convicted felon, was sentenced to life in prison.",
+                "He is very nice; in my opinion, he is the nicest person in the classroom."
+            ]
+        }
     }
-
     
-    # Display Thought Grouping Rules and Example Sentences with Styling
-    for rule, examples in thought_grouping_examples.items():
+    # Function to generate and play audio
+    def generate_audio(text):
+        tts = gTTS(text=text, lang='en')
+        audio_data = io.BytesIO()
+        tts.write_to_fp(audio_data)
+        audio_data.seek(0)
+        return audio_data
+    
+    # Display Thought Grouping Rules and Example Sentences
+    st.markdown("### 📖 Thought Grouping Rules")
+    
+    for rule, content in thought_grouping_examples.items():
         st.markdown(f"#### {rule}")
-        for example in examples:
-            st.markdown(f"- {example}", unsafe_allow_html=True)  # Render styled text
+        
+        # Display formatted examples with blue highlights
+        for example in content["display"]:
+            st.markdown(f"- {example}", unsafe_allow_html=True)
+    
+        # Button to play corresponding audio
+        if st.button(f"🔊 Play Examples for {rule}"):
+            audio_text = " ".join(content["audio"])  # Combine all audio sentences
+            audio_data = generate_audio(audio_text)
+            st.audio(audio_data.getvalue(), format='audio/mp3')
+
 
 
     # Function to Generate Audio for Sentences
