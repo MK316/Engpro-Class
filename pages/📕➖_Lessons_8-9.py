@@ -28,21 +28,21 @@ with tabs[0]:
     }
 
     selected_words = word_patterns[foot_type]
+    words_text = ", ".join(selected_words)
 
     st.markdown(f"### 🎧 Listen to {foot_type} Words")
 
-    def generate_audio(word):
-        tts = gTTS(text=word, lang='en')
+    def generate_audio(text):
+        tts = gTTS(text=text, lang='en')
         audio_data = io.BytesIO()
         tts.write_to_fp(audio_data)
         audio_data.seek(0)
         return audio_data
 
-    for word in selected_words:
-        st.write(f"**{word}**")
-        if st.button(f"Play {word}", key=f"audio_{word}"):
-            audio_data = generate_audio(word)
-            st.audio(audio_data.getvalue(), format='audio/mp3')
+    st.write(f"**Words:** {words_text}")
+    if st.button(f"Play All {foot_type} Words"):
+        audio_data = generate_audio(words_text)
+        st.audio(audio_data.getvalue(), format='audio/mp3')
 
     # Rhythmic Beat Practice
     st.markdown(f"### 🥁 Practice {foot_type} Foot with Beats")
