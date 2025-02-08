@@ -59,7 +59,8 @@ with tabs[0]:
         tts.write_to_fp(audio_data)
         audio_data.seek(0)
         return audio_data
-
+    st.markdown("---")
+    
     # Let User Select a Sentence for Audio Playback
     st.markdown("#### 🎧 Practice Thought Grouping with Audio")
     all_sentences = [sent for ex in thought_grouping_examples.values() for sent in ex]
@@ -74,16 +75,17 @@ with tabs[0]:
 
 
 
-    st.markdown("---")
-
-
-    st.markdown("---")
-
-
-    st.markdown("---")
     
 with tabs[1]:
     st.markdown("### 📒 Lesson 15: ")
+    
+
+
+    st.markdown("---")
+
+
+    st.markdown("---")
+
 with tabs[2]:
     st.markdown("### 📒 Lesson 16: ")
 with tabs[3]:
