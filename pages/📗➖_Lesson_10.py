@@ -58,7 +58,7 @@ with tabs[0]:
         # Display the audio player
         st.audio(audio_data.getvalue(), format="audio/mp3")
         
-      st.markdown("#### B. How to manifest stressed syllables?") 
+    st.markdown("#### B. How to manifest stressed syllables?") 
 
 with tabs[1]:
     st.markdown("### 📒 Lesson 15: ")
