@@ -190,7 +190,7 @@ with tabs[0]:
         return audio_data
     
     # Button to generate and play the selected sentence
-    if st.button("Play Selected Sentence"):
+    if st.button("Play Selected Sentence", key="practice_sentences"):
         audio_data = generate_audio(practice_sentences[selected_practice_sentence])
         st.audio(audio_data.getvalue(), format='audio/mp3')
         st.write(f"**Sentence:** {practice_sentences[selected_practice_sentence]}")
