@@ -174,6 +174,7 @@ with tabs[1]:
     # Display practice passages
     st.markdown("### ✰ PRACTICE: Select a Passage to Listen")
 
+
     # Define the practice passages
     practice_passages = {
         "Digital Literacy": """Digital literacy refers to the ability to use digital tools effectively for communication, research, and problem-solving. 
@@ -191,25 +192,38 @@ with tabs[1]:
         In many educational systems, obtaining certification and undergoing continuous professional development are required for teachers to maintain high teaching standards. 
         Effective teachers not only impart knowledge but also inspire students to become lifelong learners and independent thinkers."""
     }
-
-
     
-    # User selects a passage
-    selected_passage = st.selectbox("Choose a passage to hear the pronunciation:", list(practice_passages.keys()))
+    # Pre-recorded audio file URLs for Male and Female voices
+    audio_files_male = {
+        "Digital Literacy": "https://github.com/MK316/Engpro-Class/raw/main/audio/DL-M.mp3",
+        "Language Education": "https://github.com/MK316/Engpro-Class/raw/main/audio/Edu-M.mp3",
+        "Teacher Qualification": "https://github.com/MK316/Engpro-Class/raw/main/audio/Teacher-M.mp3"
+    }
+    
+    audio_files_female = {
+        "Digital Literacy": "https://github.com/MK316/Engpro-Class/raw/main/audio/DL-F.mp3",
+        "Language Education": "https://github.com/MK316/Engpro-Class/raw/main/audio/Edu-F.mp3",
+        "Teacher Qualification": "https://github.com/MK316/Engpro-Class/raw/main/audio/Teacher-F.mp3"
+    }
+    
+    # Display Practice Passage Selection
+    st.markdown("### ✰ PRACTICE: Select a Passage to Listen")
+    selected_passage = st.selectbox("Choose a passage:", list(practice_passages.keys()))
     
     # Display the selected passage
     st.write(practice_passages[selected_passage])
     
-    # Pre-recorded audio file URLs (stored on GitHub)
-    audio_files = {
-        "Digital Literacy": "https://github.com/MK316/Engpro-Class/raw/main/audio/digital_literacy.mp3",
-        "Language Education": "https://github.com/MK316/Engpro-Class/raw/main/audio/language_education.mp3",
-        "Teacher Qualification": "https://github.com/MK316/Engpro-Class/raw/main/audio/teacher_qualification.mp3"
-    }
+    # Arrange two buttons in a row
+    col1, col2 = st.columns(2)
     
-    # Play audio for the selected passage
-    if st.button("🔊 Play Selected Passage"):
-        st.audio(audio_files[selected_passage], format='audio/mp3')
+    with col1:
+        if st.button("🔊 Male Voice"):
+            st.audio(audio_files_male[selected_passage], format='audio/mp3')
+    
+    with col2:
+        if st.button("🔊 Female Voice"):
+            st.audio(audio_files_female[selected_passage], format='audio/mp3')
+
 
 
 
