@@ -70,22 +70,7 @@ with tabs[0]:
        reserved for formal speeches or when emphasizing specific words.
     """)
 
-    # Example sentences: Full form vs. Contraction
-    examples = {
-        "Formal Speech:": "I will not attend the meeting today.",
-        "Natural Speech:": "I won’t attend the meeting today.",
-        "Formal Speech:": "He is not coming to the party.",
-        "Natural Speech:": "He’s not coming to the party."
-    }
-    
-    st.markdown("#### 🎧 Listen to the Difference: Full vs. Contracted Speech")
-    selected_example = st.selectbox("Choose an example to hear:", list(examples.keys()), key="full_vs_contracted")
 
-    # Play full vs. contracted audio
-    if st.button("Play Example Sentence", key="example_audio"):
-        audio_data = generate_audio(examples[selected_example])
-        st.audio(audio_data.getvalue(), format="audio/mp3")
-        st.write(f"**Sentence:** {examples[selected_example]}")
     
     st.markdown("---")
     st.markdown("##### 📌 Practice contraction and full form")
