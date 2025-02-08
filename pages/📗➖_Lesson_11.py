@@ -1,11 +1,11 @@
 import streamlit as st
 
 # Create four tabs
-tabs = st.tabs(["💧 Lesson 14", "💧 Lesson 15", "💧 Lesson 16", "💧 Lesson 17"])
+tabs = st.tabs(["📗 Lesson 11", "❄️ App1", "❄️ App2", "❄️ App3"])
 
 # Content for each tab
 with tabs[0]:
-    st.markdown("### 📒 Lesson 14: ")
+    st.markdown("### 📒 Lesson 11: ")
 with tabs[1]:
     st.markdown("### 📒 Lesson 15: ")
 with tabs[2]:
