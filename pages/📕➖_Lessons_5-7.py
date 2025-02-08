@@ -269,7 +269,7 @@ with tabs[2]:
     st.markdown("#### 🎧 Practice Diphthongs by Position")
 
     for diphthong, positions in diphthong_words.items():
-    st.markdown(f"#### {diphthong}")
+        st.markdown(f"#### {diphthong}")
     col1, col2, col3 = st.columns(3)
     
     with col1:
