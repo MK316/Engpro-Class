@@ -200,6 +200,115 @@ with tabs[1]:
 # You can configure other tabs as needed
 with tabs[2]:
     st.markdown("### 📒 Lesson 3: Tense and lax ‘u’ - suit vs. soot")
+    
+    # Using columns to place images side-by-side
+    col1, col2 = st.columns(2)
+    with col1:
+        st.image("https://github.com/MK316/Engpro-Class/raw/main/images/suit.jpg",
+                 width=300, caption="Suit")
+    with col2:
+        st.image("https://github.com/MK316/Engpro-Class/raw/main/images/soot.jpg",
+                 width=300, caption="Soot")
+
+    # List of sentences to choose from
+    sentences_u = [
+        "He is cleaning the suit damaged by the fire.",
+        "He is cleaning the soot damaged by the fire."
+    ]
+
+    # Button to generate and play audio
+    if st.button("Audio", key="audio_lesson3"):
+        chosen_sentence_u = random.choice(sentences_u)
+        tts = gTTS(text=chosen_sentence_u, lang='en')
+        audio_data = io.BytesIO()
+        tts.write_to_fp(audio_data)
+        audio_data.seek(0)
+        st.audio(audio_data.getvalue(), format='audio/mp3')
+        st.caption(chosen_sentence_u)
+
+    st.markdown("#### A. Warming-up: Tense [ u ]")
+    word_lists_u = {
+        "Beginning": "None is available.",
+        "Middle": "food, lose, knew, pool, loose, June, group, room, mood, truth, Tuesday, duty, school, suit",
+        "End": "shoe, canoe, through, boo, you"
+    }
+
+    def generate_audio(word_list_u):
+        words_with_pause = ' '.join([word + '...' for word in word_list_u.split(', ')])
+        tts = gTTS(text=words_with_pause, lang='en')
+        audio_data = io.BytesIO()
+        tts.write_to_fp(audio_data)
+        audio_data.seek(0)
+        return audio_data
+
+    col_beginning, col_middle, col_end = st.columns(3)
+    with col_beginning:
+        if st.button("Play words at the Beginning", key="begin_u"):
+            audio_data = generate_audio(word_lists_u["Beginning"])
+            st.audio(audio_data.getvalue(), format='audio/mp3')
+            st.caption(word_lists_u["Beginning"])
+    with col_middle:
+        if st.button("Play words in the Middle", key="middle_u"):
+            audio_data = generate_audio(word_lists_u["Middle"])
+            st.audio(audio_data.getvalue(), format='audio/mp3')
+            st.caption(word_lists_u["Middle"])
+    with col_end:
+        if st.button("Play words at the End", key="end_u"):
+            audio_data = generate_audio(word_lists_u["End"])
+            st.audio(audio_data.getvalue(), format='audio/mp3')
+            st.caption(word_lists_u["End"])
+
+    st.markdown("### B. Warming-up: Lax [ ʊ ]")
+    lax_word_lists = {
+        "Beginning": "No words begin with this vowel in English",
+        "Middle": "cook, book, good, took, look, brook, stood, hood, woman, would, should, could, cookie, cushion, pudding, push, pull, bullet, wood",
+        "End": "No words end with lax vowel in English"
+    }
+
+    col_beginning_lax, col_middle_lax, col_end_lax = st.columns(3)
+    with col_beginning_lax:
+        if st.button("Play words at the Beginning", key="begin_lax_u"):
+            audio_data = generate_audio(lax_word_lists["Beginning"])
+            st.audio(audio_data.getvalue(), format='audio/mp3')
+            st.caption(lax_word_lists["Beginning"])
+    with col_middle_lax:
+        if st.button("Play words in the Middle", key="middle_lax_u"):
+            audio_data = generate_audio(lax_word_lists["Middle"])
+            st.audio(audio_data.getvalue(), format='audio/mp3')
+            st.caption(lax_word_lists["Middle"])
+    with col_end_lax:
+        if st.button("No words at the End", key="end_lax_u"):
+            audio_data = generate_audio(lax_word_lists["End"])
+            st.audio(audio_data.getvalue(), format='audio/mp3')
+            st.caption(lax_word_lists["End"])
+
+    st.markdown("### C. Contrast between tense and lax 'u'")
+    word_pairs_u = [
+        ("fool", "full"),
+        ("suit", "soot"),
+        ("Luke", "look"),
+        ("pool", "pull"),
+        ("wooed", "wood"),
+        ("shoed", "should"),
+        ("cooed", "could")
+    ]
+    
+    options_u = [f"Number {i+1}. {pair[0]} versus {pair[1]}" for i, pair in enumerate(word_pairs_u)]
+    selected_option_u = st.selectbox("Choose a word pair to hear the contrast:", options_u, key="contrast_u")
+    
+    def generate_contrast_audio(pair_description):
+        tts = gTTS(text=pair_description, lang='en')
+        audio_data = io.BytesIO()
+        tts.write_to_fp(audio_data)
+        audio_data.seek(0)
+        return audio_data
+    
+    if st.button("Generate and Play Audio", key="contrast_audio_u"):
+        index = options_u.index(selected_option_u)
+        pair_description = f"Number {index+1}. {word_pairs_u[index][0]} versus {word_pairs_u[index][1]}"
+        audio_data = generate_contrast_audio(pair_description)
+        st.audio(audio_data.getvalue(), format='audio/mp3')
+        st.caption(pair_description)
 
 
 with tabs[3]:
