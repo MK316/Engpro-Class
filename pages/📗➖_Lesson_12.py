@@ -21,7 +21,7 @@ with tabs[0]:
     st.markdown("##### 🎥 Watch: Understanding Rhythm in English")
     video_html = f"""
         <iframe width="300" height="200" 
-        src="{https://www.youtube.com/watch?v=CHmwmGJ3HbE}" 
+        src="https://www.youtube.com/watch?v=CHmwmGJ3HbE" 
         frameborder="0" allowfullscreen></iframe>
     """
     st.markdown(video_html, unsafe_allow_html=True)
