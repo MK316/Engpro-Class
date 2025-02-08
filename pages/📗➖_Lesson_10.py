@@ -7,15 +7,16 @@ tabs = st.tabs(["❄️ Lesson 10", "❄️ App 1", "❄️ App2", "❄️ App3"
 
 # Content for each tab
 with tabs[0]:
-    st.markdown("#### 📚 Word stress in English ")
+    st.markdown("#### 📚 Word Stress in English")
 
-    # Define text sections with clearer pronunciation for TTS
+    # Define text sections with improved clarity and structure
     text_sections = {
         "[1] Word Stress in English": """In English, word stress is typically fixed for a given word with a specific meaning. 
-        Changing the stress can alter the word's meaning. However, the position of the stress may shift when additional 
-        morphemes are added. For example, the word economy changes to economic. Another case is when the grammatical 
-        category of a word changes, such as when the verb record becomes the noun record. Additionally, stress may shift 
-        in compound words, such as greenhouse, which is formed from the words green and house.""",
+        Changing the stress can alter the word’s meaning. However, the position of stress may shift when additional 
+        morphemes are added. For example, the word *economy* changes to *economic*. 
+
+        Another case is when the grammatical category of a word changes, such as when the verb *record* becomes the noun *record*. 
+        Additionally, stress may shift in compound words, such as *greenhouse*, which is formed from the words *green* and *house*.""",
     
         "[2] How to Identify Stress": """To determine the primary stress in individual words, consult a dictionary. 
         Stress is often indicated by a symbol, such as a single quotation mark before the stressed syllable, 
@@ -23,13 +24,18 @@ with tabs[0]:
     
         "[3] Importance of Stress Placement": """Stress placement is crucial for clear English pronunciation. 
         Placing stress on the wrong syllable can confuse listeners and reduce speech intelligibility. 
-        Therefore, practicing stress placement in words and phrases is essential. In the next class, we will further 
-        explore stress patterns in phrases and sentences.""",
+        Therefore, practicing stress placement in words and phrases is essential. 
 
-        "[4] Stressed syllables are typically [1] longer in duration, [2] louder in intensity, and [3] often higher in pitch than other unstressed syllables in a word. 
-        However, it's important to note that the pitch may not always be higher 
-        and should be adjusted to convey the intended meaning of the word within a specific sentence."
+        In the next class, we will further explore stress patterns in phrases and sentences.""",
+
+        "[4] Characteristics of Stressed Syllables": """Stressed syllables are typically:
+        first, longer in duration,  
+        second, louder in intensity, and  
+        third, higher in pitch than unstressed syllables in a word.  
+
+        However, the pitch may not always be higher, as it can vary depending on the intended meaning of the word within a specific sentence."""
     }
+
     
     # Function to generate audio for a given text
     def generate_audio(text):
