@@ -24,7 +24,11 @@ with tabs[0]:
         "[3] Importance of Stress Placement": """Stress placement is crucial for clear English pronunciation. 
         Placing stress on the wrong syllable can confuse listeners and reduce speech intelligibility. 
         Therefore, practicing stress placement in words and phrases is essential. In the next class, we will further 
-        explore stress patterns in phrases and sentences."""
+        explore stress patterns in phrases and sentences.""",
+
+        "[4] Stressed syllables are typically [1] longer in duration, [2] louder in intensity, and [3] often higher in pitch than other unstressed syllables in a word. 
+        However, it's important to note that the pitch may not always be higher 
+        and should be adjusted to convey the intended meaning of the word within a specific sentence."
     }
     
     # Function to generate audio for a given text
@@ -36,7 +40,7 @@ with tabs[0]:
         return audio_data
     
     # Display sections with audio
-    st.markdown("#### 📖 Understanding Word Stress in English")
+    st.markdown("#### A. Introduction: Understanding Word Stress in English")
     
     for section, text in text_sections.items():
         st.markdown(f"### {section}")
@@ -47,7 +51,9 @@ with tabs[0]:
     
         # Display the audio player
         st.audio(audio_data.getvalue(), format="audio/mp3")
-    
+        
+      st.markdown("#### B. How to manifest stressed syllables?") 
+
 with tabs[1]:
     st.markdown("### 📒 Lesson 15: ")
 with tabs[2]:
