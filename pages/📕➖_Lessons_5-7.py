@@ -234,6 +234,61 @@ with tabs[2]:
         if st.button(f"Play {key}", key=key):
             audio_data = generate_audio(text)
             st.audio(audio_data.getvalue(), format='audio/mp3')
+
+# Warming-up practice (p.47)
+    st.markdown("---")
+    # Wordlists for diphthongs practice by position
+    diphthong_words = {
+        "[eɪ]": {
+            "Beginning": "ate, able, aim, eight",
+            "Middle": "rain, date, place, paint",
+            "End": "way, day, say, weigh"
+        },
+        "[aɪ]": {
+            "Beginning": "eye, I, ice, idea",
+            "Middle": "bite, byte, fight, kind",
+            "End": "by, buy, lie, lye, sigh"
+        },
+        "[aʊ]": {
+            "Beginning": "owl, out, hour",
+            "Middle": "loud, mouse, pronounce",
+            "End": "cow, how, now"
+        },
+        "[oʊ]": {
+            "Beginning": "own, old, over, open",
+            "Middle": "boat, spoke, both",
+            "End": "go, so, no"
+        },
+        "[ɔɪ]": {
+            "Beginning": "oil, oyster, oily",
+            "Middle": "join, foil, noise, boil",
+            "End": "toy, boy, enjoy"
+        }
+    }
+
+    st.markdown("#### 🎧 Practice Diphthongs by Position")
+
+    for diphthong, positions in diphthong_words.items():
+        st.markdown(f"#### {diphthong}")
+        col1, col2, col3 = st.columns(3)
+        
+        with col1:
+            if st.button(f"Beginning: {diphthong}", key=f"{diphthong}_beginning"):
+                audio_data = generate_audio(positions["Beginning"])
+                st.audio(audio_data.getvalue(), format='audio/mp3')
+        
+        with col2:
+            if st.button(f"Middle: {diphthong}", key=f"{diphthong}_middle"):
+                audio_data = generate_audio(positions["Middle"])
+                st.audio(audio_data.getvalue(), format='audio/mp3')
+        
+        with col3:
+            if st.button(f"End: {diphthong}", key=f"{diphthong}_end"):
+                audio_data = generate_audio(positions["End"])
+                st.audio(audio_data.getvalue(), format='audio/mp3')
+
+
+
 #######################################################################
 with tabs[3]:
     st.markdown("""
