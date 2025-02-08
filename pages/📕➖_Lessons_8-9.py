@@ -100,7 +100,44 @@ with tabs[0]:
         st.audio(audio_data.getvalue(), format='audio/mp3')
 
     st.markdown("---")
+    st.markdown("### Warming up: [ə]")
 
+    # Word lists by position
+    word_lists = {
+        "At the beginning of words": "ago, away, along, amaze, contain, suppose, asleep, upon, arrive, obtain, typical, cousin, capital, support",
+        "In the middle of words": "agony, relative, holiday, buffalo, telephone, company, belief, jacket, cement, open, believe, signal, famous, nation, certain",
+        "At the end of words": "soda, sofa, zebra, papa, believe, signal, famous, nation, certain"
+    }
+    
+    # Function to generate audio
+    def generate_audio(text):
+        tts = gTTS(text=text, lang='en')
+        audio_data = io.BytesIO()
+        tts.write_to_fp(audio_data)
+        audio_data.seek(0)
+        return audio_data
+    
+    # Layout with columns for buttons
+    st.markdown("### 🎧 Practice Words by Position")
+    col1, col2, col3 = st.columns(3)
+    
+    with col1:
+        if st.button("Beginning Position"):
+            st.write(f"**Words:** {word_lists['At the beginning of words']}")
+            audio_data = generate_audio(word_lists["At the beginning of words"])
+            st.audio(audio_data.getvalue(), format='audio/mp3')
+    
+    with col2:
+        if st.button("Middle Position"):
+            st.write(f"**Words:** {word_lists['In the middle of words']}")
+            audio_data = generate_audio(word_lists["In the middle of words"])
+            st.audio(audio_data.getvalue(), format='audio/mp3')
+    
+    with col3:
+        if st.button("End Position"):
+            st.write(f"**Words:** {word_lists['At the end of words']}")
+            audio_data = generate_audio(word_lists["At the end of words"])
+            st.audio(audio_data.getvalue(), format='audio/mp3')
 
 # Placeholder for Lesson 9
 with tabs[1]:
