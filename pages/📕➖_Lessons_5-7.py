@@ -270,25 +270,25 @@ with tabs[2]:
 
     for diphthong, positions in diphthong_words.items():
         st.markdown(f"#### {diphthong}")
-    col1, col2, col3 = st.columns(3)
+        col1, col2, col3 = st.columns(3)
     
-    with col1:
-        if st.button(f"Beginning: {diphthong}", key=f"{diphthong}_beginning"):
-            audio_data = generate_audio(positions["Beginning"])
-            st.audio(audio_data.getvalue(), format='audio/mp3')
-            st.write(f"Words: {positions['Beginning']}")  # Display the word list below
-
-    with col2:
-        if st.button(f"Middle: {diphthong}", key=f"{diphthong}_middle"):
-            audio_data = generate_audio(positions["Middle"])
-            st.audio(audio_data.getvalue(), format='audio/mp3')
-            st.write(f"Words: {positions['Middle']}")  # Display the word list below
-
-    with col3:
-        if st.button(f"End: {diphthong}", key=f"{diphthong}_end"):
-            audio_data = generate_audio(positions["End"])
-            st.audio(audio_data.getvalue(), format='audio/mp3')
-            st.write(f"Words: {positions['End']}")  # Display the word list below
+        with col1:
+            if st.button(f"Beginning: {diphthong}", key=f"{diphthong}_beginning"):
+                audio_data = generate_audio(positions["Beginning"])
+                st.audio(audio_data.getvalue(), format='audio/mp3')
+                st.write(f"Words: {positions['Beginning']}")  # Display the word list below
+    
+        with col2:
+            if st.button(f"Middle: {diphthong}", key=f"{diphthong}_middle"):
+                audio_data = generate_audio(positions["Middle"])
+                st.audio(audio_data.getvalue(), format='audio/mp3')
+                st.write(f"Words: {positions['Middle']}")  # Display the word list below
+    
+        with col3:
+            if st.button(f"End: {diphthong}", key=f"{diphthong}_end"):
+                audio_data = generate_audio(positions["End"])
+                st.audio(audio_data.getvalue(), format='audio/mp3')
+                st.write(f"Words: {positions['End']}")  # Display the word list below
 
 
 
