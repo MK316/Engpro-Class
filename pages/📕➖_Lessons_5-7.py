@@ -215,6 +215,27 @@ with tabs[2]:
     if st.button("Play Contrast Audio", key="diphthong"):
         audio_data_1 = generate_audio(diphthong_text)
         st.audio(audio_data_1.getvalue(), format='audio/mp3')
+
+    st.markdown("**game, night, how, don't, boy**")
+
+    st.markdown("### 🔍 Practice: Clear articulation of diphthongs")
+    # Sentences for audio generation
+    sentences = {
+        "A. Oh, really!": "Oh, really!",
+        "B. So, let’s get started.": "So, let’s get started.",
+        "C. Please don’t tell him.": "Please don’t tell him.",
+        "D. It’s very cold in here.": "It’s very cold in here.",
+        "E. You don’t have to.": "You don’t have to."
+    }
+
+    st.markdown("### 🎧 Practice Sentences")
+
+    # Generate audio for each sentence
+    for key, text in sentences.items():
+        st.write(key)
+        if st.button(f"Play {key}", key=key):
+            audio_data = generate_audio(text)
+            st.audio(audio_data.getvalue(), format='audio/mp3')
 #######################################################################
 with tabs[3]:
     st.markdown("""
