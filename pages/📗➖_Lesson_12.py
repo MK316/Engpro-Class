@@ -1,5 +1,6 @@
 import streamlit as st
-
+from gtts import gTTS
+import io
 # Create four tabs
 tabs = st.tabs(["📙 Lesson 12", "❄️ App", "❄️ Lesson 16", "❄️ Lesson 17"])
 
@@ -32,7 +33,7 @@ with tabs[0]:
 
     
     # Section 2: Contractions in English
-    st.markdown("#### 🔹 Contractions in Spoken English")
+    st.markdown("#### ➤ Contractions in Spoken English")
     st.write("""
     2. Contractions, formed by combining two words together into one, are commonly used in spoken English.
     """)
