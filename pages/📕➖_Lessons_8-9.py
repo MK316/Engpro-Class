@@ -26,13 +26,13 @@ with tabs[0]:
     # Define positions and sizes for circles
     positions = np.linspace(0, 10, 6)
     sizes = [100, 500] * 3  # Small-Large repetition
-    colors = ['orange'] * len(sizes)
+    colors = ['gray','orange'] * len(sizes)
     
     for pos, size, color in zip(positions, sizes, colors):
         ax.scatter(pos, 1, s=size, color=color)
     
     ax.set_xlim(-1, 11)
-    ax.set_ylim(0, 2)
+    ax.set_ylim(0, 1)
     ax.set_xticks([])
     ax.set_yticks([])
     ax.set_frame_on(False)
