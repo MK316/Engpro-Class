@@ -40,7 +40,7 @@ with tabs[0]:
     if st.button("Generate and Play Audio", key="audio_word_list"):
         audio_data = generate_audio(word_list_text)
         st.audio(audio_data.getvalue(), format='audio/mp3')
-
+    st.markdown("---")
     # Read-aloud
     st.image("https://github.com/MK316/Engpro-Class/raw/main/images/constitution.jpg")
 
@@ -68,6 +68,7 @@ with tabs[0]:
         "List 3": ("Jaguar, Tortoise, Rhinoceros, Kangaroo, Wolf", "https://github.com/MK316/Engpro-Class/raw/main/images/animal03.jpg"),
         "List 4": ("Coyote, Camel, Zebra, Buffalo, Alligator", "https://github.com/MK316/Engpro-Class/raw/main/images/animal04.jpg")
     }
+    st.markdown("---")
     
     st.markdown("### 🐳 More practice: Names")
     st.caption("Choose an Animal List to Hear the Pronunciation")
