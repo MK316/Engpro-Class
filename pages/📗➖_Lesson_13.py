@@ -21,44 +21,46 @@ with tabs[0]:
     youtube_url = "https://www.youtube.com/watch?v=Yd24_1n-8PM"
     st.video(youtube_url)
 
-    # Custom CSS to apply red color to specific parts
+
+    # Custom CSS to apply blue color to specific parts
     st.markdown("""
         <style>
-        .highlight { color: red; font-weight: bold; }
+        .highlight { color: blue; font-weight: bold; }
         </style>
     """, unsafe_allow_html=True)
-
     
-    # Define Thought Grouping Rules with Red Highlighting
+    # Define Thought Grouping Rules with Proper Formatting
     thought_grouping_examples = {
         "[1] When subjects are long (more than 2 key words), insert a short pause after the subject.": [
             "I went shopping.", 
             "The lady was my mom’s friend.", 
-            "<span style='color:red; font-weight:bold;'>My younger brother</span> / will visit me tomorrow."
+            " <span class='highlight'>My younger brother</span> / will visit me tomorrow."
         ],
         "[2] Article + Adjective + Noun = one thought group": [
             "A big dog / is chasing / a little cat.",
-            "He is / <span style='color:red; font-weight:bold;'>a brilliant student.</span>"
+            "He is / <span class='highlight'>a brilliant student.</span>"
         ],
         "[3] Auxiliary verb + main verb = one thought group": [
-            "He <span style='color:red; font-weight:bold;'>was bringing</span> a cake. (He’s bringing a cake.)",
-            "He <span style='color:red; font-weight:bold;'>has been doing</span> great. (He’s been doing great.)",
-            "I <span style='color:red; font-weight:bold;'>should have seen</span> a doctor.",
-            "<span style='color:red; font-weight:bold;'>Would you be interested</span> in my story?"
+            "He <span class='highlight'>was bringing</span> a cake. (He’s bringing a cake.)",
+            "He <span class='highlight'>has been doing</span> great. (He’s been doing great.)",
+            "I <span class='highlight'>should have seen</span> a doctor.",
+            "<span class='highlight'>Would you be interested</span> in my story?"
         ],
         "[4] Put a pause before prepositional phrases or conjunctions.": [
-            "The boy / ran / <span style='color:red; font-weight:bold;'>into the room.</span>",
-            "He devoted his life / for the peace / <span style='color:red; font-weight:bold;'>of all mankind.</span>",
-            "I can see my house / <span style='color:red; font-weight:bold;'>from here.</span>",
-            "He thought / <span style='color:red; font-weight:bold;'>that he is smart.</span>",
-            "We didn’t go / <span style='color:red; font-weight:bold;'>because it started to rain.</span>"
+            "The boy / ran / <span class='highlight'>into the room.</span>",
+            "He devoted his life / for the peace / <span class='highlight'>of all mankind.</span>",
+            "I can see my house / <span class='highlight'>from here.</span>",
+            "He thought / <span class='highlight'>that he is smart.</span>",
+            "We didn’t go / <span class='highlight'>because it started to rain.</span>"
         ]
     }
+    
     # Display Thought Grouping Rules and Example Sentences with Styling
     for rule, examples in thought_grouping_examples.items():
         st.markdown(f"#### {rule}")
         for example in examples:
             st.markdown(f"- {example}", unsafe_allow_html=True)  # Render styled text
+
 
     # Function to Generate Audio for Sentences
     def generate_audio(text):
