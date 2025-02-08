@@ -1,4 +1,3 @@
-In the following code, there are duplicated arguments or parameters to fix. Suggest which parts should be changed: import streamlit as st
 from gtts import gTTS
 from PIL import Image
 import random
