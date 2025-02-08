@@ -54,11 +54,11 @@ with tabs[0]:
             "We didn’t go / <span style='color:red; font-weight:bold;'>because it started to rain.</span>"
         ]
     }
-    # Display Thought Grouping Rules and Example Sentences
+    # Display Thought Grouping Rules and Example Sentences with Styling
     for rule, examples in thought_grouping_examples.items():
         st.markdown(f"#### {rule}")
         for example in examples:
-            st.write(f"- {example}")
+            st.markdown(f"- {example}", unsafe_allow_html=True)  # Render styled text
 
     # Function to Generate Audio for Sentences
     def generate_audio(text):
