@@ -9,7 +9,7 @@ import soundfile as sf
 
 
 # Create four tabs
-tabs = st.tabs(["📗 Lesson 11", "❄️ Pitch-contour-app", "❄️ App2", "❄️ App3"])
+tabs = st.tabs(["📗 Lesson 11", "❄️ Pitch-contour-app"])
 
 # Content for each tab
 with tabs[0]:
@@ -79,7 +79,3 @@ with tabs[1]:
     )
 
 
-with tabs[2]:
-    st.markdown("### 📒 Lesson 16: ")
-with tabs[3]:
-    st.markdown("### 📒 Lesson 17: ")
