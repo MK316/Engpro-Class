@@ -27,15 +27,15 @@ with tabs[0]:
     - helping verbs (is, was, are, were, has, can, etc.)
     """)
 
-# Example sentences
-example_sentences = {
-    "1) Today is Thursday.": "Today is Thursday.",
-    "2) The lecture will start in a moment.": "The lecture will start in a moment.",
-    "3) You’ll see him sooner or later.": "You’ll see him sooner or later.",
-    "4) I wanna be a singer.": "I wanna be a singer.",
-    "5) To tell the truth, I was quite nervous before giving the presentation.": 
-    "To tell the truth, I was quite nervous before giving the presentation."
-}
+    # Example sentences
+    example_sentences = {
+        "1) Today is Thursday.": "Today is Thursday.",
+        "2) The lecture will start in a moment.": "The lecture will start in a moment.",
+        "3) You’ll see him sooner or later.": "You’ll see him sooner or later.",
+        "4) I wanna be a singer.": "I wanna be a singer.",
+        "5) To tell the truth, I was quite nervous before giving the presentation.": 
+        "To tell the truth, I was quite nervous before giving the presentation."
+    }
 
     # Title
     st.markdown("##### 🎧 Listen to the Sentences")
