@@ -32,7 +32,7 @@ with tabs[0]:
         sizes = [(0.5, 0.3), (2, 0.3)] * 3  # Small (circle) -> Large (wide ellipse)
         colors = ['gray', 'orange'] * 3  # Small = Gray, Large = Orange
     else:
-        sizes = [(2, 0.5), (0.3, 0.3)] * 3  # Large (wide ellipse) -> Small (circle)
+        sizes = [(2, 0.3), (0.5, 0.3)] * 3  # Large (wide ellipse) -> Small (circle)
         colors = ['orange', 'gray'] * 3  # Large = Orange, Small = Gray
     
     # Plot ellipses with correct sizes and colors
