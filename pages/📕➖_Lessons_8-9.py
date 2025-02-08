@@ -8,10 +8,10 @@ tabs = st.tabs(["Lesson8", "Lesson9", "Listening"])
 
 # Lesson 8 Content
 with tabs[0]:
-    st.markdown("### 📒 Lesson 8: Unstressed vowel (schwa vowel) as in ‘ago’, ‘upon’, ‘company’")
+    st.markdown("#### 📒 Lesson 8: Unstressed vowel (schwa vowel) as in ‘ago’, ‘upon’, ‘company’")
 
     # Introduction
-    st.markdown("### Understanding Iambic and Trochaic Foot")
+    st.markdown("#### Understanding Iambic and Trochaic beat (Foot)")
     st.write("English words follow different rhythmic patterns. The **iambic foot** consists of a weak (short) syllable followed by a strong (long) syllable, while the **trochaic foot** follows a strong-weak pattern.")
 
     # User selection for foot type
