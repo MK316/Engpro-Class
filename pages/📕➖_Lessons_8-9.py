@@ -26,9 +26,9 @@ with tabs[0]:
     # Define positions and sizes for circles based on selected foot type
     positions = np.linspace(0, 10, 6)
     if foot_type == "Iambic (Weak-Strong)":
-        sizes = [200, 500] * 3  # Small-Large repetition
+        sizes = [200, (600, 300)] * 3  # Small -> Wide repetition
     else:
-        sizes = [500, 200] * 3  # Large-Small repetition
+        sizes = [(600, 300), 200] * 3  # Wide -> Small repetition
 
     if foot_type == "Iambic (Weak-Strong)":
         colors = ['gray', 'orange'] * 3  # Small-Large repetition
