@@ -20,18 +20,10 @@ with tabs[0]:
     # Examples of Iambic and Trochaic Words
     word_patterns = {
         "Iambic (Weak-Strong)": [
-            ("about", "a-BOUT"),
-            ("around", "a-ROUND"),
-            ("again", "a-GAIN"),
-            ("asleep", "a-SLEEP"),
-            ("today", "to-DAY")
+            "about", "around", "again", "asleep", "today"
         ],
         "Trochaic (Strong-Weak)": [
-            ("happy", "HAP-py"),
-            ("doctor", "DOC-tor"),
-            ("mother", "MOTH-er"),
-            ("table", "TA-ble"),
-            ("yellow", "YEL-low")
+            "happy", "doctor", "mother", "table", "yellow"
         ]
     }
 
@@ -39,18 +31,17 @@ with tabs[0]:
 
     st.markdown(f"### 🎧 Listen to {foot_type} Words")
 
-    def generate_audio(word, pronunciation):
-        text = f"{word}. {pronunciation}."
-        tts = gTTS(text=text, lang='en')
+    def generate_audio(word):
+        tts = gTTS(text=word, lang='en')
         audio_data = io.BytesIO()
         tts.write_to_fp(audio_data)
         audio_data.seek(0)
         return audio_data
 
-    for word, pronunciation in selected_words:
-        st.write(f"**{word}** - {pronunciation}")
+    for word in selected_words:
+        st.write(f"**{word}**")
         if st.button(f"Play {word}", key=f"audio_{word}"):
-            audio_data = generate_audio(word, pronunciation)
+            audio_data = generate_audio(word)
             st.audio(audio_data.getvalue(), format='audio/mp3')
 
     # Rhythmic Beat Practice
