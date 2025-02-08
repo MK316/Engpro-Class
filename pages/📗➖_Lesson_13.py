@@ -61,9 +61,9 @@ with tabs[0]:
             "<span class='highlight'>He’s been calling her </span>/ all day."
         ],
         "[6] Punctuation Rules - commas, colons, semi-colons, parentheses, etc.": [
-            "Mr. Brown, <span class='highlight'>my new neighbor</span>, called me yesterday.",
-            "Sam, <span class='highlight'>a convicted felon</span>, was sentenced to life in prison.",
-            "He is very nice; <span class='highlight'>in my opinion</span>, he is the nicest person in the classroom."
+            "Mr. Brown<span class='highlight'>, my new neighbor,</span> called me yesterday.",
+            "Sam<span class='highlight'>, a convicted felon,</span> was sentenced to life in prison.",
+            "He is very nice<span class='highlight'>; in my opinion,</span> he is the nicest person in the classroom."
         ]
     }
 
