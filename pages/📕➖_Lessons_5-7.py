@@ -14,7 +14,15 @@ with tabs[0]:
     with col2:
         st.image("https://github.com/MK316/Engpro-Class/raw/main/images/bigA.jpg",
                  width=300, caption="[ɑ]")
+    
+    st.markdown("""
+    ### 'o' spelling
+    cop, cod, lock, comedy, contrary, company, copy, oxen, option, on, odd, honest, shop, rocket, block, cot, top, fox, spot, oera, follow, constitution
 
+    ### 'a' spelling
+    father, arm, want, wallet, dark, wasp, watch, March
+    """)
+    
 
 with tabs[1]:
     st.markdown("### 📒 Lesson 6: Vowels in ‘but’, ‘bought’, ‘boat’")
