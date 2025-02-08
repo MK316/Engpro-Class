@@ -20,9 +20,9 @@ with tabs[0]:
 
 
     # 🎥 Embedded YouTube Video for Rhythm
-    st.markdown("#### 🎥 Watch: Understanding Rhythm in English")
+    st.markdown("#### 🎥 Watch: ABC song")
     youtube_url = "https://www.youtube.com/watch?v=CHmwmGJ3HbE"  # Replace with actual video link
-    st.video(youtube_url)
+    st.video(youtube_url, width=300, height=200)
     
     # Section 2: Contractions in English
     st.markdown("#### 🔹 Contractions in Spoken English")
