@@ -199,6 +199,12 @@ with tabs[1]:
 #######################################################################
 with tabs[2]:
     st.markdown("### 📒 Lesson 7: Diphthong vowels in English")
+
+    st.caption("I don't know how that boy won the game last night, but it was impressive!")
+    st.image("https://github.com/MK316/Engpro-Class/raw/main/images/diphthong.jpg", caption="I don't know how that boy won the game last night, but it was impressive!")
+
+
+
 #######################################################################
 with tabs[3]:
     st.markdown("""
