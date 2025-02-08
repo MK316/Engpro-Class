@@ -313,9 +313,14 @@ with tabs[2]:
 
 with tabs[3]:
     st.markdown("### 📒 Lesson 4: Vowel pair in ‘bed’ and ‘bad’")
-     # Display lesson header image
-    st.image("https://github.com/MK316/Engpro-Class/raw/main/images/vowel_pair_3.jpg", 
-             caption="[ɛ] bed vs. bad [æ] - head vs. had")
+     # Using columns to place images side-by-side
+    col1, col2 = st.columns(2)
+    with col1:
+        st.image("https://github.com/MK316/Engpro-Class/raw/main/images/left.jpg",
+                 width=300, caption="Image on the Left")
+    with col2:
+        st.image("https://github.com/MK316/Engpro-Class/raw/main/images/laughed.jpg",
+                 width=300, caption="Image on the Right") 
     
     st.markdown("#### Articulation Tips")
     st.write("The [æ] vowel is articulated with a lower jaw position than the [ɛ] vowel.")
