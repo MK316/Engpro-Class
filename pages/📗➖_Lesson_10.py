@@ -161,6 +161,39 @@ with tabs[0]:
     |8|| lifeguard, babysitter, movie star, bartender, saleswoman, disc Jockey|
     """)
 
+    # ✾ PRACTICE sentences
+    practice_sentences = {
+        "1. The convict escaped from jail.": "The convict escaped from jail.",
+        "2. Keep a record of your expenses.": "Keep a record of your expenses.",
+        "3. The police don’t suspect anyone.": "The police don’t suspect anyone.",
+        "4. The student will present a speech.": "The student will present a speech.",
+        "5. The present was not wrapped.": "The present was not wrapped.",
+        "6. The invalid was in the hospital.": "The invalid was in the hospital.",
+        "7. Please print your address clearly.": "Please print your address clearly.",
+        "8. Be sure to record your speech.": "Be sure to record your speech.",
+        "9. The letter is in the envelop.": "The letter is in the envelop.",
+        "10. I want to envelop the baby in my arms.": "I want to envelop the baby in my arms."
+    }
+    
+    # Title
+    st.markdown("### 🎧 Practice Sentences")
+    
+    # User selects a sentence
+    selected_practice_sentence = st.selectbox("Choose a sentence to hear the pronunciation:", list(practice_sentences.keys()))
+    
+    # Function to generate and play audio
+    def generate_audio(text):
+        tts = gTTS(text=text, lang='en')
+        audio_data = io.BytesIO()
+        tts.write_to_fp(audio_data)
+        audio_data.seek(0)
+        return audio_data
+    
+    # Button to generate and play the selected sentence
+    if st.button("Play Selected Sentence"):
+        audio_data = generate_audio(practice_sentences[selected_practice_sentence])
+        st.audio(audio_data.getvalue(), format='audio/mp3')
+        st.write(f"**Sentence:** {practice_sentences[selected_practice_sentence]}")
 with tabs[1]:
     st.markdown("### 📒 Lesson 15: ")
 with tabs[2]:
