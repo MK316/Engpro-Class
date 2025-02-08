@@ -156,5 +156,8 @@ with tabs[1]:
 # Placeholder for Listening
 with tabs[2]:
     st.markdown("### 🎧 Listening Practice")
-    st.write("- Lesson 8")
+    st.markdown("""
+    - [Lesson 8](https://engpro-listening.streamlit.app/Lesson_08)
+    - [Lesson 9](https://engpro-listening.streamlit.app/Lesson_09)
+    ")
     st.write("- Lesson 9")
