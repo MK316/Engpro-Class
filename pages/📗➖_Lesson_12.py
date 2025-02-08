@@ -88,7 +88,7 @@ with tabs[0]:
         st.write(f"**Sentence:** {examples[selected_example]}")
     
     st.markdown("---")
-    st.markdown("##### Practice contraction and full form)
+    st.markdown("##### 📌 Practice contraction and full form")
 
 
     # Define sentence pairs
