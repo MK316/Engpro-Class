@@ -126,7 +126,7 @@ with tabs[0]:
         "10. exploit (Noun/Verb)": "His book is **an inspiring exploit** of adventure and survival, but critics argue that he tried **to exploit** the story for financial gain."
     }
     # User selection for the sentence to play
-    st.markdown("### 🎧 Sentence Stress Practice")
+    st.markdown("### 🎧 Practice: Words with differenct stress")
     selected_sentence = st.selectbox("Choose a sentence to hear the pronunciation:", list(sentences.keys()))
     
     # Function to generate and play audio
