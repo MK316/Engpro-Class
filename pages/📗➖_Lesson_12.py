@@ -2,14 +2,14 @@ import streamlit as st
 from gtts import gTTS
 import io
 # Create four tabs
-tabs = st.tabs(["📙 Lesson 12", "❄️ App", "❄️ Lesson 16", "❄️ Lesson 17"])
+tabs = st.tabs(["📙 Lesson 12-1", "📙 Lesson 12-2", "❄️ Lesson 16", "❄️ Lesson 17"])
 
 # Content for each tab
 with tabs[0]:
     st.markdown("#### 📒 Lesson 12: Rhythm and Intonation in English")
 
     # Section 1: Introduction to Rhythm
-    st.markdown("#### ➤ Rhythm in English")
+    st.markdown("#### ➤ Part 1: Rhythm in English")
     st.write("""
     1. In English, certain words within a sentence must be emphasized, while others should be spoken more rapidly and weakly. 
        This creates the rhythm of English, which differs from Korean.
@@ -119,7 +119,8 @@ with tabs[0]:
             st.audio(audio_data.getvalue(), format='audio/mp3')
 
 with tabs[1]:
-    st.markdown("### 📒 Lesson 15: ")
+    # Section 1: Introduction to Rhythm
+    st.markdown("#### ➤ Part 2: English intonation")
 with tabs[2]:
     st.markdown("### 📒 Lesson 16: ")
 with tabs[3]:
