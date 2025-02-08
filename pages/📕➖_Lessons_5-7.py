@@ -169,7 +169,29 @@ with tabs[1]:
                     audio_data = generate_audio(positions['End'])
                     st.audio(audio_data.getvalue(), format='audio/mp3')
 
-
+    # Contrast Practice Section
+    st.markdown("### 🔊 Contrast Practice")
+    contrast_pairs = {
+        "1. but / bought / boat": "but, bought, boat",
+        "2. cut / caught / coat": "cut, caught, coat",
+        "3. hull / hall / hole": "hull, hall, hole",
+        "4. scull / call / coal": "scull, call, coal",
+        "5. mull / mall / mole": "mull, mall, mole",
+        "6. dug / dog": "dug, dog",
+        "7. done / dawn": "done, dawn",
+        "8. lung / long": "lung, long",
+        "9. cuff / cough": "cuff, cough",
+        "10. saw / so": "saw, so",
+        "11. law / low": "law, low",
+        "12. tall / toll": "tall, toll",
+        "13. bald / bold": "bald, bold",
+        "14. color / caller / collar": "color, caller, collar"
+    }
+    
+    selected_pair = st.selectbox("Select a contrast pair to hear:", list(contrast_pairs.keys()))
+    if st.button("Play Contrast Audio", key="contrast_audio"):
+        audio_data = generate_audio(contrast_pairs[selected_pair])
+        st.audio(audio_data.getvalue(), format='audio/mp3')
 #######################################################################
 with tabs[2]:
     st.markdown("### 📒 Lesson 7: Diphthong vowels in English")
