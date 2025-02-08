@@ -29,10 +29,10 @@ with tabs[0]:
     
     # Define correct sizes and colors
     if foot_type == "Iambic (Weak-Strong)":
-        sizes = [(0.5, 0.2), (2, 0.5)] * 3  # Small (circle) -> Large (wide ellipse)
+        sizes = [(0.5, 0.2), (2, 0.2)] * 3  # Small (circle) -> Large (wide ellipse)
         colors = ['gray', 'orange'] * 3  # Small = Gray, Large = Orange
     else:
-        sizes = [(2, 0.5), (0.5, 0.5)] * 3  # Large (wide ellipse) -> Small (circle)
+        sizes = [(2, 0.5), (0.2, 0.2)] * 3  # Large (wide ellipse) -> Small (circle)
         colors = ['orange', 'gray'] * 3  # Large = Orange, Small = Gray
     
     # Plot ellipses with correct sizes and colors
