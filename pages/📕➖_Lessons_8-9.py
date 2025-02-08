@@ -234,7 +234,26 @@ with tabs[1]:
             st.audio(audio_data.getvalue(), format='audio/mp3')
             st.caption(unstressed_words["At the end of words"])
 
+    st.markdown("---")
+    st.markdown("#### How to pronounce '-rl' together?")
 
+    # Sentences including the target words
+    sentences = {
+        "girl, sea gull": "The little girl watched a sea gull fly over the ocean.",
+        "curl, cull": "She likes to curl her hair, but sometimes she needs to cull the old strands.",
+        "world, word": "The world is full of wonders, and a single word can change everything.",
+        "pearl, purr": "She found a pearl in the shell while her cat gave a soft purr.",
+        "early": "She arrived early to get a good seat for the lecture."
+    }
+
+    # Dropdown menu to select a sentence
+    selected_sentence = st.selectbox("Choose a sentence to hear:", list(sentences.keys()))
+
+    # Button to generate and play audio
+    if st.button("Play Sentence Audio"):
+        audio_data = generate_audio(sentences[selected_sentence])
+        st.audio(audio_data.getvalue(), format='audio/mp3')
+        st.caption(sentences[selected_sentence])
 # Placeholder for Listening
 with tabs[2]:
     st.markdown("### 🎧 Listening Practice")
