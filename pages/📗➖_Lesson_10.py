@@ -69,7 +69,7 @@ with tabs[0]:
 
     st.markdown("---")    
     # Display word lists and audio buttons
-    st.markdown("#### Practice: Stress by position")
+    st.markdown("#### 🎧 Practice: Stress by position")
     col1, col2, col3 = st.columns(3)
 
     with col1:
