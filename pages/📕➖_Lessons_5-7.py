@@ -97,15 +97,37 @@ with tabs[1]:
     st.markdown("### 📒 Lesson 6: Vowels in ‘but’, ‘bought’, ‘boat’")
     st.write("Word list: cut, caught, coat")
     col3, col4, col5 = st.columns(3)
+    # Function to generate audio
+    def generate_audio(text):
+        tts = gTTS(text=text, lang='en')
+        audio_data = io.BytesIO()
+        tts.write_to_fp(audio_data)
+        audio_data.seek(0)
+        return audio_data
+    
     with col3:
-        st.image("https://github.com/MK316/Engpro-Class/raw/main/images/cut.jpg",
-                 width=300, caption="[ʌ]")
+        st.image("https://github.com/MK316/Engpro-Class/raw/main/images/cut.jpg", width=300, caption="[ʌ]")
+        sentence_cut = "The director shouted cut while filming."
+        st.write(sentence_cut)
+        if st.button("Play Audio", key="audio_cut"):
+            audio_data = generate_audio(sentence_cut)
+            st.audio(audio_data.getvalue(), format='audio/mp3')
+    
     with col4:
-        st.image("https://github.com/MK316/Engpro-Class/raw/main/images/caught.jpg",
-                 width=300, caption="[ɔ]")
+        st.image("https://github.com/MK316/Engpro-Class/raw/main/images/caught.jpg", width=300, caption="[ɔ]")
+        sentence_caught = "A cat caught a mouse."
+        st.write(sentence_caught)
+        if st.button("Play Audio", key="audio_caught"):
+            audio_data = generate_audio(sentence_caught)
+            st.audio(audio_data.getvalue(), format='audio/mp3')
+    
     with col5:
-        st.image("https://github.com/MK316/Engpro-Class/raw/main/images/coat.jpg",
-                 width=300, caption="[oʊ]")
+        st.image("https://github.com/MK316/Engpro-Class/raw/main/images/coat.jpg", width=300, caption="[oʊ]")
+        sentence_coat = "My sister got a new winter coat."
+        st.write(sentence_coat)
+        if st.button("Play Audio", key="audio_coat"):
+            audio_data = generate_audio(sentence_coat)
+            st.audio(audio_data.getvalue(), format='audio/mp3')
 
 
 
