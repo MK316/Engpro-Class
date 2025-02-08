@@ -217,7 +217,7 @@ with tabs[2]:
         st.audio(audio_data_1.getvalue(), format='audio/mp3')
 
     st.markdown("**game, night, how, don't, boy**")
-
+    st.markdown("---")
     st.markdown("#### 🔍 Practice: Clear articulation of diphthongs")
     # Sentences for audio generation
     sentences = {
