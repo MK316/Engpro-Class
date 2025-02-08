@@ -25,7 +25,7 @@ with tabs[0]:
     
     # Define positions and sizes for circles
     positions = np.linspace(0, 10, 6)
-    sizes = [200, 500] * 3  # Small-Large repetition
+    sizes = [100, 500] * 3  # Small-Large repetition
     colors = ['orange'] * len(sizes)
     
     for pos, size, color in zip(positions, sizes, colors):
