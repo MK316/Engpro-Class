@@ -67,40 +67,40 @@ stress_words = {
     "Third syllable": ["accidental", "absolute", "seventeen", "personnel", "kangaroo", "gasoline", "employee"]
 }
 
-# Function to generate and play audio
-def generate_audio(words):
-    text = ", ".join(words)
-    tts = gTTS(text=text, lang='en')
-    audio_data = io.BytesIO()
-    tts.write_to_fp(audio_data)
-    audio_data.seek(0)
-    return audio_data
-
-# Implement under tabs[0]
-
-    # Display word lists and audio buttons
-    col1, col2, col3 = st.columns(3)
+    # Function to generate and play audio
+    def generate_audio(words):
+        text = ", ".join(words)
+        tts = gTTS(text=text, lang='en')
+        audio_data = io.BytesIO()
+        tts.write_to_fp(audio_data)
+        audio_data.seek(0)
+        return audio_data
     
-    with col1:
-        st.markdown("#### 🔹 First Syllable Stress")
-        st.write(", ".join(stress_words["First syllable"]))
-        if st.button("Play First Syllable Words", key="first_syllable"):
-            audio = generate_audio(stress_words["First syllable"])
-            st.audio(audio.getvalue(), format='audio/mp3')
-
-    with col2:
-        st.markdown("#### 🔹 Second Syllable Stress")
-        st.write(", ".join(stress_words["Second syllable"]))
-        if st.button("Play Second Syllable Words", key="second_syllable"):
-            audio = generate_audio(stress_words["Second syllable"])
-            st.audio(audio.getvalue(), format='audio/mp3')
-
-    with col3:
-        st.markdown("#### 🔹 Third Syllable Stress")
-        st.write(", ".join(stress_words["Third syllable"]))
-        if st.button("Play Third Syllable Words", key="third_syllable"):
-            audio = generate_audio(stress_words["Third syllable"])
-            st.audio(audio.getvalue(), format='audio/mp3')
+    # Implement under tabs[0]
+    
+        # Display word lists and audio buttons
+        col1, col2, col3 = st.columns(3)
+        
+        with col1:
+            st.markdown("#### 🔹 First Syllable Stress")
+            st.write(", ".join(stress_words["First syllable"]))
+            if st.button("Play First Syllable Words", key="first_syllable"):
+                audio = generate_audio(stress_words["First syllable"])
+                st.audio(audio.getvalue(), format='audio/mp3')
+    
+        with col2:
+            st.markdown("#### 🔹 Second Syllable Stress")
+            st.write(", ".join(stress_words["Second syllable"]))
+            if st.button("Play Second Syllable Words", key="second_syllable"):
+                audio = generate_audio(stress_words["Second syllable"])
+                st.audio(audio.getvalue(), format='audio/mp3')
+    
+        with col3:
+            st.markdown("#### 🔹 Third Syllable Stress")
+            st.write(", ".join(stress_words["Third syllable"]))
+            if st.button("Play Third Syllable Words", key="third_syllable"):
+                audio = generate_audio(stress_words["Third syllable"])
+                st.audio(audio.getvalue(), format='audio/mp3')
 
 with tabs[1]:
     st.markdown("### 📒 Lesson 15: ")
