@@ -10,7 +10,7 @@ with tabs[1]:
     st.markdown("### 📒 Lesson 6: Vowels in ‘but’, ‘bought’, ‘boat’")
 with tabs[2]:
     st.markdown("### 📒 Lesson 7: Diphthong vowels in English")
-with tabs[3]"
+with tabs[3]:
     st.markdown("""
     - Lesson 5
     - Lesson 6
