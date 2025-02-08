@@ -13,9 +13,7 @@ with tabs[0]:
     text_sections = {
         "[1] Word Stress in English": """In English, word stress is typically fixed for a given word with a specific meaning. 
         Changing the stress can alter the word’s meaning. However, the position of stress may shift when additional 
-        morphemes are added. For example, the word *economy* changes to *economic*. 
-
-        Another case is when the grammatical category of a word changes, such as when the verb *record* becomes the noun *record*. 
+        morphemes are added. For example, the word *economy* changes to *economic*. Another case is when the grammatical category of a word changes, such as when the verb *record* becomes the noun *record*. 
         Additionally, stress may shift in compound words, such as *greenhouse*, which is formed from the words *green* and *house*.""",
     
         "[2] How to Identify Stress": """To determine the primary stress in individual words, consult a dictionary. 
