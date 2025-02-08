@@ -64,7 +64,7 @@ with tabs[0]:
         st.write(f"**Sentence:** {contractions[selected_contraction]}")
 
     # Section 3: Using Full Forms
-    st.markdown("#### 🔹 When to Use Full Forms")
+    st.markdown("#### ➤ When to Use Full Forms")
     st.write("""
     3. Using the full form of a contraction in conversation can make your speech sound unnatural, as full forms are generally 
        reserved for formal speeches or when emphasizing specific words.
@@ -86,6 +86,56 @@ with tabs[0]:
         audio_data = generate_audio(examples[selected_example])
         st.audio(audio_data.getvalue(), format="audio/mp3")
         st.write(f"**Sentence:** {examples[selected_example]}")
+    
+    st.markdown("---")
+    st.markdown("##### Practice contraction and full form)
+
+
+    # Define sentence pairs
+    sentence_pairs = {
+        "1. I’ll → I will": ("I’ll be there.", "I will be there."),
+        "2. You’re → You are": ("You’re right.", "You are right."),
+        "3. He’s → He is": ("He’s smart.", "He is smart."),
+        "4. We’ve → We have": ("We’ve been through a lot.", "We have been through a lot."),
+        "5. Isn’t → Is not": ("It isn’t right.", "It is not right."),
+        "6. Doesn’t → Does not": ("It doesn’t matter.", "It does not matter."),
+        "7. Hasn’t → Has not": ("He hasn’t eaten yet.", "He has not eaten yet."),
+        "8. That’s → That is": ("That’s right.", "That is right."),
+        "9. Won’t → Will not": ("It won’t happen again.", "It will not happen again."),
+        "10. I’m → I am": ("I’m here.", "I am here.")
+    }
+    
+    # Title
+    st.markdown("### 🎧 Contraction vs. Full Forms")
+    st.write("Select a sentence to hear the contrast between contraction and full form.")
+    
+    # User selects a sentence
+    selected_sentence = st.selectbox("Choose a sentence:", list(sentence_pairs.keys()))
+    
+    # Function to generate and play audio
+    def generate_audio(text):
+        tts = gTTS(text=text, lang='en')
+        audio_data = io.BytesIO()
+        tts.write_to_fp(audio_data)
+        audio_data.seek(0)
+        return audio_data
+    
+    # Display the selected sentence
+    if selected_sentence:
+        contraction, full_form = sentence_pairs[selected_sentence]
+    
+        st.write(f"**Contraction Form:** {contraction}")
+        st.write(f"**Full Form:** {full_form}")
+    
+        # Generate audio for both forms
+        if st.button("🔊 Play Contraction Form"):
+            audio_data = generate_audio(contraction)
+            st.audio(audio_data.getvalue(), format='audio/mp3')
+    
+        if st.button("🔊 Play Full Form"):
+            audio_data = generate_audio(full_form)
+            st.audio(audio_data.getvalue(), format='audio/mp3')
+
 
 with tabs[1]:
     st.markdown("### 📒 Lesson 15: ")
