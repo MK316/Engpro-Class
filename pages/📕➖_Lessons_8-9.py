@@ -29,8 +29,8 @@ with tabs[0]:
 
     selected_words = word_patterns[foot_type]
     words_text = ", ".join(selected_words)
-
-    st.markdown(f"### 🎧 Listen to {foot_type} Words")
+    st.markdown("---")
+    st.markdown(f"#### 1. 🎧 Listen to {foot_type} Words")
 
     def generate_audio(text):
         tts = gTTS(text=text, lang='en')
@@ -44,8 +44,9 @@ with tabs[0]:
         audio_data = generate_audio(words_text)
         st.audio(audio_data.getvalue(), format='audio/mp3')
 
+    st.markdown("---")
     # Rhythmic Beat Practice
-    st.markdown(f"### 🥁 Practice {foot_type} Foot with Beats")
+    st.markdown(f"#### 2. 🎧 Practice {foot_type} with Beats")
     st.write("Tap along with the beats to feel the rhythm pattern!")
 
     if st.button("Start Beat Practice"):
