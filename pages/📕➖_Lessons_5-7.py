@@ -203,8 +203,8 @@ with tabs[2]:
 
     diphthong_text="I don't know how that boy won the game last night, but it was impressive!"
     if st.button("Play Contrast Audio", key="diphthong"):
-        audio_data = generate_audio()
-        st.audio(audio_data.getvalue(), format='audio/mp3')
+        audio_data_1 = generate_audio()
+        st.audio(audio_data_1.getvalue(), format='audio/mp3')
 #######################################################################
 with tabs[3]:
     st.markdown("""
