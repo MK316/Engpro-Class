@@ -58,6 +58,49 @@ with tabs[0]:
     st.markdown("#### C. Words can have more than one stress")
     st.write("When a word consists of more than two syllables, it can have more than one stress. In such cases, there are primary (main) stresses and secondary stresses, which are weaker than the primary stress.")
     st.write("Primary stress is indicated with an accent mark ( ́ ) or an upper bar ( ˈ ) in dictionaries. Secondary stress is marked with an grave mark ( ̀ ) or a lower bar ( ˌ ) in dictionaries.")
+    st.image("https://github.com/MK316/Engpro-Class/raw/main/images/L10-words.jpg", caption="Practice words")
+
+# Word lists categorized by stress pattern
+stress_words = {
+    "First syllable": ["accident", "strawberry", "seventy", "personal", "elephant", "February", "salary"],
+    "Second syllable": ["acceptance", "vanilla", "examine", "translation", "gorilla", "December", "employer"],
+    "Third syllable": ["accidental", "absolute", "seventeen", "personnel", "kangaroo", "gasoline", "employee"]
+}
+
+# Function to generate and play audio
+def generate_audio(words):
+    text = ", ".join(words)
+    tts = gTTS(text=text, lang='en')
+    audio_data = io.BytesIO()
+    tts.write_to_fp(audio_data)
+    audio_data.seek(0)
+    return audio_data
+
+# Implement under tabs[0]
+
+    # Display word lists and audio buttons
+    col1, col2, col3 = st.columns(3)
+    
+    with col1:
+        st.markdown("#### 🔹 First Syllable Stress")
+        st.write(", ".join(stress_words["First syllable"]))
+        if st.button("Play First Syllable Words", key="first_syllable"):
+            audio = generate_audio(stress_words["First syllable"])
+            st.audio(audio.getvalue(), format='audio/mp3')
+
+    with col2:
+        st.markdown("#### 🔹 Second Syllable Stress")
+        st.write(", ".join(stress_words["Second syllable"]))
+        if st.button("Play Second Syllable Words", key="second_syllable"):
+            audio = generate_audio(stress_words["Second syllable"])
+            st.audio(audio.getvalue(), format='audio/mp3')
+
+    with col3:
+        st.markdown("#### 🔹 Third Syllable Stress")
+        st.write(", ".join(stress_words["Third syllable"]))
+        if st.button("Play Third Syllable Words", key="third_syllable"):
+            audio = generate_audio(stress_words["Third syllable"])
+            st.audio(audio.getvalue(), format='audio/mp3')
 
 with tabs[1]:
     st.markdown("### 📒 Lesson 15: ")
