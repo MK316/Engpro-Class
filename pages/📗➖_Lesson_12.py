@@ -144,8 +144,47 @@ with tabs[1]:
     6. There are typical intonation patterns depending on the sentence types, which can practice.
     """)
 
+    st.markdown("---")
+    st.markdown("""
+    #### Intonation by sentence types
+    ##### A. Declarative sentence (description or statement)
+    : The final rise-fall intonation is crucial to signal that your sentence is completed, serving a **‘finality’** function.
+    _Note:_Ending sentences with a rise in tone can make you appear uncertain or lacking confidence.
+    """)
+    st.image("https://github.com/MK316/Engpro-Class/raw/main/images/Inton-dec.jpg")
 
-
+    st.markdown("##### Audio samples")
+    
+    # Define the sentences
+    sentences = {
+        "a. We like ice cream.": "We like ice cream.",
+        "b. She likes to play tennis.": "She likes to play tennis.",
+        "c. I have four sisters.": "I have four sisters.",
+        "d. The boss gave him a raise.": "The boss gave him a raise."
+    }
+    
+    # Title
+    st.write("Select a sentence to hear the pronunciation.")
+    
+    # User selects a sentence
+    selected_sentence = st.selectbox("Choose a sentence:", list(sentences.keys()))
+    
+    # Function to generate and play audio
+    def generate_audio(text):
+        tts = gTTS(text=text, lang='en')
+        audio_data = io.BytesIO()
+        tts.write_to_fp(audio_data)
+        audio_data.seek(0)
+        return audio_data
+    
+    # Display the selected sentence
+    if selected_sentence:
+        st.write(f"**Sentence:** {sentences[selected_sentence]}")
+    
+        # Generate and play audio
+        if st.button("🔊 Play Sentence"):
+            audio_data = generate_audio(sentences[selected_sentence])
+            st.audio(audio_data.getvalue(), format='audio/mp3')
 with tabs[2]:
     st.markdown("Goto App: visible intonation contour")
     st.markdown("**[APP](https://mrkim21.github.io/appfolder/tts-pitch.html)**")
