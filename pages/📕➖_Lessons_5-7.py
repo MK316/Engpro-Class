@@ -69,7 +69,8 @@ with tabs[0]:
         "List 4": ("Coyote, Camel, Zebra, Buffalo, Alligator", "https://github.com/MK316/Engpro-Class/raw/main/images/animal04.jpg")
     }
     
-    st.markdown("### Choose an Animal List to Hear the Pronunciation")
+    st.markdown("### 🐳 More practice: Names")
+    st.caption("Choose an Animal List to Hear the Pronunciation")
     
     # Dropdown to select the list
     selected_list = st.selectbox("Select an animal list:", list(animal_lists.keys()))
