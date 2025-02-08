@@ -36,7 +36,7 @@ with tabs[0]:
         return audio_data
     
     # Display sections with audio
-    st.markdown("## 📖 Understanding Word Stress in English")
+    st.markdown("#### 📖 Understanding Word Stress in English")
     
     for section, text in text_sections.items():
         st.markdown(f"### {section}")
