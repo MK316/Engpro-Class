@@ -147,7 +147,19 @@ with tabs[0]:
         st.audio(audio_data.getvalue(), format='audio/mp3')
         st.write(f"**Sentence:** {sentences2[selected_sentence]}")
 
-
+    st.markdown("##### 3. Compound nouns (when two words are combined to create a new meaning): The stress is typically on the first word.")
+    st.markdown("""
+    ||A + N| Compound noun|
+    |--|--|--|
+    |1| bed room|bed room|
+    |2| green house | greenhouse|
+    |3| dark room | darkroom|
+    |4| blue bird | bluebird|
+    |5| white house | White house|
+    |6| black board| blackboard|
+    |7|| mailman, fisherman, fireman, policeman, repairman|
+    |8|| lifeguard, babysitter, movie star, bartender, saleswoman, disc Jockey|
+    """)
 
 with tabs[1]:
     st.markdown("### 📒 Lesson 15: ")
