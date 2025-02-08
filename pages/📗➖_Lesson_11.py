@@ -68,7 +68,11 @@ if st.button("Play Selected Sentence"):
 
 
 with tabs[1]:
-    st.markdown("### 📒 Lesson 15: ")
+    st.markdown("### 📒 Show pitch contour ")
+
+    https://mrkim21.github.io/appfolder/tts-pitch.html
+
+
 with tabs[2]:
     st.markdown("### 📒 Lesson 16: ")
 with tabs[3]:
