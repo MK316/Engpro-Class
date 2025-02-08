@@ -204,10 +204,10 @@ with tabs[2]:
     # Using columns to place images side-by-side
     col1, col2 = st.columns(2)
     with col1:
-        st.image("https://github.com/MK316/Engpro-Class/raw/main/images/sheep.png",
+        st.image("https://github.com/MK316/Engpro-Class/raw/main/images/suit.jpg",
                  width=300, caption="Image on the Left")
     with col2:
-        st.image("https://github.com/MK316/Engpro-Class/raw/main/images/ship.png",
+        st.image("https://github.com/MK316/Engpro-Class/raw/main/images/soot.jpg",
                  width=300, caption="Image on the Right")
 
     # List of sentences to choose from
