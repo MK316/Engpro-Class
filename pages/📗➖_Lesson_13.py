@@ -171,9 +171,6 @@ with tabs[0]:
 
     
 with tabs[1]:
-    # Display practice passages
-    st.markdown("### ✰ PRACTICE: Select a Passage to Listen")
-
 
     # Define the practice passages
     practice_passages = {
