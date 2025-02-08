@@ -177,7 +177,7 @@ with tabs[1]:
     
     # Display the selected sentence
     if selected_sentence:
-        st.write(f"**Sentence:** {sentences[selected_sentence]}")
+#        st.write(f"**Sentence:** {sentences[selected_sentence]}")
     
         # Generate and play audio
         if st.button("🔊 Play Sentence"):
