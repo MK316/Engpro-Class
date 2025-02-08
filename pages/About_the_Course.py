@@ -76,11 +76,11 @@ with tabs[3]:
     st.write("List and detail the assignments for the course here, providing due dates and submission guidelines.")
     # Bulleted List using Markdown
     st.markdown("""
-    - HW#1
-    - HW#2
-    - HW#3
-    - HW#4
-    - HW#5
+    - HW#1: Recording (diagnosis)
+    - HW#2: Transcript searching
+    - HW#3: Song practice
+    - HW#4: Recording (diagnosis)
+    - HW#5: Final recording
     """)
     st.caption("Details will be announced in time.")
 # Content for the Links tab
