@@ -70,10 +70,13 @@ if st.button("Play Selected Sentence"):
 with tabs[1]:
     st.markdown("### 📒 Show Pitch Contour")
 
-    # Create a button that links to the webpage
-    if st.button("Open Pitch Contour App"):
-        st.markdown('[Click here to view pitch contour](https://mrkim21.github.io/appfolder/tts-pitch.html)', unsafe_allow_html=True)
-
+    # Directly open the link when clicking the button
+    st.markdown(
+        '<a href="https://mrkim21.github.io/appfolder/tts-pitch.html" target="_blank">'
+        '<button style="padding:10px 20px; font-size:16px;">Open Pitch Contour App</button>'
+        '</a>', 
+        unsafe_allow_html=True
+    )
 
 
 with tabs[2]:
