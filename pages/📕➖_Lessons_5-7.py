@@ -202,8 +202,8 @@ with tabs[2]:
 #######################################################################
 with tabs[3]:
     st.markdown("""
-    - Lesson 5
-    - Lesson 6
-    - Lesson 7
+    - [Lesson 5](https://engpro-listening.streamlit.app/Lesson_05)
+    - [Lesson 6](https://engpro-listening.streamlit.app/Lesson_06)
+    - [Lesson 7](https://engpro-listening.streamlit.app/Lesson_07)
     """)
 
