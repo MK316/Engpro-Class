@@ -20,7 +20,7 @@ with tabs[0]:
 
     # 🎥 Embedded YouTube Video for Rhythm
     st.markdown("##### 🎥 Watch: Understanding Rhythm in English")
-    youtube_url = "https://www.youtube.com/watch?v=d9Ww8wwyXj0"  # Replace with actual video link
+    youtube_url = "https://www.youtube.com/watch?v=nfDQdBhCnPo"  # Replace with actual video link
     st.video(youtube_url)
 
     
