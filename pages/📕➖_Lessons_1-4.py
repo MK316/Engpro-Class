@@ -313,6 +313,94 @@ with tabs[2]:
 
 with tabs[3]:
     st.markdown("### 📒 Lesson 4: Vowel pair in ‘bed’ and ‘bad’")
+     # Display lesson header image
+    st.image("https://github.com/MK316/Engpro-Class/raw/main/images/vowel_pair_3.jpg", 
+             caption="[ɛ] bed vs. bad [æ] - head vs. had")
+    
+    st.markdown("#### Articulation Tips")
+    st.write("The [æ] vowel is articulated with a lower jaw position than the [ɛ] vowel.")
+    st.write("Try to make the jaw position similar to the Korean [a] sound ‘아’.")
+    
+    st.markdown("#### A. Warming-up: [ɛ]")
+    word_lists_e = {
+        "Beginning": "end, egg, else, effort, elephant, extra, every, error",
+        "Middle": "bed, next, west, bent, many, bread, yes, meant, measure",
+        "End": "NA"
+    }
+    
+    def generate_audio(word_list):
+        words_with_pause = ' '.join([word + '...' for word in word_list.split(', ')])
+        tts = gTTS(text=words_with_pause, lang='en')
+        audio_data = io.BytesIO()
+        tts.write_to_fp(audio_data)
+        audio_data.seek(0)
+        return audio_data
+    
+    col_beginning, col_middle, col_end = st.columns(3)
+    with col_beginning:
+        if st.button("Play words at the Beginning", key="begin_e"):
+            audio_data = generate_audio(word_lists_e["Beginning"])
+            st.audio(audio_data.getvalue(), format='audio/mp3')
+            st.caption(word_lists_e["Beginning"])
+    with col_middle:
+        if st.button("Play words in the Middle", key="middle_e"):
+            audio_data = generate_audio(word_lists_e["Middle"])
+            st.audio(audio_data.getvalue(), format='audio/mp3')
+            st.caption(word_lists_e["Middle"])
+    with col_end:
+        st.write("No words end with [ɛ] in English.")
+    
+    st.markdown("#### B. Warming-up: [æ]")
+    word_lists_ae = {
+        "Beginning": "and, apple, ask, action, absent, after, angry, animal",
+        "Middle": "cat, back, black, have, map, cap, laugh, happy, last, class",
+        "End": "NA"
+    }
+    
+    col_beginning_ae, col_middle_ae, col_end_ae = st.columns(3)
+    with col_beginning_ae:
+        if st.button("Play words at the Beginning", key="begin_ae"):
+            audio_data = generate_audio(word_lists_ae["Beginning"])
+            st.audio(audio_data.getvalue(), format='audio/mp3')
+            st.caption(word_lists_ae["Beginning"])
+    with col_middle_ae:
+        if st.button("Play words in the Middle", key="middle_ae"):
+            audio_data = generate_audio(word_lists_ae["Middle"])
+            st.audio(audio_data.getvalue(), format='audio/mp3')
+            st.caption(word_lists_ae["Middle"])
+    with col_end_ae:
+        st.write("No words end with [æ] in English.")
+    
+    st.markdown("### C. Contrast between [ɛ] and [æ]")
+    word_pairs_e_ae = [
+        ("head", "had"),
+        ("met", "mat"),
+        ("pet", "pat"),
+        ("lend", "land"),
+        ("pest", "past (passed)"),
+        ("ten", "tan"),
+        ("said", "sad"),
+        ("end", "and"),
+        ("bed", "bad"),
+        ("Ed", "add (ad)")
+    ]
+    
+    options_e_ae = [f"Number {i+1}. {pair[0]} versus {pair[1]}" for i, pair in enumerate(word_pairs_e_ae)]
+    selected_option_e_ae = st.selectbox("Choose a word pair to hear the contrast:", options_e_ae, key="contrast_e_ae")
+    
+    def generate_contrast_audio(pair_description):
+        tts = gTTS(text=pair_description, lang='en')
+        audio_data = io.BytesIO()
+        tts.write_to_fp(audio_data)
+        audio_data.seek(0)
+        return audio_data
+    
+    if st.button("Generate and Play Audio", key="contrast_audio_e_ae"):
+        index = options_e_ae.index(selected_option_e_ae)
+        pair_description = f"Number {index+1}. {word_pairs_e_ae[index][0]} versus {word_pairs_e_ae[index][1]}"
+        audio_data = generate_contrast_audio(pair_description)
+        st.audio(audio_data.getvalue(), format='audio/mp3')
+        st.caption(pair_description)
 with tabs[4]:
     st.title("Listening practice")
     st.markdown("""
