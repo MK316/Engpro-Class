@@ -235,7 +235,7 @@ with tabs[1]:
             st.caption(unstressed_words["At the end of words"])
 
     st.markdown("---")
-    st.markdown("#### How to pronounce '-rl' together?")
+    st.markdown("#### 💞 How to pronounce '-rl' together?")
 
     # Sentences including the target words
     sentences = {
