@@ -113,7 +113,7 @@ with tabs[0]:
         "10. exploit (Noun/Verb)": "His book is an inspiring exploit of adventure and survival, but critics argue that he tried to exploit the story for financial gain."
     }
 
-        sentences2 = {
+    sentences2 = {
         "1. invalid (Noun/Adjective)": "The hospital provides special care for an **invalid**, as they require constant medical attention, but his insurance claim was deemed **invalid** due to missing documents.",
         "2. desert (Noun/Verb)": "The stranded travelers feared they would be left in the desert without water, but the guide refused to desert them in such a dangerous situation.",
         "3. conflict (Noun/Verb)": "The ongoing conflict between the two nations has led to trade restrictions, yet neither side wants to conflict with international laws.",
