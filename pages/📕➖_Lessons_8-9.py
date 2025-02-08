@@ -32,7 +32,7 @@ with tabs[0]:
         ax.scatter(pos, 1, s=size, color=color)
     
     ax.set_xlim(-1, 11)
-    ax.set_ylim(0, 1)
+    ax.set_ylim(0, 2)
     ax.set_xticks([])
     ax.set_yticks([])
     ax.set_frame_on(False)
