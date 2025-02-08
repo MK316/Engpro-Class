@@ -19,9 +19,16 @@ with tabs[0]:
     st.write(" - English: A B C song (Stress-timed)")
 
     # 🎥 Embedded YouTube Video for Rhythm
-    st.markdown("##### 🎥 Watch: Understanding Rhythm in English")
+    st.markdown("##### 🎥 Watch: 가나다 송")
+    youtube_url = "https://www.youtube.com/watch?v=DzNubK1E-kk"  # Replace with actual video link
+    st.video(youtube_url)
+
+    
+    st.markdown("##### 🎥 Watch: ABC song")
     youtube_url = "https://www.youtube.com/watch?v=nfDQdBhCnPo"  # Replace with actual video link
     st.video(youtube_url)
+
+    
 
     
     # Section 2: Contractions in English
