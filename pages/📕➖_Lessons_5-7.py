@@ -95,7 +95,7 @@ with tabs[0]:
 #######################################################################
 with tabs[1]:
     st.markdown("### 📒 Lesson 6: Vowels in ‘but’, ‘bought’, ‘boat’")
-
+    st.write("Word list: cut, caught, coat")
     col3, col4, col5 = st.columns(3)
     with col3:
         st.image("https://github.com/MK316/Engpro-Class/raw/main/images/cut.jpg",
