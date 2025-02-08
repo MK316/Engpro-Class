@@ -55,6 +55,10 @@ with tabs[0]:
     st.image("https://github.com/MK316/Engpro-Class/raw/main/images/banana-spec.jpg", caption="Spectrogram of 'banana'")
 
 
+    st.markdown("#### C. Words can have more than one stress")
+    st.write("When a word consists of more than two syllables, it can have more than one stress. In such cases, there are primary (main) stresses and secondary stresses, which are weaker than the primary stress.")
+    st.write("Primary stress is indicated with an accent mark ( ́ ) or an upper bar ( ˈ ) in dictionaries. Secondary stress is marked with an grave mark ( ̀ ) or a lower bar ( ˌ ) in dictionaries.")
+
 with tabs[1]:
     st.markdown("### 📒 Lesson 15: ")
 with tabs[2]:
