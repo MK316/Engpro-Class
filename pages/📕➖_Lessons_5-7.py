@@ -44,16 +44,17 @@ with tabs[0]:
     # Read-aloud
     st.image("https://github.com/MK316/Engpro-Class/raw/main/images/constitution.jpg")
 
-    text1 = """The Constitution of the United States is the supreme law of the United States of
-    America. The Constitution, originally comprising seven articles, delineates the
-    national frame of government. Its first three articles entrench the doctrine of the
-    separation of powers, whereby the federal government is divided into three
-    branches: the legislative, consisting of the bicameral Congress; the executive,
-    consisting of the President; and the judicial, consisting of the Supreme Court and other federal
-    courts. Articles Four, Five and Six entrench concepts of federalism, describing the rights and
-    responsibilities of state governments and of the states in relationship to the federal
-    government. Article Seven establishes the procedure subsequently used by the thirteen States
-    to ratify it."""
+    text1 = """The Constitution of the United States is the supreme law of the United States of America. 
+    The Constitution, originally comprising seven articles, delineates the national frame of government. 
+    Its first three articles entrench the doctrine of the separation of powers, 
+    whereby the federal government is divided into three branches: 
+    the legislative, consisting of the bicameral Congress; the executive,
+    consisting of the President; and the judicial, 
+    consisting of the Supreme Court and other federal courts. 
+    Articles Four, Five and Six entrench concepts of federalism, 
+    describing the rights and in relationship to the federal responsibilities of state governments and of the states government.
+    Article Seven establishes the procedure subsequently used by the thirteen States to ratify it."""
+    
 
     if st.button("Generate and Play Audio", key="text1"):
         audio_data = generate_audio(text1)
