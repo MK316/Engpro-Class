@@ -121,7 +121,33 @@ with tabs[0]:
 with tabs[1]:
     # Section 1: Introduction to Rhythm
     st.markdown("#### ➤ Part 2: English intonation")
+
+
+    st.markdown("""
+    1. When learning English, we often bring our native intonation and rhythm into our English speech, frequently resulting in a foreign accent.
+    2. Intonation refers to the melody, rise, and fall of the voice when speaking. Each language uses pitch fluctuation differently, creating unique melody and intonation patterns.
+    3. By mastering English intonation patterns, we can sound more like native speakers and communicate more effectively.
+    """)
+    4. Korean intonation to compare: 
+
+    Example)
+    """)
+
+    st.image("https://github.com/MK316/Engpro-Class/blob/main/images/LHLH.jpg", caption="Seoul dialect")
+
+    st.markdown("""
+    5. English intonation patterns are formed by the alternation of stress and accent in a sentence. By placing stress and accent on the appropriate words according to their meanings, you can learn these patterns. 
+
+    - Geoge Washington
+    - Bill Clinton
+    - George Bush
+
+    6. There are typical intonation patterns depending on the sentence types, which can practice.
+    """)
+
+
+
 with tabs[2]:
-    st.markdown("### 📒 Lesson 16: ")
+    st.markdown("Goto App: visible intonation contour")
 with tabs[3]:
-    st.markdown("### 📒 Lesson 17: ")
+    st.markdown("### 📒 Intonation-by-sentence-type")
