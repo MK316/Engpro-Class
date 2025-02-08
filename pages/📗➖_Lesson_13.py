@@ -26,24 +26,24 @@ with tabs[0]:
         "[1] When subjects are long (more than 2 key words), insert a short pause after the subject.": [
             "I went shopping.", 
             "The lady was my mom’s friend.", 
-            "My younger brother / will visit me tomorrow."
+            "**My younger brother** / will visit me tomorrow."
         ],
         "[2] Article + Adjective + Noun = one thought group": [
             "A big dog / is chasing / a little cat.",
-            "He is / a brilliant student."
+            "He is / **a brilliant student.**"
         ],
         "[3] Auxiliary verb + main verb = one thought group": [
-            "He was bringing a cake. (He’s bringing a cake.)",
-            "He has been doing great. (He’s been doing great.)",
-            "I should have seen a doctor.",
-            "Would you be interested in my story?"
+            "He **was bringing** a cake. (He’s bringing a cake.)",
+            "He **has been doing** great. (He’s been doing great.)",
+            "I **should have seen** a doctor.",
+            "**Would you be interested** in my story?"
         ],
         "[4] Put a pause before prepositional phrases or conjunctions.": [
-            "The boy / ran / into the room.",
-            "He devoted his life / for the peace / of all mankind.",
-            "I can see my house / from here.",
-            "He thought / that he is smart.",
-            "We didn’t go / because it started to rain."
+            "The boy / ran / **into the room.**",
+            "He devoted his life / for the peace / **of all mankind.**",
+            "I can see my house / **from here.**",
+            "He thought / **that he is smart.**",
+            "We didn’t go / **because it started to rain.**"
         ]
     }
 
