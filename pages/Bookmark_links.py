@@ -4,7 +4,7 @@ def main():
     st.title('Online Resources')
     
     # Create tabs
-    tab1, tab2, tab3 = st.tabs(["💻 Online materials", " 📌 Digital tools", "💿 Pronunciation Lessons"])
+    tab1, tab2, tab3 = st.tabs(["💻 Online materials", " 📌 Digital tools", ,"Customized apps","💿 Pronunciation Lessons"])
     
     with tab1:
         st.header('Classroom Connections')
@@ -35,13 +35,35 @@ def main():
 
 
     with tab2:
-        st.header('Additional Resources')
-        st.subheader('Further Explore')
-        st.write("Check out more tools and guides to assist you in advancing your English language skills.")
-        st.markdown("Here you can find extra materials, webinars, and community forums to support your learning journey.")
-    
+        st.header(Digital & AI tools')
+        st.write("Get familiar with digital tools online")
+        st.markdown("---")
+        # Dictionary of useful links and their descriptions
+        resources = {
+            "🔎 YouGlish": {
+                "url": "https://youglish.com/",
+                "description": "Use YouTube videos to practice pronunciation in context and see how words are used in real-life speeches."
+            },
+            "🔎 Speechnotes": {
+                "url": "https://speechnotes.co",
+                "description": "a web-based voice recognition tool that transforms speech into text, perfect for students and professionals."
+            },
+            "Elevenlabs": {
+                "url": "https://elevenlabs.io",
+                "description": "A voice synthesis platform that enables realistic and customizable voice generation for various applications."
+            }
+        }
+
+        # Display links and descriptions
+        for name, info in resources.items():
+            st.markdown(f"##### {name}")
+            st.markdown(f"[Visit the site]({info['url']})")
+            st.markdown(info['description'])
+            st.write(" ")  # Add some space between entries
     
     with tab3:
+        st.write("TBA")
+    with tab4:
         st.header('Explore the resources below')
         st.write("to improve your English pronunciation skills.")
         st.markdown("---")
