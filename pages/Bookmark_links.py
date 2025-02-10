@@ -1,7 +1,7 @@
 import streamlit as st
 
 def main():
-    st.title(Online Resources')
+    st.title('Online Resources')
     
     # Create tabs
     tab1, tab2, tab3 = st.tabs(["Online materials", "Digital tools", "Pronunciation Lessons"])
