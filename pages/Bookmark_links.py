@@ -64,7 +64,7 @@ def main():
     
     with tab3:
         st.header('Explore More Applications')
-        st.subheader('Check out these tools to enhance your learning experience:')
+        st.caption('To use the following apps, follow the in-class instruction:')
         
         # Correctly formatted buttons
         if st.button('Go to Speechnotes', key='btn1'):
