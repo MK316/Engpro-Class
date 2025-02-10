@@ -4,7 +4,8 @@ def main():
     st.title('English Pronunciation Practice Resources')
 
     st.header('Welcome to English Pronunciation Practice Links!')
-    st.subheader('Explore the resources below to improve your English pronunciation skills.')
+    st.subheader('Explore the resources below') 
+    st.write("to improve your English pronunciation skills.")
 
     # Dictionary of useful links and their descriptions
     resources = {
