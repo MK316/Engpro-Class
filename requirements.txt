@@ -10,3 +10,4 @@ gtts
 pydub
 librosa
 soundfile
+webbrowser
