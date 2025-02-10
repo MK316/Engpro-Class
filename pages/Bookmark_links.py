@@ -11,7 +11,7 @@ def main():
         st.subheader('Begin Your Journey Here')
         st.write("Discover how you can improve your English pronunciation skills with our curated resources and tips.")
 
-    with tab2
+    with tab2:
         st.header('Additional Resources')
         st.subheader('Further Explore')
         st.write("Check out more tools and guides to assist you in advancing your English language skills.")
