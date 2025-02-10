@@ -6,7 +6,7 @@ def main():
     st.header('Welcome to English Pronunciation Practice Links!')
     st.subheader('Explore the resources below') 
     st.write("to improve your English pronunciation skills.")
-
+    st.markdown("---")
     # Dictionary of useful links and their descriptions
     resources = {
         "🔎 YouGlish": {
