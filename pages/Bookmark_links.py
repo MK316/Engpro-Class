@@ -7,9 +7,32 @@ def main():
     tab1, tab2, tab3 = st.tabs(["💻 Online materials", " 📌 Digital tools", "💿 Pronunciation Lessons"])
     
     with tab1:
-        st.header('Welcome!')
-        st.subheader('Begin Your Journey Here')
-        st.write("Discover how you can improve your English pronunciation skills with our curated resources and tips.")
+        st.header('Classroom Connections')
+        st.write("Web links commonly used")
+        st.markdown("---")
+        # Dictionary of useful links and their descriptions
+        resources = {
+            "🔎 GNU LMS": {
+                "url": "https://rec.ac.kr/gnu",
+                "description": "GNU 학습시스템"
+            },
+            "🔎 Padlet for activities": {
+                "url": "https://padlet.com/mirankim316/S25Engpro",
+                "description": "Files to upload and share"
+            },
+            "Dictionary.com": {
+                "url": "https://dictionary.com",
+                "description": "Online dictionary."
+            }
+        }
+
+        # Display links and descriptions
+        for name, info in resources.items():
+            st.markdown(f"##### {name}")
+            st.markdown(f"[Visit the site]({info['url']})")
+            st.markdown(info['description'])
+            st.write(" ")  # Add some space between entries
+
 
     with tab2:
         st.header('Additional Resources')
