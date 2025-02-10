@@ -70,7 +70,7 @@ def main():
             a.button_link {
                 display: inline-block;
                 text-align: center;
-                background-color: #FF1B1B;
+                background-color: #009999;
                 color: white;
                 padding: 10px 20px;
                 text-decoration: none;
