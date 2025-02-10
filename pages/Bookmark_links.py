@@ -71,24 +71,26 @@ def main():
             webbrowser.open('https://speechnotes.co')
         if st.button('App2. Loanword English pronunciation', key='btn2'):
             webbrowser.open('https://elevenlabs.io')
-        if st.button('App3 OXford 5K', key='btn3'):
+        if st.button('App3. OXford 5K', key='btn3'):
             webbrowser.open('https://www.bbc.co.uk/learningenglish')
         
         st.markdown("""
             <style>
-            div.stButton > button:first-child {
+            div.stButton > button:contains('Speechnotes') {
                 background-color: #4CAF50;
                 color: white;
             }
-            div.stButton > button:nth-child(2) {
+            div.stButton > button:contains('ElevenLabs') {
                 background-color: #2196F3;
                 color: white;
             }
-            div.stButton > button:nth-child(3) {
+            div.stButton > button:contains('BBC Learning') {
                 background-color: #f44336;
                 color: white;
             }
-            </style>""", unsafe_allow_html=True)
+            </style>
+            """, unsafe_allow_html=True)
+        
     with tab4:
         st.header('Explore the resources below')
         st.write("to improve your English pronunciation skills.")
