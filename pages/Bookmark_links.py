@@ -48,7 +48,7 @@ def main():
                 "url": "https://speechnotes.co",
                 "description": "a web-based voice recognition tool that transforms speech into text, perfect for students and professionals."
             },
-            "Elevenlabs": {
+            "🔎 Elevenlabs": {
                 "url": "https://elevenlabs.io",
                 "description": "A voice synthesis platform that enables realistic and customizable voice generation for various applications."
             }
