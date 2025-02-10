@@ -12,7 +12,7 @@ def main():
             "url": "https://youglish.com/",
             "description": "Use YouTube videos to practice pronunciation in context and see how words are used in real-life speeches."
         },
-        "Minimal Pairs Practice": {
+        "🔎 Minimal Pairs Practice": {
             "url": "https://www.englishclub.com/pronunciation/minimal-pairs.htm",
             "description": "Interactive exercises to help you master minimal pairs and improve your ability to distinguish between similar sounds."
         },
@@ -32,7 +32,7 @@ def main():
 
     # Display links and descriptions
     for name, info in resources.items():
-        st.markdown(f"##### 🔎 {name}")
+        st.markdown(f"##### {name}")
         st.markdown(f"[Visit the site]({info['url']})")
         st.markdown(info['description'])
         st.write(" ")  # Add some space between entries
