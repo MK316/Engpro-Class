@@ -8,13 +8,12 @@ def main():
 
     # Dictionary of useful links and their descriptions
     resources = {
-        "YouGlish": {
+        "🔎 YouGlish": {
             "url": "https://youglish.com/",
             "description": "Use YouTube videos to practice pronunciation in context and see how words are used in real-life speeches."
         "Minimal Pairs Practice": {
             "url": "https://www.englishclub.com/pronunciation/minimal-pairs.htm",
             "description": "Interactive exercises to help you master minimal pairs and improve your ability to distinguish between similar sounds."
-        },
         },
         "BBC Learning English": {
             "url": "https://www.bbc.co.uk/learningenglish/english/features/pronunciation",
