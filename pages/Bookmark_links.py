@@ -69,9 +69,9 @@ def main():
         # Correctly formatted buttons
         if st.button('App1: Pronunciation feedback', key='btn1'):
             webbrowser.open('https://speechnotes.co')
-        if st.button('App2. ', key='btn2'):
+        if st.button('App2. Loanword English pronunciation', key='btn2'):
             webbrowser.open('https://elevenlabs.io')
-        if st.button('App3', key='btn3'):
+        if st.button('App3 OXford 5K', key='btn3'):
             webbrowser.open('https://www.bbc.co.uk/learningenglish')
         
         st.markdown("""
