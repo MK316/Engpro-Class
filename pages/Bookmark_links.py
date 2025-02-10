@@ -4,7 +4,7 @@ def main():
     st.title('Online Resources')
     
     # Create tabs
-    tab1, tab2, tab3 = st.tabs(["Online materials", "Digital tools", "Pronunciation Lessons"])
+    tab1, tab2, tab3 = st.tabs(["💻 Online materials", " 📌 Digital tools", "💿 Pronunciation Lessons"])
     
     with tab1:
         st.header('Welcome!')
