@@ -63,7 +63,7 @@ def main():
             st.write(" ")  # Add some space between entries
     
     with tab3:
-        st.header('Explore More Applications')
+        st.header('Customized Applications')
         # CSS to style the markdown links as buttons
         button_style = """
         <style>
@@ -90,7 +90,7 @@ def main():
         st.markdown(button_style, unsafe_allow_html=True)
     
         # Creating clickable markdown buttons
-        st.markdown('<a href="https://speechnotes.co" class="button_link" target="_blank">Pronunciation Feedback</a>', unsafe_allow_html=True)
+        st.markdown('<a href="https://MK-316-pronunciationfeedback.hf.co" class="button_link" target="_blank">Pronunciation Feedback</a>', unsafe_allow_html=True)
         st.markdown('<a href="https://elevenlabs.io" class="button_link" target="_blank">Loanword English Pronunciation</a>', unsafe_allow_html=True)
         st.markdown('<a href="https://www.bbc.co.uk/learningenglish" class="button_link" target="_blank">Oxford 5K</a>', unsafe_allow_html=True)
 
