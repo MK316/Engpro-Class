@@ -64,31 +64,35 @@ def main():
     
     with tab3:
         st.header('Explore More Applications')
-        st.caption('To use the following apps, follow the in-class instruction:')
-        
-        # Correctly formatted buttons
-        if st.button('App1: Pronunciation feedback', key='btn1'):
-            webbrowser.open('https://speechnotes.co')
-        if st.button('App2: Loanword English pronunciation', key='btn2'):
-            webbrowser.open('https://elevenlabs.io')
-        if st.button('App3: OXford 5K', key='btn3'):
-            webbrowser.open('https://www.bbc.co.uk/learningenglish')
-        
-        st.markdown("""
-            <style>
-            div.stButton > button:first-child {
-                background-color: #4CAF50;
+        # CSS to style the markdown links as buttons
+        button_style = """
+        <style>
+            a.button_link {
+                display: inline-block;
+                text-align: center;
+                background-color: #FF4B4B;
                 color: white;
+                padding: 10px 20px;
+                text-decoration: none;
+                border-radius: 5px;
+                border: none;
+                cursor: pointer;
+                font-size: 16px;
+                transition: background-color 0.3s;
             }
-            div.stButton > button:nth-child(2) {
-                background-color: #2196F3;
-                color: white;
+            a.button_link:hover {
+                background-color: #FF7878;
             }
-            div.stButton > button:nth-child(3) {
-                background-color: #f44336;
-                color: white;
-            }
-            </style>""", unsafe_allow_html=True)
+        </style>
+        """
+    
+        # Apply the CSS
+        st.markdown(button_style, unsafe_allow_html=True)
+    
+        # Creating clickable markdown buttons
+        st.markdown('<a href="https://speechnotes.co" class="button_link" target="_blank">Pronunciation Feedback</a>', unsafe_allow_html=True)
+        st.markdown('<a href="https://elevenlabs.io" class="button_link" target="_blank">Loanword English Pronunciation</a>', unsafe_allow_html=True)
+        st.markdown('<a href="https://www.bbc.co.uk/learningenglish" class="button_link" target="_blank">Oxford 5K</a>', unsafe_allow_html=True)
 
         
     with tab4:
