@@ -21,7 +21,7 @@ def main():
                 "url": "https://padlet.com/mirankim316/S25Engpro",
                 "description": "Files to upload and share"
             },
-            "🍀 TED": {
+            "🌈 TED": {
                 "url": "https://ted.com",
                 "description": "Listen to public talks (& Choose your final presentation)"
             },
