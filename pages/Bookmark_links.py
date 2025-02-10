@@ -90,9 +90,10 @@ def main():
         st.markdown(button_style, unsafe_allow_html=True)
     
         # Creating clickable markdown buttons
-        st.markdown('<a href="https://MK-316-pronunciationfeedback.hf.co" class="button_link" target="_blank">Pronunciation Feedback</a>', unsafe_allow_html=True)
-        st.markdown('<a href="https://elevenlabs.io" class="button_link" target="_blank">Loanword English Pronunciation</a>', unsafe_allow_html=True)
-        st.markdown('<a href="https://www.bbc.co.uk/learningenglish" class="button_link" target="_blank">Oxford 5K</a>', unsafe_allow_html=True)
+        st.markdown('<a href="https://mk-316-accuracyfeedback.hf.space" class="button_link" target="_blank">Accuracy Feedback</a>', unsafe_allow_html=True)
+        st.markdown('<a href="https://https://mk-316-pronunciationfeedback.hf.space/" class="button_link" target="_blank">Pronunciation Feedback</a>', unsafe_allow_html=True)
+        st.markdown('<a href="https://mk-316-korean-english.hf.space" class="button_link" target="_blank">Loanword English Pronunciation</a>', unsafe_allow_html=True)
+        st.markdown('<a href="https://mk-316-oxford5k.hf.space" class="button_link" target="_blank">Oxford 5K</a>', unsafe_allow_html=True)
 
         
     with tab4:
