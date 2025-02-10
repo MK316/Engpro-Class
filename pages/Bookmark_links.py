@@ -67,11 +67,11 @@ def main():
         st.caption('To use the following apps, follow the in-class instruction:')
         
         # Correctly formatted buttons
-        if st.button('Go to Speechnotes', key='btn1'):
+        if st.button('App1: Pronunciation feedback', key='btn1'):
             webbrowser.open('https://speechnotes.co')
-        if st.button('Visit ElevenLabs', key='btn2'):
+        if st.button('App2. ', key='btn2'):
             webbrowser.open('https://elevenlabs.io')
-        if st.button('Access BBC Learning', key='btn3'):
+        if st.button('App3', key='btn3'):
             webbrowser.open('https://www.bbc.co.uk/learningenglish')
         
         st.markdown("""
