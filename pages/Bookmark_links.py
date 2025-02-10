@@ -35,7 +35,7 @@ def main():
 
 
     with tab2:
-        st.header(Digital & AI tools')
+        st.header('Digital & AI tools')
         st.write("Get familiar with digital tools online")
         st.markdown("---")
         # Dictionary of useful links and their descriptions
