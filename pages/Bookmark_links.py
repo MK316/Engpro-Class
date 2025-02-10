@@ -1,4 +1,5 @@
 import streamlit as st
+import webbrowser
 
 def main():
     st.title('Online Resources')
