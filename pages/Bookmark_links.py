@@ -76,20 +76,20 @@ def main():
         
         st.markdown("""
             <style>
-            div.stButton > button:contains('Speechnotes') {
+            div.stButton > button:first-child {
                 background-color: #4CAF50;
                 color: white;
             }
-            div.stButton > button:contains('ElevenLabs') {
+            div.stButton > button:nth-child(2) {
                 background-color: #2196F3;
                 color: white;
             }
-            div.stButton > button:contains('BBC Learning') {
+            div.stButton > button:nth-child(3) {
                 background-color: #f44336;
                 color: white;
             }
-            </style>
-            """, unsafe_allow_html=True)
+            </style>""", unsafe_allow_html=True)
+
         
     with tab4:
         st.header('Explore the resources below')
