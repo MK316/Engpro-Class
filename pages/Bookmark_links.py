@@ -66,22 +66,14 @@ def main():
         st.header('Explore More Applications')
         st.subheader('Check out these tools to enhance your learning experience:')
         
-        # Button for the first application with a blue color
-        if st.button('Go to Speechnotes', key='btn1', on_click=None, args=None, kwargs=None, help=None, disabled=False, label_visibility="visible"):
-            st.write('You are redirected to Speechnotes.')
-            st.experimental_singleton('https://speechnotes.co')
-    
-        # Button for the second application with a green color
-        if st.button('Visit ElevenLabs', key='btn2', on_click=None, args=None, kwargs=None, help=None, disabled=False, label_visibility="visible"):
-            st.write('You are redirected to ElevenLabs.')
-            st.experimental_singleton('https://elevenlabs.io')
-    
-        # Button for the third application with a red color
-        if st.button('Access BBC Learning', key='btn3', on_click=None, args=None, kwargs=None, help=None, disabled=False, label_visibility="visible"):
-            st.write('You are redirected to BBC Learning English.')
-            st.experimental_singleton('https://www.bbc.co.uk/learningenglish')
-    
-        # Custom CSS to style the buttons
+        # Correctly formatted buttons
+        if st.button('Go to Speechnotes', key='btn1'):
+            webbrowser.open('https://speechnotes.co')
+        if st.button('Visit ElevenLabs', key='btn2'):
+            webbrowser.open('https://elevenlabs.io')
+        if st.button('Access BBC Learning', key='btn3'):
+            webbrowser.open('https://www.bbc.co.uk/learningenglish')
+        
         st.markdown("""
             <style>
             div.stButton > button:first-child {
@@ -97,7 +89,6 @@ def main():
                 color: white;
             }
             </style>""", unsafe_allow_html=True)
-
     with tab4:
         st.header('Explore the resources below')
         st.write("to improve your English pronunciation skills.")
