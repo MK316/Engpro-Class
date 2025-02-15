@@ -10,4 +10,5 @@ gtts
 pydub
 librosa
 soundfile
+selenium
 
