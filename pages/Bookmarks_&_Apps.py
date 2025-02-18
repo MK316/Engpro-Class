@@ -9,7 +9,7 @@ def main():
     
     with tab1:
         st.header('Classroom Connections')
-        st.write("Web links commonly used")
+        st.write("Web links frequently used in class")
         st.markdown("---")
         # Dictionary of useful links and their descriptions
         resources = {
