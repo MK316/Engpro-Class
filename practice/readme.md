@@ -20,7 +20,7 @@ Introduce yourself in public
 ---
 8. Reflective and Inspirational Introduction:_"Good afternoon, I’m John Smith, a proud resident of Jinju, now embarking on my journey here at GNU in the Department of English Education. I chose to study English teaching because I believe in the transformative power of education. Coming from a place steeped in tradition and innovation, I aim to blend those values into my teaching approach.”_
 ---
-9. Detailed and Professional Introduction:_"Hello everyone, I'm John Smith from Jinju. I’m currently a freshman at GNU, majoring in English Education. I’ve always been fascinated by the way languages can connect people and I’m eager to explore this further as I train to become an English teacher. I’m committed to applying my learnings to foster a dynamic and inclusive learning environment.”_
+9. Detailed and Professional Introduction:_"Hello everyone, I'm John Smith from Jinju. I’m currently a freshman at GNU, majoring in English Education. I’ve always been fascinated by the way languages can connect people and I’m eager to explore this further as I train to become an English teacher. I’m committed to applying my learnings to foster a dynamic and inclusive learning environment. I'm really looking forward to meeting all of you and learning together!”_
 ---
 10. Enthusiastic and Engaging Introduction:_"Hey there! I’m John Smith, fresh into my first year at GNU in the Department of English Education. Hailing from the vibrant city of Jinju, I bring with me a passion for English and a dream to inspire future generations. I’m looking forward to collaborating with all of you, sharing ideas, and growing together in this exciting phase of our lives."_
 
