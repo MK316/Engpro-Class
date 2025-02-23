@@ -139,7 +139,7 @@ with tabs[0]:
     st.markdown("### [6]")
         st.write("test")
         audio_url = "https://github.com/MK316/Engpro-Class/raw/main/audio/thoughgroup_M.mp3"
-        st.audio(audio_url, format='audio/mp3')
+    st.audio(audio_url, format='audio/mp3')
 
 
     st.markdown("---")
