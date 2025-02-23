@@ -75,7 +75,7 @@ with tabs[2]:
 
 # Tab 3: Open External Website
 with tabs[3]:
-    st.caption("Click + sign to make a new post.")
+    st.markdown("Click + sign to make a new post. [Click here to open in a new tab](https://padlet.com/mirankim316/S25Engpro)")
     # URL you want to embed
     url_to_embed2 = "https://padlet.com/mirankim316/S25Engpro"
     
