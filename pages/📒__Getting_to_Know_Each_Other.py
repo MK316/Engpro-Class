@@ -32,9 +32,11 @@ tabs = st.tabs(["📖 Scripts", "🔎 Introduce_yourself_audio", "🌀 TTS app",
 
 # Tab 0: Scripts
 with tabs[0]:
-    st.title("Scripts (example)")
-    url = "https://github.com/MK316/Engpro-Class/blob/main/practice/readme.md"  # Replace with your actual URL
-    st.markdown(f"[Visit GitHub Scripts]({url})", unsafe_allow_html=True)
+    # URL you want to embed
+    url_to_embed1 = "https://github.com/MK316/Engpro-Class/blob/main/practice/readme.md"
+    
+    # Embed the URL using an iframe
+    components.iframe(url_to_embed1, width=600, height=600, scrolling=True)
 
 # Tab 1: Introduce Yourself with Audio
 with tabs[1]:
@@ -62,8 +64,8 @@ with tabs[2]:
 
 # Tab 3: Open External Website
 with tabs[3]:
-    st.title("Visit an External Website")
-    st.markdown("Click the button below to visit the specified website.")
-    if st.button("Go to Website", key='website'):
-        st.experimental_rerun()  # To avoid duplicate element issues
-        st.markdown("<script>window.open('https://www.example.com');</script>", unsafe_allow_html=True)
+    # URL you want to embed
+    url_to_embed2 = "https://padlet.com/mirankim316/S25Engpro"
+    
+    # Embed the URL using an iframe
+    components.iframe(url_to_embed2, width=600, height=600, scrolling=True)
