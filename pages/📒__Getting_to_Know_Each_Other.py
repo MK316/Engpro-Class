@@ -2,7 +2,7 @@ import streamlit as st
 from gtts import gTTS
 from io import BytesIO
 import streamlit.components.v1 as components
-
+import requests
 
 # Example dictionary mapping indices to text and audio URLs
 introductions = {
