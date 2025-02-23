@@ -35,7 +35,7 @@ tabs = st.tabs(["📖 Scripts", "🔎 Introduce_yourself_audio", "🌀 TTS app",
 # Tab 0: Scripts
 with tabs[0]:
     # URL of the raw markdown file on GitHub
-    url_to_embed1 = "https://github.com/MK316/Engpro-Class/blob/raw/practice/readme.md"
+    url_to_embed1 = "https://raw.githubusercontent.com/MK316/Engpro-Class/refs/heads/main/practice/readme.md"
     
     try:
         response = requests.get(url_to_embed1)
