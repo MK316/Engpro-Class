@@ -34,11 +34,20 @@ tabs = st.tabs(["📖 Scripts", "🔎 Introduce_yourself_audio", "🌀 TTS app",
 
 # Tab 0: Scripts
 with tabs[0]:
-    # URL you want to embed
+    # URL of the raw markdown file on GitHub
     url_to_embed1 = "https://github.com/MK316/Engpro-Class/blob/raw/practice/readme.md"
     
-    # Embed the URL using an iframe
-    components.iframe(url_to_embed1, width=600, height=600, scrolling=True)
+    try:
+        response = requests.get(markdown_url)
+        response.raise_for_status()  # Raises an HTTPError for bad responses
+        markdown_content = response.text
+        st.markdown(markdown_content, unsafe_allow_html=True)
+    except requests.exceptions.HTTPError as err:
+        st.error(f"Failed to retrieve Markdown content: {err}")
+    except requests.exceptions.RequestException as e:
+        st.error(f"Request failed: {e}")
+
+
 
 # Tab 1: Introduce Yourself with Audio
 with tabs[1]:
