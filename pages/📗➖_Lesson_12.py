@@ -39,9 +39,9 @@ with tabs[0]:
     """)
     
     contractions = {
-        "I am → I'm": "I am going to the stor. I’m going to the store.",
+        "I am → I'm": "I am going to the store. I’m going to the store.",
         "You are → You're": "You are my best friend. You're my best friend.",
-        "She is → She's": "She is coming later.She's coming later.",
+        "She is → She's": "She is coming later. She's coming later.",
         "He will → He'll": "He will call you soon. He’ll call you soon.",
         "They have → They've": "They have finished their work. They've finished their work."
     }
