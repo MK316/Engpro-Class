@@ -38,7 +38,7 @@ with tabs[0]:
     url_to_embed1 = "https://github.com/MK316/Engpro-Class/blob/raw/practice/readme.md"
     
     try:
-        response = requests.get(markdown_url)
+        response = requests.get(url_to_embed1)
         response.raise_for_status()  # Raises an HTTPError for bad responses
         markdown_content = response.text
         st.markdown(markdown_content, unsafe_allow_html=True)
