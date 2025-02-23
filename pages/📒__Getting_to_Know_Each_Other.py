@@ -31,13 +31,10 @@ introductions = {
 tabs = st.tabs(["📖 Scripts", "🔎 Introduce_yourself_audio", "🌀 TTS app", "🌀 Padlet to submit"])
 
 # Tab 0: Scripts
-with tabs[0]:
+ith tabs[0]:
     st.title("Scripts (example)")
-    url = "https://github.com/MK316/Engpro-Class/blob/main/practice/readme.md"
-    if st.button('Visit GitHub Scripts'):
-        js = f"window.open('{url}')"
-        st.experimental_rerun()  # To avoid duplicate element issues
-        st.components.v1.html(f'<script>{js}</script>', height=0)  
+    url = "https://github.com/MK316/Engpro-Class/blob/main/practice/readme.md"  # Replace with your actual URL
+    st.markdown(f"[Visit GitHub Scripts]({url})", unsafe_allow_html=True)
 
 # Tab 1: Introduce Yourself with Audio
 with tabs[1]:
