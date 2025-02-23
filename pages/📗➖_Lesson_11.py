@@ -41,8 +41,8 @@ example_sentences = {
     "2) The lecture will start in a moment.": "The lecture will start in a moment.",
     "3) You’ll see him sooner or later.": "You’ll see him sooner or later.",
     "4) I wanna be a singer.": "I wanna be a singer.",
-    "5) To tell the truth, I was quite nervous before giving the presentation.": 
-    "To tell the truth, I was quite nervous before giving the presentation."
+    "5) To tell the truth, I was quite nervous before giving the presentation.": "To tell the truth, I was quite nervous before giving the presentation.",
+    "6) To tell the truth, I was quite nervous before giving the presentation 2": "https://github.com/MK316/Engpro-Class/raw/main/audio/totellthetruth.mp3"  # Update with your actual URL
 }
 
 # Title
@@ -53,18 +53,23 @@ selected_example_sentence = st.selectbox("Choose a sentence to hear the pronunci
 
 # Function to generate and return audio file
 def generate_audio(text):
-    tts = gTTS(text=text, lang='en')
-    audio_data = io.BytesIO()
-    tts.write_to_fp(audio_data)
-    audio_data.seek(0)
-    return audio_data
+    if "http" not in text:
+        tts = gTTS(text=text, lang='en')
+        audio_data = io.BytesIO()
+        tts.write_to_fp(audio_data)
+        audio_data.seek(0)
+        return audio_data
+    else:
+        return text  # Return the URL for the sixth sentence
 
 # Generate and Play Audio
 if st.button("Play Selected Sentence"):
     audio_data = generate_audio(example_sentences[selected_example_sentence])
-    st.audio(audio_data.getvalue(), format='audio/mp3')
-    st.write(f"**Sentence:** {example_sentences[selected_example_sentence]}")
-
+    if isinstance(audio_data, io.BytesIO):
+        st.audio(audio_data.getvalue(), format='audio/mp3')
+    else:
+        st.audio(audio_data, format='audio/mp3')  # Play the audio from the URL directly
+    st.write(f"**Sentence:** {selected_example_sentence}")
 
 
 with tabs[1]:
