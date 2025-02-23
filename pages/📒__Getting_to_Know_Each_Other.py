@@ -51,7 +51,7 @@ with tabs[0]:
 
 # Tab 1: Introduce Yourself with Audio
 with tabs[1]:
-    st.title("Introduce Yourself")
+    st.title("Introduce Yourself in 30 seconds!")
     choice = st.selectbox("Select an introduction", range(1, len(introductions) + 1), format_func=lambda x: f"Introduction {x}")
     intro_text = introductions[choice]["text"]
     intro_audio = introductions[choice]["audio"]
