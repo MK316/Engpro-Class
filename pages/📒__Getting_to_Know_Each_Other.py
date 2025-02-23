@@ -35,7 +35,7 @@ tabs = st.tabs(["📖 Scripts", "🔎 Introduce_yourself_audio", "🌀 TTS app",
 # Tab 0: Scripts
 with tabs[0]:
     # URL you want to embed
-    url_to_embed1 = "https://github.com/MK316/Engpro-Class/blob/main/practice/readme.md"
+    url_to_embed1 = "https://github.com/MK316/Engpro-Class/blob/raw/practice/readme.md"
     
     # Embed the URL using an iframe
     components.iframe(url_to_embed1, width=600, height=600, scrolling=True)
