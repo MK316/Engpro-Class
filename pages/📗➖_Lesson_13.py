@@ -96,18 +96,7 @@ with tabs[0]:
                 "We drank beer.",
                 "I like football.",
                 "He’s been calling her all day."
-            ]
-        },
-        "[6] Punctuation Rules - commas, colons, semi-colons, parentheses, etc.": {
-            "display": [
-                "Mr. Brown<span class='highlight'>, my new neighbor,</span> called me yesterday.",
-                "Sam<span class='highlight'>, a convicted felon,</span> was sentenced to life in prison.",
-                "He is very nice<span class='highlight'>; in my opinion,</span> he is the nicest person in the classroom."
-            # ],
-            # "audio": [
-            #     "Mr. Brown, my new neighbor, called me yesterday.",
-            #     "Sam, a convicted felon, was sentenced to life in prison.",
-            #     "He is very nice; in my opinion, he is the nicest person in the classroom."
+
             ]
         }
     }
@@ -136,8 +125,13 @@ with tabs[0]:
             audio_data = generate_audio(audio_text)
             st.audio(audio_data.getvalue(), format='audio/mp3')
 
-    st.markdown("### [6]")
-    st.write("test")
+    st.markdown("#### [6] Punctuation Rules - commas, colons, semi-colons, parentheses, etc."")
+    st.markdown("""
+    1. Mr. Brown<span class='highlight'>, my new neighbor,</span> called me yesterday.
+    2. Sam<span class='highlight'>, a convicted felon,</span> was sentenced to life in prison.
+    3. He is very nice<span class='highlight'>; in my opinion,</span> he is the nicest person in the classroom.
+    """)
+                
     audio_url = "https://github.com/MK316/Engpro-Class/raw/main/audio/thoughgroup_M.mp3"
     st.audio(audio_url, format='audio/mp3')
 
