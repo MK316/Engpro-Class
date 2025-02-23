@@ -35,12 +35,24 @@ with tabs[0]:
     <div class="justify-text">
 
     This course is specifically designed for future English teachers, aiming to enhance their English language proficiency with an emphasis on developing clear and intelligible pronunciation. It includes a series of targeted activities that improve speaking and listening skills, complemented by a variety of authentic materials such as TED Talks and online videos, enhanced by digital resources and advanced AI technologies.
+    </div>
+    """, unsafe_allow_html=True)
+    st.audio("https://github.com/MK316/Engpro-Class/raw/main/audio/engpro-overview1.mp3", format='audio/mp3')
     
+    st.markdown("""
+    <div class="justify-text">
     The curriculum provides an in-depth study of English linguistic features, focusing on pronunciation. Instruction covers the International Phonetic Alphabet (IPA) and the importance of stress and intonation in communication. Practical applications complement this theoretical knowledge, fostering a holistic approach to mastering English pronunciation.
-
+    </div>
+    """, unsafe_allow_html=True)
+    st.audio("https://github.com/MK316/Engpro-Class/raw/main/audio/engpro-overview2.mp3", format='audio/mp3')
+    
+    st.markdown("""
+    <div class="justify-text">
     Assignments are crafted to reinforce learned concepts and encourage the development of teaching methodologies. By the course's end, participants will not only master English pronunciation but also be equipped with effective strategies to teach these skills in various educational settings.
     </div>
     """, unsafe_allow_html=True)
+    st.audio("https://github.com/MK316/Engpro-Class/raw/main/audio/engpro-overview3.mp3", format='audio/mp3')
+    
 
 # Content for the Schedule tab
 with tabs[1]:
