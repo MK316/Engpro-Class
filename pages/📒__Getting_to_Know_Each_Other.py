@@ -1,7 +1,7 @@
 import streamlit as st
 from gtts import gTTS
 from io import BytesIO
-import components.iframe
+
 
 # Example dictionary mapping indices to text and audio URLs
 introductions = {
