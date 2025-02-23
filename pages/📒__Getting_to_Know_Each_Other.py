@@ -31,7 +31,7 @@ introductions = {
 tabs = st.tabs(["📖 Scripts", "🔎 Introduce_yourself_audio", "🌀 TTS app", "🌀 Padlet to submit"])
 
 # Tab 0: Scripts
-ith tabs[0]:
+with tabs[0]:
     st.title("Scripts (example)")
     url = "https://github.com/MK316/Engpro-Class/blob/main/practice/readme.md"  # Replace with your actual URL
     st.markdown(f"[Visit GitHub Scripts]({url})", unsafe_allow_html=True)
