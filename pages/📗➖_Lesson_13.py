@@ -136,7 +136,7 @@ with tabs[0]:
             audio_data = generate_audio(audio_text)
             st.audio(audio_data.getvalue(), format='audio/mp3')
 
-    st.markdown("### [6]
+    st.markdown("### [6]")
         st.write("test")
         audio_url = "https://github.com/MK316/Engpro-Class/raw/main/audio/thoughgroup_M.mp3"
         st.audio(audio_url, format='audio/mp3')
