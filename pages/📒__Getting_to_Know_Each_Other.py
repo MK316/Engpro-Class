@@ -28,41 +28,45 @@ introductions = {
 
 
 # Assuming you have already created tabs
-tabs = st.tabs(["Scripts", "🔎 Introduce_yourself_audio", "🌀 TTS app", "🌀 Padlet to submit"])
+tabs = st.tabs(["📖 Scripts", "🔎 Introduce_yourself_audio", "🌀 TTS app", "🌀 Padlet to submit"])
 
+# Tab 0: Scripts
 with tabs[0]:
     st.title("Scripts (example)")
-    url = "https://github.com/MK316/Engpro-Class/blob/main/practice/readme.md"  # Replace with the actual URL you want to display
-    if st.button('Visit Website'):
+    url = "https://github.com/MK316/Engpro-Class/blob/main/practice/readme.md"
+    if st.button('Visit GitHub Scripts'):
         js = f"window.open('{url}')"
+        st.experimental_rerun()  # To avoid duplicate element issues
         st.components.v1.html(f'<script>{js}</script>', height=0)  
+
+# Tab 1: Introduce Yourself with Audio
 with tabs[1]:
-    st.title("Practice 01: Introduce Yourself")
-    st.write("Introduce yourself in public")
+    st.title("Introduce Yourself")
+    choice = st.selectbox("Select an introduction", range(1, len(introductions) + 1), format_func=lambda x: f"Introduction {x}")
+    intro_text = introductions[choice]["text"]
+    intro_audio = introductions[choice]["audio"]
+    
+    st.write(intro_text)
+    st.audio(intro_audio)
 
-    # Let the user select a number from 1 to 10
-    choice = st.selectbox("Choose an introduction number:", list(introductions.keys()))
-
-    # Display the introduction text
-    st.write(introductions[choice]["text"])
-
-    # Play the audio
-    st.audio(introductions[choice]["audio"])
-
+# Tab 2: Text-to-Speech App
 with tabs[2]:
-    st.title("Text-to-Speech Converter")
-    text_input = st.text_area("Enter text to convert to speech:")
-    accent_option = st.selectbox("Choose Accent:", ["American", 'British'])
-    if st.button("Convert to Speech"):
-        tts = gTTS(text=text_input, lang='en', tld='com' if accent_option == 'American' else 'co.uk')
+    st.title("Text-to-Speech Conversion")
+    text_input = st.text_area("Enter text here:")
+    accent_option = st.radio("Select Accent:", ["American", "British"])
+    tld = 'com' if accent_option == 'American' else 'co.uk'
+    
+    if st.button("Convert"):
+        tts = gTTS(text=text_input, lang='en', tld=tld)
         speech_file = BytesIO()
         tts.write_to_fp(speech_file)
         speech_file.seek(0)
         st.audio(speech_file, format='audio/mp3')
 
+# Tab 3: Open External Website
 with tabs[3]:
-    st.title("Padlet: to post your video")
-    url = "https://padlet.com/mirankim316/S25Engpro"  # Replace with the actual URL you want to display
-    if st.button('Visit Website'):
-        js = f"window.open('{url}')"
-        st.components.v1.html(f'<script>{js}</script>', height=0)  
+    st.title("Visit an External Website")
+    st.markdown("Click the button below to visit the specified website.")
+    if st.button("Go to Website", key='website'):
+        st.experimental_rerun()  # To avoid duplicate element issues
+        st.markdown("<script>window.open('https://www.example.com');</script>", unsafe_allow_html=True)
