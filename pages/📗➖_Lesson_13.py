@@ -132,7 +132,7 @@ with tabs[0]:
     3. He is very nice, _in my opinion_, and maybe he is the nicest person in the classroom.
     """)
                 
-    audio_url = "https://github.com/MK316/Engpro-Class/raw/main/audio/thoughgroup_M2.mp3"
+    audio_url = "https://github.com/MK316/Engpro-Class/raw/main/audio/thoughtgroup_M2.mp3"
     st.audio(audio_url, format='audio/mp3')
 
 
