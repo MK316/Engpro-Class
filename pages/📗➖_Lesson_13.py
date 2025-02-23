@@ -127,12 +127,12 @@ with tabs[0]:
 
     st.markdown("#### [6] Punctuation Rules - commas, colons, semi-colons, parentheses, etc.")
     st.markdown("""
-    1. Mr. Brown<span class='highlight'>, my new neighbor,</span> called me yesterday.
-    2. Sam<span class='highlight'>, a convicted felon,</span> was sentenced to life in prison.
-    3. He is very nice<span class='highlight'>; in my opinion,</span> he is the nicest person in the classroom.
+    1. Mr. Brown, _my new neighbor_, called me yesterday.
+    2. Sam, _a convicted felon_, was sentenced to life in prison.
+    3. He is very nice, _in my opinion_, and maybe he is the nicest person in the classroom.
     """)
                 
-    audio_url = "https://github.com/MK316/Engpro-Class/raw/main/audio/thoughgroup_M.mp3"
+    audio_url = "https://github.com/MK316/Engpro-Class/raw/main/audio/thoughgroup_M2.mp3"
     st.audio(audio_url, format='audio/mp3')
 
 
