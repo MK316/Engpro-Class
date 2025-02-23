@@ -125,7 +125,7 @@ with tabs[0]:
             audio_data = generate_audio(audio_text)
             st.audio(audio_data.getvalue(), format='audio/mp3')
 
-    st.markdown("#### [6] Punctuation Rules - commas, colons, semi-colons, parentheses, etc."")
+    st.markdown("#### [6] Punctuation Rules - commas, colons, semi-colons, parentheses, etc.")
     st.markdown("""
     1. Mr. Brown<span class='highlight'>, my new neighbor,</span> called me yesterday.
     2. Sam<span class='highlight'>, a convicted felon,</span> was sentenced to life in prison.
