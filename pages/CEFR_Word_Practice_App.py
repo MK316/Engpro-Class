@@ -21,7 +21,6 @@ def generate_audio(text):
     return audio_file
 
 def run_practice_app(user_name, file_url):
-    # Main application logic for practice session
     data = load_data(file_url)
     total_words = len(data)
     st.header(f"Welcome, {user_name}")
@@ -33,8 +32,18 @@ def run_practice_app(user_name, file_url):
         for row in filtered_data.itertuples():
             audio_data = generate_audio(row.WORD)
             audio_key = f"audio_{row.SID}"
+            input_key = f"input_{row.SID}"
             st.session_state[audio_key] = audio_data
-            st.audio(st.session_state[audio_key], format='audio/mp3', start_time=0)
+            st.session_state[input_key] = ""  # Initialize the input state
+
+    for row in filtered_data.itertuples():
+        audio_key = f"audio_{row.SID}"
+        input_key = f"input_{row.SID}"
+        if audio_key in st.session_state:
+            st.audio(st.session_state[audio_key], format='audio/mp3')
+            st.text_input("Type the word shown:", key=input_key, placeholder="Type here...")
+
+
 
 def main():
     # Main entry point for the Streamlit app
