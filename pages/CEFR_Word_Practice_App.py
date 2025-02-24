@@ -88,29 +88,34 @@ def run_practice_app(user_name, file_url):
             audio_key = f'{audio_key_prefix}_{row.SID}'  # Use SID directly to ensure uniqueness
             st.session_state[f'{audio_key_prefix}_data'][audio_key] = generate_audio(row.WORD)
 
-    if st.session_state.get(f'{audio_key_prefix}_generated', False):
-        for row in filtered_data.itertuples():
-            audio_key = f'{audio_key_prefix}_{row.SID}'
-            sid_key = f'{input_key_prefix}_{row.SID}'
+# When generating audio and user inputs:
+if st.session_state.get(f'{audio_key_prefix}_generated', False):
+    for row in filtered_data.itertuples():
+        audio_key = f'{audio_key_prefix}_{row.SID}'
+        # Include a distinct part of the file_url to make keys unique across different files
+        sid_key = f'{input_key_prefix}_{row.SID}_{file_url[-10:-4]}'
 
-            if audio_key in st.session_state[f'{audio_key_prefix}_data']:
-                st.caption(f"SID {row.SID}")  # Display SID before each audio
-                st.audio(st.session_state[f'{audio_key_prefix}_data'][audio_key], format='audio/mp3')
+        if audio_key in st.session_state[f'{audio_key_prefix}_data']:
+            st.caption(f"SID {row.SID}")  # Display SID before each audio
+            st.audio(st.session_state[f'{audio_key_prefix}_data'][audio_key], format='audio/mp3')
 
-                # **Force reset user input fields using `value=""`**
-                st.text_input("Type the word shown:", key=sid_key, value="", placeholder="Type here...", label_visibility="collapsed")
+            # Use the updated sid_key for user input
+            st.text_input("Type the word shown:", key=sid_key, value="", placeholder="Type here...", label_visibility="collapsed")
 
-    if st.button(f'🔑 Check Answers - {file_url[-6:-4]}'):  # Unique check button per file
-        correct_count = 0
-        for row in filtered_data.itertuples():
-            sid_key = f'{input_key_prefix}_{row.SID}'
-            user_input = st.session_state.get(sid_key, '').strip().lower()
-            correct = user_input == row.WORD.lower()
-            if correct:
-                correct_count += 1
-            st.write(f"Word: {row.WORD}, Your Input: {user_input}, Correct: {correct}")
+# When checking answers:
+if st.button(f'🔑 Check Answers - {file_url[-6:-4]}'):
+    correct_count = 0
+    for row in filtered_data.itertuples():
+        # Use the same unique sid_key as above
+        sid_key = f'{input_key_prefix}_{row.SID}_{file_url[-10:-4]}'
+        user_input = st.session_state.get(sid_key, '').strip().lower()
+        correct = user_input == row.WORD.lower()
+        if correct:
+            correct_count += 1
+        st.write(f"Word: {row.WORD}, Your Input: {user_input}, Correct: {correct}")
 
-        st.write(f"{user_name}: {correct_count}/{len(filtered_data)} correct.")
+    st.write(f"{user_name}: {correct_count}/{len(filtered_data)} correct.")
+
 
 if __name__ == "__main__":
     main()
