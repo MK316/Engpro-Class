@@ -3,7 +3,7 @@ from gtts import gTTS
 from io import BytesIO
 import pandas as pd
 
-@st.cache(allow_output_mutation=True)
+@st.cache_data
 def load_data(file_url):
     # Loads data from a given URL and processes it
     df = pd.read_csv(file_url, sep='\t', usecols=['SID', 'WORD', 'POS'], dtype=str)
