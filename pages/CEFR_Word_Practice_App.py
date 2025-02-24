@@ -3,22 +3,21 @@ from gtts import gTTS
 from io import BytesIO
 import pandas as pd
 
-# Load data with caching
-@st.cache(allow_output_mutation=True, suppress_st_warning=True)
+# Load data with caching using the new method
+@st.cache_data
 def load_data(file_url):
-    df = pd.read_csv(file_url, sep='\t', usecols=['SID', 'WORD', 'POS'], dtype=str)  # Read all as strings
+    df = pd.read_csv(file_url, sep='\t', usecols=['SID', 'WORD', 'POS'], dtype=str)
     df.columns = df.columns.str.strip()
-    df['SID'] = df['SID'].str.extract('(\d+)')[0].astype(int)  # Extract numbers only and convert to integer
+    df['SID'] = df['SID'].str.extract('(\d+)')[0].astype(int)
     df['WORD'] = df['WORD'].str.split().str[0]
     return df
 
 def generate_audio(text):
-    """Generate speech audio for a given text using gTTS."""
     tts = gTTS(text=text, lang='en')
     audio_file = BytesIO()
     tts.write_to_fp(audio_file)
     audio_file.seek(0)
-    return audio_file.getvalue()  # Return byte content
+    return audio_file.getvalue()
 
 def main():
     st.title("🎧 CEFR Listen & Spell Practice")
@@ -32,31 +31,20 @@ def main():
 
 def run_practice_app(user_name, file_url):
     data = load_data(file_url)
-    total_words = len(data)
-    st.info(f"🔎 This level contains {total_words} words. Choose your SID range below.")
-    start_sid = st.number_input("Start SID", min_value=1, max_value=total_words, value=1, key=f"{user_name}_start_sid")
-    end_sid = st.number_input("End SID", min_value=1, max_value=total_words, value=min(20, total_words), key=f"{user_name}_end_sid")
+    start_sid = st.number_input("Start SID", min_value=1, max_value=len(data), value=1, key=f"{user_name}_start_sid")
+    end_sid = st.number_input("End SID", min_value=1, max_value=len(data), value=min(20, len(data)), key=f"{user_name}_end_sid")
     filtered_data = data[(data['SID'] >= start_sid) & (data['SID'] <= end_sid)]
 
     audio_key_prefix = f"audio_{user_name}"
     input_key_prefix = f"input_{user_name}"
 
-    if st.button("Generate Audio"):
+    generate_button_key = f"generate_audio_{user_name}"
+    if st.button("Generate Audio", key=generate_button_key):
         for row in filtered_data.itertuples():
             audio_key = f"{audio_key_prefix}_{row.SID}"
             sid_key = f"{input_key_prefix}_{row.SID}"
             st.session_state[audio_key] = generate_audio(row.WORD)
             st.text_input("Type the word shown:", key=sid_key, placeholder="Type here...")
-
-    if st.button("Check Answers"):
-        correct_count = 0
-        for row in filtered_data.itertuples():
-            sid_key = f"{input_key_prefix}_{row.SID}"
-            user_input = st.session_state.get(sid_key, "").strip().lower()
-            correct = user_input == row.WORD.lower()
-            correct_count += int(correct)
-            st.write(f"Word: {row.WORD}, Your Input: {user_input}, Correct: {correct}")
-        st.write(f"{user_name}: {correct_count}/{len(filtered_data)} correct.")
 
 if __name__ == "__main__":
     main()
