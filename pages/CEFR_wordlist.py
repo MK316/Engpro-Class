@@ -38,8 +38,9 @@ for idx, (tab_name, url) in enumerate(wordlist_urls.items()):
         st.caption("🔎 The B1B2 and C1 word lists contain a total of 733 and 3,000 words, respectively. Select the word numbers you want, then click the Show button.")
         
         # Custom button with a link
+        app_url = "https://mk316voca.streamlit.app/"
         button_html = f"""
-        <a href="{url}" target="_blank">
+        <a href="{app_url}" target="_blank">
             <button style='color: white; background-color: #2ca02c; border: none; border-radius: 5px; padding: 10px 20px; text-align: center; display: inline-block; font-size: 16px;'>
                 Go to CEFR App
             </button>
