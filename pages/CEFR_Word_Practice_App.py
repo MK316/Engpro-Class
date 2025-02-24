@@ -28,20 +28,24 @@ def run_practice_app(user_name, file_url):
     end_sid = st.number_input("End SID", min_value=1, max_value=total_words, value=min(20, total_words), key=f"{user_name}_end_sid")
     filtered_data = data[(data['SID'] >= start_sid) & (data['SID'] <= end_sid)]
 
+    # Ensure that the session state for audio and input keys is initialized
+    for row in filtered_data.itertuples():
+        audio_key = f"audio_{user_name}_{row.SID}"
+        input_key = f"input_{user_name}_{row.SID}"
+        if audio_key not in st.session_state:
+            st.session_state[audio_key] = None
+        if input_key not in st.session_state:
+            st.session_state[input_key] = ""
+
     if st.button("Generate Audio", key=f"generate_{user_name}"):
         for row in filtered_data.itertuples():
             audio_data = generate_audio(row.WORD)
-            audio_key = f"audio_{row.SID}"
-            input_key = f"input_{row.SID}"
+            audio_key = f"audio_{user_name}_{row.SID}"
+            input_key = f"input_{user_name}_{row.SID}"
             st.session_state[audio_key] = audio_data
-            st.session_state[input_key] = ""  # Initialize the input state
-
-    for row in filtered_data.itertuples():
-        audio_key = f"audio_{row.SID}"
-        input_key = f"input_{row.SID}"
-        if audio_key in st.session_state:
+            # Display audio and corresponding text input for each word
             st.audio(st.session_state[audio_key], format='audio/mp3')
-            st.text_input("Type the word shown:", key=input_key, placeholder="Type here...")
+            st.text_input("Type the word shown:", key=input_key, value=st.session_state[input_key], placeholder="Type here...")
 
 
 
