@@ -36,6 +36,7 @@ tabs = st.tabs(list(wordlist_urls.keys()))
 for idx, (tab_name, url) in enumerate(wordlist_urls.items()):
     with tabs[idx]:  # Assign content to each tab
         st.caption("🔎 The B1B2 and C1 word lists contain a total of 733 and 3,000 words, respectively. Select the word numbers you want, then click the Show button.")
+        st.markdown("[Go to CEFR application](https://mk316voca.streamlit.app/)")
         st.markdown("---")
         # Load wordlist
         wordlist = load_wordlist(url)
