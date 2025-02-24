@@ -42,7 +42,7 @@ for idx, (tab_name, url) in enumerate(wordlist_urls.items()):
         button_html = f"""
         <a href="{app_url}" target="_blank">
             <button style='color: white; background-color: #2ca02c; border: none; border-radius: 5px; padding: 10px 20px; text-align: center; display: inline-block; font-size: 16px;'>
-                Go to CEFR App
+                Go to CEFR Listen & Spell Application
             </button>
         </a>
         """
