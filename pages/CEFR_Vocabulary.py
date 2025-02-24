@@ -1,4 +1,7 @@
 import streamlit as st
 
+st.markdown(
+    '<a href="https://mk316voca.streamlit.app/" target="_blank">🔗 Open Listen and Spell</a>',
+    unsafe_allow_html=True
+)
 
-st.page_link("https://mk316voca.streamlit.app/", label="🔗 Open CEFR word practice page", new_tab=True)
