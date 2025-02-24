@@ -16,5 +16,8 @@
 |  W12    |May 20 & 22| English Consonants III |        |       |
 |  W13    |May 27 & 29| English Consonants IV|        |       |
 |  W14    |June 3 & 5|  Sound rules I |        |       |
-|  W15    |June 10 & 12| Sound rules II |        |       |
+|  W15    |June 10[^1] & 12[^2]| Sound rules II |        |       |
 |  W16    |June 17 & 19| Final presentation |        |       |
+
+[^1]: May 6 (make-up class)
+[^2]: May 1 (make-up class)
