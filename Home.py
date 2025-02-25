@@ -4,7 +4,8 @@ import requests
 from io import BytesIO
 
 st.markdown("### 🐣 English Pronunication (Spring 2025)")
-st.markdown('"_Confidence is a habit that can be developed by acting as if you already had the confidence you desire to have._"')
+st.markdown('"_Confidence is a habit that can be developed by acting_')
+st.markdown('_as if you already had the confidence you desire to have._"')
 st.caption("- Brian Tracy (writer and motivational public speaker")
 
 # Add an image from GitHub
