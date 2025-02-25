@@ -14,6 +14,6 @@ response = requests.get(image_url)
 img = Image.open(BytesIO(response.content))
 img = img.resize((500, 500))  # Set custom width and height
 
-st.image(img, caption="Practice Makes Perfect")
+st.image(img, caption="©️ MK316 English Pronunciation Practice: Practice Makes Perfect")
 
 st.markdown("⛺Goto [MK316 home](https://mk316.github.io)")
