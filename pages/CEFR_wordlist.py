@@ -6,7 +6,7 @@ import io  # ✅ Fixed StringIO issue
 # URLs for wordlists
 wordlist_urls = {
     "🍐 Wordlist B2": "https://raw.githubusercontent.com/MK316/CEFR/refs/heads/main/data/B2.txt",
-    "🍓 Wordlist C1": "https://raw.githubusercontent.com/MK316/CEFR/refs/heads/main/data/C1.txt"
+    "🍓 Wordlist C1": "https://raw.githubusercontent.com/MK316/CEFR/refs/heads/main/data/C1f.txt"
 }
 
 # Function to load wordlist data
@@ -35,7 +35,7 @@ tabs = st.tabs(list(wordlist_urls.keys()))
 # Loop through tabs dynamically
 for idx, (tab_name, url) in enumerate(wordlist_urls.items()):
     with tabs[idx]:  # Assign content to each tab
-        st.caption("🔎 The B2 and C1 word lists contain a total of 725 and 1,381 words, respectively. Select the word numbers you want, then click the Show button.")
+        st.caption("🔎 The B2 and C1 word lists contain a total of 725 and 1,380 words, respectively. Select the word numbers you want, then click the Show button.")
         
         # Custom button with a link
         app_url = "https://mk316voca.streamlit.app/"
