@@ -5,8 +5,8 @@ import io  # ✅ Fixed StringIO issue
 
 # URLs for wordlists
 wordlist_urls = {
-    "🍐 Wordlist B1B2": "https://raw.githubusercontent.com/MK316/Engpro-Class/refs/heads/main/data/CEFRB1B2.txt",
-    "🍓 Wordlist C1": "https://raw.githubusercontent.com/MK316/Engpro-Class/refs/heads/main/data/CEFRC1.txt"
+    "🍐 Wordlist B1B2": "https://raw.githubusercontent.com/MK316/Engpro-Class/refs/heads/main/data/B2.txt",
+    "🍓 Wordlist C1": "https://raw.githubusercontent.com/MK316/Engpro-Class/refs/heads/main/data/C1.txt"
 }
 
 # Function to load wordlist data
