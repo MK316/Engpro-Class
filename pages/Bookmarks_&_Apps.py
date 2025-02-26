@@ -34,12 +34,10 @@ def main():
     st.title('Online Resources')
     
     # Create tabs
-    tab1, tab2, tab3, tab4, tab5 = st.tabs(["🔆 Online links", "🌈 Oxford5K", " 🔆 Digital tools" ,"🔆 Customized apps","🔆 More web resources"])
+    tab1, tab2, tab3, tab4, tab5 = st.tabs(["🔆 Course links", "🌈 Oxford5K", " 🔆 Digital tools" ,"🔆 Customized apps","🔆 More web resources"])
     
     with tab1:
-        st.header('Classroom Connections')
-        st.write("Web links frequently used in class")
-        st.markdown("---")
+
         # Dictionary of useful links and their descriptions
         resources = {
             "🔎 GNU LMS": {
