@@ -85,7 +85,7 @@ def main():
         
         st.markdown("---")
 
-                st.markdown("---")
+
         # Load wordlist
         wordlist = load_wordlist(url)
 
