@@ -1,5 +1,5 @@
 import streamlit as st
 
 st.header("🐾 Q & As: on Padlet")
-st.write("This Padlet serves as a dynamic hub for Q & As regarding the course. Personal inquiries can be directred via E-mail at mirankim316@gmail.com")
+st.write("This Padlet serves as a dynamic hub for Q & As regarding the course. Personal inquiries can be directred via [E-mail](mirankim316@gmail.com)")
 st.components.v1.iframe("https://padlet.com/mirankim316/QNA", width=700, height=600)
