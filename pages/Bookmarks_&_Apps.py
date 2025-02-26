@@ -69,7 +69,7 @@ def main():
 
     with tab2:
 
-       st.caption("🔎 The B2 and C1 word lists contain a total of 725 and 1,380 words, respectively. Select the word numbers you want, then click the Show button.")
+        st.caption("🔎 The B2 and C1 word lists contain a total of 725 and 1,380 words, respectively. Select the word numbers you want, then click the Show button.")
     
         # ✅ Custom button to external CEFR Voca Application
         st.link_button("Go to CEFR Voca Application", "https://mk316voca.streamlit.app/", use_container_width=False)
