@@ -27,8 +27,8 @@ def load_wordlist(url):
         return pd.DataFrame(columns=["SID", "WORD"])
 
 # ✅ URLs for wordlists
-wordlist_url = "https://raw.githubusercontent.com/MK316/CEFR/refs/heads/main/data/B2.txt"
-
+wordlist_url1 = "https://raw.githubusercontent.com/MK316/CEFR/refs/heads/main/data/B2.txt"
+wordlist_url2 = "https://raw.githubusercontent.com/MK316/CEFR/refs/heads/main/data/C1f.txt"
 
 def main():
     st.title('Online Resources')
@@ -69,12 +69,23 @@ def main():
 
     with tab2:
 
-        st.caption("🔎 The B2 and C1 word lists contain a total of 725 and 1,380 words, respectively. Select the word numbers you want, then click the Show button.")
+       st.caption("🔎 The B2 and C1 word lists contain a total of 725 and 1,380 words, respectively. Select the word numbers you want, then click the Show button.")
     
         # ✅ Custom button to external CEFR Voca Application
         st.link_button("Go to CEFR Voca Application", "https://mk316voca.streamlit.app/", use_container_width=False)
     
         st.markdown("---")
+    
+        # ✅ Selection for Level B or Level C
+        level_choice = st.radio("Select a Wordlist Level:", ["🍐 Level B (B2)", "🍎 Level C (C1)"], key="wordlist_selection")
+    
+        # Assign the correct dataset based on selection
+        if level_choice == "🍐 Level B (B2)":
+            wordlist_url = wordlist_url1
+            level_key = "b2"
+        else:
+            wordlist_url = wordlist_url2
+            level_key = "c1"
     
         # ✅ Load wordlist
         wordlist = load_wordlist(wordlist_url)
@@ -85,20 +96,21 @@ def main():
             # ✅ User selects SID range
             col1, col2 = st.columns(2)
             with col1:
-                start_sid = st.number_input(f"From SID (Total: {total_words} words)", min_value=1, max_value=wordlist['SID'].max(), value=1, key="start_sid_b2")
+                start_sid = st.number_input(f"From SID (Total: {total_words} words)", min_value=1, max_value=wordlist['SID'].max(), value=1, key=f"start_sid_{level_key}")
             with col2:
-                end_sid = st.number_input(f"To SID (Total: {total_words} words)", min_value=start_sid, max_value=wordlist['SID'].max(), value=min(start_sid+19, wordlist['SID'].max()), key="end_sid_b2")
+                end_sid = st.number_input(f"To SID (Total: {total_words} words)", min_value=start_sid, max_value=wordlist['SID'].max(), value=min(start_sid+19, wordlist['SID'].max()), key=f"end_sid_{level_key}")
     
             # ✅ Filter selected range
             filtered_words = wordlist[(wordlist['SID'] >= start_sid) & (wordlist['SID'] <= end_sid)].reset_index(drop=True)
     
             # ✅ "Show Words" Button with number of selected words
             num_selected = len(filtered_words)
-            if st.button(f"🔍 Show {num_selected} Words", key=f"show_words_{start_sid}"):
+            if st.button(f"🔍 Show {num_selected} Words", key=f"show_words_{level_key}_{start_sid}"):
                 st.table(filtered_words.set_index("SID"))
-
+    
         else:
             st.error("❌ No data available for this wordlist.")
+
 
     
     with tab3:
