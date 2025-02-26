@@ -75,7 +75,7 @@ def main():
         button_html = """
         <style>
             .blue-button {
-                background-color: #007BFF; /* Bootstrap Blue */
+                background-color: #99004C; /* Bootstrap Blue */
                 color: white !important;
                 border: none;
                 border-radius: 8px;
