@@ -132,7 +132,7 @@ def main():
             st.error("❌ No data available for this wordlist.")
 
     with tab3:
-        st.header("🐾 Class activities and assignment submission: on Padlet")
+        st.markdown("#### 🐾 Class activities and assignment submission: on Padlet")
         st.write("This Padlet serves as a dynamic hub for class activities. Secure submissions will be managed through the LMS.")
         st.components.v1.iframe("https://padlet.com/mirankim316/S25Engpro", width=700, height=800)
     
