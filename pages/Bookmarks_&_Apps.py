@@ -4,11 +4,7 @@ import requests
 import pandas as pd
 import io  # ✅ Fixed StringIO issue
 
-# URLs for wordlists
-wordlist_urls = {
-    "🍐 Wordlist B2": "https://raw.githubusercontent.com/MK316/CEFR/refs/heads/main/data/B2.txt",
-    "🍓 Wordlist C1": "https://raw.githubusercontent.com/MK316/CEFR/refs/heads/main/data/C1f.txt"
-}
+
 
 # Function to load wordlist data
 @st.cache_data
@@ -87,6 +83,9 @@ def main():
 
 
         # Load wordlist
+
+        # URLs for wordlists
+        urls = "🍐 Wordlist B2": "https://raw.githubusercontent.com/MK316/CEFR/refs/heads/main/data/B2.txt"      
         wordlist = load_wordlist(url)
 
         if not wordlist.empty:
