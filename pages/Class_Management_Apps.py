@@ -37,7 +37,7 @@ with tabs[0]:
         qr.add_data(qr_link)
         qr.make(fit=True)
 
-        qr_img = qr.make_image(fill='black', back_color='white')
+        qr_img = qr.make_image(fill='blue', back_color='white')
 
         # Convert the QR code image to RGB format and resize
         qr_img = qr_img.convert('RGB')  # Convert to RGB to be compatible with st.image
