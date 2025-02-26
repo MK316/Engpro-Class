@@ -34,7 +34,7 @@ def main():
     st.title('Online Resources')
     
     # Create tabs
-    tab1, tab2, tab3, tab4, tab5 = st.tabs(["🔆 Course links", "🌈 Oxford5K", "Padlet", " 🔆 Digital tools" ,"🔆 Customized apps","🔆 More web resources"])
+    tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(["🔆 Course links", "🌈 Oxford5K", "Padlet", " 🔆 Digital tools" ,"🔆 Customized apps","🔆 More web resources"])
     
     with tab1:
 
