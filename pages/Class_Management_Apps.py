@@ -50,7 +50,7 @@ with tabs[0]:
         qr_img = qr_img.resize((600, 600))
 
         # ✅ Display the QR code with caption
-        st.image(qr_img, caption=caption if caption else "Generated QR Code", use_container_width=False, width=400)
+        st.image(qr_img, caption=caption if caption else "Generate", use_container_width=False, width=400)
 
 
 # Timer tab
