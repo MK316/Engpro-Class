@@ -25,7 +25,7 @@ with tabs[0]:
     col1, col2, col3 = st.columns([3, 3, 2])  # Adjust width ratios for better layout
 
     with col1:
-        qr_link = st.text_input("📌 Enter a link:", key="qr_link")
+        qr_link = st.text_input("📌 Enter URL link:", key="qr_link")
     with col2:
         caption = st.text_input("Enter a caption (optional):", key="qr_caption")
     with col3:
