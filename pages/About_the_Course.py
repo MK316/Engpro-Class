@@ -25,7 +25,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Create tabs for different sections of the course
-tabs = st.tabs(["🍐 Course Overview", "🍓 Schedule", "Padlet", "🍏 Evaluation", "🍒 Assignments", "🍋 Links", "📆 Calendar"])
+tabs = st.tabs(["🍐 Course Overview", "🍓 Schedule", "Padlet", "🍏 Evaluation", "🍒 Assignments", "📆 Calendar"])
 
 # Content for the Course Overview tab
 with tabs[0]:
@@ -101,13 +101,9 @@ with tabs[4]:
     - HW#5: Final recording
     """)
     st.caption("Details will be announced in time.")
-# Content for the Links tab
-with tabs[5]:
-    st.header("Links")
-    st.write("Provide useful links here. This could include additional reading materials, online resources, and related external websites.")
 
 # Content for the Calendar tab
-with tabs[6]:
+with tabs[5]:
     # Dropdown for selecting a month
     month_option = st.selectbox("Select a Month", options=["March", "April", "May", "June"], index=0)
     # Dictionary to map month names to their corresponding numbers
