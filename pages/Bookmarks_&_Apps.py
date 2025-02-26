@@ -97,8 +97,8 @@ def main():
             if st.button(f"🔍 Show {num_selected} Words", key=f"show_words_{start_sid}"):
                 st.table(filtered_words.set_index("SID"))
 
-    else:
-        st.error("❌ No data available for this wordlist.")
+        else:
+            st.error("❌ No data available for this wordlist.")
 
     
     with tab3:
