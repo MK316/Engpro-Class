@@ -5,7 +5,7 @@ def main():
     st.title('Online Resources')
     
     # Create tabs
-    tab1, tab2, tab3, tab4 = st.tabs(["💻 Online links", " 📌 Digital tools" ,"🍒 Customized apps","💿 More web resources"])
+    tab1, tab2, tab3, tab4, tab5 = st.tabs(["💻 Online links", "Oxford5K", " 📌 Digital tools" ,"🍒 Customized apps","💿 More web resources"])
     
     with tab1:
         st.header('Classroom Connections')
@@ -38,8 +38,23 @@ def main():
             st.markdown(info['description'])
             st.write(" ")  # Add some space between entries
 
-
     with tab2:
+        st.caption("🔎 The B2 and C1 word lists contain a total of 725 and 1,380 words, respectively. Select the word numbers you want, then click the Show button.")
+        
+        # Custom button with a link
+        app_url = "https://mk316voca.streamlit.app/"
+        button_html = f"""
+        <a href="{app_url}" target="_blank">
+            <button style='color: white; background-color: #2ca02c; border: none; border-radius: 5px; padding: 10px 20px; text-align: center; display: inline-block; font-size: 16px;'>
+                Go to CEFR Voca Application
+            </button>
+        </a>
+        """
+        st.markdown(button_html, unsafe_allow_html=True)
+        
+        st.markdown("---")
+    
+    with tab3:
         st.header('Digital & AI tools')
         st.write("Get familiar with digital tools online")
         st.markdown("---")
@@ -66,7 +81,7 @@ def main():
             st.markdown(info['description'])
             st.write(" ")  # Add some space between entries
     
-    with tab3:
+    with tab4:
         st.header('Customized Applications')
         # CSS to style the markdown links as buttons
         button_style = """
@@ -102,7 +117,7 @@ def main():
         st.markdown('<a href="https://mk-316-oxford5k.hf.space" class="button_link" target="_blank">🐇 App 6: Oxford 5K Vocabulary practice</a>', unsafe_allow_html=True)
 
         
-    with tab4:
+    with tab5:
         st.header('Explore the resources below')
         st.write("to improve your English pronunciation skills.")
         st.markdown("---")
