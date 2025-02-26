@@ -6,26 +6,28 @@ import io  # ✅ Fixed StringIO issue
 
 
 
-# Function to load wordlist data
+# ✅ Load wordlist from GitHub
 @st.cache_data
 def load_wordlist(url):
     try:
         response = requests.get(url)
-        response.raise_for_status()  # Raise error for invalid requests
+        response.raise_for_status()  # Raise error if request fails
 
-        # ✅ Fixed: Using io.StringIO instead of pd.compat.StringIO
-        df = pd.read_csv(io.StringIO(response.text), sep='\t', usecols=['SID', 'WORD'], dtype=str)
+        # Read as DataFrame
+        df = pd.read_csv(io.StringIO(response.text), sep='\t', usecols=['SID', 'WORD', 'POS'], dtype=str)
 
-        # Strip whitespace and convert SID to integer
+        # Clean and convert SID to integer
         df.columns = df.columns.str.strip()
-        df['SID'] = df['SID'].str.extract('(\d+)')[0].astype(int)  # Extract numbers and convert
-        df['WORD'] = df['WORD'].str.strip()  # Clean up words
+        df['SID'] = df['SID'].str.extract('(\d+)')[0].astype(int)
+        df['WORD'] = df['WORD'].str.strip()  # Remove extra spaces
 
         return df
     except Exception as e:
         st.error(f"❌ Failed to load data: {e}")
-        return pd.DataFrame(columns=["SID", "WORD"])  # Return empty DataFrame on error
+        return pd.DataFrame(columns=["SID", "WORD"])
 
+# ✅ URLs for wordlists
+wordlist_url = "https://raw.githubusercontent.com/MK316/CEFR/refs/heads/main/data/B2.txt"
 
 
 def main():
@@ -66,48 +68,39 @@ def main():
             st.write(" ")  # Add some space between entries
 
     with tab2:
+
         st.caption("🔎 The B2 and C1 word lists contain a total of 725 and 1,380 words, respectively. Select the word numbers you want, then click the Show button.")
-        
-        # Custom button with a link
-        app_url = "https://mk316voca.streamlit.app/"
-        button_html = f"""
-        <a href="{app_url}" target="_blank">
-            <button style='color: white; background-color: #2ca02c; border: none; border-radius: 5px; padding: 10px 20px; text-align: center; display: inline-block; font-size: 16px;'>
-                Go to CEFR Voca Application
-            </button>
-        </a>
-        """
-        st.markdown(button_html, unsafe_allow_html=True)
-        
+    
+        # ✅ Custom button to external CEFR Voca Application
+        st.link_button("Go to CEFR Voca Application", "https://mk316voca.streamlit.app/", use_container_width=False)
+    
         st.markdown("---")
-
-
-        # Load wordlist
-
-        # URLs for wordlists
-        urls = "🍐 Wordlist B2": "https://raw.githubusercontent.com/MK316/CEFR/refs/heads/main/data/B2.txt"      
-        wordlist = load_wordlist(url)
-
+    
+        # ✅ Load wordlist
+        wordlist = load_wordlist(wordlist_url)
+    
         if not wordlist.empty:
             total_words = len(wordlist)  # Get total words in the wordlist
             
-            # User selects SID range
+            # ✅ User selects SID range
             col1, col2 = st.columns(2)
             with col1:
-                start_sid = st.number_input(f"From SID (Total: {total_words} words)", min_value=1, max_value=wordlist['SID'].max(), value=1)
+                start_sid = st.number_input(f"From SID (Total: {total_words} words)", min_value=1, max_value=wordlist['SID'].max(), value=1, key="start_sid_b2")
             with col2:
-                end_sid = st.number_input(f"To SID (Total: {total_words} words)", min_value=start_sid, max_value=wordlist['SID'].max(), value=min(start_sid+19, wordlist['SID'].max()))
-
-            # Filter selected range
+                end_sid = st.number_input(f"To SID (Total: {total_words} words)", min_value=start_sid, max_value=wordlist['SID'].max(), value=min(start_sid+19, wordlist['SID'].max()), key="end_sid_b2")
+    
+            # ✅ Filter selected range
             filtered_words = wordlist[(wordlist['SID'] >= start_sid) & (wordlist['SID'] <= end_sid)].reset_index(drop=True)
-
+    
             # ✅ "Show Words" Button with number of selected words
             num_selected = len(filtered_words)
-            if st.button(f"🔍 Show {num_selected} Words", key=f"show_words_{idx}"):
+            if st.button(f"🔍 Show {num_selected} Words", key=f"show_words_{start_sid}"):
                 st.table(filtered_words.set_index("SID"))
 
-        else:
-            st.error("No data available for this wordlist.")
+    else:
+        st.error("❌ No data available for this wordlist.")
+
+    
     with tab3:
         st.header('Digital & AI tools')
         st.write("Get familiar with digital tools online")
