@@ -25,12 +25,12 @@ with tabs[0]:
     col1, col2, col3 = st.columns([3, 3, 1])  # Adjust width ratios for better layout
 
     with col1:
-        qr_link = st.text_input("Enter a link:", key="qr_link")
+        qr_link = st.text_input("📌 Enter a link:", key="qr_link")
     with col2:
         caption = st.text_input("Enter a caption:", key="qr_caption")
     with col3:
         st.write("")  # Add spacing for alignment
-        generate_qr_button = st.button("Click to Generate", key="generate_qr")
+        generate_qr_button = st.button("🔆 Click to Generate", key="generate_qr")
 
     if generate_qr_button and qr_link:
         # ✅ Generate the QR code
