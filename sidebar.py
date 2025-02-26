@@ -4,11 +4,11 @@ def show_sidebar():
     st.sidebar.title("📖 Class Navigation")
 
     # Top-level navigation
-    st.sidebar.markdown("[🏠 Home](#)")
-    st.sidebar.markdown("[📘 About the Course](#)")
-    st.sidebar.markdown("### 📌 Bookmarks & Apps")
-    st.sidebar.markdown("[📌 Class Management Apps](#)")
-    st.sidebar.markdown("### 📘 Class Workbook Contents")
+    st.sidebar.markdown("[Home](#)")
+    st.sidebar.markdown("[About the Course](#)")
+    st.sidebar.markdown("### Bookmarks & Apps")
+    st.sidebar.markdown("[Class Management Apps](#)")
+    st.sidebar.markdown("### Class Workbook Contents")
 
     # ✅ Getting to Know Each Other (Always Visible)
     st.sidebar.markdown("📒 **Getting to Know Each Other**")
