@@ -2,10 +2,10 @@ import streamlit as st
 from PIL import Image
 import requests
 from io import BytesIO
-import sidebar  # Import sidebar module
+#import sidebar  # Import sidebar module
 
 # ✅ Display Sidebar
-sidebar.show_sidebar()
+# sidebar.show_sidebar()
 
 # ✅ Main Page Content
 st.markdown("### 🐣 English Pronunciation (Spring 2025)")
