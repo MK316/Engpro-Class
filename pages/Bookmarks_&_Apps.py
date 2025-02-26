@@ -31,7 +31,7 @@ wordlist_url1 = "https://raw.githubusercontent.com/MK316/CEFR/refs/heads/main/da
 wordlist_url2 = "https://raw.githubusercontent.com/MK316/CEFR/refs/heads/main/data/C1f.txt"
 
 def main():
-    st.title('Bookmarks & Applications')
+    st.title('Bookmarks & Apps')
     
     # Create tabs
     tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(["🔆 Weblinks", "🌈 Oxford5K", "🌈 Padlet", " 🔆 Digital tools" ,"🔆 Customized apps","🔆 More web resources"])
