@@ -72,12 +72,12 @@ def main():
         st.caption("🔎 The B2 and C1 word lists contain a total of 725 and 1,380 words, respectively. Select the word numbers you want, then click the Show button.")
     
         # ✅ Custom button to external CEFR Voca Application
-        st.link_button("Go to CEFR Voca Application", "https://mk316voca.streamlit.app/", use_container_width=False)
+        st.link_button("Go to Voca Application", "https://mk316voca.streamlit.app/", use_container_width=False)
     
         st.markdown("---")
     
         # ✅ Selection for Level B or Level C
-        level_choice = st.radio("Select a Wordlist Level:", ["🍐 Level B (B2)", "🍎 Level C (C1)"], key="wordlist_selection")
+        level_choice = st.radio("🔍 Select a Wordlist Level:", ["📗 Level B (B2)", "📕 Level C (C1)"], key="wordlist_selection")
     
         # Assign the correct dataset based on selection
         if level_choice == "🍐 Level B (B2)":
