@@ -71,27 +71,34 @@ def main():
 
         st.caption("🔎 The B2 and C1 word lists contain a total of 725 and 1,380 words, respectively. Select the word numbers you want, then click the Show button.")
     
-        # ✅ Custom-styled button for external CEFR Voca Application (Blue)
+        # ✅ Custom-styled blue button for external CEFR Voca Application
         button_html = """
         <style>
             .blue-button {
                 background-color: #007BFF; /* Bootstrap Blue */
-                color: white;
+                color: white !important;
                 border: none;
-                border-radius: 5px;
-                padding: 10px 20px;
+                border-radius: 8px;
+                padding: 12px 20px;
                 font-size: 16px;
-                cursor: pointer;
-                text-decoration: none;
+                font-weight: bold;
+                text-decoration: none !important;
                 display: inline-block;
+                text-align: center;
+                width: auto;
             }
             .blue-button:hover {
                 background-color: #0056b3; /* Darker Blue */
+            }
+            .blue-button a {
+                color: white !important;
+                text-decoration: none !important;
             }
         </style>
         <a href="https://mk316voca.streamlit.app/" target="_blank" class="blue-button">Go to Voca Application: Practice with Sound</a>
         """
         st.markdown(button_html, unsafe_allow_html=True)
+
     
         st.markdown("---")
     
