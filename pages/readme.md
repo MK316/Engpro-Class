@@ -7,7 +7,7 @@
 |  W03    |Mar.18 & 20| | English vowels II |        |       |
 |  W04    |Mar.25 & 27| | English vowels III |        |       |
 |  W05    |Apr.1 & 3| | English vowels IV |        |       |
-|  W06    |Apr.8 & **10**|Mar.18 (6-8PM)| English vowels V |        |       |
+|  W06    |Apr.8 & **10**|Mar.18 (6-9PM)| English vowels V |        |       |
 |  W07    |**Apr.15 & 17**| Mar.25 (6-9PM) |English Prosody I |        |       |
 |  W08    |**Apr.22 & 24**| |English Prosody II |   **Midterm (TBA)**     |       |
 |  W09    |**Apr.29** & (May 1)|Mar.18 (8-9PM) |  |        |       |
