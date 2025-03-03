@@ -97,7 +97,7 @@ with tabs[0]:
     st.audio("https://github.com/MK316/Engpro-Class/raw/main/audio/engpro-overview3.mp3", format='audio/mp3')
     
 ##############################
-with tabs[0]:
+with tabs[1]:
 
     # Arrange 'Start', 'Previous', 'Next', and 'Slide Selector' in a single row
     col1, col2, col3, col4 = st.columns([1, 1, 1, 5])
