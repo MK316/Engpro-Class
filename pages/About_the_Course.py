@@ -96,8 +96,8 @@ with tabs[4]:
     st.markdown("""
     - HW#1: Recording (diagnosis)
     - HW#2: Transcript searching
-    - HW#3: Song practice
-    - HW#4: Recording (diagnosis)
+    - HW#3: Recording (presentation)
+    - HW#4: Song practice
     - HW#5: Final recording
     """)
     st.caption("Details will be announced in time.")
