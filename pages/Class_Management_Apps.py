@@ -66,6 +66,7 @@ with tabs[1]:
 # Grouping tab
 with tabs[2]:
     st.subheader("👥 Grouping Tool")
+    st.caption("Your csv file must have 'Names' column")
     st.markdown("[S25 Roster](https://raw.githubusercontent.com/MK316/Engpro-Class/refs/heads/main/data/Engpro-roster25.csv)")
 
     # Upload file section
