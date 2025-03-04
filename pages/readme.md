@@ -2,7 +2,7 @@
 
 | Week | Date(s) | Remark|Topic(s) | Assign/activities | Links |
 |------|------|----|------|--------|-------|
-|  W01    |Mar.4 & 6||Introduction| Grouping       |       |
+|  W01    |Mar.4 & 6||Introduction| Grouping, HW#1 (Mar.9)       |       |
 |  W02    |Mar.11 & 13|| English vowels I |        |       |
 |  W03    |Mar.18 & 20| | English vowels II |        |       |
 |  W04    |Mar.25 & 27| | English vowels III |        |       |
