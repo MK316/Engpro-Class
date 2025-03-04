@@ -177,7 +177,7 @@ with tabs[5]:
     st.write("List and detail the assignments for the course here, providing due dates and submission guidelines.")
     # Bulleted List using Markdown
     st.markdown("""
-    - HW#1: Recording (diagnosis)
+    - HW#1: Recording (diagnosis) due by Mar.9
     - HW#2: Transcript searching
     - HW#3: Recording (presentation)
     - HW#4: Song practice
