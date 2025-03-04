@@ -76,7 +76,7 @@ with tabs[2]:
     members_per_group = st.number_input("Members per Group", min_value=1, value=5)
     
     # Input for fixed groups (optional)
-    fixed_groups_input = st.text_input("Fixed Groups (separated by semicolon;)", placeholder="Name1, Name2; Name3, Name4")
+    fixed_groups_input = st.text_input("Fixed Groups (separated by semicolon;)", placeholder="Leader, Name2; Name3, Name4")
 
     # Submit button to trigger grouping process
     if st.button("Submit"):
