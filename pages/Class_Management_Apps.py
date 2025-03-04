@@ -66,6 +66,7 @@ with tabs[1]:
 # Grouping tab
 with tabs[2]:
     st.subheader("👥 Grouping Tool")
+    st.markdown("[S25 Roster](https://raw.githubusercontent.com/MK316/Engpro-Class/refs/heads/main/data/Engpro-roster25.csv)")
 
     # Upload file section
     uploaded_file = st.file_uploader("Upload CSV File", type=["csv"])
