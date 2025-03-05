@@ -51,7 +51,7 @@ def main():
             "Dictionary.com": {
                 "url": "https://dictionary.com",
                 "description": "Online dictionary."
-            }
+            },
             "Grouping - Google sheet": {
                 "url": "https://docs.google.com/spreadsheets/d/1vi-wOJEFpXNWInfcKEZKqiuNFzOQtib5_1R3qyT6N9E/edit?usp=sharing",
                 "description": "Engpro Grouping."
