@@ -123,7 +123,7 @@ with tabs[0]:
         "5. content (Noun/Verb)": "She carefully examined **the content** of the report before submission, making sure it would **content** the board members.",
         "6. contest (Noun/Verb)": "The debate tournament included **a heated contest** among schools, but the losing team decided **to contest** the final results.",
         "7. permit (Noun/Verb)": "The government must issue **a permit** before construction begins, but the residents plan **to permit** only eco-friendly projects.",
-        "8. object (Noun/Verb)": "The museum displayed **va rare object** from ancient history, but some critics continued **to object** to its removal from its country of origin.",
+        "8. object (Noun/Verb)": "The museum displayed **a rare object** from ancient history, but some critics continued **to object** to its removal from its country of origin.",
         "9. increase (Noun/Verb)": "The company saw **an increase** in sales last quarter, but the CEO plans **to increase** investment in research to sustain growth.",
         "10. exploit (Noun/Verb)": "His book is **an inspiring exploit** of adventure and survival, but critics argue that he tried **to exploit** the story for financial gain."
     }
