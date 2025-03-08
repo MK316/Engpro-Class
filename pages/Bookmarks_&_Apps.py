@@ -203,7 +203,7 @@ def main():
         st.markdown('<a href="https://https://mk-316-pronunciationfeedback.hf.space/" class="button_link" target="_blank">📝 App 4: Pronunciation Feedback</a>', unsafe_allow_html=True)
         st.markdown('<a href="https://mk-316-korean-english.hf.space" class="button_link" target="_blank">🎧 App 5: Loanword English Pronunciation</a>', unsafe_allow_html=True)
         st.markdown('<a href="https://mk-316-oxford5k.hf.space" class="button_link" target="_blank">🐇 App 6: Oxford 5K Vocabulary practice</a>', unsafe_allow_html=True)
-        st.markdown('<a href="https://mk-316-wer-recording.hf.space/" class="button_link" target="_blank">🐇 App 7: WER speech feedback</a>', unsafe_allow_html=True)
+        st.markdown('<a href="https://mk-316-wer-recording.hf.space/" class="button_link" target="_blank">👄 App 7: WER speech feedback</a>', unsafe_allow_html=True)
 
         
     with tab6:
