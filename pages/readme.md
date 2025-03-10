@@ -7,9 +7,9 @@
 |  W03    |Mar.18 & 20| | English vowels II |        |  HW#2 (Mar.20)     |
 |  W04    |Mar.25 & 27| | English vowels III |        |       |
 |  W05    |Apr.1 & 3| | English vowels IV |        |       |
-|  W06    |Apr.8 & **10**|Mar.18 (6-9PM)| English vowels V |        |       |
-|  W07    |**Apr.15 & 17**| Mar.25 (6-9PM) |English Prosody I |        |       |
-|  W08    |**Apr.22 & 24**| |English Prosody II |        |       |
+|  W06    |Apr.8 & **10**|Mar.18 (6-9PM)| English vowels V, English Prosody I |        |       |
+|  W07    |**Apr.15 & 17**| Mar.25 (6-9PM) |English Prosody II |        |       |
+|  W08    |**Apr.22 & 24**| |English Prosody III |        |       |
 |  W09    |**Apr.29** & (May 1)| |  |        |    HW#3 recording (5/1)   |
 |  W10    |(May 6) & 8| |English Consonants I |  **Midterm (5/8)**      |       |
 |  W11    |May 13 & 15| |English Consonants II |        |       |
