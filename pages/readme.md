@@ -5,8 +5,8 @@
 |  W01    |Mar.4 & 6||Introduction| Grouping, HW#1 (Mar.9)       |       |
 |  W02    |Mar.11 & 13|| English vowels I |        |       |
 |  W03    |Mar.18 & 20|| English vowels II |   [HW#2 (Mar.18)](https://docs.google.com/spreadsheets/d/1vi-wOJEFpXNWInfcKEZKqiuNFzOQtib5_1R3qyT6N9E/edit?usp=sharing)     |       |
-|  W04    |Mar.25 & 27|Mar.25 (6-9PM)  | English vowels III |        |       |
-|  W05    |Apr.1 & 3|Apr.1 (6-9PM) | English vowels IV |        |       |
+|  W04    |Mar.25 & 27|(TBA) Mar.25 (6-9PM)  | English vowels III |        |       |
+|  W05    |Apr.1 & 3|(TBA) Apr.1 (6-9PM) | English vowels IV |        |       |
 |  W06    |Apr.8 & **10**|| English Prosody I (Lecture video) |        |       |
 |  W07    |**Apr.15 & 17**| |Group meeting for recording |   [HW#3 recording (4/17)](https://padlet.com/mirankim316/S25Engpro)      |       |
 |  W08    |**Apr.22 & 24**| |No class |       |       |
