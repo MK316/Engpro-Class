@@ -8,9 +8,9 @@
 |  W04    |Mar.25 & 27|Mar.25 (6-9PM)  | English vowels III |        |       |
 |  W05    |Apr.1 & 3|Apr.1 (6-9PM) | English vowels IV |        |       |
 |  W06    |Apr.8 & **10**|| English Prosody I (Lecture video) |        |       |
-|  W07    |**Apr.15 & 17**| |English Prosody II (Lecture video) |        |       |
-|  W08    |**Apr.22 & 24**| |No class |        |       |
-|  W09    |**Apr.29** & (May 1)| | No class |    HW#3 recording (5/1)    |       |
+|  W07    |**Apr.15 & 17**| |Group meeting for recording |  HW#3 recording (4/17)      |       |
+|  W08    |**Apr.22 & 24**| |(Lecture video) |        |       |
+|  W09    |**Apr.29** & (May 1)| | No class |        |       |
 |  W10    |(May 6) & 8| |English Consonants I |  **Midterm (5/8)**      |       |
 |  W11    |May 13 & 15| |English Consonants II |        |       |
 |  W12    |May 20 & 22| |English Consonants III |        |       |
