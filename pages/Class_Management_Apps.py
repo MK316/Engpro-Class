@@ -164,6 +164,7 @@ with tabs[3]:
             "Spanish": ("es", None),
             "French": ("fr", None),
             "Italian": ("it", None),
+            "Chinese": ("zh-CN", None),
             "Japanese": ("ja", None)
         }
         language_code, tld = lang_codes[language]
