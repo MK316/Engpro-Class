@@ -4,7 +4,7 @@
 |------|------|----|------|--------|-------|
 |  W01    |Mar.4 & 6||Introduction| Grouping, HW#1 (Mar.9)       |       |
 |  W02    |Mar.11 & 13|| English vowels I |        |       |
-|  W03    |Mar.18 & 20| | English vowels II |        |       |
+|  W03    |Mar.18 & 20| | English vowels II |        |  HW#2 (Mar.20)     |
 |  W04    |Mar.25 & 27| | English vowels III |        |       |
 |  W05    |Apr.1 & 3| | English vowels IV |        |       |
 |  W06    |Apr.8 & **10**|Mar.18 (6-9PM)| English vowels V |        |       |
