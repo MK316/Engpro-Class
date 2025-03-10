@@ -6,7 +6,7 @@
 |  W02    |Mar.11 & 13|| English vowels I |        |       |
 |  W03    |Mar.18 & 20|Mar.18 (6-9PM) | English vowels II |        |  HW#2 (Mar.20)     |
 |  W04    |Mar.25 & 27|Mar.25 (6-9PM)  | English vowels III |        |       |
-|  W05    |Apr.1 & 3| | English vowels IV |        |       |
+|  W05    |Apr.1 & 3|Apr.1 (6-9PM) | English vowels IV |        |       |
 |  W06    |Apr.8 & **10**|| English vowels V, English Prosody I |        |       |
 |  W07    |**Apr.15 & 17**| |English Prosody II |        |       |
 |  W08    |**Apr.22 & 24**| |English Prosody III |        |       |
