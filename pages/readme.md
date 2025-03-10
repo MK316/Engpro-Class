@@ -10,7 +10,7 @@
 |  W06    |Apr.8 & **10**|Mar.18 (6-9PM)| English vowels V |        |       |
 |  W07    |**Apr.15 & 17**| Mar.25 (6-9PM) |English Prosody I |        |       |
 |  W08    |**Apr.22 & 24**| |English Prosody II |        |       |
-|  W09    |**Apr.29** & (May 1)| |  |        |    HW#3 recording   |
+|  W09    |**Apr.29** & (May 1)| |  |        |    HW#3 recording (5/1)   |
 |  W10    |(May 6) & 8| |English Consonants I |  **Midterm (TBA)**      |       |
 |  W11    |May 13 & 15| |English Consonants II |        |       |
 |  W12    |May 20 & 22| |English Consonants III |        |       |
