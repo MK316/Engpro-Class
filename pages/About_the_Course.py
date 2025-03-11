@@ -178,9 +178,9 @@ with tabs[5]:
     # Bulleted List using Markdown
     st.markdown("""
     - HW#1: Recording (diagnosis) due by Mar.9
-    - HW#2: Transcript searching
-    - HW#3: Recording (presentation)
-    - HW#4: Song practice
+    - HW#2: Choose a TED Talk for practice: Get the transcript ready. (**due by Mar. 18**)
+    - HW#3: Recording (1 min's presentation, recording) 
+    - HW#4: Practice with a song (Hey Jude - by the Beatles)
     - HW#5: Final recording
     """)
     st.caption("Details will be announced in time.")
