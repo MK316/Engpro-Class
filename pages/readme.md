@@ -9,8 +9,8 @@
 |  W05    |Apr.1 & 3|(TBA) Apr.1 (6-9PM) | English vowels IV |        |       |
 |  W06    |Apr.8 & 💜**10**|| English Prosody I (Lecture video) |        |       |
 |  W07    |**💜Apr.15 & 💜17**| | Group meeting for recording |   [HW#3 recording to post 1(Due by 4/17)](https://padlet.com/mirankim316/S25Engpro)     |       |
-|  W08    |**💜Apr.22 & 💜24**| | |       |       |
-|  W09    |**💜Apr.29** & ❤️(May 1)||  |        |       |
+|  W08    |**💜Apr.22 & 💜24**| | No Class (makeup-on Apr.1|       |       |
+|  W09    |**💜Apr.29** & ❤️(May 1)||  **Midterm**|        |       |
 |  W10    |❤️(May 6) & 8| |English Consonants I |        |       |
 |  W11    |May 13 & 15| |English Consonants II |        |       |
 |  W12    |May 20 & 22| |English Consonants III |        |       |
