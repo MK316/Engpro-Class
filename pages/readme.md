@@ -10,8 +10,8 @@
 |  W06    |Apr.8 & 💜**10**|| English Prosody I (Lecture video) |        |       |
 |  W07    |**💜Apr.15 & 💜17**| | Group meeting for recording |   [HW#3 recording to post 1(Due by 4/17)](https://padlet.com/mirankim316/S25Engpro)     |       |
 |  W08    |**💜Apr.22 & 💜24**| | |       |       |
-|  W09    |**💜Apr.29** & (May 1)||  |        |       |
-|  W10    |(May 6) & 8| |English Consonants I |        |       |
+|  W09    |**💜Apr.29** & 💜(May 1)||  |        |       |
+|  W10    |💜(May 6) & 8| |English Consonants I |        |       |
 |  W11    |May 13 & 15| |English Consonants II |        |       |
 |  W12    |May 20 & 22| |English Consonants III |        |       |
 |  W13    |May 27 & 29| |English Consonants IV|        |       |
