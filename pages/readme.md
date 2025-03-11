@@ -1,6 +1,6 @@
 🌱 **Course Schedule**
 
-| Week | Date(s) | Remark|Topic(s) | Assign/activities | 
+| Week | Date(s) | Make-up|Topic(s) | Assign/activities | 
 |------|------|----|------|--------|
 |  W01    |Mar.4&6||Introduction| Grouping, HW#1 (Mar.9)       |       
 |  W02    |Mar.11&13|| English vowels I |        |       
