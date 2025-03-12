@@ -10,7 +10,7 @@
 |  W06    |Apr.8&<br>💜**10**|| 💓 English Prosody I (Lecture video) |        |       
 |  W07    |**💜Apr.15& <br>💜17**| | No class (makeup-on Mar.25)<br>👫💓  Group meeting for recording |   [HW#3 recording to post 1(Due by 4/22)](https://padlet.com/mirankim316/S25Engpro)     |       
 |  W08    |**💜Apr.22& <br>💜24**| | No Class (makeup-on Apr.1)|       |       
-|  W09    |**💙Apr.29**& <br>❤️(May 1)|6/10|  **Midterm**|        |       
+|  W09    |**Apr.29**& <br>❤️(May 1)|6/10|  **Midterm** (301-330)|        |       
 |  W10    |❤️(May 6)&<br>May 8|6/12|English Consonants I |        |       
 |  W11    |May 13&15| |English Consonants II |        |       
 |  W12    |May 20&22| |English Consonants III |        |       
