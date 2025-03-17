@@ -1,4 +1,5 @@
 import streamlit as st
+import requests
 
 tabs = st.tabs(["💧 Schedule", "💧 Hey Jude"])
 
