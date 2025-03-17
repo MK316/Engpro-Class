@@ -6,7 +6,7 @@ import time
 import io
 
 # Create four tabs
-tabs = st.tabs(["💧 Lesson 1", "💧 Lesson 2", "💧 Lesson 3", "💧 Lesson 4", "Listening practice"])
+tabs = st.tabs(["💧 Lesson 1", "💧 Lesson 2", "💧 Lesson 3", "💧 Lesson 4", "🎧 Listening practice", "Videos"])
 
 if 'show_image' not in st.session_state:
     st.session_state.show_image = False
@@ -446,3 +446,21 @@ with tabs[4]:
     - [Lesson 3](https://engpro-listening.streamlit.app/Lesson_03)
     - [Lesson 4](https://engpro-listening.streamlit.app/Lesson_04)
     """)
+
+######################################
+with tabs[5]:
+    st.title("Videos to catch a moment")
+
+
+with tabs[5]:
+    st.markdown("### Videos to catch a moment")
+
+    # Define the URLs for the YouTube videos
+    st.title("I would!")
+    video_url1 = "https://www.youtube.com/embed/UCxOZCc2gMQ?si=oCaTeDonuOzB9Gus"
+    # video_url2 = "https://www.youtube.com/embed/UCxOZCc2gMQ?si=oCaTeDonuOzB9Gus"
+
+    # Display the YouTube videos with specified width
+    st.video(video_url1, format="video/mp4", start_time=0, width=400)
+    # st.video(video_url2, format="video/mp4", start_time=0, width=400)
+
