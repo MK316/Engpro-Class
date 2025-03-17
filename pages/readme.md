@@ -5,7 +5,7 @@
 |  W01    |Mar.4&6|In-class|Introduction| Grouping, HW#1 (Mar.9)       |       
 |  W02    |Mar.11&13|In-class| English vowels I |        |       
 |  W03    |Mar.18&20|In-class| English vowels II |   [HW#2: TED (Mar.18)](https://docs.google.com/spreadsheets/d/1vi-wOJEFpXNWInfcKEZKqiuNFzOQtib5_1R3qyT6N9E/edit?usp=sharing)     |       
-|  W04    |Mar.25&💜27|In-class/Online <br>3/25 (6-9PM)|  English vowels III | 💓 LMS lecture video |       
+|  W04    |Mar.25&<br>💜27|In-class/Online <br>3/25 (6-9PM)|  English vowels III | 💓 LMS lecture video |       
 |  W05    |Apr.1&3|In-class <br>4/1 (6-9PM)| English vowels IV |        |       
 |  W06    |Apr.8&<br>💜**10**|Online| 💓 English Prosody I (Lecture video) |        |       
 |  W07    |**💜Apr.15& <br>💜17**|Group meeting | No class (makeup-on Mar.25)<br>👫💓  Group meeting for recording |   [HW#3 recording to post 1(Due by 4/22)](https://padlet.com/mirankim316/S25Engpro)     |       
