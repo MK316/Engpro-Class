@@ -31,7 +31,7 @@ with tabs[1]:
 
     st.markdown("---")
     st.markdown("""
-    🎼 **Lyrics**
+    #### 🎼 Lyrics
 
     1.  
     Hey Jude, don't make it bad.  
