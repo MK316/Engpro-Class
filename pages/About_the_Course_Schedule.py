@@ -74,4 +74,12 @@ with tabs[1]:
     (repeat X number of times, fade)
 
     """)
-              
+
+    audio_url01 = "[sample 1](https://github.com/MK316/Engpro-Class/blob/main/audio/HeyJude-sample1.wav)"
+    st.markdown("[sample 2](https://github.com/MK316/Engpro-Class/blob/main/audio/HeyJude-sample2.wav)")
+    st.markdown("[sample 2](https://github.com/MK316/Engpro-Class/blob/main/audio/HeyJude-sample3.mp3)")
+    st.markdown("[sample 2](https://github.com/MK316/Engpro-Class/blob/main/audio/HeyJude-sample4.mp3)")
+    st.markdown("[sample 2](https://github.com/MK316/Engpro-Class/blob/main/audio/HeyJude-sample5.m4a)")
+
+
+    st.audio(audio_url)
