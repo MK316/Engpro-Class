@@ -457,7 +457,7 @@ with tabs[5]:
 
     # Define the URLs for the YouTube videos
     st.title("I would!")
-    video_url1 = "https://www.youtube.com/embed/UCxOZCc2gMQ?si=oCaTeDonuOzB9Gus"
+    video_url1 = "https://youtu.be/UCxOZCc2gMQ"
     # video_url2 = "https://www.youtube.com/embed/UCxOZCc2gMQ?si=oCaTeDonuOzB9Gus"
 
     # Display the YouTube videos with specified width
