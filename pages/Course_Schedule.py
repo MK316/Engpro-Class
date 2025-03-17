@@ -1,6 +1,6 @@
 import streamlit as st
 
-tabs = st.tabs(["💧 Schedule", "💧 Hey Jude", 
+tabs = st.tabs(["💧 Schedule", "💧 Hey Jude"])
 
 
 ##############################
