@@ -461,6 +461,6 @@ with tabs[5]:
     # video_url2 = "https://www.youtube.com/embed/UCxOZCc2gMQ?si=oCaTeDonuOzB9Gus"
 
     # Display the YouTube videos with specified width
-    st.video(video_url1, format="video/mp4", start_time=0, width=400)
+    st.video(video_url1, format="video/mp4", start_time=0)
     # st.video(video_url2, format="video/mp4", start_time=0, width=400)
 
