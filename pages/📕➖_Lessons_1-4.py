@@ -458,10 +458,11 @@ with tabs[5]:
     # Define the URLs for the YouTube videos
     st.markdown("#### 1. Hey Jude (Beatles)")
     video_url1 = "https://www.youtube.com/embed/mQER0A0ej0M?si=eSi7vtIJzot9cqAf"
-    video_url2 = "https://www.youtube.com/watch?v=UCxOZCc2gMQ"
+    st.video(video_url1, format="video/mp4", start_time=0)
+
 
     # Display the YouTube videos with specified width
     st.markdown("#### 2. I would! (from NCIS)")
-    st.video(video_url1, format="video/mp4", start_time=0)
+    video_url2 = "https://www.youtube.com/watch?v=UCxOZCc2gMQ"
     st.video(video_url2, format="video/mp4", start_time=0)
 
