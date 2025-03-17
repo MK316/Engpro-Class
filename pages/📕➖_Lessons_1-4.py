@@ -464,3 +464,20 @@ with tabs[5]:
     st.video(video_url1, format="video/mp4", start_time=0)
     # st.video(video_url2, format="video/mp4", start_time=0, width=400)
 
+    # Custom CSS to modify the width of the video
+    st.markdown(
+        """
+        <style>
+        .video-container {
+            width: 50%;  # Adjust the width as needed
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+    
+    # Embed video within a custom-styled container
+    st.markdown(
+        f'<div class="video-container"><iframe width="100%" height="315" src="{video_url1}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>',
+        unsafe_allow_html=True
+    )
