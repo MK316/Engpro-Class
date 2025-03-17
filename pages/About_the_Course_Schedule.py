@@ -82,4 +82,4 @@ with tabs[1]:
     st.markdown("[sample 2](https://github.com/MK316/Engpro-Class/blob/main/audio/HeyJude-sample5.m4a)")
 
 
-    st.audio(audio_url)
+    st.audio(audio_url01)
