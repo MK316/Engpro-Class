@@ -456,11 +456,12 @@ with tabs[5]:
     st.markdown("### 🎬 Videos to catch a moment")
 
     # Define the URLs for the YouTube videos
-    st.markdown("#### 1. I would! (from NCIS)")
-    video_url1 = "https://www.youtube.com/watch?v=UCxOZCc2gMQ"
-    # video_url2 = "https://www.youtube.com/embed/UCxOZCc2gMQ?si=oCaTeDonuOzB9Gus"
+    st.markdown("#### 1. Hey Jude (Beatles)")
+    video_url1 = "https://www.youtube.com/embed/mQER0A0ej0M?si=eSi7vtIJzot9cqAf"
+    video_url2 = "https://www.youtube.com/watch?v=UCxOZCc2gMQ"
 
     # Display the YouTube videos with specified width
+    st.markdown("#### 2. I would! (from NCIS)")
     st.video(video_url1, format="video/mp4", start_time=0)
-    # st.video(video_url2, format="video/mp4", start_time=0)
+    st.video(video_url2, format="video/mp4", start_time=0)
 
