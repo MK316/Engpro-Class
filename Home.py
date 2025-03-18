@@ -6,6 +6,12 @@ from io import BytesIO
 st.markdown("### 🐣 English Pronunciation (Spring 2025)")
 st.markdown('"_Confidence is a habit that can be developed by acting as if you already had the confidence you desire to have."_  Brian Tracy (writer and motivational public speaker)')
 
+# URL of the raw audio file on GitHub
+audio_url = 'https://github.com/MK316/Engpro-Class/raw/main/audio/confidence.wav'
+
+# Display the audio player in Streamlit
+st.audio(audio_url, format='audio/mp3', start_time=0)
+
 # Add an image from GitHub
 image_url = "https://github.com/MK316/Engpro-Class/raw/main/data/engpro-cover.png"
 
