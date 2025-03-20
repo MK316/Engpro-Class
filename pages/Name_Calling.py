@@ -17,9 +17,13 @@ def main():
     intro = text_to_speech("Calling will begin shortly. Please listen to your name and respond with 'Present'.")
     st.audio(intro, format='audio/mp3')
 
-    st.write("roll call")
-    roster_audio = "https://github.com/MK316/Engpro-Class/raw/main/audio/roll-call-S25.mp3"
-    st.audio(roster_audio, format='audio/mp3')
+    st.write("1. Roll call (Male teacher)")
+    roster_audio1 = "https://github.com/MK316/Engpro-Class/raw/main/audio/roll-call-S25.mp3"
+    st.audio(roster_audio1, format='audio/mp3')
+
+    st.write("2. Roll call (Female teacher)")
+    roster_audio2 = "https://github.com/MK316/Engpro-Class/raw/main/audio/roll-call-S25-F.mp3"
+    st.audio(roster_audio2, format='audio/mp3')
     
     # User selects the CSV file column for names
     url = "https://raw.githubusercontent.com/MK316/Engpro-Class/main/data/s25engpro-roster2.csv"
