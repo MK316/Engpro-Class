@@ -20,7 +20,7 @@ def main():
     # User selects the CSV file column for names
     url = "https://raw.githubusercontent.com/MK316/Engpro-Class/main/data/s25engpro-roster2.csv"
     data = pd.read_csv(url)
-    st.write("Data columns:", data.columns)  # This will display the actual column names for debugging
+    # st.write("Data columns:", data.columns)  # This will display the actual column names for debugging
 
     # Let the user choose which column of names to use, ensuring the exact case from the data
     name_column = st.radio("Choose which names to call:", ('Names', 'ENames'))
