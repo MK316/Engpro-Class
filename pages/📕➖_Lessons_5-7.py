@@ -63,8 +63,8 @@ with tabs[0]:
 
     # Audio files
     audio_urls = {
-        'Male': 'https://github.com/MK316/Engpro-Class/raw/main/audio/constitution-M.mp3',
-        'Female': 'https://github.com/MK316/Engpro-Class/raw/main/audio/constitution-F.mp3',
+        'Male': 'https://github.com/MK316/Engpro-Class/raw/main/audio/constitution-F.mp3',
+        'Female': 'https://github.com/MK316/Engpro-Class/raw/main/audio/constitution-M.mp3',
     }
 
     selected_voice = st.selectbox("Select Voice", options=['Male', 'Female'], key='selected_voice')
