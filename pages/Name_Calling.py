@@ -5,7 +5,7 @@ from io import BytesIO
 
 # Function to generate audio from text
 def text_to_speech(text):
-    tts = gTTS(text, lang='en')  # Using 'ko' for Korean
+    tts = gTTS(text, lang='ko')  # Assuming 'ko' for Korean pronunciation
     audio_buffer = BytesIO()
     tts.write_to_fp(audio_buffer)
     audio_buffer.seek(0)
@@ -17,9 +17,15 @@ def main():
     st.markdown("### Teacher's Talk")
     st.markdown("🔊 Calling will begin shortly. Please listen to your name and respond with 'Present'.")
 
+    # User selects the CSV file column for names
     url = "https://raw.githubusercontent.com/MK316/Engpro-Class/main/data/Engpro-roster25.csv"
     data = pd.read_csv(url)
-    names = data['Names'].tolist()
+
+    # Let the user choose which column of names to use
+    name_column = st.radio("Choose which names to call:", ('Names', 'ENames'))
+
+    # Extract names from the selected column
+    names = data[name_column].tolist()
 
     if st.button("Start Calling Names"):
         for name in names:
