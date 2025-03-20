@@ -5,17 +5,12 @@ from io import BytesIO
 import time
 import os
 
-path = st.text_input("Enter the path to the CSV file:", value="path/to/your/names.csv")
-
-# Load names from a CSV file
-@st.cache_data
 def load_names(path):
     if not os.path.exists(path):
         raise FileNotFoundError(f"The file {path} does not exist.")
     data = pd.read_csv(path)
     return data['Names'].tolist()
 
-# Generate speech from text
 def text_to_speech(text):
     tts = gTTS(text, lang='en')
     audio_buffer = BytesIO()
@@ -25,32 +20,30 @@ def text_to_speech(text):
 
 def main():
     st.title("Class Name Caller")
-
-    # Display an introductory message
     st.markdown("### Teacher's Talk")
     st.markdown("🔊 Calling will begin shortly. Please listen to your name and respond with 'Present'.")
 
-    # Load names
-    
-    if path:
-        names = load_names(path)
+    path = st.text_input("Enter the path to the CSV file:", value="https://raw.githubusercontent.com/MK316/Engpro-Class/refs/heads/main/data/Engpro-roster25.csv")
 
-        # Button to start the name calling
+    if path:
+        try:
+            names = load_names(path)
+        except FileNotFoundError as e:
+            st.error(e)
+            return
+
         if st.button("Start Calling Names"):
             for name in names:
-                # Generate and play name
                 audio_response = text_to_speech(name)
                 st.audio(audio_response, format='audio/mp3')
                 st.write(f"Now calling: {name}")
-                time.sleep(1)  # Wait for a bit after each name
+                time.sleep(1)
 
-                # Optional teacher's natural response
-                if name != names[-1]:  # To avoid a response after the last name
+                if name != names[-1]:
                     interjection = "Next up,"
                     audio_response = text_to_speech(interjection)
                     st.audio(audio_response, format='audio/mp3')
-                    time.sleep(0.5)  # Short pause between names
-
+                    time.sleep(0.5)
 
 if __name__ == "__main__":
     main()
