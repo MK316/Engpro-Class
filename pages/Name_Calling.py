@@ -5,7 +5,7 @@ from io import BytesIO
 
 # Function to generate audio from text
 def text_to_speech(text):
-    tts = gTTS(text, lang='ko')  # Using 'ko' for Korean
+    tts = gTTS(text, lang='en')  # Using 'ko' for Korean
     audio_buffer = BytesIO()
     tts.write_to_fp(audio_buffer)
     audio_buffer.seek(0)
@@ -23,7 +23,7 @@ def main():
 
     if st.button("Start Calling Names"):
         for name in names:
-            st.write(f"Now calling: {name}")
+            st.write(f"Now calling:")
             # Generate audio for the name
             audio_response = text_to_speech(name)
             # Display audio player for the generated audio
