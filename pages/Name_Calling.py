@@ -2,11 +2,10 @@ import streamlit as st
 import pandas as pd
 from gtts import gTTS
 from io import BytesIO
-import os
 
 # Function to generate audio from text
 def text_to_speech(text):
-    tts = gTTS(text, lang='en')  # Change 'en' to 'ko' for Korean pronunciation
+    tts = gTTS(text, lang='ko')  # Using 'ko' for Korean
     audio_buffer = BytesIO()
     tts.write_to_fp(audio_buffer)
     audio_buffer.seek(0)
@@ -28,7 +27,7 @@ def main():
             # Generate audio for the name
             audio_response = text_to_speech(name)
             # Display audio player for the generated audio
-            st.audio(audio_response, format='audio/mp3', start_playing=True)
+            st.audio(audio_response, format='audio/mp3')
 
 if __name__ == "__main__":
     main()
