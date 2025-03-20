@@ -60,6 +60,27 @@ with tabs[0]:
         audio_data = generate_audio(text1)
         st.audio(audio_data.getvalue(), format='audio/mp3')    
 
+
+    # Audio files
+    audio_urls = {
+        'Male': 'https://github.com/MK316/Engpro-Class/raw/main/audio/constitution-M.mp3',
+        'Female': 'https://github.com/MK316/Engpro-Class/raw/main/audio/constitution-F.mp3',
+    }
+
+    selected_voice = st.selectbox("Select Voice", options=['Male', 'Female''], key='selected_voice')
+    st.caption("You can change the speech by clicking the three vertical dots in the audio panel.")
+    if st.button("Show Selected Audio"):
+        selected_audio_url = audio_urls[selected_voice]
+
+        # Display audio without adjusted speed (default playback)
+        st.markdown(f"""
+        <audio controls>
+            <source src="{selected_audio_url}" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        """, unsafe_allow_html=True)
+    st.markdown("---")
+    
     # More practice: names of animal
     # Define animal lists and corresponding image URLs
     animal_lists = {
