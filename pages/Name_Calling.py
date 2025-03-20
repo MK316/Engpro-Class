@@ -3,12 +3,15 @@ import pandas as pd
 from gtts import gTTS
 from io import BytesIO
 import time
+import os
 
 path = st.text_input("Enter the path to the CSV file:", value="path/to/your/names.csv")
 
 # Load names from a CSV file
-@st.cache
+@st.cache_data
 def load_names(path):
+    if not os.path.exists(path):
+        raise FileNotFoundError(f"The file {path} does not exist.")
     data = pd.read_csv(path)
     return data['Names'].tolist()
 
