@@ -197,6 +197,7 @@ with tabs[1]:
         audio_data = generate_audio(contrast_pairs[selected_pair])
         st.audio(audio_data.getvalue(), format='audio/mp3')
 
+    st.markdown("---")
     st.markdown("#### 🎬 Watch video 1: Open 'o' gesture close-up [lyrics](https://github.com/MK316/Engpro-Class/blob/main/data/SPDF.md)")
     st.caption('The Rocky Horror Picture Show: "Science Fiction, Double Feature')
     
