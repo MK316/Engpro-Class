@@ -4,6 +4,8 @@ from gtts import gTTS
 from io import BytesIO
 import time
 
+path = st.text_input("Enter the path to the CSV file:", value="path/to/your/names.csv")
+
 # Load names from a CSV file
 @st.cache
 def load_names(path):
@@ -26,7 +28,7 @@ def main():
     st.markdown("🔊 Calling will begin shortly. Please listen to your name and respond with 'Present'.")
 
     # Load names
-    path = st.text_input("Enter the path to the CSV file:", value="path/to/your/names.csv")
+    
     if path:
         names = load_names(path)
 
