@@ -29,13 +29,14 @@ def main():
 
     if st.button("Start Calling Names"):
         for name in names:
-            id = 0
-            nid = id+1
+            nid = 1
+           
             st.write(f"Now calling: {nid}")
             # Generate audio for the name
             audio_response = text_to_speech(name)
             # Display audio player for the generated audio
             st.audio(audio_response, format='audio/mp3')
+            nid += 1
 
 if __name__ == "__main__":
     main()
