@@ -13,9 +13,11 @@ def text_to_speech(text):
 
 # Main function defining the Streamlit app
 def main():
-    st.title("Class Name Caller")
+    st.title("😍 Name Caller")
     st.markdown("### Teacher's Talk")
-    st.markdown("🔊 Calling will begin shortly. Please listen to your name and respond with 'Present'.")
+    intro=text_to_speech("Calling will begin shortly. Please listen to your name and respond with 'Present'.")
+    st.audio(intro, format='audio/mp3')
+
 
     # User selects the CSV file column for names
     url = "https://github.com/MK316/Engpro-Class/raw/main/data/s25engpro-roster1.csv"
@@ -32,8 +34,7 @@ def main():
         st.session_state.nid = 1  # Resets or initializes the counter
 
     if st.button("Start Calling Names"):
-        intro=text_to_speech("Calling will begin shortly. Please listen to your name and respond with 'Present'.")
-        st.audio(intro, format='audio/mp3')
+
         # Process each name and increment nid after each call
         for name in names:
             st.write(f"Now calling: {st.session_state.nid}")
