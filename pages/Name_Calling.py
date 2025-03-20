@@ -5,7 +5,7 @@ from io import BytesIO
 
 # Function to generate audio from text
 def text_to_speech(text):
-    tts = gTTS(text, lang='ko')  # Using 'ko' for Korean pronunciation
+    tts = gTTS(text, lang='en')  # Using 'ko' for Korean pronunciation
     audio_buffer = BytesIO()
     tts.write_to_fp(audio_buffer)
     audio_buffer.seek(0)
