@@ -5,7 +5,7 @@ from io import BytesIO
 
 # Function to generate audio from text
 def text_to_speech(text):
-    tts = gTTS(text, lang='ko')  # Assuming 'ko' for Korean pronunciation
+    tts = gTTS(text, lang='ko')  # Using 'ko' for Korean pronunciation
     audio_buffer = BytesIO()
     tts.write_to_fp(audio_buffer)
     audio_buffer.seek(0)
@@ -27,16 +27,17 @@ def main():
     # Extract names from the selected column
     names = data[name_column].tolist()
 
+    # Initialize or reset the name ID (nid) using Streamlit's session state
+    if 'nid' not in st.session_state or st.button("Reset Counter"):
+        st.session_state.nid = 1  # Resets or initializes the counter
+
     if st.button("Start Calling Names"):
+        # Process each name and increment nid after each call
         for name in names:
-            nid = 1
-           
-            st.write(f"Now calling: {nid}")
-            # Generate audio for the name
+            st.write(f"Now calling: {st.session_state.nid}")
             audio_response = text_to_speech(name)
-            # Display audio player for the generated audio
             st.audio(audio_response, format='audio/mp3')
-            nid += 1
+            st.session_state.nid += 1  # Increment nid in the session state
 
 if __name__ == "__main__":
     main()
