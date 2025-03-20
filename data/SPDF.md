@@ -5,28 +5,28 @@
 
 
 ### [Verse 1]
-Michael Rennie was <span style="color:red">**ill**</span>   
-the day the earth stood <span style="color:red">**still**</span>   
+Michael Rennie was **ill**   
+the day the earth stood **still**   
 But he told us where we stand   
 
-And Flash Gordon was <span style="color:red">**there**</span>    
-in silver <span style="color:red">**underwear**</span>   
+And Flash Gordon was **there**    
+in silver **underwear**   
 Claude Rains was the invisible man   
 
-Then something went <span style="color:red">**wrong**</span>    
-for Fay Wray and King <span style="color:red">**Kong**</span>   
+Then something went **wrong**    
+for Fay Wray and King **Kong**   
 They got caught in a celluloid jam   
 
 Then at a deadly pace it came from outer space   
 And this is how the message ran   
 
 ### [Chorus]
-Science Fiction, Double <span style="color:red">**Feature**</span>   
-Dr. X will build a <span style="color:red">**creature**</span>   
-See androids fighting Brad and <span style="color:red">**Janet**</span>   
-Anne Francis stars in Forbidden <span style="color:red">**Planet**</span>   
+Science Fiction, Double **Feature**   
+Dr. X will build a **creature**   
+See androids fighting Brad and **Janet**   
+Anne Francis stars in Forbidden **Planet**   
 Wa-ah-ah-oh-oh   
-At the late night, double feature picture show     
+At the late night, double feature picture show  
 
 ### [Verse 2]
 I knew Leo G. Carroll was over a barrel   
