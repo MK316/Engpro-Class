@@ -5,13 +5,12 @@ from io import BytesIO
 
 # Function to generate audio from text
 def text_to_speech(text):
-    tts = gTTS(text, lang='en')  # Assuming 'en' since the code comment was conflicting ('ko' was mentioned)
+    tts = gTTS(text, lang='en')  # Correct language code if needed
     audio_buffer = BytesIO()
     tts.write_to_fp(audio_buffer)
     audio_buffer.seek(0)
     return audio_buffer
 
-# Main function defining the Streamlit app
 def main():
     st.title("😍 Name Caller")
     st.markdown("### Teacher's Talk")
@@ -21,11 +20,12 @@ def main():
     # User selects the CSV file column for names
     url = "https://raw.githubusercontent.com/MK316/Engpro-Class/main/data/s25engpro-roster2.csv"
     data = pd.read_csv(url)
-    st.write("Data columns:", data.columns)  # Debug: print actual columns
+    st.write("Data columns:", data.columns)  # This will display the actual column names for debugging
 
-    # Let the user choose which column of names to use
+    # Let the user choose which column of names to use, ensuring the exact case from the data
     name_column = st.radio("Choose which names to call:", ('Names', 'ENames'))
 
+    # Check if the selected column exists in the DataFrame to avoid KeyErrors
     if name_column in data.columns:
         names = data[name_column].tolist()
 
