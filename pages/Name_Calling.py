@@ -18,7 +18,7 @@ def main():
     st.markdown("🔊 Calling will begin shortly. Please listen to your name and respond with 'Present'.")
 
     # User selects the CSV file column for names
-    url = "https://raw.githubusercontent.com/MK316/Engpro-Class/main/data/Engpro-roster25.csv"
+    url = "https://github.com/MK316/Engpro-Class/raw/main/data/s25engpro-roster1.csv"
     data = pd.read_csv(url)
 
     # Let the user choose which column of names to use
