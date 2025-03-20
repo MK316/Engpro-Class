@@ -26,7 +26,7 @@ def main():
     st.markdown("🔊 Calling will begin shortly. Please listen to your name and respond with 'Present'.")
 
     # Load names
-    path = st.text_input("Enter the path to the CSV file:", value="https://raw.githubusercontent.com/MK316/Engpro-Class/refs/heads/main/data/Engpro-roster25.csv")
+    path = st.text_input("Enter the path to the CSV file:", value="path/to/your/names.csv")
     if path:
         names = load_names(path)
 
@@ -35,7 +35,7 @@ def main():
             for name in names:
                 # Generate and play name
                 audio_response = text_to_speech(name)
-                st.audio(audio_response, format='audio/mp3', start_playing=True)
+                st.audio(audio_response, format='audio/mp3')
                 st.write(f"Now calling: {name}")
                 time.sleep(1)  # Wait for a bit after each name
 
@@ -43,8 +43,9 @@ def main():
                 if name != names[-1]:  # To avoid a response after the last name
                     interjection = "Next up,"
                     audio_response = text_to_speech(interjection)
-                    st.audio(audio_response, format='audio/mp3', start_playing=True)
+                    st.audio(audio_response, format='audio/mp3')
                     time.sleep(0.5)  # Short pause between names
+
 
 if __name__ == "__main__":
     main()
