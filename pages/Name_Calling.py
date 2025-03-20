@@ -23,7 +23,7 @@ def main():
     st.markdown("### Teacher's Talk")
     st.markdown("🔊 Calling will begin shortly. Please listen to your name and respond with 'Present'.")
 
-    path = st.text_input("Enter the path to the CSV file:", value="https://raw.githubusercontent.com/MK316/Engpro-Class/refs/heads/main/data/Engpro-roster25.csv")
+    path = st.text_input("Enter the path to the CSV file:", value="https://github.com/MK316/Engpro-Class/raw/main/data/Engpro-roster25.csv")
 
     if path:
         try:
