@@ -17,6 +17,10 @@ def main():
     intro = text_to_speech("Calling will begin shortly. Please listen to your name and respond with 'Present'.")
     st.audio(intro, format='audio/mp3')
 
+    st.write("roll call")
+    roster_audio = "https://github.com/MK316/Engpro-Class/raw/main/audio/roll-call-S25.mp3"
+    st.audio(roster_audio, format='audio/mp3')
+    
     # User selects the CSV file column for names
     url = "https://raw.githubusercontent.com/MK316/Engpro-Class/main/data/s25engpro-roster2.csv"
     data = pd.read_csv(url)
