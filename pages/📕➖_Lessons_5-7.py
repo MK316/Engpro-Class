@@ -67,7 +67,7 @@ with tabs[0]:
         'Female': 'https://github.com/MK316/Engpro-Class/raw/main/audio/constitution-F.mp3',
     }
 
-    selected_voice = st.selectbox("Select Voice", options=['Male', 'Female''], key='selected_voice')
+    selected_voice = st.selectbox("Select Voice", options=['Male', 'Female'], key='selected_voice')
     st.caption("You can change the speech by clicking the three vertical dots in the audio panel.")
     if st.button("Show Selected Audio"):
         selected_audio_url = audio_urls[selected_voice]
