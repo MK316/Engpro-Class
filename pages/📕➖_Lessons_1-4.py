@@ -437,12 +437,7 @@ with tabs[3]:
     youtube_url_accent = "https://www.youtube.com/watch?v=DKEM-juLxmM"
     st.video(youtube_url_accent)
     
-    st.markdown("#### 🎬 Watch video 2: Open 'o' gesture close-up [lyrics](https://github.com/MK316/Engpro-Class/blob/main/data/SPDF.md)")
-    st.caption('The Rocky Horror Picture Show: "Science Fiction, Double Feature')
-    
-    # YouTube Video Embed
-    youtube_url_horror = "https://www.youtube.com/embed/GKhPVHoodrU?si=_-cik1waiS3X0zir"
-    st.video(youtube_url_horror)
+
 
 ###################################################################
 with tabs[4]:
