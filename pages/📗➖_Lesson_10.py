@@ -3,7 +3,7 @@ import io
 from gtts import gTTS
 
 # Create four tabs
-tabs = st.tabs(["❄️ Lesson 10", "❄️ Speech notes"])
+tabs = st.tabs(["❄️ Lesson 10", "❄️ Speechnotes"])
 
 # Content for each tab
 with tabs[0]:
