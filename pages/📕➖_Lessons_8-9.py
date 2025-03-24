@@ -259,5 +259,4 @@ with tabs[2]:
     st.markdown("### 🎧 Listening Practice")
     st.markdown("""
     - [Lesson 8](https://engpro-listening.streamlit.app/Lesson_08)
-    - [Lesson 9](https://engpro-listening.streamlit.app/Lesson_09)
     """)
