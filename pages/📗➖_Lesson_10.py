@@ -3,7 +3,7 @@ import io
 from gtts import gTTS
 
 # Create four tabs
-tabs = st.tabs(["❄️ Lesson 10", "❄️ App 1", "❄️ App 2", "❄️ App 3"])
+tabs = st.tabs(["❄️ Lesson 10", "❄️ Speech notes"])
 
 # Content for each tab
 with tabs[0]:
@@ -193,8 +193,6 @@ with tabs[0]:
         st.audio(audio_data.getvalue(), format='audio/mp3')
         st.write(f"**Sentence:** {practice_sentences[selected_practice_sentence]}")
 with tabs[1]:
-    st.markdown("### 📒 Lesson 15: ")
-with tabs[2]:
-    st.markdown("### 📒 Lesson 16: ")
-with tabs[3]:
-    st.markdown("### 📒 Lesson 17: ")
+    st.markdown("### 📒 Speechnotes ")
+    st.markdown("Visit [Speechnotes](https://speechnotes.co) to hone your reading skills. Read the sentences aloud one by one and observe how the AI transcribes them in real-time. This interactive exercise will not only improve your pronunciation but also give you immediate feedback on how accurately your spoken words are being captured by the AI. Perfect for enhancing your reading fluency!")
+
