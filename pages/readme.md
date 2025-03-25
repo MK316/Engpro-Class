@@ -8,8 +8,8 @@
 |  W04    |Mar.25&<br>💜27|In-class/Online <br>3/25 (6:30-9:30PM)|  English vowels III | 💓 LMS lecture video |       
 |  W05    |Apr.1&3|In-class <br>4/1 (6:30-9:30PM)| English vowels IV |        |       
 |  W06    |Apr.8&<br>💜**10**|In-class<br>Online| English Prosody I (Lecture video) |💓 LMS lecture video        |       
-|  W07    |**💜Apr.15& <br>💜17**|Group meeting | No class (makeup-on Mar.25)<br>👫💓  Group meeting for recording |   [HW#3 recording to post 1(Due by 4/22)](https://padlet.com/mirankim316/S25Engpro)     |       
-|  W08    |**💜Apr.22& <br>💜24**| No class| No Class (makeup-on Apr.1)|       |       
+|  W07    |**💜Apr.15<br>&💜17**|Group meeting | No class (makeup-on Mar.25)<br>👫💓  Group meeting for recording |   [HW#3 recording to post 1(Due by 4/22)](https://padlet.com/mirankim316/S25Engpro)     |       
+|  W08    |**💜Apr.22<br>&💜24**| No class| No Class (makeup-on Apr.1)|       |       
 |  W09    |💜Apr.29& <br>(May 1)|(Group activity: final check for Voca assignment)| Holiday |Voca-assignment due (4/29) <br> [Google sheet link](https://docs.google.com/spreadsheets/d/1Mdg9aSWt71uqkwoK5xU2v2sO9QMYxl-uEhCRW4ogwno/edit?usp=sharing)       |       
 |  W10    |(May 6)&<br>May 8|In-class|**Midterm (5/8, Thur)**;<br>English Consonants I |        |       
 |  W11    |May 13&15| In-class|English Consonants II |        |       
