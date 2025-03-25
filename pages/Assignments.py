@@ -14,7 +14,7 @@ with tab1:
         "Due Date": ["2025-03-09", "2025-03-18", "2025-04-22", "2025-04-10", "2025-04-15"],
         "Status": ["Closed", "Closed", "Open", "TBA", "TBA"],
         "Grade": ["Complete/Incomplete", "C / I", "4 pts.", "4 pts.", "4 pts."],
-        "Submission": ["LMS", "Google Sheet", "Padlet", "Padlet", "TBA"],
+        "Submission": ["[LMS](https://rec.ac.kr/gnu)", "[Google Sheet](https://docs.google.com/spreadsheets/d/1vi-wOJEFpXNWInfcKEZKqiuNFzOQtib5_1R3qyT6N9E/edit?usp=sharing)", "[Padlet](https://padlet.com/mirankim316/S25Engpro)", "[Padlet](https://padlet.com/mirankim316/S25Engpro)", "TBA"],
         "Remark":["","","","",""]
     }
 
