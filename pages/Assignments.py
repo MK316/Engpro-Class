@@ -27,7 +27,7 @@ with tab1:
     st.markdown("### 📝 Group Assignments Details")
     
     g_data = {
-        "Assignment": ["1. Voca study (Level B & C)", "2: 1 min. TED recording"],
+        "Assignment": ["1. Voca study (Level B & C)", "2: Help 1 min. TED recording"],
         "Due Date": ["2025-04-29", "2025-04-22"],
         "Status": ["Open", "Open"],
         "Grade": ["Complete/Incomplete", "C / I"],
