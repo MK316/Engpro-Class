@@ -6,7 +6,7 @@ tab1, tab2 = st.tabs(["🎱 Group info", "🎾 Assignments"])
 
 with tab1:
     st.markdown("### Grouping")
-    st.markdown("#### [Oxford5K voca](https://docs.google.com/spreadsheets/d/1vi-wOJEFpXNWInfcKEZKqiuNFzOQtib5_1R3qyT6N9E/edit?usp=sharing)"
+    st.markdown("#### [Oxford5K voca](https://docs.google.com/spreadsheets/d/1vi-wOJEFpXNWInfcKEZKqiuNFzOQtib5_1R3qyT6N9E/edit?usp=sharing)")
 
 with tab2:
     st.markdown("### 📝 Assignments Details")
