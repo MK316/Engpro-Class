@@ -6,7 +6,7 @@ tab1, tab2 = st.tabs(["🎱 Group info", "🎾 Assignments"])
 
 with tab1:
     st.markdown("### Grouping")
-    st.markdown("#### [Oxford5K voca](https://docs.google.com/spreadsheets/d/1vi-wOJEFpXNWInfcKEZKqiuNFzOQtib5_1R3qyT6N9E/edit?usp=sharing")
+    st.markdown("#### [Oxford5K voca](https://docs.google.com/spreadsheets/d/1vi-wOJEFpXNWInfcKEZKqiuNFzOQtib5_1R3qyT6N9E/edit?usp=sharing)"
 
 with tab2:
     st.markdown("### 📝 Assignments Details")
@@ -18,7 +18,7 @@ with tab2:
         "Status": ["Closed", "Closed", "Open", "TBA", "TBA"],
         "Grade": ["Complete/Incomplete", "C / I", "4 pts.", "4 pts.", "4 pts."],
         "Submission": ["LMS", "Google Sheet", "Padlet", "Padlet", "TBA"],
-        "Links":["","","","",""]
+        "Remark":["","","","",""]
     }
 
     # Convert the dictionary into a DataFrame
