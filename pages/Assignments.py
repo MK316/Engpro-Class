@@ -15,7 +15,7 @@ with tab1:
         "Status": ["Closed", "Closed", "Open", "TBA", "TBA"],
         "Grade": ["Complete/Incomplete", "C / I", "4 pts.", "4 pts.", "4 pts."],
         "Submission": ["[LMS](https://rec.ac.kr/gnu)", "[Google Sheet](https://docs.google.com/spreadsheets/d/1vi-wOJEFpXNWInfcKEZKqiuNFzOQtib5_1R3qyT6N9E/edit?usp=sharing)", "[Padlet](https://padlet.com/mirankim316/S25Engpro)", "[Padlet](https://padlet.com/mirankim316/S25Engpro)", "TBA"],
-        "Remark":["","","","",""]
+        "Notes":["","","","",""]
     }
 
     # Convert the dictionary into a DataFrame
@@ -32,7 +32,7 @@ with tab1:
         "Status": ["Open", "Open"],
         "Grade": ["Complete/Incomplete", "C / I"],
         "Submission": ["[Google Sheet](https://docs.google.com/spreadsheets/d/1vi-wOJEFpXNWInfcKEZKqiuNFzOQtib5_1R3qyT6N9E/edit?usp=sharing)", "Padlet"],
-        "Remark":["",""]
+        "Notes":["",""]
     }
 
     # Convert the dictionary into a DataFrame
