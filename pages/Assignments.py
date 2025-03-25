@@ -6,7 +6,7 @@ tab1, tab2, tab3 = st.tabs(["🎱 Assignments", "👬 Group info", "🌵 Padlet"
 
 
 with tab1:
-    st.markdown("### 📝 Assignments Details")
+    st.markdown("### 📝 Individual Assignments Details")
 
     # Sample data for the assignments table
     data = {
@@ -24,10 +24,25 @@ with tab1:
     # Display the DataFrame as a table in Streamlit
     st.table(assignments_df.set_index("Assignment"))
 
+    st.markdown("### 📝 Group Assignments Details")
+    st.markdown("#### 1. [Oxford5K voca](https://docs.google.com/spreadsheets/d/1vi-wOJEFpXNWInfcKEZKqiuNFzOQtib5_1R3qyT6N9E/edit?usp=sharing)")
 
+    g_data = {
+        "Assignments": ["1. Voca study (Level B & C)", "2: 1 min. TED recording"],
+        "Due Date": ["2025-04-29", "2025-04-22"],
+        "Status": ["Open", "Open"],
+        "Grade": ["Complete/Incomplete", "C / I"],
+        "Submission": ["[Google Sheet](https://docs.google.com/spreadsheets/d/1vi-wOJEFpXNWInfcKEZKqiuNFzOQtib5_1R3qyT6N9E/edit?usp=sharing)", "Padlet"],
+        "Remark":["",""]
+    }
+
+    # Convert the dictionary into a DataFrame
+    g_assignments_df = pd.DataFrame(g_data)
+
+    # Display the DataFrame as a table in Streamlit
+    st.table(g_assignments_df.set_index("Assignment"))
 with tab2:
     st.markdown("### 1. [Groups](https://docs.google.com/spreadsheets/d/1vi-wOJEFpXNWInfcKEZKqiuNFzOQtib5_1R3qyT6N9E/edit?usp=sharing)")
-    st.markdown("#### 2. [Oxford5K voca](https://docs.google.com/spreadsheets/d/1vi-wOJEFpXNWInfcKEZKqiuNFzOQtib5_1R3qyT6N9E/edit?usp=sharing)")
 
 with tab3:
     st.header("🐾 Files to share: on Padlet")
