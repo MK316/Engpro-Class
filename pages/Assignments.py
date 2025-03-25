@@ -2,13 +2,10 @@ import streamlit as st
 import pandas as pd
 
 # Create a tab bar with three tabs
-tab1, tab2 = st.tabs(["🎱 Group info", "🎾 Assignments"])
+tab1, tab2 = st.tabs(["🎱 Assignments", "👬 Group info", "🌵 Padlet"])
+
 
 with tab1:
-    st.markdown("### Grouping")
-    st.markdown("#### [Oxford5K voca](https://docs.google.com/spreadsheets/d/1vi-wOJEFpXNWInfcKEZKqiuNFzOQtib5_1R3qyT6N9E/edit?usp=sharing)")
-
-with tab2:
     st.markdown("### 📝 Assignments Details")
 
     # Sample data for the assignments table
@@ -26,3 +23,13 @@ with tab2:
 
     # Display the DataFrame as a table in Streamlit
     st.table(assignments_df.set_index("Assignment"))
+
+
+with tab2:
+    st.markdown("### 1. [Groups](https://docs.google.com/spreadsheets/d/1vi-wOJEFpXNWInfcKEZKqiuNFzOQtib5_1R3qyT6N9E/edit?usp=sharing)")
+    st.markdown("#### 2. [Oxford5K voca](https://docs.google.com/spreadsheets/d/1vi-wOJEFpXNWInfcKEZKqiuNFzOQtib5_1R3qyT6N9E/edit?usp=sharing)")
+
+with tab3:
+    st.header("🐾 Files to share: on Padlet")
+    st.write("This Padlet serves as a dynamic hub for our Acoustics course. Here, you'll find additional course materials, additional reading resources, and online tools. It's also a space for sharing files and submitting assignments.")
+    st.components.v1.iframe("https://padlet.com/mirankim316/S25Engpro", width=700, height=800)
