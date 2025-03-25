@@ -22,7 +22,7 @@ with tab2:
     }
 
     # Convert the dictionary into a DataFrame
-    assignments_df = pd.DataFrame(data)
+    assignments_df = pd.DataFrame(data, index=False)
 
     # Display the DataFrame as a table in Streamlit
     st.table(assignments_df)
