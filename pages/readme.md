@@ -7,7 +7,7 @@
 |  W03    |Mar.18&20|In-class| English vowels II |   [HW#2: TED (Mar.18)](https://docs.google.com/spreadsheets/d/1vi-wOJEFpXNWInfcKEZKqiuNFzOQtib5_1R3qyT6N9E/edit?usp=sharing)     |       
 |  W04    |Mar.25&<br>💜27|In-class/Online <br>3/25 (6:30-9:30PM)|  English vowels III | 💓 LMS lecture video |       
 |  W05    |Apr.1&3|In-class <br>4/1 (6:30-9:30PM)| English vowels IV |        |       
-|  W06    |Apr.8&<br>💜**10**|Online Lecture 🌀Survey link on LMS (4/8)| English Prosody I (Lecture video) |💓 LMS lecture video        |       
+|  W06    |💜Apr.8&<br>💜**10**|Online Lecture 🌀Survey link on LMS (4/8)| English Prosody I (Lecture video) |💓 LMS lecture video        |       
 |  W07    |**💜Apr.15<br>&💜17**|Group meeting: 📌[사범대미래교육센터예약](https://www.gnu.ac.kr/sadae/cm/cntnts/cntntsView.do?mi=9038&cntntsId=4820) | No class (makeup-on Mar.25)<br>👫💓  Group meeting for recording |   📌[HW#3 TED recording (Due by 4/22)](https://padlet.com/mirankim316/S25Engpro)     |       
 |  W08    |**💜Apr.22<br>&💜24**| No class| No Class (makeup-on Apr.1)|       |       
 |  W09    |💜Apr.29& <br>(May 1)|(Group activity: final check for Voca assignment) 📌[attendance photo on Padlet](https://padlet.com/mirankim316/S25Engpro)| Holiday |Voca-assignment due (4/29) <br> [Google sheet link](https://docs.google.com/spreadsheets/d/1Mdg9aSWt71uqkwoK5xU2v2sO9QMYxl-uEhCRW4ogwno/edit?usp=sharing)       |       
