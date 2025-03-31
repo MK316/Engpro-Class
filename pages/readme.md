@@ -12,7 +12,7 @@
 |  W08    |**💜Apr.22<br>&💜24**| No class| No Class (makeup-on Apr.1)|       |       
 |  W09    |💜Apr.29& <br>(May 1)|(Group activity: final check for Voca assignment) 📌[attendance photo on Padlet](https://padlet.com/mirankim316/S25Engpro)| Holiday |Voca-assignment due (4/29) <br> [Google sheet link](https://docs.google.com/spreadsheets/d/1Mdg9aSWt71uqkwoK5xU2v2sO9QMYxl-uEhCRW4ogwno/edit?usp=sharing)       |       
 |  W10    |(May 6)&<br>May 8|In-class|**Midterm (5/8, Thur)**;<br>English Consonants I |        |       
-|  W11    |May 13&15| In-class|English Consonants II |        |       
+|  W11    |May 13&15| In-class + makup classes|English Consonants II |        |       
 |  W12    |May 20&22|In-class |English Consonants III |        |       
 |  W13    |May 27&29| In-class|English Consonants IV|        |       
 |  W14    |June 3&5|In-class |Sound rules I |        |       
