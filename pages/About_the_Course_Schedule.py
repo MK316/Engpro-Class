@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
 
-tabs = st.tabs(["💧 Schedule", "💧 Hey Jude"])
+tabs = st.tabs(["💧 Schedule", "💧 Hey Jude", "Todolist])
 
 
 ##############################
@@ -76,3 +76,6 @@ with tabs[1]:
     """)
 
     st.markdown("[samples on Padlet](https://padlet.com/mirankim316/S25Engpro)")
+
+with tabs[2]:
+    st.markdown("[pdf](https://github.com/MK316/Engpro-Class/blob/main/data/Todolist-Engpro.pdf)")
