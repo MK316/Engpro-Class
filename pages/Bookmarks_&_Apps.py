@@ -103,7 +103,7 @@ def main():
     
         # ✅ Selection for Level B or Level C
 
-    
+        st.markdown("### Note: The following only displays wordlist in text. To use audio sound, click the application button in the above.")
         level_choice = st.radio("🔍 Select a Wordlist Level:", ["📗 Level B (B2)", "📕 Level C (C1)"], key="wordlist_selection")
         
         if level_choice == "📗 Level B (B2)":
