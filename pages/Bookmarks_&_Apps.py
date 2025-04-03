@@ -102,15 +102,17 @@ def main():
         st.markdown("---")
     
         # ✅ Selection for Level B or Level C
-        level_choice = st.radio("🔍 Select a Wordlist Level:", ["📗 Level B (B2)", "📕 Level C (C1)"], key="wordlist_selection")
+
     
-        # Assign the correct dataset based on selection
-        if level_choice == "🍐 Level B (B2)":
+        level_choice = st.radio("🔍 Select a Wordlist Level:", ["📗 Level B (B2)", "📕 Level C (C1)"], key="wordlist_selection")
+        
+        if level_choice == "📗 Level B (B2)":
             wordlist_url = wordlist_url1
             level_key = "b2"
         else:
             wordlist_url = wordlist_url2
             level_key = "c1"
+
     
         # ✅ Load wordlist
         wordlist = load_wordlist(wordlist_url)
