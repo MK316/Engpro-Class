@@ -27,7 +27,7 @@ def load_wordlist(url):
         return pd.DataFrame(columns=["SID", "WORD"])
 
 # ✅ URLs for wordlists
-wordlist_url1 = "https://raw.githubusercontent.com/MK316/CEFR/refs/heads/main/data/B2.txt"
+wordlist_url1 = "https://github.com/MK316/CEFR/raw/main/data/B2.txt"
 wordlist_url2 = "https://raw.githubusercontent.com/MK316/CEFR/refs/heads/main/data/C1f.txt"
 
 def main():
