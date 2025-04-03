@@ -94,7 +94,7 @@ def main():
                 text-decoration: none !important;
             }
         </style>
-        <a href="https://mk316voca.streamlit.app/" target="_blank" class="blue-button">Click: Go to Voca Application: Practice with Sound</a>
+        <a href="https://mk316voca.streamlit.app/" target="_blank" class="blue-button">✨ Go to Voca Application: Practice with Sound</a>
         """
         st.markdown(button_html, unsafe_allow_html=True)
 
