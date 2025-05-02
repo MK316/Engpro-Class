@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 from gtts import gTTS
 from io import BytesIO
+import random
 
 # Load your dataset
 @st.cache_data
@@ -20,7 +21,7 @@ def generate_audio(text, lang='en'):
 df = load_data()
 
 # Create tabs
-tab1, tab2, tab3 = st.tabs(["🔤 Search by Word", "📘 Monophthongs", "📗 Diphthongs"])
+tab1, tab2, tab3, tab4 = st.tabs(["🔤 Search by Word", "📘 Monophthongs", "📗 Diphthongs", "Quiz"])
 
 # --- Tab 1: Flashcard App ---
 with tab1:
@@ -155,3 +156,61 @@ with tab3:
                 st.session_state.page_start_diph += num_display
     else:
         st.warning("No matching words found or end of list reached.")
+
+
+
+# --- Tab 4: Minimal Vowel Quiz ---
+
+tab4 = st.container()  # Just to keep layout consistent
+
+
+with tab4:
+    st.markdown("### 🧠 Vowel Odd-One-Out Quiz")
+    st.caption("Choose the word that has a different stressed vowel than the others.")
+
+    if "quiz_words" not in st.session_state:
+        st.session_state.quiz_words = []
+    if "correct_answer" not in st.session_state:
+        st.session_state.correct_answer = ""
+
+    if st.button("🎯 Start Quiz"):
+        # Get all unique vowels
+        vowels = df["Stressed_Vowel"].dropna().unique().tolist()
+
+        # Step 1: Pick one vowel, then get 4 matching words
+        vowel1 = random.choice(vowels)
+        words_with_vowel1 = df[df["Stressed_Vowel"] == vowel1]["WORD"].dropna().unique().tolist()
+        if len(words_with_vowel1) < 4:
+            st.warning("Not enough words for selected vowel. Try again.")
+        else:
+            quiz_choices = random.sample(words_with_vowel1, 4)
+
+            # Step 2: Pick a different vowel and 1 word from that set
+            other_vowels = [v for v in vowels if v != vowel1]
+            random.shuffle(other_vowels)
+            odd_word = ""
+            for vowel2 in other_vowels:
+                words_with_vowel2 = df[df["Stressed_Vowel"] == vowel2]["WORD"].dropna().unique().tolist()
+                if words_with_vowel2:
+                    odd_word = random.choice(words_with_vowel2)
+                    break
+
+            if odd_word:
+                quiz_choices.append(odd_word)
+                random.shuffle(quiz_choices)
+
+                st.session_state.quiz_words = quiz_choices
+                st.session_state.correct_answer = odd_word
+            else:
+                st.warning("Could not find a suitable odd word. Try again.")
+
+    if st.session_state.quiz_words:
+        selected_word = st.radio("Which word has a different vowel?", st.session_state.quiz_words, key="quiz_choice")
+
+        if st.button("✅ Show the answer"):
+            st.success(f"The correct answer is: **{st.session_state.correct_answer}**")
+            if selected_word == st.session_state.correct_answer:
+                st.balloons()
+                st.info("🎉 You got it right!")
+            else:
+                st.error("Oops! That's not correct.")
