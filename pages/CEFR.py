@@ -165,15 +165,15 @@ tab4 = st.container()  # Just to keep layout consistent
 
 
 with tab4:
-    st.markdown("### 🎡 Vowel Odd-One-Out Quiz")
-    st.caption("Choose the word that has a different stressed vowel than the others.")
+    st.markdown("### 🍀 Vowel Odd-One-Out Quiz")
+    st.caption("Q: Choose the word that has a different stressed vowel than the others.")
 
     # Initialize session states for quiz logic
     for key in ["quiz_words", "correct_answer", "quiz_choice", "score", "attempts", "answered"]:
         if key not in st.session_state:
             st.session_state[key] = None if key in ["quiz_words", "correct_answer", "quiz_choice"] else 0
 
-    if st.button("🎯 Start Quiz"):
+    if st.button("🎯 Show me a question."):
         # Reset score only when starting over
         st.session_state.answered = False
         st.session_state.quiz_choice = None
