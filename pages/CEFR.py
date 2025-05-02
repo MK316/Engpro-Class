@@ -105,5 +105,54 @@ with tab2:
 
 # --- Tab 3 Placeholder ---
 with tab3:
-    st.header("📗 App 3")
-    st.write("You can implement another app here.")
+    st.markdown("### 📘 Browse Words by Vowels (Diphthongs)")
+    st.caption("🚩 The following contains all diphthong vowels.")
+
+    # Monophthong vowel list
+    monophthongs = ["/ aɪ /", "/ oʊ /", "/ eɪ /", "/ aʊ /", "/ ɔɪ /"]
+
+
+    # Initialize session state for pagination
+    if "page_start" not in st.session_state:
+        st.session_state.page_start = 0
+    if "prev_vowel" not in st.session_state:
+        st.session_state.prev_vowel = ""
+    if "prev_count" not in st.session_state:
+        st.session_state.prev_count = 5
+
+    # UI: Dropdown + Radio
+    selected_vowel = st.selectbox("Choose a monophthong vowel:", monophthongs)
+    num_display = st.radio("How many words would you like to display?", [5, 10, 20], horizontal=True)
+
+    # Reset pagination if vowel or count changed
+    if selected_vowel != st.session_state.prev_vowel or num_display != st.session_state.prev_count:
+        st.session_state.page_start = 0
+        st.session_state.prev_vowel = selected_vowel
+        st.session_state.prev_count = num_display
+
+    # Filter dataset
+    filtered_df = df[(df["Stressed_Vowel"].str.strip() == selected_vowel) & (df["Vowel_Type"] == "Monophthong")]
+    total_matches = len(filtered_df)
+    st.info(f"🔍 Found **{total_matches}** words with stressed vowel **{selected_vowel}**.")
+
+    # Get page slice
+    start = st.session_state.page_start
+    end = start + num_display
+    to_display = filtered_df.iloc[start:end]
+
+    if not to_display.empty:
+        for _, row in to_display.iterrows():
+            with st.container():
+                st.markdown("---")
+                st.markdown(f"### 🌼 **{row['WORD']}**")
+                st.markdown(f"**Part of Speech:** {row['POS']}")
+                st.markdown(f"**Stressed Vowel:** `{row['Stressed_Vowel']}`")
+                audio = generate_audio(row['WORD'])
+                st.audio(audio, format='audio/mp3')
+
+        # Only show "Next" if more results remain
+        if end < total_matches:
+            if st.button("Next"):
+                st.session_state.page_start += num_display
+    else:
+        st.warning("No matching words found or end of list reached.")
