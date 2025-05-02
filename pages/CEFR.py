@@ -54,7 +54,7 @@ with tab2:
     st.caption("Select a monophthong vowel to view matching words.")
 
     # Monophthong vowel list
-    monophthongs = ["/i/", "/ɪ/", "/u/", "/ʊ/", "/ɛ/", "/æ/", "/ʌ/", "/ɔ/", "/ɑ/", "/ɝ/"]
+    monophthongs = ["/ i /", "/ ɪ /", "/ u /", "/ ʊ /", "/ ɛ /", "/ æ /", "/ ʌ /", "/ ɔ /", "/ ɑ /", "/ ɝ /"]
 
     # Dropdown to select vowel
     selected_vowel = st.selectbox("Choose a monophthong vowel:", monophthongs)
