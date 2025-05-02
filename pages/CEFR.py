@@ -27,7 +27,7 @@ with tab1:
             for _, row in matched.iterrows():
                 with st.container():
                     st.markdown("---")
-                    st.markdown(f"### **{row['WORD']}**")
+                    st.markdown(f"### 🌱 **{row['WORD']}**")
                     st.markdown(f"**🔵 Part of Speech:** {row['POS']}")
                     st.markdown(f"**🔵 Vowel Type:** {row['Vowel_Type']}")
                     st.markdown(f"**🔴 Stressed Vowel:** `{row['Stressed_Vowel']}`")
