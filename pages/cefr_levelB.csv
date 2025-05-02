@@ -1,0 +1,1000 @@
+﻿SID,WORD,POS,Vowel_Type,Stressed_Vowel
+1,absorb,v.,Monophthong,/ ɔ /
+2,abstract,n.,Monophthong,/ æ /
+3,abstract,adj.,Monophthong,/ æ /
+4,accent,n.,Monophthong,/ æ /
+5,accidentally,adv.,Monophthong,/ ɛ /
+6,accommodate,v.,Monophthong,/ ɑ /
+7,accomplish,v.,Monophthong,/ ɑ /
+8,accountant,n.,Diphthong,/ aʊ /
+9,accuracy,n.,Monophthong,/ æ /
+10,accurately,adv.,Monophthong,/ æ /
+11,acid,n.,Monophthong,/ æ /
+12,activate,v.,Monophthong,/ æ /
+13,addiction,n.,Monophthong,/ ɪ /
+14,additionally,adv.,Monophthong,/ ɪ /
+15,adequate,adj.,Monophthong,/ æ /
+16,adequately,adv.,Monophthong,/ æ /
+17,adjust,v.,Monophthong,/ ʌ /
+18,affordable,adj.,Monophthong,/ ɔ /
+19,agriculture,n.,Monophthong,/ æ /
+20,AIDS,n.,Diphthong,/ eɪ /
+21,alien,n.,Diphthong,/ eɪ /
+22,alongside,prep.,Diphthong,/ aɪ /
+23,altogether,adv.,Monophthong,/ ɛ /
+24,ambulance,n.,Monophthong,/ æ /
+25,amusing,adj.,Monophthong,/ u /
+26,analyst,n.,Monophthong,/ æ /
+27,ancestor,n.,Monophthong,/ æ /
+28,animation,n.,Diphthong,/ eɪ /
+29,annually,adv.,Monophthong,/ æ /
+30,anticipate,v.,Monophthong,/ ɪ /
+31,anxiety,n.,Diphthong,/ aɪ /
+32,apology,n.,Monophthong,/ ɑ /
+33,applicant,n.,Monophthong,/ æ /
+34,appropriately,adv.,Diphthong,/ oʊ /
+35,arrow,n.,Monophthong,/ æ /
+36,artwork,n.,Monophthong,/ ɑ /
+37,aside,adv.,Diphthong,/ aɪ /
+38,asset,n.,Monophthong,/ æ /
+39,assign,v.,Diphthong,/ aɪ /
+40,assistance,n.,Monophthong,/ ɪ /
+41,assumption,n.,Monophthong,/ ʌ /
+42,assure,v.,Monophthong,/ ʊ /
+43,astonishing,adj.,Monophthong,/ ɑ /
+44,attachment,n.,Monophthong,/ æ /
+45,auction,n.,Monophthong,/ ɔ /
+46,audio,adj.,Monophthong,/ ɔ /
+47,automatic,adj.,Monophthong,/ æ /
+48,automatically,adv.,Monophthong,/ æ /
+49,awareness,n.,Monophthong,/ ɝ /
+50,awkward,adj.,Monophthong,/ ɔ /
+51,badge,n.,Monophthong,/ æ /
+52,balanced,adj.,Monophthong,/ æ /
+53,ballet,n.,Diphthong,/ eɪ /
+54,balloon,n.,Monophthong,/ u /
+55,barely,adv.,Monophthong,/ ɝ /
+56,bargain,n.,Monophthong,/ ɑ /
+57,basement,n.,Diphthong,/ eɪ /
+58,basket,n.,Monophthong,/ æ /
+59,bat,n.,Monophthong,/ æ /
+60,beneficial,adj.,Monophthong,/ ɪ /
+61,beside,prep.,Diphthong,/ aɪ /
+62,besides,prep.,Diphthong,/ aɪ /
+63,besides,adv.,Diphthong,/ aɪ /
+64,bias,n.,Diphthong,/ aɪ /
+65,bid,n.,Monophthong,/ ɪ /
+66,bid,v.,Monophthong,/ ɪ /
+67,biological,adj.,Monophthong,/ ɑ /
+68,blanket,n.,Monophthong,/ æ /
+69,blow,n.,Diphthong,/ oʊ /
+70,bold,adj.,Diphthong,/ oʊ /
+71,bombing,n.,Monophthong,/ ɑ /
+72,booking,n.,Monophthong,/ ʊ /
+73,boost,v.,Monophthong,/ u /
+74,boost,n.,Monophthong,/ u /
+75,bound,adj.,Diphthong,/ aʊ /
+76,brick,n.,Monophthong,/ ɪ /
+77,briefly,adv.,Monophthong,/ i /
+78,broadcaster,n.,Monophthong,/ ɔ /
+79,broadly,adv.,Monophthong,/ ɔ /
+80,bug,n.,Monophthong,/ ʌ /
+81,cabin,n.,Monophthong,/ æ /
+82,canal,n.,Monophthong,/ æ /
+83,candle,n.,Monophthong,/ æ /
+84,carbon,n.,Monophthong,/ ɑ /
+85,casual,adj.,Monophthong,/ æ /
+86,cave,n.,Diphthong,/ eɪ /
+87,certainty,n.,Monophthong,/ ɝ /
+88,certificate,n.,Monophthong,/ ɪ /
+89,challenging,adj.,Monophthong,/ æ /
+90,championship,n.,Monophthong,/ æ /
+91,charming,adj.,Monophthong,/ ɑ /
+92,chase,v.,Diphthong,/ eɪ /
+93,chase,n.,Diphthong,/ aɪ /
+94,cheek,n.,Monophthong,/ i /
+95,cheer,v.,Monophthong,/ ɝ /
+96,cheer,n.,Monophthong,/ ɝ /
+97,choir,n.,Diphthong,/ aɪ /
+98,chop,v.,Monophthong,/ ɑ /
+99,circuit,n.,Monophthong,/ ɪ /
+100,civilization,n.,Diphthong,/ eɪ /
+101,clarify,v.,Monophthong,/ æ /
+102,classify,v.,Monophthong,/ æ /
+103,clerk,n.,Monophthong,/ ɝ /
+104,cliff,n.,Monophthong,/ ɪ /
+105,clinic,n.,Monophthong,/ ɪ /
+106,clip,n.,Monophthong,/ ɪ /
+107,coincidence,n.,Monophthong,/ ɪ /
+108,collector,n.,Monophthong,/ ɛ /
+109,colony,n.,Monophthong,/ ɑ /
+110,colorful,adj.,Monophthong,/ ʌ /
+111,comic,adj.,Monophthong,/ ɑ /
+112,comic,n.,Monophthong,/ ɑ /
+113,commander,n.,Monophthong,/ æ /
+114,comparative,adj.,Monophthong,/ æ /
+115,completion,n.,Monophthong,/ i /
+116,compose,v.,Diphthong,/ oʊ /
+117,composer,n.,Diphthong,/ oʊ /
+118,compound,n.,Diphthong,/ aʊ /
+119,comprehensive,adj.,Monophthong,/ ɛ /
+120,comprise,v.,Diphthong,/ aɪ /
+121,compulsory,adj.,Monophthong,/ ʌ /
+122,concrete,adj.,Monophthong,/ ɑ /
+123,concrete,n.,Monophthong,/ ɑ /
+124,confess,v.,Monophthong,/ ɛ /
+125,confusion,n.,Monophthong,/ u /
+126,consequently,adv.,Monophthong,/ ɑ /
+127,conservation,n.,Diphthong,/ eɪ /
+128,considerable,adj.,Monophthong,/ ɪ /
+129,considerably,adv.,Monophthong,/ ɪ /
+130,consistently,adv.,Monophthong,/ ɪ /
+131,conspiracy,n.,Monophthong,/ ɪ /
+132,consult,v.,Monophthong,/ ʌ /
+133,consultant,n.,Monophthong,/ ʌ /
+134,consumption,n.,Monophthong,/ ʌ /
+135,controversial,adj.,Monophthong,/ ɛ /
+136,controversy,n.,Monophthong,/ ɑ /
+137,convenience,n.,Monophthong,/ i /
+138,convention,n.,Monophthong,/ ɛ /
+139,conventional,adj.,Monophthong,/ ɛ /
+140,convey,v.,Diphthong,/ eɪ /
+141,convincing,adj.,Monophthong,/ ɪ /
+142,cope,v.,Diphthong,/ oʊ /
+143,corporation,n.,Diphthong,/ eɪ /
+144,corridor,n.,Monophthong,/ ɔ /
+145,counter,n.,Diphthong,/ aʊ /
+146,coverage,n.,Monophthong,/ ʌ /
+147,crack,v.,Monophthong,/ æ /
+148,crack,n.,Monophthong,/ æ /
+149,craft,n.,Monophthong,/ æ /
+150,creativity,n.,Monophthong,/ ɪ /
+151,critically,adv.,Monophthong,/ ɪ /
+152,cruise,n.,Monophthong,/ u /
+153,cruise,v.,Monophthong,/ u /
+154,cue,n.,Monophthong,/ u /
+155,curious,adj.,Monophthong,/ ʊ /
+156,curriculum,n.,Monophthong,/ ɪ /
+157,cute,adj.,Monophthong,/ u /
+158,dairy,n.,Monophthong,/ ɛ /
+159,dairy,adj.,Monophthong,/ ɛ /
+160,dare,v.,Monophthong,/ ɛ /
+161,darkness,n.,Monophthong,/ ɑ /
+162,database,n.,Diphthong,/ eɪ /
+163,deadline,n.,Monophthong,/ ɛ /
+164,deadly,adj.,Monophthong,/ ɛ /
+165,dealer,n.,Monophthong,/ i /
+166,deck,n.,Monophthong,/ ɛ /
+167,defender,n.,Monophthong,/ ɛ /
+168,delete,v.,Monophthong,/ i /
+169,democracy,n.,Monophthong,/ ɑ /
+170,democratic,adj.,Monophthong,/ æ /
+171,demonstration,n.,Diphthong,/ eɪ /
+172,depart,v.,Monophthong,/ ɑ /
+173,dependent,adj.,Monophthong,/ ɛ /
+174,deposit,n.,Monophthong,/ ɑ /
+175,depression,n.,Monophthong,/ ɛ /
+176,derive,v.,Diphthong,/ aɪ /
+177,desperately,adv.,Monophthong,/ ɛ /
+178,destruction,n.,Monophthong,/ ʌ /
+179,determination,n.,Diphthong,/ eɪ /
+180,devote,v.,Diphthong,/ oʊ /
+181,differ,v.,Monophthong,/ ɪ /
+182,disability,n.,Monophthong,/ ɪ /
+183,disabled,adj.,Diphthong,/ eɪ /
+184,disagreement,n.,Monophthong,/ i /
+185,disappoint,v.,Diphthong,/ ɔɪ /
+186,disappointment,n.,Diphthong,/ ɔɪ /
+187,discourage,v.,Monophthong,/ ɝ /
+188,disorder,n.,Monophthong,/ ɔ /
+189,distant,adj.,Monophthong,/ ɪ /
+190,distinct,adj.,Monophthong,/ ɪ /
+191,distinguish,v.,Monophthong,/ ɪ /
+192,distract,v.,Monophthong,/ æ /
+193,disturb,v.,Monophthong,/ ɝ /
+194,dive,v.,Diphthong,/ aɪ /
+195,diverse,adj.,Monophthong,/ ɝ /
+196,diversity,n.,Monophthong,/ ɝ /
+197,divorce,v.,Monophthong,/ ɔ /
+198,dominant,adj.,Monophthong,/ ɑ /
+199,donation,n.,Diphthong,/ eɪ /
+200,dot,n.,Monophthong,/ ɑ /
+201,downtown,n.,Diphthong,/ aʊ /
+202,dramatically,adv.,Monophthong,/ æ /
+203,drought,n.,Diphthong,/ aʊ /
+204,dull,adj.,Monophthong,/ ʌ /
+205,dump,v.,Monophthong,/ ʌ /
+206,duration,n.,Diphthong,/ eɪ /
+207,dynamic,adj.,Monophthong,/ æ /
+208,economics,n.,Monophthong,/ ɑ /
+209,economist,n.,Monophthong,/ ɑ /
+210,editorial,adj.,Monophthong,/ ɔ /
+211,efficiently,adv.,Monophthong,/ ɪ /
+212,elbow,n.,Monophthong,/ ɛ /
+213,electronics,n.,Monophthong,/ ɑ /
+214,elegant,adj.,Monophthong,/ ɛ /
+215,elementary,adj.,Monophthong,/ ɛ /
+216,eliminate,v.,Monophthong,/ ɪ /
+217,embrace,v.,Diphthong,/ eɪ /
+218,emission,n.,Monophthong,/ ɪ /
+219,emotionally,adv.,Diphthong,/ oʊ /
+220,empire,n.,Monophthong,/ ɛ /
+221,enjoyable,adj.,Diphthong,/ ɔɪ /
+222,entertaining,adj.,Diphthong,/ eɪ /
+223,entrepreneur,n.,Monophthong,/ ʊ /
+224,envelope,n.,Monophthong,/ ɛ /
+225,equip,v.,Monophthong,/ ɪ /
+226,equivalent,adj.,Monophthong,/ ɪ /
+227,era,n.,Monophthong,/ ɛ /
+228,erupt,v.,Monophthong,/ ʌ /
+229,essentially,adv.,Monophthong,/ ɛ /
+230,ethic,n.,Monophthong,/ ɛ /
+231,ethnic,adj.,Monophthong,/ ɛ /
+232,evaluation,n.,Diphthong,/ eɪ /
+233,evident,adj.,Monophthong,/ ɛ /
+234,evolution,n.,Monophthong,/ u /
+235,evolve,v.,Monophthong,/ ɑ /
+236,exceed,v.,Monophthong,/ i /
+237,exception,n.,Monophthong,/ ɛ /
+238,excessive,adj.,Monophthong,/ ɛ /
+239,exclude,v.,Monophthong,/ u /
+240,exhibit,v.,Monophthong,/ ɪ /
+241,exit,n.,Monophthong,/ ɛ /
+242,exotic,adj.,Monophthong,/ ɑ /
+243,expansion,n.,Monophthong,/ æ /
+244,expertise,n.,Monophthong,/ i /
+245,exploit,v.,Monophthong,/ ɔ /
+246,exposure,n.,Diphthong,/ oʊ /
+247,extension,n.,Monophthong,/ ɛ /
+248,extensive,adj.,Monophthong,/ ɛ /
+249,extensively,adv.,Monophthong,/ ɛ /
+250,extract,n.,Monophthong,/ ɛ /
+251,fabric,n.,Monophthong,/ æ /
+252,fabulous,adj.,Monophthong,/ æ /
+253,failed,adj.,Diphthong,/ eɪ /
+254,fake,adj.,Diphthong,/ eɪ /
+255,fame,n.,Diphthong,/ eɪ /
+256,fantasy,n.,Monophthong,/ æ /
+257,fare,n.,Monophthong,/ ɛ /
+258,federal,adj.,Monophthong,/ ɛ /
+259,fever,n.,Monophthong,/ i /
+260,firefighter,n.,Diphthong,/ aɪ /
+261,firework,n.,Diphthong,/ aɪ /
+262,firm,adj.,Monophthong,/ ɝ /
+263,firmly,adv.,Monophthong,/ ɝ /
+264,flavour,n.,Diphthong,/ eɪ /
+265,fond,adj.,Monophthong,/ ɑ /
+266,fool,n.,Monophthong,/ u /
+267,forbid,v.,Monophthong,/ ɪ /
+268,forecast,v.,Monophthong,/ ɔ /
+269,format,n.,Monophthong,/ ɔ /
+270,formation,n.,Diphthong,/ eɪ /
+271,formerly,adv.,Monophthong,/ ɔ /
+272,fortunate,adj.,Monophthong,/ ɔ /
+273,forum,n.,Monophthong,/ ɔ /
+274,fossil,n.,Monophthong,/ ɑ /
+275,foundation,n.,Diphthong,/ eɪ /
+276,founder,n.,Diphthong,/ aʊ /
+277,fraction,n.,Monophthong,/ æ /
+278,fragment,n.,Monophthong,/ æ /
+279,framework,n.,Diphthong,/ eɪ /
+280,fraud,n.,Monophthong,/ ɔ /
+281,freely,adv.,Monophthong,/ i /
+282,frequent,adj.,Monophthong,/ i /
+283,fulfil,v.,Monophthong,/ ɪ /
+284,full-time,adj.,Diphthong,/ aɪ /
+285,fundamentally,adv.,Monophthong,/ ɛ /
+286,furious,adj.,Monophthong,/ ʊ /
+287,gaming,n.,Diphthong,/ eɪ /
+288,gay,adj.,Diphthong,/ eɪ /
+289,gender,n.,Monophthong,/ ɛ /
+290,gene,n.,Monophthong,/ i /
+291,genetic,adj.,Monophthong,/ ɛ /
+292,genius,n.,Monophthong,/ i /
+293,genuine,adj.,Monophthong,/ ɛ /
+294,genuinely,adv.,Monophthong,/ ɛ /
+295,gesture,n.,Monophthong,/ ɛ /
+296,gig,n.,Monophthong,/ ɪ /
+297,globalization,n.,Diphthong,/ eɪ /
+298,globe,n.,Diphthong,/ oʊ /
+299,golden,adj.,Diphthong,/ oʊ /
+300,goodness,n.,Monophthong,/ ʊ /
+301,gorgeous,adj.,Monophthong,/ ɔ /
+302,governor,n.,Monophthong,/ ʌ /
+303,graphic,adj.,Monophthong,/ æ /
+304,graphics,n.,Monophthong,/ æ /
+305,greatly,adv.,Diphthong,/ eɪ /
+306,greenhouse,n.,Monophthong,/ i /
+307,grocery,n.,Diphthong,/ oʊ /
+308,guideline,n.,Diphthong,/ aɪ /
+309,habitat,n.,Monophthong,/ æ /
+310,harbor,n.,Monophthong,/ ɑ /
+311,headquarters,n.,Monophthong,/ ɛ /
+312,heal,v.,Monophthong,/ i /
+313,healthcare,n.,Monophthong,/ ɛ /
+314,helmet,n.,Monophthong,/ ɛ /
+315,hence,adv.,Monophthong,/ ɛ /
+316,herb,n.,Monophthong,/ ɝ /
+317,hidden,adj.,Monophthong,/ ɪ /
+318,highway,n.,Diphthong,/ aɪ /
+319,hilarious,adj.,Monophthong,/ ɛ /
+320,hip,n.,Monophthong,/ ɪ /
+321,historian,n.,Monophthong,/ ɔ /
+322,homeless,adj.,Diphthong,/ oʊ /
+323,honesty,n.,Monophthong,/ ɑ /
+324,hook,n.,Monophthong,/ ʊ /
+325,hopefully,adv.,Diphthong,/ oʊ /
+326,hunger,n.,Monophthong,/ ʌ /
+327,hypothesis,n.,Monophthong,/ ɑ /
+328,icon,n.,Diphthong,/ aɪ /
+329,identical,adj.,Monophthong,/ ɛ /
+330,illusion,n.,Monophthong,/ u /
+331,immigration,n.,Diphthong,/ eɪ /
+332,immune,adj.,Monophthong,/ u /
+333,implement,v.,Monophthong,/ ɪ /
+334,implication,n.,Diphthong,/ eɪ /
+335,incentive,n.,Monophthong,/ ɛ /
+336,incorporate,v.,Monophthong,/ ɔ /
+337,incorrect,adj.,Monophthong,/ ɛ /
+338,independence,n.,Monophthong,/ ɛ /
+339,index,n.,Monophthong,/ ɪ /
+340,indication,n.,Diphthong,/ eɪ /
+341,inevitable,adj.,Monophthong,/ ɛ /
+342,inevitably,adv.,Monophthong,/ ɛ /
+343,infer,v.,Monophthong,/ ɝ /
+344,inflation,n.,Diphthong,/ eɪ /
+345,info,n.,Monophthong,/ ɪ /
+346,infrastructure,n.,Monophthong,/ ɪ /
+347,inhabitant,n.,Monophthong,/ æ /
+348,inherit,v.,Monophthong,/ ɛ /
+349,ink,n.,Monophthong,/ ɪ /
+350,innovation,n.,Diphthong,/ eɪ /
+351,innovative,adj.,Monophthong,/ ɪ /
+352,input,n.,Monophthong,/ ɪ /
+353,insert,v.,Monophthong,/ ɝ /
+354,inspector,n.,Monophthong,/ ɛ /
+355,installation,n.,Diphthong,/ eɪ /
+356,instant,adj.,Monophthong,/ ɪ /
+357,instantly,adv.,Monophthong,/ ɪ /
+358,integrate,v.,Monophthong,/ ɪ /
+359,intellectual,adj.,Monophthong,/ ɛ /
+360,interact,v.,Monophthong,/ æ /
+361,interaction,n.,Monophthong,/ æ /
+362,interpretation,n.,Diphthong,/ eɪ /
+363,interval,n.,Monophthong,/ ɪ /
+364,invade,v.,Diphthong,/ eɪ /
+365,invasion,n.,Diphthong,/ eɪ /
+366,investor,n.,Monophthong,/ ɛ /
+367,isolate,v.,Diphthong,/ aɪ /
+368,isolated,adj.,Diphthong,/ aɪ /
+369,jail,n.,Diphthong,/ eɪ /
+370,jet,n.,Monophthong,/ ɛ /
+371,joint,adj.,Diphthong,/ ɔɪ /
+372,joint,n.,Diphthong,/ ɔɪ /
+373,journalism,n.,Monophthong,/ ɝ /
+374,jury,n.,Monophthong,/ ʊ /
+375,kit,n.,Monophthong,/ ɪ /
+376,ladder,n.,Monophthong,/ æ /
+377,landing,n.,Monophthong,/ æ /
+378,lane,n.,Diphthong,/ eɪ /
+379,lately,adv.,Diphthong,/ eɪ /
+380,leaflet,n.,Monophthong,/ i /
+381,legend,n.,Monophthong,/ ɛ /
+382,lens,n.,Monophthong,/ ɛ /
+383,lifetime,n.,Diphthong,/ aɪ /
+384,lighting,n.,Diphthong,/ aɪ /
+385,likewise,adv.,Diphthong,/ aɪ /
+386,limitation,n.,Diphthong,/ eɪ /
+387,literally,adv.,Monophthong,/ ɪ /
+388,literary,adj.,Monophthong,/ ɪ /
+389,litre,n.,Monophthong,/ i /
+390,litter,n.,Monophthong,/ ɪ /
+391,logo,n.,Diphthong,/ oʊ /
+392,lottery,n.,Monophthong,/ ɑ /
+393,loyal,adj.,Diphthong,/ ɔɪ /
+394,lyric,n.,Monophthong,/ ɪ /
+395,magnificent,adj.,Monophthong,/ ɪ /
+396,make-up,n.,Diphthong,/ eɪ /
+397,making,n.,Diphthong,/ eɪ /
+398,manufacture,v.,Monophthong,/ æ /
+399,manufacturing,n.,Monophthong,/ æ /
+400,marathon,n.,Monophthong,/ æ /
+401,margin,n.,Monophthong,/ ɑ /
+402,marker,n.,Monophthong,/ ɑ /
+403,martial,adj.,Monophthong,/ ɑ /
+404,mate,n.,Diphthong,/ eɪ /
+405,mate,v.,Diphthong,/ eɪ /
+406,mayor,n.,Diphthong,/ eɪ /
+407,mechanic,n.,Monophthong,/ æ /
+408,mechanical,adj.,Monophthong,/ æ /
+409,mechanism,n.,Monophthong,/ ɛ /
+410,medal,n.,Monophthong,/ ɛ /
+411,medication,n.,Diphthong,/ eɪ /
+412,membership,n.,Monophthong,/ ɛ /
+413,memorable,adj.,Monophthong,/ ɛ /
+414,metaphor,n.,Monophthong,/ ɛ /
+415,miner,n.,Diphthong,/ aɪ /
+416,miserable,adj.,Monophthong,/ ɪ /
+417,mode,n.,Diphthong,/ oʊ /
+418,modest,adj.,Monophthong,/ ɑ /
+419,monster,n.,Monophthong,/ ɑ /
+420,monthly,adj.,Monophthong,/ ʌ /
+421,monument,n.,Monophthong,/ ɑ /
+422,moreover,adv.,Diphthong,/ oʊ /
+423,mortgage,n.,Monophthong,/ ɔ /
+424,mosque,n.,Monophthong,/ ɑ /
+425,motion,n.,Diphthong,/ oʊ /
+426,motivate,v.,Diphthong,/ oʊ /
+427,motivation,n.,Diphthong,/ oʊ /
+428,moving,adj.,Monophthong,/ u /
+429,myth,n.,Monophthong,/ ɪ /
+430,naked,adj.,Diphthong,/ eɪ /
+431,nasty,adj.,Monophthong,/ æ /
+432,navigation,n.,Diphthong,/ eɪ /
+433,nearby,adj.,Monophthong,/ ɪ /
+434,nearby,adv.,Monophthong,/ ɪ /
+435,necessity,n.,Monophthong,/ ɛ /
+436,negotiate,v.,Diphthong,/ oʊ /
+437,negotiation,n.,Diphthong,/ eɪ /
+438,neutral,adj.,Monophthong,/ u /
+439,newly,adv.,Monophthong,/ u /
+440,norm,n.,Monophthong,/ ɔ /
+441,notebook,n.,Diphthong,/ oʊ /
+442,novelist,n.,Monophthong,/ ɑ /
+443,nowadays,adv.,Diphthong,/ aʊ /
+444,nursing,adj.,Monophthong,/ ɝ /
+445,nutrition,n.,Monophthong,/ ɪ /
+446,obesity,n.,Diphthong,/ oʊ /
+447,observer,n.,Monophthong,/ ɝ /
+448,obstacle,n.,Monophthong,/ ɑ /
+449,occupation,n.,Diphthong,/ eɪ /
+450,occupy,v.,Monophthong,/ ɑ /
+451,offender,n.,Monophthong,/ ɛ /
+452,ongoing,adj.,Monophthong,/ ɑ /
+453,openly,adv.,Diphthong,/ oʊ /
+454,opera,n.,Monophthong,/ ɑ /
+455,operator,n.,Monophthong,/ ɑ /
+456,optimistic,adj.,Monophthong,/ ɪ /
+457,orchestra,n.,Monophthong,/ ɔ /
+458,organic,adj.,Monophthong,/ æ /
+459,outfit,n.,Diphthong,/ aʊ /
+460,output,n.,Diphthong,/ aʊ /
+461,outstanding,adj.,Diphthong,/ aʊ /
+462,overcome,v.,Monophthong,/ ʌ /
+463,overnight,adv.,Diphthong,/ aɪ /
+464,overseas,adv.,Monophthong,/ i /
+465,overseas,adj.,Monophthong,/ i /
+466,ownership,n.,Diphthong,/ oʊ /
+467,oxygen,n.,Monophthong,/ ɑ /
+468,packet,n.,Monophthong,/ æ /
+469,palm,n.,Monophthong,/ ɑ /
+470,panic,n.,Monophthong,/ æ /
+471,parade,n.,Diphthong,/ eɪ /
+472,parallel,adj.,Monophthong,/ æ /
+473,parallel,n.,Monophthong,/ æ /
+474,participation,n.,Diphthong,/ eɪ /
+475,partnership,n.,Monophthong,/ ɑ /
+476,part-time,adj.,Diphthong,/ aɪ /
+477,part-time,adv.,Diphthong,/ aɪ /
+478,passionate,adj.,Monophthong,/ æ /
+479,password,n.,Monophthong,/ æ /
+480,patience,n.,Diphthong,/ eɪ /
+481,pause,v.,Monophthong,/ ɔ /
+482,pause,n.,Monophthong,/ ɔ /
+483,peer,n.,Monophthong,/ ɪ /
+484,penalty,n.,Monophthong,/ ɛ /
+485,perceive,v.,Monophthong,/ i /
+486,perception,n.,Monophthong,/ ɛ /
+487,permanently,adv.,Monophthong,/ ɝ /
+488,pill,n.,Monophthong,/ ɪ /
+489,pity,n.,Monophthong,/ ɪ /
+490,placement,n.,Diphthong,/ eɪ /
+491,portion,n.,Monophthong,/ ɔ /
+492,potentially,adv.,Monophthong,/ ɛ /
+493,precede,v.,Monophthong,/ i /
+494,precious,adj.,Monophthong,/ ɛ /
+495,precise,adj.,Diphthong,/ aɪ /
+496,precisely,adv.,Diphthong,/ aɪ /
+497,predictable,adj.,Monophthong,/ ɪ /
+498,preference,n.,Monophthong,/ ɛ /
+499,pride,n.,Diphthong,/ aɪ /
+500,primarily,adv.,Monophthong,/ ɛ /
+501,principal,adj.,Monophthong,/ ɪ /
+502,prior,adj.,Diphthong,/ aɪ /
+503,probability,n.,Monophthong,/ ɪ /
+504,probable,adj.,Monophthong,/ ɑ /
+505,proceed,v.,Monophthong,/ i /
+506,programming,n.,Diphthong,/ oʊ /
+507,progressive,adj.,Monophthong,/ ɛ /
+508,prohibit,v.,Monophthong,/ ɪ /
+509,promising,adj.,Monophthong,/ ɑ /
+510,promotion,n.,Diphthong,/ oʊ /
+511,prompt,v.,Monophthong,/ ɑ /
+512,proportion,n.,Monophthong,/ ɔ /
+513,protein,n.,Diphthong,/ oʊ /
+514,protester,n.,Diphthong,/ oʊ /
+515,psychological,adj.,Diphthong,/ aɪ /
+516,publicity,n.,Monophthong,/ ɪ /
+517,publishing,n.,Monophthong,/ ʌ /
+518,punk,n.,Monophthong,/ ʌ /
+519,purely,adv.,Monophthong,/ ʊ /
+520,pursuit,n.,Monophthong,/ u /
+521,puzzle,n.,Monophthong,/ ʌ /
+522,questionnaire,n.,Monophthong,/ ɛ /
+523,racial,adj.,Diphthong,/ eɪ /
+524,racism,n.,Diphthong,/ eɪ /
+525,racist,n.,Diphthong,/ eɪ /
+526,radiation,n.,Diphthong,/ eɪ /
+527,rail,n.,Diphthong,/ eɪ /
+528,random,adj.,Monophthong,/ æ /
+529,rat,n.,Monophthong,/ æ /
+530,rating,n.,Diphthong,/ eɪ /
+531,reasonably,adv.,Monophthong,/ i /
+532,rebuild,v.,Monophthong,/ ɪ /
+533,receiver,n.,Monophthong,/ i /
+534,recession,n.,Monophthong,/ ɛ /
+535,reckon,v.,Monophthong,/ ɛ /
+536,recognition,n.,Monophthong,/ ɪ /
+537,recovery,n.,Monophthong,/ ʌ /
+538,recruit,v.,Monophthong,/ u /
+539,recruit,n.,Monophthong,/ u /
+540,recruitment,n.,Monophthong,/ u /
+541,referee,n.,Monophthong,/ i /
+542,refugee,n.,Monophthong,/ i /
+543,registration,n.,Diphthong,/ eɪ /
+544,regulate,v.,Monophthong,/ ɛ /
+545,reinforce,v.,Monophthong,/ ɔ /
+546,relieve,v.,Monophthong,/ i /
+547,relieved,adj.,Monophthong,/ i /
+548,remarkable,adj.,Monophthong,/ ɑ /
+549,remarkably,adv.,Monophthong,/ ɑ /
+550,reporting,n.,Monophthong,/ ɔ /
+551,resign,v.,Diphthong,/ aɪ /
+552,resolution,n.,Monophthong,/ u /
+553,restore,v.,Monophthong,/ ɔ /
+554,restrict,v.,Monophthong,/ ɪ /
+555,restriction,n.,Monophthong,/ ɪ /
+556,retail,n.,Monophthong,/ i /
+557,retirement,n.,Diphthong,/ aɪ /
+558,revenue,n.,Monophthong,/ ɛ /
+559,revision,n.,Monophthong,/ ɪ /
+560,ridiculous,adj.,Monophthong,/ ɪ /
+561,risky,adj.,Monophthong,/ ɪ /
+562,rival,n.,Diphthong,/ aɪ /
+563,rival,adj.,Diphthong,/ aɪ /
+564,rob,v.,Monophthong,/ ɑ /
+565,robbery,n.,Monophthong,/ ɑ /
+566,rocket,n.,Monophthong,/ ɑ /
+567,romance,n.,Diphthong,/ oʊ /
+568,rose,n.,Diphthong,/ oʊ /
+569,roughly,adv.,Monophthong,/ ʌ /
+570,ruin,v.,Monophthong,/ u /
+571,ruin,n.,Monophthong,/ u /
+572,satisfaction,n.,Monophthong,/ æ /
+573,scandal,n.,Monophthong,/ æ /
+574,scare,v.,Monophthong,/ ɛ /
+575,scare,n.,Monophthong,/ ɛ /
+576,scenario,n.,Monophthong,/ ɛ /
+577,scholar,n.,Monophthong,/ ɑ /
+578,scholarship,n.,Monophthong,/ ɑ /
+579,scratch,v.,Monophthong,/ æ /
+580,scratch,n.,Monophthong,/ æ /
+581,screening,n.,Monophthong,/ i /
+582,seeker,n.,Monophthong,/ i /
+583,seminar,n.,Monophthong,/ ɛ /
+584,settler,n.,Monophthong,/ ɛ /
+585,severely,adv.,Monophthong,/ ɪ /
+586,sexy,adj.,Monophthong,/ ɛ /
+587,shaped,adj.,Diphthong,/ eɪ /
+588,shocking,adj.,Monophthong,/ ɑ /
+589,shore,n.,Monophthong,/ ɔ /
+590,shortage,n.,Monophthong,/ ɔ /
+591,shortly,adv.,Monophthong,/ ɔ /
+592,short-term,adj.,Monophthong,/ ɝ /
+593,sibling,n.,Monophthong,/ ɪ /
+594,signature,n.,Monophthong,/ ɪ /
+595,significance,n.,Monophthong,/ ɪ /
+596,skilled,adj.,Monophthong,/ ɪ /
+597,skull,n.,Monophthong,/ ʌ /
+598,slogan,n.,Diphthong,/ oʊ /
+599,so-called,adj.,Monophthong,/ ɔ /
+600,somehow,adv.,Monophthong,/ ʌ /
+601,sometime,adv.,Monophthong,/ ʌ /
+602,sophisticated,adj.,Monophthong,/ ɪ /
+603,spare,adj.,Monophthong,/ ɛ /
+604,specialize,v.,Monophthong,/ ɛ /
+605,specify,v.,Monophthong,/ ɛ /
+606,spectacular,adj.,Monophthong,/ æ /
+607,spectator,n.,Monophthong,/ ɛ /
+608,speculate,v.,Monophthong,/ ɛ /
+609,speculation,n.,Diphthong,/ eɪ /
+610,spice,n.,Diphthong,/ aɪ /
+611,spill,v.,Monophthong,/ ɪ /
+612,spite,n.,Diphthong,/ aɪ /
+613,spoil,v.,Diphthong,/ ɔɪ /
+614,spokesman,n.,Diphthong,/ oʊ /
+615,spokesperson,n.,Diphthong,/ oʊ /
+616,spokeswoman,n.,Diphthong,/ oʊ /
+617,sponsorship,n.,Monophthong,/ ɑ /
+618,sporting,adj.,Monophthong,/ ɔ /
+619,stall,n.,Monophthong,/ ɔ /
+620,stance,n.,Monophthong,/ æ /
+621,starve,v.,Monophthong,/ ɑ /
+622,steadily,adv.,Monophthong,/ ɛ /
+623,steam,n.,Monophthong,/ i /
+624,stimulate,v.,Monophthong,/ ɪ /
+625,strengthen,v.,Monophthong,/ ɛ /
+626,strictly,adv.,Monophthong,/ ɪ /
+627,stroke,n.,Diphthong,/ oʊ /
+628,stunning,adj.,Monophthong,/ ʌ /
+629,subsequent,adj.,Monophthong,/ ʌ /
+630,subsequently,adv.,Monophthong,/ ʌ /
+631,suburb,n.,Monophthong,/ ʌ /
+632,suffering,n.,Monophthong,/ ʌ /
+633,sufficient,adj.,Monophthong,/ ɪ /
+634,sufficiently,adv.,Monophthong,/ ɪ /
+635,super,adj.,Monophthong,/ u /
+636,surgeon,n.,Monophthong,/ ɝ /
+637,survival,n.,Diphthong,/ aɪ /
+638,survivor,n.,Diphthong,/ aɪ /
+639,suspend,v.,Monophthong,/ ɛ /
+640,sustainable,adj.,Diphthong,/ eɪ /
+641,swallow,v.,Monophthong,/ ɑ /
+642,sympathetic,adj.,Monophthong,/ ɛ /
+643,tackle,v.,Monophthong,/ æ /
+644,tag,n.,Monophthong,/ æ /
+645,tag,v.,Monophthong,/ æ /
+646,tap,v.,Monophthong,/ æ /
+647,tap,n.,Monophthong,/ æ /
+648,technological,adj.,Monophthong,/ ɑ /
+649,teens,n.,Monophthong,/ i /
+650,temple,n.,Monophthong,/ ɛ /
+651,temporarily,adv.,Monophthong,/ ɛ /
+652,tendency,n.,Monophthong,/ ɛ /
+653,tension,n.,Monophthong,/ ɛ /
+654,terminal,n.,Monophthong,/ ɝ /
+655,terms,n.,Monophthong,/ ɝ /
+656,terribly,adv.,Monophthong,/ ɛ /
+657,terrify,v.,Monophthong,/ ɛ /
+658,territory,n.,Monophthong,/ ɛ /
+659,terror,n.,Monophthong,/ ɛ /
+660,terrorism,n.,Monophthong,/ ɛ /
+661,terrorist,n.,Monophthong,/ ɛ /
+662,testing,n.,Monophthong,/ ɛ /
+663,textbook,n.,Monophthong,/ ɛ /
+664,theft,n.,Monophthong,/ ɛ /
+665,therapist,n.,Monophthong,/ ɛ /
+666,thesis,n.,Monophthong,/ i /
+667,thorough,adj.,Monophthong,/ ɛ /
+668,thoroughly,adv.,Monophthong,/ ɛ /
+669,thumb,n.,Monophthong,/ ʌ /
+670,timing,n.,Diphthong,/ aɪ /
+671,tissue,n.,Monophthong,/ ɪ /
+672,ton,n.,Monophthong,/ ʌ /
+673,tonne,n.,Monophthong,/ ʌ /
+674,tournament,n.,Monophthong,/ ʊ /
+675,trace,v.,Diphthong,/ eɪ /
+676,trading,n.,Diphthong,/ eɪ /
+677,tragedy,n.,Monophthong,/ æ /
+678,tragic,adj.,Monophthong,/ æ /
+679,trait,n.,Diphthong,/ eɪ /
+680,transmit,v.,Monophthong,/ ɪ /
+681,transportation,n.,Diphthong,/ eɪ /
+682,trap,v.,Monophthong,/ æ /
+683,trap,n.,Monophthong,/ æ /
+684,treasure,n.,Monophthong,/ ɛ /
+685,tribe,n.,Diphthong,/ aɪ /
+686,trigger,v.,Monophthong,/ ɪ /
+687,trillion,num.,Monophthong,/ ɪ /
+688,troop,n.,Monophthong,/ u /
+689,tsunami,n.,Monophthong,/ ɑ /
+690,ultimate,adj.,Monophthong,/ ʌ /
+691,unacceptable,adj.,Monophthong,/ ɛ /
+692,uncertainty,n.,Monophthong,/ ɝ /
+693,undergo,v.,Diphthong,/ oʊ /
+694,undertake,v.,Diphthong,/ eɪ /
+695,unfold,v.,Diphthong,/ oʊ /
+696,unfortunate,adj.,Monophthong,/ ɔ /
+697,unite,v.,Diphthong,/ aɪ /
+698,unity,n.,Monophthong,/ u /
+699,universal,adj.,Monophthong,/ ɝ /
+700,urgent,adj.,Monophthong,/ ɝ /
+701,usage,n.,Monophthong,/ u /
+702,useless,adj.,Monophthong,/ u /
+703,valid,adj.,Monophthong,/ æ /
+704,variation,n.,Diphthong,/ eɪ /
+705,vertical,adj.,Monophthong,/ ɝ /
+706,viewpoint,n.,Monophthong,/ u /
+707,visa,n.,Monophthong,/ i /
+708,visible,adj.,Monophthong,/ ɪ /
+709,voluntary,adj.,Monophthong,/ ɑ /
+710,voting,n.,Diphthong,/ oʊ /
+711,wander,v.,Monophthong,/ ɑ /
+712,warming,n.,Monophthong,/ ɔ /
+713,weekly,adj.,Monophthong,/ i /
+714,weird,adj.,Monophthong,/ ɪ /
+715,welfare,n.,Monophthong,/ ɛ /
+716,wheat,n.,Monophthong,/ i /
+717,whoever,pron.,Monophthong,/ ɛ /
+718,widespread,adj.,Diphthong,/ ɛ /
+719,wisdom,n.,Monophthong,/ ɪ /
+720,withdraw,v.,Monophthong,/ ɔ /
+721,workforce,n.,Monophthong,/ ɝ /
+722,workplace,n.,Monophthong,/ ɝ /
+723,workshop,n.,Monophthong,/ ɝ /
+724,worm,n.,Monophthong,/ ɝ /
+725,wrist,n,Monophthong,/ ɪ /
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
