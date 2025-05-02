@@ -56,7 +56,7 @@ with tab2:
     st.caption("🚩 The following contains all monophthong vowels. (A total of 1,644 words)")
 
     # Monophthong vowel list
-    monophthongs = ["/ i /", "/ ɪ /", "/ u /", "/ ʊ /", "/ ɛ /", "/ æ /", "/ ʌ /", "/ ɔ /", "/ ɑ /", "/ ɝ /"]
+    monophthongs = ["Choose a vowel", "/ i /", "/ ɪ /", "/ u /", "/ ʊ /", "/ ɛ /", "/ æ /", "/ ʌ /", "/ ɔ /", "/ ɑ /", "/ ɝ /"]
 
 
     # Initialize session state for pagination
@@ -110,7 +110,7 @@ with tab3:
     st.caption("🚩 The following contains all diphthong vowels. (A total of 462 words)")
 
     # Diphthong vowel list
-    diphthongs = ["/ aɪ /", "/ oʊ /", "/ eɪ /", "/ aʊ /", "/ ɔɪ /"]
+    diphthongs = ["Choose a vowel", "/ aɪ /", "/ oʊ /", "/ eɪ /", "/ aʊ /", "/ ɔɪ /"]
 
     # Initialize session state for pagination
     if "page_start_diph" not in st.session_state:
