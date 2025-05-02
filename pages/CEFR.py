@@ -4,7 +4,7 @@ import pandas as pd
 # Load your dataset
 @st.cache_data
 def load_data():
-    return pd.read_csv("https://raw.githubusercontent.com/MK316/Engpro-Class/refs/heads/main/pages/cefr_levelB.csv")  # Replace with your actual filename
+    return pd.read_csv("https://raw.githubusercontent.com/MK316/Engpro-Class/refs/heads/main/pages/cefr_250502.csv")  # Replace with your actual filename
 
 # Load data
 df = load_data()
