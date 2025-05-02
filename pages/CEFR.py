@@ -15,7 +15,7 @@ tab1, tab2, tab3 = st.tabs(["🔤 Search by Word", "📘 By Vowels", "📗 By SI
 # --- Tab 1: Flashcard App ---
 with tab1:
     st.header("🔤 Search by word")
-
+    st.caption("A total of 2,106 words from CEFR level B and level C")
     # User input
     user_input = st.text_input("Enter a word to look up:", "").strip().lower()
 
