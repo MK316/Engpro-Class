@@ -14,7 +14,7 @@ tab1, tab2, tab3 = st.tabs(["🔤 Search by Word", "📘 By Vowels", "📗 By SI
 
 # --- Tab 1: Flashcard App ---
 with tab1:
-    st.header("🔤 Vowel Flashcard App")
+    st.header("🔤 Search by word")
 
     # User input
     user_input = st.text_input("Enter a word to look up:", "").strip().lower()
