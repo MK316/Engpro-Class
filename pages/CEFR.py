@@ -10,7 +10,7 @@ def load_data():
 df = load_data()
 
 # Create tabs
-tab1, tab2, tab3 = st.tabs(["🔤 Vowel Flashcard", "📘 App 2", "📗 App 3"])
+tab1, tab2, tab3 = st.tabs(["🔤 Search by Word", "📘 By Vowels", "📗 By SID"])
 
 # --- Tab 1: Flashcard App ---
 with tab1:
