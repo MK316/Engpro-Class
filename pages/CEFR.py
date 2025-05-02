@@ -48,28 +48,42 @@ with tab1:
         else:
             st.warning("No matching word found.")
 
+
 # --- Tab 2: Browse by Monophthong Vowel ---
 with tab2:
     st.header("📘 Browse Words by Monophthong")
     st.caption("Select a monophthong vowel to view matching words.")
 
     # Monophthong vowel list
-    monophthongs = ["/ i /", "/ ɪ /", "/ u /", "/ ʊ /", "/ ɛ /", "/ æ /", "/ ʌ /", "/ ɔ /", "/ ɑ /", "/ ɝ /"]
+    monophthongs = ["/i/", "/ɪ/", "/u/", "/ʊ/", "/ɛ/", "/æ/", "/ʌ/", "/ɔ/", "/ɑ/", "/ɝ/"]
 
-    # Dropdown to select vowel
+    # Initialize session state for pagination
+    if "page_start" not in st.session_state:
+        st.session_state.page_start = 0
+    if "prev_vowel" not in st.session_state:
+        st.session_state.prev_vowel = ""
+    if "prev_count" not in st.session_state:
+        st.session_state.prev_count = 5
+
+    # UI: Dropdown + Radio
     selected_vowel = st.selectbox("Choose a monophthong vowel:", monophthongs)
-
-    # Radio buttons to select number of items to show
     num_display = st.radio("How many words would you like to display?", [5, 10, 20], horizontal=True)
+
+    # Reset pagination if vowel or count changed
+    if selected_vowel != st.session_state.prev_vowel or num_display != st.session_state.prev_count:
+        st.session_state.page_start = 0
+        st.session_state.prev_vowel = selected_vowel
+        st.session_state.prev_count = num_display
 
     # Filter dataset
     filtered_df = df[(df["Stressed_Vowel"].str.strip() == selected_vowel) & (df["Vowel_Type"] == "Monophthong")]
-
     total_matches = len(filtered_df)
     st.info(f"🔍 Found **{total_matches}** words with stressed vowel **{selected_vowel}**.")
 
-    # Show only the selected number
-    to_display = filtered_df.head(num_display)
+    # Get page slice
+    start = st.session_state.page_start
+    end = start + num_display
+    to_display = filtered_df.iloc[start:end]
 
     if not to_display.empty:
         for _, row in to_display.iterrows():
@@ -80,9 +94,13 @@ with tab2:
                 st.markdown(f"**Stressed Vowel:** `{row['Stressed_Vowel']}`")
                 audio = generate_audio(row['WORD'])
                 st.audio(audio, format='audio/mp3')
-    else:
-        st.warning("No matching words found.")
 
+        # Only show "Next" if more results remain
+        if end < total_matches:
+            if st.button("Next"):
+                st.session_state.page_start += num_display
+    else:
+        st.warning("No matching words found or end of list reached.")
 
 # --- Tab 3 Placeholder ---
 with tab3:
