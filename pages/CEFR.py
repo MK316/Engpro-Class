@@ -103,40 +103,39 @@ with tab2:
     else:
         st.warning("No matching words found or end of list reached.")
 
-# --- Tab 3 Placeholder ---
+# --- Tab 3: Browse by Diphthong Vowel ---
 with tab3:
-    st.markdown("### 📘 Browse Words by Vowels (Diphthongs)")
+    st.markdown("### 📗 Browse Words by Vowels (Diphthongs)")
     st.caption("🚩 The following contains all diphthong vowels.")
 
-    # Monophthong vowel list
-    monophthongs = ["/ aɪ /", "/ oʊ /", "/ eɪ /", "/ aʊ /", "/ ɔɪ /"]
-
+    # Diphthong vowel list
+    diphthongs = ["/ aɪ /", "/ oʊ /", "/ eɪ /", "/ aʊ /", "/ ɔɪ /"]
 
     # Initialize session state for pagination
-    if "page_start" not in st.session_state:
-        st.session_state.page_start = 0
-    if "prev_vowel" not in st.session_state:
-        st.session_state.prev_vowel = ""
-    if "prev_count" not in st.session_state:
-        st.session_state.prev_count = 5
+    if "page_start_diph" not in st.session_state:
+        st.session_state.page_start_diph = 0
+    if "prev_vowel_diph" not in st.session_state:
+        st.session_state.prev_vowel_diph = ""
+    if "prev_count_diph" not in st.session_state:
+        st.session_state.prev_count_diph = 5
 
-    # UI: Dropdown + Radio
-    selected_vowel = st.selectbox("Choose a monophthong vowel:", monophthongs)
-    num_display = st.radio("How many words would you like to display?", [5, 10, 20], horizontal=True)
+    # UI: Dropdown + Radio with unique keys
+    selected_vowel = st.selectbox("Choose a diphthong vowel:", diphthongs, key="diphthong_dropdown")
+    num_display = st.radio("How many words would you like to display?", [5, 10, 20], horizontal=True, key="diphthong_display_count")
 
     # Reset pagination if vowel or count changed
-    if selected_vowel != st.session_state.prev_vowel or num_display != st.session_state.prev_count:
-        st.session_state.page_start = 0
-        st.session_state.prev_vowel = selected_vowel
-        st.session_state.prev_count = num_display
+    if selected_vowel != st.session_state.prev_vowel_diph or num_display != st.session_state.prev_count_diph:
+        st.session_state.page_start_diph = 0
+        st.session_state.prev_vowel_diph = selected_vowel
+        st.session_state.prev_count_diph = num_display
 
-    # Filter dataset
-    filtered_df = df[(df["Stressed_Vowel"].str.strip() == selected_vowel) & (df["Vowel_Type"] == "Monophthong")]
+    # Filter dataset for diphthongs
+    filtered_df = df[(df["Stressed_Vowel"].str.strip() == selected_vowel) & (df["Vowel_Type"] == "Diphthong")]
     total_matches = len(filtered_df)
     st.info(f"🔍 Found **{total_matches}** words with stressed vowel **{selected_vowel}**.")
 
     # Get page slice
-    start = st.session_state.page_start
+    start = st.session_state.page_start_diph
     end = start + num_display
     to_display = filtered_df.iloc[start:end]
 
@@ -152,7 +151,7 @@ with tab3:
 
         # Only show "Next" if more results remain
         if end < total_matches:
-            if st.button("Next"):
-                st.session_state.page_start += num_display
+            if st.button("Next", key="diphthong_next"):
+                st.session_state.page_start_diph += num_display
     else:
         st.warning("No matching words found or end of list reached.")
