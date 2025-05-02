@@ -55,7 +55,8 @@ with tab2:
     st.caption("Select a monophthong vowel to view matching words.")
 
     # Monophthong vowel list
-    monophthongs = ["/i/", "/ɪ/", "/u/", "/ʊ/", "/ɛ/", "/æ/", "/ʌ/", "/ɔ/", "/ɑ/", "/ɝ/"]
+    monophthongs = ["/ i /", "/ ɪ /", "/ u /", "/ ʊ /", "/ ɛ /", "/ æ /", "/ ʌ /", "/ ɔ /", "/ ɑ /", "/ ɝ /"]
+
 
     # Initialize session state for pagination
     if "page_start" not in st.session_state:
