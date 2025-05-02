@@ -51,8 +51,8 @@ with tab1:
 
 # --- Tab 2: Browse by Monophthong Vowel ---
 with tab2:
-    st.header("📘 Browse Words by Monophthong")
-    st.caption("Select a monophthong vowel to view matching words.")
+    st.header("📘 Browse Words by Vowels")
+    st.caption("🚩 The following contains all monophthong vowels.")
 
     # Monophthong vowel list
     monophthongs = ["/ i /", "/ ɪ /", "/ u /", "/ ʊ /", "/ ɛ /", "/ æ /", "/ ʌ /", "/ ɔ /", "/ ɑ /", "/ ɝ /"]
