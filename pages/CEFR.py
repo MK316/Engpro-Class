@@ -51,7 +51,7 @@ with tab1:
 
 # --- Tab 2: Browse by Monophthong Vowel ---
 with tab2:
-    st.header("📘 Browse Words by Vowels")
+    st.markdown("### 📘 Browse Words by Vowels (Monophthongs)")
     st.caption("🚩 The following contains all monophthong vowels.")
 
     # Monophthong vowel list
