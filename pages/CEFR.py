@@ -21,7 +21,7 @@ def generate_audio(text, lang='en'):
 df = load_data()
 
 # Create tabs
-tab1, tab2, tab3, tab4 = st.tabs(["🔤 Search by Word", "📘 Monophthongs", "📗 Diphthongs", "Quiz"])
+tab1, tab2, tab3, tab4 = st.tabs(["🔤 Search by Word", "📘 Monophthongs", "📗 Diphthongs", "🌈 Quiz"])
 
 # --- Tab 1: Flashcard App ---
 with tab1:
@@ -165,31 +165,33 @@ tab4 = st.container()  # Just to keep layout consistent
 
 
 with tab4:
-    st.markdown("### 🧠 Vowel Odd-One-Out Quiz")
+    st.markdown("### 🎡 Vowel Odd-One-Out Quiz")
     st.caption("Choose the word that has a different stressed vowel than the others.")
 
-    if "quiz_words" not in st.session_state:
-        st.session_state.quiz_words = []
-    if "correct_answer" not in st.session_state:
-        st.session_state.correct_answer = ""
+    # Initialize session states for quiz logic
+    for key in ["quiz_words", "correct_answer", "quiz_choice", "score", "attempts", "answered"]:
+        if key not in st.session_state:
+            st.session_state[key] = None if key in ["quiz_words", "correct_answer", "quiz_choice"] else 0
 
     if st.button("🎯 Start Quiz"):
+        # Reset score only when starting over
+        st.session_state.answered = False
+        st.session_state.quiz_choice = None
+
         # Get all unique vowels
         vowels = df["Stressed_Vowel"].dropna().unique().tolist()
 
-        # Step 1: Pick one vowel, then get 4 matching words
+        # Step 1: Pick one vowel and 4 words
         vowel1 = random.choice(vowels)
         words_with_vowel1 = df[df["Stressed_Vowel"] == vowel1]["WORD"].dropna().unique().tolist()
-        if len(words_with_vowel1) < 4:
-            st.warning("Not enough words for selected vowel. Try again.")
-        else:
+
+        if len(words_with_vowel1) >= 4:
             quiz_choices = random.sample(words_with_vowel1, 4)
 
-            # Step 2: Pick a different vowel and 1 word from that set
+            # Step 2: Pick one odd word
             other_vowels = [v for v in vowels if v != vowel1]
-            random.shuffle(other_vowels)
             odd_word = ""
-            for vowel2 in other_vowels:
+            for vowel2 in random.sample(other_vowels, len(other_vowels)):
                 words_with_vowel2 = df[df["Stressed_Vowel"] == vowel2]["WORD"].dropna().unique().tolist()
                 if words_with_vowel2:
                     odd_word = random.choice(words_with_vowel2)
@@ -198,19 +200,34 @@ with tab4:
             if odd_word:
                 quiz_choices.append(odd_word)
                 random.shuffle(quiz_choices)
-
                 st.session_state.quiz_words = quiz_choices
                 st.session_state.correct_answer = odd_word
             else:
-                st.warning("Could not find a suitable odd word. Try again.")
+                st.warning("Couldn't find an odd word. Try again.")
+        else:
+            st.warning("Not enough words for this vowel. Try again.")
 
+    # Display quiz if ready
     if st.session_state.quiz_words:
-        selected_word = st.radio("Which word has a different vowel?", st.session_state.quiz_words, key="quiz_choice")
+        st.session_state.quiz_choice = st.radio(
+            "Which word has a different stressed vowel?",
+            st.session_state.quiz_words,
+            key="quiz_choice_radio"
+        )
 
         if st.button("✅ Show the answer"):
-            st.success(f"The correct answer is: **{st.session_state.correct_answer}**")
-            if selected_word == st.session_state.correct_answer:
-                st.balloons()
-                st.info("🎉 You got it right!")
-            else:
-                st.error("Oops! That's not correct.")
+            if not st.session_state.answered:
+                st.session_state.attempts += 1
+                st.session_state.answered = True
+
+                if st.session_state.quiz_choice == st.session_state.correct_answer:
+                    st.session_state.score += 1
+                    st.success(f"🎉 Correct! The odd word is **{st.session_state.correct_answer}**.")
+                    st.balloons()
+                else:
+                    st.error(f"❌ Incorrect. The correct answer is **{st.session_state.correct_answer}**.")
+
+    # Show score summary
+    if st.session_state.attempts > 0:
+        st.markdown(f"### 🧾 Score: {st.session_state.score} / {st.session_state.attempts}")
+
