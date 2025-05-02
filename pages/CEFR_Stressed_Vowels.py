@@ -161,7 +161,7 @@ with tab3:
 
 # --- Tab 4: Minimal Vowel Quiz ---
 
-tab4 = st.container()  # Just to keep layout consistent
+
 
 
 with tab4:
