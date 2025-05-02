@@ -106,7 +106,7 @@ with tab2:
 # --- Tab 3: Browse by Diphthong Vowel ---
 with tab3:
     st.markdown("### 📗 Browse Words by Vowels (Diphthongs)")
-    st.caption("🚩 The following contains all diphthong vowels.")
+    st.caption("🚩 The following contains all diphthong vowels. (A total of 462 words)")
 
     # Diphthong vowel list
     diphthongs = ["/ aɪ /", "/ oʊ /", "/ eɪ /", "/ aʊ /", "/ ɔɪ /"]
