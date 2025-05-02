@@ -52,7 +52,7 @@ with tab1:
 # --- Tab 2: Browse by Monophthong Vowel ---
 with tab2:
     st.markdown("### 📘 Browse Words by Vowels (Monophthongs)")
-    st.caption("🚩 The following contains all monophthong vowels.")
+    st.caption("🚩 The following contains all monophthong vowels. (A total of 1,644 words)")
 
     # Monophthong vowel list
     monophthongs = ["/ i /", "/ ɪ /", "/ u /", "/ ʊ /", "/ ɛ /", "/ æ /", "/ ʌ /", "/ ɔ /", "/ ɑ /", "/ ɝ /"]
