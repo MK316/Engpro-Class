@@ -7,7 +7,7 @@ import random
 # Load your dataset
 @st.cache_data
 def load_data():
-    return pd.read_csv("https://raw.githubusercontent.com/MK316/Engpro-Class/refs/heads/main/pages/cefr_250502.csv")
+    return pd.read_csv("https://raw.githubusercontent.com/MK316/Engpro-Class/refs/heads/main/pages/cefr_20260505.csv")
 
 # Function to generate and return audio
 def generate_audio(text, lang='en'):
