@@ -174,38 +174,43 @@ with tab4:
             st.session_state[key] = None if key in ["quiz_words", "correct_answer", "quiz_choice"] else 0
 
     if st.button("🎯 Show me a question."):
-        # Reset score only when starting over
         st.session_state.answered = False
         st.session_state.quiz_choice = None
-
-        # Get all unique vowels
+    
+        # Step 1: Pick one vowel
         vowels = df["Stressed_Vowel"].dropna().unique().tolist()
-
-        # Step 1: Pick one vowel and 4 words
         vowel1 = random.choice(vowels)
-        words_with_vowel1 = df[df["Stressed_Vowel"] == vowel1]["WORD"].dropna().unique().tolist()
-
-        if len(words_with_vowel1) >= 4:
-            quiz_choices = random.sample(words_with_vowel1, 4)
-
-            # Step 2: Pick one odd word
-            other_vowels = [v for v in vowels if v != vowel1]
-            odd_word = ""
-            for vowel2 in random.sample(other_vowels, len(other_vowels)):
-                words_with_vowel2 = df[df["Stressed_Vowel"] == vowel2]["WORD"].dropna().unique().tolist()
-                if words_with_vowel2:
-                    odd_word = random.choice(words_with_vowel2)
+    
+        # Get 4 words with that vowel
+        group1 = df[df["Stressed_Vowel"] == vowel1]["WORD"].dropna().unique().tolist()
+        if len(group1) < 4:
+            st.warning("Not enough words to form a quiz. Try again.")
+        else:
+            group1_words = random.sample(group1, 4)
+    
+            # Step 2: Pick a truly different vowel
+            different_vowels = [v for v in vowels if v != vowel1]
+            odd_word = None
+            odd_vowel = None
+    
+            for v2 in random.sample(different_vowels, len(different_vowels)):
+                group2 = df[df["Stressed_Vowel"] == v2]["WORD"].dropna().unique().tolist()
+                if group2:
+                    odd_word = random.choice(group2)
+                    odd_vowel = v2
                     break
-
+    
             if odd_word:
-                quiz_choices.append(odd_word)
-                random.shuffle(quiz_choices)
-                st.session_state.quiz_words = quiz_choices
+                # Combine and store as (word, vowel) pairs
+                combined = [(w, vowel1) for w in group1_words] + [(odd_word, odd_vowel)]
+                random.shuffle(combined)
+    
+                # Extract just the words for display
+                st.session_state.quiz_words = [w for w, _ in combined]
                 st.session_state.correct_answer = odd_word
             else:
-                st.warning("Couldn't find an odd word. Try again.")
-        else:
-            st.warning("Not enough words for this vowel. Try again.")
+                st.warning("Could not find an odd-one-out word. Try again.")
+
 
     # Display quiz if ready
     if st.session_state.quiz_words:
