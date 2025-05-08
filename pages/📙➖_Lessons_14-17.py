@@ -64,14 +64,15 @@ with tabs[0]:
     # 🔊 Play audio if available
     if st.session_state.audio_data:
         st.audio(st.session_state.audio_data, format="audio/mp3")
-
+    st.markdown("---")
+    
     # ▶️ Show spelling button
     if st.session_state.current_word:
         if st.button("▶️ Display Spelling and Transcription (IPA)"):
             st.session_state.show_spelling = True
     
     # Show IPA spelling
-    st.markdown("---")
+
     if st.session_state.current_word and st.session_state.show_spelling:
         word = st.session_state.current_word["word"]
         ipa = st.session_state.current_word["ipa"]
