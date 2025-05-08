@@ -19,8 +19,6 @@ word_pairs = [
     {"en": "church and judge", "ko": "처치와 저지"},
 ]
 
-st.markdown("### [2] Listen to minimal pairs in English and Korean")
-
 # Function to generate and return audio data
 def generate_audio(text, lang='en'):
     try:
@@ -48,3 +46,5 @@ for pair in word_pairs:
         if ko_audio:
             st.audio(ko_audio, format="audio/mp3")
     st.markdown("---")
+
+st.markdown("### [2] Practice")
