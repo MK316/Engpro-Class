@@ -87,14 +87,14 @@ with tabs[0]:
     st.markdown("#### [2] 🎧 Consonants grouped by voicing, place of articulation, and manner of articulation")
 
     word_pairs = [
-        ("pie", "bye"),
-        ("teen", "deen"),
-        ("Kate", "gate"),
-        ("leaf", "leave"),
-        ("breath", "breathe"),
-        ("face", "phase"),
-        ("pressure", "pleasure"),
-        ("batch", "badge"),
+        ("pie and bye", "He says bye now."),
+        ("teen and dean", "He is a dean of the department."),
+        ("Kate and gate", "Let's meet up at the gate nine."),
+        ("leaf and leave", "He said, leave us alone."),
+        ("breath and breathe", "He said, breathe again."),
+        ("face and phase", "We are in the phase one."),
+        ("pressure and pleasure", "It's my pleasure."),
+        ("batch and badge", "He earned the badge by himself."),
     ]
 
     def generate_audio(word):
