@@ -9,8 +9,7 @@ tabs = st.tabs(["💧 Lesson 14", "💧 Lesson 15", "💧 Lesson 16", "💧 Less
 
 # Content for each tab
 # Sample dataset of irregular words
-with tabs[0]:
-    word_data = [
+word_data = [
         {"word": "said", "ipa": "sɛd"},
         {"word": "busy", "ipa": "bɪzi"},
         {"word": "one", "ipa": "wʌn"},
@@ -31,8 +30,8 @@ with tabs[0]:
         {"word": "cough", "ipa": "kɔf"},
         {"word": "bought", "ipa": "bɔt"},
         {"word": "enough", "ipa": "ɪnʌf"},
-    ]
-    
+]
+with tabs[0]:    
     st.markdown("### 📒 Lesson 14:")
     st.markdown("#### 🗣️ Irregularity of English Words: Sound and Spelling")
     
