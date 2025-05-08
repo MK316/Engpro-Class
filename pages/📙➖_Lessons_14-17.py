@@ -31,49 +31,39 @@ word_data = [
         {"word": "bought", "ipa": "bɔt"},
         {"word": "enough", "ipa": "ɪnʌf"},
 ]
-with tabs[0]:    
-    st.markdown("### 📒 Lesson 14:")
-    st.markdown("#### 🗣️ Irregularity of English Words: Sound and Spelling")
-    
-    # Initialize session state
+
+# Lesson content in the first tab
+with tabs[0]:
+    st.markdown("### 📒 Lesson 14: Irregular Sound-Spelling Words")
+
     if "current_word" not in st.session_state:
         st.session_state.current_word = None
-    if "audio_data" not in st.session_state:
-        st.session_state.audio_data = None
     if "show_spelling" not in st.session_state:
         st.session_state.show_spelling = False
-    
-    # Start button: choose word + generate audio
+
+    # ▶️ Start button
     if st.button("▶️ Start"):
         st.session_state.current_word = random.choice(word_data)
-        st.session_state.show_spelling = False  # Reset spelling flag
-    
-        try:
-            tts = gTTS(st.session_state.current_word["word"])
-            audio_fp = BytesIO()
-            tts.write_to_fp(audio_fp)
-            audio_fp.seek(0)
-            st.session_state.audio_data = audio_fp.read()  # store audio bytes in session
-            st.audio(st.session_state.audio_data, format="audio/mp3")
-        except Exception as e:
-            st.session_state.audio_data = None
-            st.error("❌ Failed to generate audio. Check internet or rate limits.")
-            st.exception(e)
-    
-    # Replay audio if already generated
-    if st.session_state.audio_data and not st.session_state.show_spelling:
-        st.audio(st.session_state.audio_data, format="audio/mp3")
-    
-    # Show Spelling button
+        st.session_state.show_spelling = False
+
+    # 🔊 Play audio if a word is selected
     if st.session_state.current_word:
+        word = st.session_state.current_word["word"]
+        audio_path = f"audio/{word}.mp3"
+        if os.path.exists(audio_path):
+            st.audio(audio_path, format="audio/mp3")
+        else:
+            st.warning(f"⚠️ Audio not found for `{word}`. Check `audio/{word}.mp3`")
+
+        # 🔤 Show spelling button
         if st.button("🔤 Show Spelling"):
             st.session_state.show_spelling = True
-    
-    # Display spelling if toggled
+
+    # Show IPA spelling
     if st.session_state.current_word and st.session_state.show_spelling:
-        word = st.session_state.current_word["word"]
         ipa = st.session_state.current_word["ipa"]
         st.markdown(f"**Word**: `{word}`  \n**IPA**: /{ipa}/")
+
 with tabs[1]:
     st.markdown("### 📒 Lesson 15: ")
 with tabs[2]:
