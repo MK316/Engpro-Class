@@ -2,42 +2,43 @@ import streamlit as st
 from gtts import gTTS
 import random
 from io import BytesIO
-import os
 
 # Create four tabs
 tabs = st.tabs(["💧 Lesson 14", "💧 Lesson 15", "💧 Lesson 16", "💧 Lesson 17"])
 
-# Content for each tab
 # Sample dataset of irregular words
 word_data = [
-        {"word": "said", "ipa": "sɛd"},
-        {"word": "busy", "ipa": "bɪzi"},
-        {"word": "one", "ipa": "wʌn"},
-        {"word": "two", "ipa": "tu"},
-        {"word": "done", "ipa": "dʌn"},
-        {"word": "love", "ipa": "lʌv"},
-        {"word": "move", "ipa": "muv"},
-        {"word": "once", "ipa": "wʌns"},
-        {"word": "colonel", "ipa": "kɝnəl"},
-        {"word": "island", "ipa": "aɪlənd"},
-        {"word": "knife", "ipa": "naɪf"},
-        {"word": "hour", "ipa": "aʊɚ"},
-        {"word": "answer", "ipa": "ænsɚ"},
-        {"word": "listen", "ipa": "lɪsən"},
-        {"word": "choir", "ipa": "kwaɪɚ"},
-        {"word": "though", "ipa": "ðoʊ"},
-        {"word": "through", "ipa": "θru"},
-        {"word": "cough", "ipa": "kɔf"},
-        {"word": "bought", "ipa": "bɔt"},
-        {"word": "enough", "ipa": "ɪnʌf"},
+    {"word": "said", "ipa": "sɛd"},
+    {"word": "busy", "ipa": "bɪzi"},
+    {"word": "one", "ipa": "wʌn"},
+    {"word": "two", "ipa": "tu"},
+    {"word": "done", "ipa": "dʌn"},
+    {"word": "love", "ipa": "lʌv"},
+    {"word": "move", "ipa": "muv"},
+    {"word": "once", "ipa": "wʌns"},
+    {"word": "colonel", "ipa": "kɝnəl"},
+    {"word": "island", "ipa": "aɪlənd"},
+    {"word": "knife", "ipa": "naɪf"},
+    {"word": "hour", "ipa": "aʊɚ"},
+    {"word": "answer", "ipa": "ænsɚ"},
+    {"word": "listen", "ipa": "lɪsən"},
+    {"word": "choir", "ipa": "kwaɪɚ"},
+    {"word": "though", "ipa": "ðoʊ"},
+    {"word": "through", "ipa": "θru"},
+    {"word": "cough", "ipa": "kɔf"},
+    {"word": "bought", "ipa": "bɔt"},
+    {"word": "enough", "ipa": "ɪnʌf"},
 ]
 
 # Lesson content in the first tab
 with tabs[0]:
     st.markdown("### 📒 Lesson 14: Irregular Sound-Spelling Words")
 
+    # Initialize session state
     if "current_word" not in st.session_state:
         st.session_state.current_word = None
+    if "audio_data" not in st.session_state:
+        st.session_state.audio_data = None
     if "show_spelling" not in st.session_state:
         st.session_state.show_spelling = False
 
@@ -45,25 +46,35 @@ with tabs[0]:
     if st.button("▶️ Start"):
         st.session_state.current_word = random.choice(word_data)
         st.session_state.show_spelling = False
-
-    # 🔊 Play audio if a word is selected
-    if st.session_state.current_word:
         word = st.session_state.current_word["word"]
-        audio_path = f"audio/{word}.mp3"
-        if os.path.exists(audio_path):
-            st.audio(audio_path, format="audio/mp3")
-        else:
-            st.warning(f"⚠️ Audio not found for `{word}`. Check `audio/{word}.mp3`")
 
-        # 🔤 Show spelling button
+        try:
+            tts = gTTS(text=word, lang='en')
+            audio_fp = BytesIO()
+            tts.write_to_fp(audio_fp)
+            audio_fp.seek(0)
+            st.session_state.audio_data = audio_fp.read()
+        except Exception as e:
+            st.session_state.audio_data = None
+            st.error("❌ Failed to generate audio. This may be due to a rate limit or internet issue.")
+            st.exception(e)
+
+    # 🔊 Play audio if available
+    if st.session_state.audio_data:
+        st.audio(st.session_state.audio_data, format="audio/mp3")
+
+    # 🔤 Show spelling button
+    if st.session_state.current_word:
         if st.button("🔤 Show Spelling"):
             st.session_state.show_spelling = True
 
     # Show IPA spelling
     if st.session_state.current_word and st.session_state.show_spelling:
+        word = st.session_state.current_word["word"]
         ipa = st.session_state.current_word["ipa"]
         st.markdown(f"**Word**: `{word}`  \n**IPA**: /{ipa}/")
 
+# Other lesson tabs
 with tabs[1]:
     st.markdown("### 📒 Lesson 15: ")
 with tabs[2]:
