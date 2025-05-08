@@ -84,8 +84,43 @@ with tabs[0]:
             unsafe_allow_html=True
         )
     st.markdown("---")
-    st.markdown("#### [2] Consonants grouped by voicing, place of articulation, and manner of articulation")
-    
+    st.markdown("#### [2] 🎧 Consonants grouped by voicing, place of articulation, and manner of articulation")
+
+    word_pairs = [
+        ("pie", "bye"),
+        ("teen", "deen"),
+        ("Kate", "gate"),
+        ("leaf", "leave"),
+        ("breath", "breathe"),
+        ("face", "phase"),
+        ("pressure", "pleasure"),
+        ("batch", "badge"),
+    ]
+
+    def generate_audio(word):
+        try:
+            tts = gTTS(text=word, lang='en')
+            audio_fp = BytesIO()
+            tts.write_to_fp(audio_fp)
+            audio_fp.seek(0)
+            return audio_fp.read()
+        except Exception as e:
+            st.error(f"⚠️ Could not generate audio for '{word}'.")
+            return None
+
+    for w1, w2 in word_pairs:
+        st.markdown(f"**🔹 {w1}** & **{w2}**")
+        col1, col2 = st.columns(2)
+        with col1:
+            audio1 = generate_audio(w1)
+            if audio1:
+                st.audio(audio1, format="audio/mp3")
+        with col2:
+            audio2 = generate_audio(w2)
+            if audio2:
+                st.audio(audio2, format="audio/mp3")
+        st.write("---")
+
 
 # Other lesson tabs
 with tabs[1]:
