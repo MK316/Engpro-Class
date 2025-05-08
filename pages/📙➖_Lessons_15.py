@@ -16,7 +16,7 @@ from io import BytesIO
 word_pairs = [
     {"en": "face and phase", "ko": "페이스 그리고 페이즈"},
     {"en": "pressure and pleasure", "ko": "프레셔 그리고 플레져"},
-    {"en": "church and judge", "ko": "처치 그리고 저지"},
+    {"en": "church and judge", "ko": "처치 그리고  젇지"},
 ]
 
 st.markdown("### [2] Listen to minimal pairs in English and Korean")
@@ -36,7 +36,7 @@ def generate_audio(text, lang='en'):
 
 # Loop through each pair
 for pair in word_pairs:
-    st.markdown(f"**🔹 English:** {pair['en']}  \n**🔸 Korean:** {pair['ko']}")
+    st.markdown(f"**🔹 English:** {pair['en']}  \n**🔸 Korean:** {pair['en']")
 
     col1, col2 = st.columns(2)
     with col1:
