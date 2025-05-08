@@ -43,13 +43,16 @@ with tabs[0]:
         st.session_state.current_word = None
     
     # Start button
-    if st.button("▶️ Start"):
-        st.session_state.current_word = random.choice(word_data)
+    try:
         tts = gTTS(st.session_state.current_word["word"])
         audio_fp = BytesIO()
         tts.write_to_fp(audio_fp)
         audio_fp.seek(0)
         st.audio(audio_fp, format="audio/mp3")
+    except Exception as e:
+        st.error("❌ Failed to generate audio. Please check your internet connection or try again later.")
+        st.exception(e)
+
     
     # If word is selected, offer to show spelling
     if st.session_state.current_word:
