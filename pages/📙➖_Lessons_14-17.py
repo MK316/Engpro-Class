@@ -121,6 +121,37 @@ with tabs[0]:
                 st.audio(audio2, format="audio/mp3")
         st.write("---")
 
+    st.markdown("### [3] English consonants: 24 distinct sounds")
+
+    # List of natural sentences covering all 24 consonant phonemes
+    sentences = [
+        "Just before dawn, the wizard fixed a broken phone with a laugh and sang gently through the heavy jungle.",
+        "The brave judge watched a flying penguin zigzag through thick jungle fog near a calm river.",
+        "She jumped on the big van, threw a quiet laugh, and whispered softly to the young wizard.",
+        "The young chef’s badge glowed as he danced through freezing mist on the jungle path.",
+        "With vivid energy, the knight zipped past the laughing chimp, dropping his badge in the thick bushes."
+    ]
+    
+    # Function to generate TTS audio from text
+    def generate_audio(text):
+        try:
+            tts = gTTS(text=text, lang='en')
+            audio_fp = BytesIO()
+            tts.write_to_fp(audio_fp)
+            audio_fp.seek(0)
+            return audio_fp.read()
+        except Exception as e:
+            st.error("❌ Failed to generate audio. Try again later.")
+            st.exception(e)
+            return None
+    
+    # Display each sentence with its audio
+    for i, sentence in enumerate(sentences, 1):
+        st.markdown(f"**🔹 Sentence {i}:** {sentence}")
+        audio_data = generate_audio(sentence)
+        if audio_data:
+            st.audio(audio_data, format="audio/mp3")
+        st.write("---")
 
 # Other lesson tabs
 with tabs[1]:
