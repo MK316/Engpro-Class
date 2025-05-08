@@ -72,7 +72,14 @@ with tabs[0]:
     if st.session_state.current_word and st.session_state.show_spelling:
         word = st.session_state.current_word["word"]
         ipa = st.session_state.current_word["ipa"]
-        st.markdown(f"**Word**: `{word}`  \n**IPA**: /{ipa}/")
+        st.markdown(
+            f"""
+            <div style="font-size: 36px; font-weight: bold;">Word: {word}</div>
+            <div style="font-size: 28px; color: #555;">IPA: /{ipa}/</div>
+            """,
+            unsafe_allow_html=True
+        )
+
 
 # Other lesson tabs
 with tabs[1]:
