@@ -36,7 +36,7 @@ with tabs[0]:
         {"word": "enough", "ipa": "ɪnʌf"},
     ]
     
-    st.title("🗣️ Irregular English Words: Sound and Spelling")
+    st.markdown("#### 🗣️ Irregularity of English Words: Sound and Spelling")
     
     # Use session state to persist selected word
     if "current_word" not in st.session_state:
