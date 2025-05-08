@@ -36,7 +36,7 @@ def generate_audio(text, lang='en'):
 
 # Loop through each pair
 for pair in word_pairs:
-    st.markdown(f"**🔹 English:** {pair['en']}  \n**🔹 Korean:** {pair['ko']}")
+    st.markdown(f"**🔹 English:** {pair['en']}  \n**🔸 Korean:** {pair['en']}")
 
     col1, col2 = st.columns(2)
     with col1:
