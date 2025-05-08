@@ -32,9 +32,9 @@ word_data = [
 
 # Lesson content in the first tab
 with tabs[0]:
-    st.markdown("### 📒 Lesson 14: Irregular Sound-Spelling Words")
-    st.write("[1] In English, spelling and sound correspondence often follows a one-to-many relationship.")
-    st.caption("Since the spelling does not represent an exact sound that the letter represents, it is helpful to use the International Phonetic Alphabet (IPA) to understand English pronunciation better.")
+    st.markdown("## 📒 Lesson 14: Irregular Sound-Spelling Words")
+    st.markdown("#### [1] In English, spelling and sound correspondence often follows a one-to-many relationship.")
+    st.write("Since the spelling does not represent an exact sound that the letter represents, it is helpful to use the International Phonetic Alphabet (IPA) to understand English pronunciation better.")
     
     # Initialize session state
     if "current_word" not in st.session_state:
@@ -83,7 +83,9 @@ with tabs[0]:
             """,
             unsafe_allow_html=True
         )
-
+    st.markdown("---")
+    st.markdown("#### [2] Consonants grouped by voicing, place of articulation, and manner of articulation")
+    
 
 # Other lesson tabs
 with tabs[1]:
