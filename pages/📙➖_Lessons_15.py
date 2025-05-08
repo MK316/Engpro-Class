@@ -14,9 +14,9 @@ from io import BytesIO
 
 # Define word pairs in English and Korean
 word_pairs = [
-    {"en": "face and phase", "ko": "페이스 그리고 페이즈"},
-    {"en": "pressure and pleasure", "ko": "프레셔 그리고 플레져"},
-    {"en": "church and judge", "ko": "처치 그리고 저지"},
+    {"en": "face and phase", "ko": "페이스와 페이즈"},
+    {"en": "pressure and pleasure", "ko": "프레셔와 플레져"},
+    {"en": "church and judge", "ko": "처치와 저지"},
 ]
 
 st.markdown("### [2] Listen to minimal pairs in English and Korean")
