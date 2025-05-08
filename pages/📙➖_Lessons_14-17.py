@@ -33,7 +33,9 @@ word_data = [
 # Lesson content in the first tab
 with tabs[0]:
     st.markdown("### 📒 Lesson 14: Irregular Sound-Spelling Words")
-
+    st.write("[1] In English, spelling and sound correspondence often follows a one-to-many relationship.")
+    st.caption("Since the spelling does not represent an exact sound that the letter represents, it is helpful to use the International Phonetic Alphabet (IPA) to understand English pronunciation better.")
+    
     # Initialize session state
     if "current_word" not in st.session_state:
         st.session_state.current_word = None
@@ -63,9 +65,9 @@ with tabs[0]:
     if st.session_state.audio_data:
         st.audio(st.session_state.audio_data, format="audio/mp3")
 
-    # 🔤 Show spelling button
+    # ▶️ Show spelling button
     if st.session_state.current_word:
-        if st.button("🔤 Display Spelling and Transcription (IPA)"):
+        if st.button("▶️ Display Spelling and Transcription (IPA)"):
             st.session_state.show_spelling = True
     
     # Show IPA spelling
