@@ -7,11 +7,10 @@ from io import BytesIO
 tabs = st.tabs(["💧 Lesson 14", "💧 Lesson 15", "💧 Lesson 16", "💧 Lesson 17"])
 
 # Content for each tab
+# Content for each tab
 with tabs[0]:
-    st.markdown("### 📒 Lesson 14: ")
+    st.markdown("### 📒 Lesson 14:")
 
-
-    
     # Sample dataset of irregular words
     word_data = [
         {"word": "said", "ipa": "sɛd"},
@@ -35,37 +34,32 @@ with tabs[0]:
         {"word": "bought", "ipa": "bɔt"},
         {"word": "enough", "ipa": "ɪnʌf"},
     ]
-    
+
     st.markdown("#### 🗣️ Irregularity of English Words: Sound and Spelling")
-    
-    # Use session state to persist selected word
+
+    # Initialize session state
     if "current_word" not in st.session_state:
         st.session_state.current_word = None
-    
-    # Start button
-    try:
-        tts = gTTS(st.session_state.current_word["word"])
-        audio_fp = BytesIO()
-        tts.write_to_fp(audio_fp)
-        audio_fp.seek(0)
-        st.audio(audio_fp, format="audio/mp3")
-    except Exception as e:
-        st.error("❌ Failed to generate audio. Please check your internet connection or try again later.")
-        st.exception(e)
 
-    
-    # If word is selected, offer to show spelling
+    # Start button to choose a random word
+    if st.button("▶️ Start"):
+        st.session_state.current_word = random.choice(word_data)
+        try:
+            tts = gTTS(st.session_state.current_word["word"])
+            audio_fp = BytesIO()
+            tts.write_to_fp(audio_fp)
+            audio_fp.seek(0)
+            st.audio(audio_fp, format="audio/mp3")
+        except Exception as e:
+            st.error("❌ Failed to generate audio.")
+            st.exception(e)
+
+    # Show spelling button
     if st.session_state.current_word:
         if st.button("🔤 Show Spelling"):
             word = st.session_state.current_word["word"]
             ipa = st.session_state.current_word["ipa"]
             st.markdown(f"**Word**: `{word}`  \n**IPA**: /{ipa}/")
-
-
-
-
-
-
 with tabs[1]:
     st.markdown("### 📒 Lesson 15: ")
 with tabs[2]:
