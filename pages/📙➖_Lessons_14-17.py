@@ -67,8 +67,9 @@ with tabs[0]:
     if st.session_state.current_word:
         if st.button("🔤 Display Spelling and Transcription (IPA)"):
             st.session_state.show_spelling = True
-
+    
     # Show IPA spelling
+    st.markdown("---")
     if st.session_state.current_word and st.session_state.show_spelling:
         word = st.session_state.current_word["word"]
         ipa = st.session_state.current_word["ipa"]
