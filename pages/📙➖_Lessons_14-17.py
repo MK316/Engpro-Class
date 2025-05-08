@@ -78,8 +78,8 @@ with tabs[0]:
         ipa = st.session_state.current_word["ipa"]
         st.markdown(
             f"""
-            <div style="font-size: 36px; font-weight: bold;">Word: {word}</div>
-            <div style="font-size: 28px; color: #555;">IPA: /{ipa}/</div>
+            <div style="font-size: 36px; color: #787882;font-weight: bold;">⚪ Word: {word}</div>
+            <div style="font-size: 36px; color: #121ab0;">⚪ IPA: /{ipa}/</div>
             """,
             unsafe_allow_html=True
         )
