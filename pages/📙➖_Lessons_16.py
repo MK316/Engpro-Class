@@ -110,7 +110,7 @@ with tabs[2]:
         st.audio(audio, format="audio/mp3")
         st.markdown("---")
 
-    st.markdown("#### Practice")
+    st.markdown("#### 🌴 More Practice")
     sentences2 = [
         "Hello, James!",
         "What's new?",
