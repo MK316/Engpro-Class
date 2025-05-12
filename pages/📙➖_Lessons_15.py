@@ -218,33 +218,44 @@ st.markdown("---")
 import random
 
 # --- Section 4: Listening Quiz ---
+# --- Section 4: Listening Quiz ---
 st.markdown("### [4] Listening Quiz")
-st.markdown("🎧 Listen to the word and type what you hear.")
+st.markdown("🎧 Listen to each audio and type the word you hear.")
 
-# Word list
+# Word list (in pairs)
 quiz_words = [
     "chess", "Jess", "Jack", "Zack", "chew", "jew", "zoo", "jew",
     "heads", "hedge", "zone", "Joan", "bays", "beige", "ruse", "rouge",
     "Caesar", "seizure", "version", "virgin", "lesion", "legion", "pleasure", "pledger"
 ]
 
-# Randomly choose a word (session state to keep it constant)
-if "quiz_word" not in st.session_state:
-    st.session_state.quiz_word = random.choice(quiz_words)
+# Show in pairs
+for i in range(0, len(quiz_words), 2):
+    word1 = quiz_words[i]
+    word2 = quiz_words[i+1]
 
-# Generate audio for the chosen word
-quiz_audio = generate_audio_simple(st.session_state.quiz_word)
-st.audio(quiz_audio.getvalue(), format="audio/mp3")
+    col1, col2 = st.columns(2)
 
-# Input box for answer
-user_input = st.text_input("Type the word you heard:")
+    with col1:
+        st.markdown("🔊 **Audio 1**")
+        audio1 = generate_audio_simple(word1)
+        st.audio(audio1.getvalue(), format="audio/mp3")
+        ans1 = st.text_input(f"Type what you heard (1):", key=f"input_{i}")
+        if ans1:
+            if ans1.strip().lower() == word1.lower():
+                st.success("✅ Correct")
+            else:
+                st.error(f"❌ Incorrect. Try again.")
 
-# Check the answer
-if user_input:
-    if user_input.strip().lower() == st.session_state.quiz_word.lower():
-        st.success("✅ Correct!")
-        if st.button("Next Word"):
-            st.session_state.quiz_word = random.choice(quiz_words)
-    else:
-        st.error("❌ Try again.")
+    with col2:
+        st.markdown("🔊 **Audio 2**")
+        audio2 = generate_audio_simple(word2)
+        st.audio(audio2.getvalue(), format="audio/mp3")
+        ans2 = st.text_input(f"Type what you heard (2):", key=f"input_{i+1}")
+        if ans2:
+            if ans2.strip().lower() == word2.lower():
+                st.success("✅ Correct")
+            else:
+                st.error(f"❌ Incorrect. Try again.")
 
+    st.markdown("---")
