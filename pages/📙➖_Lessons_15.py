@@ -3,22 +3,16 @@ from gtts import gTTS
 from io import BytesIO
 import io
 
-# Page header
+# --- Page Header ---
+st.set_page_config(page_title="Lesson 15: [s] and [z]", layout="wide")
 st.markdown("### 📙 Lesson 15. Three consonant pairs")
 st.caption("Workbook page 77")
+
 image_url = "https://github.com/MK316/Engpro-Class/raw/main/images/L15-keywords.png"
 st.image(image_url, caption="A: B, C (Place); A, B: C (Manner)", use_container_width=True)
 st.markdown("---")
 
-# Section 1: Word pairs with audio
-st.markdown("### [1] Sound group A: [s] and [z]")
-
-word_pairs = [
-    {"en": "face and phase", "ko": "페이스와 페이즈"},
-    {"en": "pressure and pleasure", "ko": "프레셔와 플레져"},
-    {"en": "church and judge", "ko": "처치와 저지"},
-]
-
+# --- Audio Function ---
 def generate_audio(text, lang='en'):
     try:
         tts = gTTS(text=text, lang=lang)
@@ -31,9 +25,24 @@ def generate_audio(text, lang='en'):
         st.exception(e)
         return None
 
-for pair in word_pairs:
-    st.markdown(f"**🔹 English:** {pair['en']}  \n**🔸 Korean:** {pair['ko']}")
+def generate_audio_simple(text):
+    tts = gTTS(text=text, lang='en')
+    audio_data = io.BytesIO()
+    tts.write_to_fp(audio_data)
+    audio_data.seek(0)
+    return audio_data
 
+# --- Section 1: Word Pairs ---
+st.markdown("### [1] Sound group A: [s] and [z]")
+
+word_pairs = [
+    {"en": "face and phase", "ko": "페이스와 페이즈"},
+    {"en": "pressure and pleasure", "ko": "프레셔와 플레져"},
+    {"en": "church and judge", "ko": "처치와 저지"},
+]
+
+for i, pair in enumerate(word_pairs):
+    st.markdown(f"**🔹 English:** {pair['en']}  \n**🔸 Korean:** {pair['ko']}")
     col1, col2 = st.columns(2)
     with col1:
         en_audio = generate_audio(pair["en"], lang="en")
@@ -45,16 +54,9 @@ for pair in word_pairs:
             st.audio(ko_audio, format="audio/mp3")
     st.markdown("---")
 
-# Section 2: Practice words
+# --- Section 2: Word Positions ---
 st.markdown("### [2] Practice")
 st.markdown("### 🎤 Practice Words by Position")
-
-def generate_audio_simple(text):
-    tts = gTTS(text=text, lang='en')
-    audio_data = io.BytesIO()
-    tts.write_to_fp(audio_data)
-    audio_data.seek(0)
-    return audio_data
 
 vowel_practice = {
     "[s]": {
@@ -72,41 +74,6 @@ vowel_practice = {
 for sound, positions in vowel_practice.items():
     st.markdown(f"#### {sound} Words")
     col1, col2, col3 = st.columns(3)
-
-# Section 3: [s] / [z] contrast practice
-st.markdown("### [3] More Practice")
-st.markdown("### 🔊 Listen and Compare: [s] vs. [z]")
-
-contrast_pairs = [
-    ("Sue", "zoo"),
-    ("face", "phase"),
-    ("race", "raise"),
-    ("bus", "buzz"),
-    ("ice", "eyes"),
-    ("place", "plays"),
-    ("pease", "peas"),
-    ("price", "prize"),
-    ("racer", "razor")
-]
-
-for s_word, z_word in contrast_pairs:
-    st.markdown(f"**[s]** `{s_word}` vs. **[z]** `{z_word}`")
-
-    col1, col2 = st.columns(2)
-
-    with col1:
-        st.write(f"🔹 {s_word}")
-        audio_s = generate_audio_simple(s_word)
-        st.audio(audio_s.getvalue(), format="audio/mp3")
-
-    with col2:
-        st.write(f"🔸 {z_word}")
-        audio_z = generate_audio_simple(z_word)
-        st.audio(audio_z.getvalue(), format="audio/mp3")
-
-    st.markdown("---")
-
-    
 
     with col1:
         st.write(f"**Beginning:** {positions['Beginning']}")
@@ -127,3 +94,35 @@ for s_word, z_word in contrast_pairs:
             st.audio(audio.getvalue(), format="audio/mp3")
 
 st.markdown("---")
+
+# --- Section 3: [s] vs [z] Contrast ---
+st.markdown("### [3] More Practice")
+st.markdown("### 🔊 Listen and Compare: [s] vs. [z]")
+
+contrast_pairs = [
+    ("Sue", "zoo"),
+    ("face", "phase"),
+    ("race", "raise"),
+    ("bus", "buzz"),
+    ("ice", "eyes"),
+    ("place", "plays"),
+    ("pease", "peas"),
+    ("price", "prize"),
+    ("racer", "razor")
+]
+
+for idx, (s_word, z_word) in enumerate(contrast_pairs):
+    st.markdown(f"**[s]** `{s_word}` vs. **[z]** `{z_word}`")
+    col1, col2 = st.columns(2)
+
+    with col1:
+        st.write(f"🔹 {s_word}")
+        audio_s = generate_audio_simple(s_word)
+        st.audio(audio_s.getvalue(), format="audio/mp3")
+
+    with col2:
+        st.write(f"🔸 {z_word}")
+        audio_z = generate_audio_simple(z_word)
+        st.audio(audio_z.getvalue(), format="audio/mp3")
+
+    st.markdown("---")
