@@ -55,8 +55,7 @@ for i, pair in enumerate(word_pairs):
     st.markdown("---")
 
 # --- Section 2: Word Positions ---
-st.markdown("### [2] Practice")
-st.markdown("### 🎤 Practice Words by Position")
+st.markdown("#### 🎤 Practice Words by Position")
 
 vowel_practice = {
     "[s]": {
@@ -96,8 +95,8 @@ for sound, positions in vowel_practice.items():
 st.markdown("---")
 
 # --- Section 3: [s] vs [z] Contrast ---
-st.markdown("### [3] More Practice")
-st.markdown("### 🔊 Listen and Compare: [s] vs. [z]")
+
+st.markdown("#### 🔊 More practice: Listen and Compare [s] vs. [z]")
 
 contrast_pairs = [
     ("Sue", "zoo"),
@@ -126,3 +125,47 @@ for idx, (s_word, z_word) in enumerate(contrast_pairs):
         st.audio(audio_z.getvalue(), format="audio/mp3")
 
     st.markdown("---")
+
+# --- Section 2: Word Pair 2 ---
+st.markdown("### [2] Sound group B: [ʃ] and [ʒ]")
+
+st.info("Lips are rounded when you make these sounds. The only difference between the two sounds is the voicing. Everything else in the mouth should be the same.")
+
+st.markdown("#### 🎤 Practice Words by Position")
+
+vowel_practice2 = {
+    "[ʃ]": {
+        "Beginning": "shine, shame, sugar",
+        "Middle": "fashion, cushion",
+        "End": "fish, cash, smash"
+    },
+    "[ʒ]": {
+        "Beginning": "genre",
+        "Middle": "pleasure, measure, leisure, vision, decision, television, lesion, occasion, usual, Asia, conclusion",
+        "End": "beige, garage, camouflage, entourage, rouge, regime, massage"
+    }
+}
+
+for sound, positions in vowel_practice2.items():
+    st.markdown(f"#### {sound} Words")
+    col1, col2, col3 = st.columns(3)
+
+    with col1:
+        st.write(f"**Beginning:** {positions['Beginning']}")
+        if st.button(f"▶️ Beginning ({sound})", key=f"{sound}_beg"):
+            audio = generate_audio_simple(positions["Beginning"])
+            st.audio(audio.getvalue(), format="audio/mp3")
+
+    with col2:
+        st.write(f"**Middle:** {positions['Middle']}")
+        if st.button(f"▶️ Middle ({sound})", key=f"{sound}_mid"):
+            audio = generate_audio_simple(positions["Middle"])
+            st.audio(audio.getvalue(), format="audio/mp3")
+
+    with col3:
+        st.write(f"**End:** {positions['End']}")
+        if st.button(f"▶️ End ({sound})", key=f"{sound}_end"):
+            audio = generate_audio_simple(positions["End"])
+            st.audio(audio.getvalue(), format="audio/mp3")
+
+st.markdown("---")
