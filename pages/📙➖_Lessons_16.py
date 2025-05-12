@@ -112,16 +112,16 @@ with tabs[2]:
 
     st.markdown("#### Practice")
     sentences2 = [
-        "1. Hello, James!",
-        "2. What's new?",
-        "3. That's all right.",
-        "4. She measures about five feet 2 inches.",
-        "5. He has blue eyes, and weighs 100 pounds.",
-        "6. She enters law school after finals.",
-        "7. He got good grades.",
-        "8. She golfs, plays tennis, and swims.",
-        "9. The store sells watches, rings, bracelets, diamonds, and rubies.",
-        "10. My sister's dresses, blouses, and shoes are all new."
+        "Hello, James!",
+        "What's new?",
+        "That's all right.",
+        "She measures about five feet 2 inches.",
+        "He has blue eyes, and weighs 100 pounds.",
+        "She enters law school after finals.",
+        "He got good grades.",
+        "She golfs, plays tennis, and swims.",
+        "The store sells watches, rings, bracelets, diamonds, and rubies.",
+        "My sister's dresses, blouses, and shoes are all new."
     ]
 
     for i, sentence in enumerate(sentences2, start=1):
