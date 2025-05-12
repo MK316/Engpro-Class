@@ -110,4 +110,23 @@ with tabs[2]:
         st.audio(audio, format="audio/mp3")
         st.markdown("---")
 
+    st.markdown("#### Practice")
+    sentences2 = [
+        "1. Hello, James!",
+        "2. What's new?",
+        "3. That's all right.",
+        "4. She measures about five feet 2 inches.",
+        "5. He has blue eyes, and weighs 100 pounds.",
+        "6. She enters law school after finals.",
+        "7. He got good grades.",
+        "8. She golfs, plays tennis, and swims.",
+        "9. The store sells watches, rings, bracelets, diamonds, and rubies.",
+        "10. My sister's dresses, blouses, and shoes are all new."
+    ]
+
+    for i, sentence in enumerate(sentences, start=1):
+        st.markdown(f"**{i}. {sentence}**")
+        audio = generate_audio(sentence)
+        st.audio(audio, format="audio/mp3")
+        st.markdown("---")
     
