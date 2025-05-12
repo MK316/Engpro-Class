@@ -50,6 +50,13 @@ for pair in word_pairs:
     st.markdown("---")
 
 st.markdown("### [2] Practice")
+    # Function to generate and play audio
+    def generate_audio(text):
+        tts = gTTS(text=text, lang='en')
+        audio_data = io.BytesIO()
+        tts.write_to_fp(audio_data)
+        audio_data.seek(0)
+        return audio_data
 
     # Practice Section
     st.markdown("### 🎤 Practice Words by Position")
