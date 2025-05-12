@@ -14,7 +14,7 @@ def generate_audio(text):
     return audio_fp
 
 # Create tab layout
-tabs = st.tabs(["🌱 e(s) Pronunciation", "🌀 Plural Nouns Generator"])
+tabs = st.tabs(["🌱 e(s) Pronunciation", "🌀 Plural Nouns Generator","🍁 3rd person singular"])
 
 # --- Tab 1: e(s) Pronunciation Rules ---
 with tabs[0]:
@@ -87,3 +87,27 @@ with tabs[1]:
     
         st.markdown(f"### 🔁 Plural: **{plural}**")
         st.audio(generate_audio(plural), format="audio/mp3")
+
+with tabs[2]:
+    st.title("🗣️ Sentence Pronunciation Practice")
+    st.markdown("Listen to how final **–s/-es** sounds are pronounced in connected speech.")
+
+    sentences = [
+        "He kicks it.",
+        "She saves it.",
+        "She misses it.",
+        "It works easy.",
+        "She means it.",
+        "He washes it.",
+        "He tastes it.",
+        "The boy listens it.",
+        "She catches it."
+    ]
+
+    for i, sentence in enumerate(sentences, start=1):
+        st.markdown(f"**{i}. {sentence}**")
+        audio = generate_audio(sentence)
+        st.audio(audio, format="audio/mp3")
+        st.markdown("---")
+
+    
