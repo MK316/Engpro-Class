@@ -14,7 +14,7 @@ def generate_audio(text):
     return audio_fp
 
 # Create tab layout
-tabs = st.tabs(["e(s) Pronunciation", "Plural Nouns Generator"])
+tabs = st.tabs(["🌱 e(s) Pronunciation", "🌀 Plural Nouns Generator"])
 
 # --- Tab 1: e(s) Pronunciation Rules ---
 with tabs[0]:
