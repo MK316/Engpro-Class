@@ -124,9 +124,9 @@ with tabs[2]:
         "10. My sister's dresses, blouses, and shoes are all new."
     ]
 
-    for i, sentence in enumerate(sentences, start=1):
-        st.markdown(f"**{i}. {sentence2}**")
-        audio = generate_audio(sentence2)
+    for i, sentence in enumerate(sentences2, start=1):
+        st.markdown(f"**{i}. {sentence}**")
+        audio = generate_audio(sentence)
         st.audio(audio, format="audio/mp3")
         st.markdown("---")
     
