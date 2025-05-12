@@ -1,4 +1,6 @@
 import streamlit as st
+from gtts import gTTS
+import io
 
 st.markdown("### 📙 Lesson 15. Three consonant pairs")
 st.caption("Workbook page 77")
@@ -48,3 +50,45 @@ for pair in word_pairs:
     st.markdown("---")
 
 st.markdown("### [2] Practice")
+
+    # Practice Section
+    st.markdown("### 🎤 Practice Words by Position")
+    vowel_practice = {
+        "[s]": {
+            "Beginning": "same, sign, city, cinema, signature, system, sorry",
+            "Middle": "lesson, custom, castle, history",
+            "End": "bus, face, course, makes, miss, house, plus"
+        },
+        "[z]": {
+            "Beginning": "zoo, zero, zest, zeal, zone, zinc, zipper, zebra",
+            "Middle": "crazy, busy, easy, dizzy, cousin, puzzle, dozen",
+            "End": "as, was, raise, is, buzz, his, breeze, amaze"
+        }
+    }
+    
+    for vowel, positions in vowel_practice.items():
+        st.markdown(f"#### {vowel} Words")
+        col_beginning, col_middle, col_end = st.columns(3)
+        
+        with col_beginning:
+            if positions["Beginning"] != "None":
+                st.write(f"**Beginning:** {positions['Beginning']}")
+                if st.button(f"Play Beginning Words ({vowel})", key=f"audio_{vowel}_beginning"):
+                    audio_data = generate_audio(positions['Beginning'])
+                    st.audio(audio_data.getvalue(), format='audio/mp3')
+        
+        with col_middle:
+            if positions["Middle"] != "None":
+                st.write(f"**Middle:** {positions['Middle']}")
+                if st.button(f"Play Middle Words ({vowel})", key=f"audio_{vowel}_middle"):
+                    audio_data = generate_audio(positions['Middle'])
+                    st.audio(audio_data.getvalue(), format='audio/mp3')
+        
+        with col_end:
+            if positions["End"] != "None":
+                st.write(f"**End:** {positions['End']}")
+                if st.button(f"Play End Words ({vowel})", key=f"audio_{vowel}_end"):
+                    audio_data = generate_audio(positions['End'])
+                    st.audio(audio_data.getvalue(), format='audio/mp3')
+
+    st.markdown("---")
