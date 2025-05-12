@@ -73,6 +73,41 @@ for sound, positions in vowel_practice.items():
     st.markdown(f"#### {sound} Words")
     col1, col2, col3 = st.columns(3)
 
+# Section 3: [s] / [z] contrast practice
+st.markdown("### [3] More Practice")
+st.markdown("### 🔊 Listen and Compare: [s] vs. [z]")
+
+contrast_pairs = [
+    ("Sue", "zoo"),
+    ("face", "phase"),
+    ("race", "raise"),
+    ("bus", "buzz"),
+    ("ice", "eyes"),
+    ("place", "plays"),
+    ("pease", "peas"),
+    ("price", "prize"),
+    ("racer", "razor")
+]
+
+for s_word, z_word in contrast_pairs:
+    st.markdown(f"**[s]** `{s_word}` vs. **[z]** `{z_word}`")
+
+    col1, col2 = st.columns(2)
+
+    with col1:
+        st.write(f"🔹 {s_word}")
+        audio_s = generate_audio_simple(s_word)
+        st.audio(audio_s.getvalue(), format="audio/mp3")
+
+    with col2:
+        st.write(f"🔸 {z_word}")
+        audio_z = generate_audio_simple(z_word)
+        st.audio(audio_z.getvalue(), format="audio/mp3")
+
+    st.markdown("---")
+
+    
+
     with col1:
         st.write(f"**Beginning:** {positions['Beginning']}")
         if st.button(f"▶️ Beginning ({sound})", key=f"{sound}_beg"):
