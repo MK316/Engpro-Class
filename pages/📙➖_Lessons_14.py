@@ -4,7 +4,7 @@ import random
 from io import BytesIO
 
 # Create four tabs
-tabs = st.tabs(["💧 Lesson 14", "💧 Lesson 15", "💧 Lesson 16", "💧 Lesson 17"])
+tabs = st.tabs(["💧 Lesson 14", "💧 Others"])
 
 # Sample dataset of irregular words
 word_data = [
@@ -153,10 +153,5 @@ with tabs[0]:
             st.audio(audio_data, format="audio/mp3")
         st.write("---")
 
-# Other lesson tabs
 with tabs[1]:
-    st.markdown("### 📒 Lesson 15: ")
-with tabs[2]:
-    st.markdown("### 📒 Lesson 16: ")
-with tabs[3]:
-    st.markdown("### 📒 Lesson 17: ")
+    st.caption("TBA")
