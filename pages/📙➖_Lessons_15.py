@@ -169,3 +169,82 @@ for sound, positions in vowel_practice2.items():
             st.audio(audio.getvalue(), format="audio/mp3")
 
 st.markdown("---")
+
+
+# --- Section 3: Word Pair3 ---
+st.markdown("### [3] Sound group B: [tʃ] and [dʒ]")
+
+st.info("Lips are rounded when you make these sounds. The only difference between the two sounds is the voicing. Everything else in the mouth should be the same.")
+
+st.markdown("#### 🎤 Practice Words by Position")
+
+vowel_practice2 = {
+    "[tʃ]": {
+        "Beginning": "chain, church, cherry, champion",
+        "Middle": "preacher, teacher, butcher, catcher",
+        "End": "match, catch, church, peach"
+    },
+    "[dʒ]": {
+        "Beginning": "giant, gym, gelly, giraffe",
+        "Middle": "magic, pledger, pager, larger",
+        "End": "cage, large, forge, badge"
+    }
+}
+
+for sound, positions in vowel_practice3.items():
+    st.markdown(f"#### {sound} Words")
+    col1, col2, col3 = st.columns(3)
+
+    with col1:
+        st.write(f"**Beginning:** {positions['Beginning']}")
+        if st.button(f"▶️ Beginning ({sound})", key=f"{sound}_beg"):
+            audio = generate_audio_simple(positions["Beginning"])
+            st.audio(audio.getvalue(), format="audio/mp3")
+
+    with col2:
+        st.write(f"**Middle:** {positions['Middle']}")
+        if st.button(f"▶️ Middle ({sound})", key=f"{sound}_mid"):
+            audio = generate_audio_simple(positions["Middle"])
+            st.audio(audio.getvalue(), format="audio/mp3")
+
+    with col3:
+        st.write(f"**End:** {positions['End']}")
+        if st.button(f"▶️ End ({sound})", key=f"{sound}_end"):
+            audio = generate_audio_simple(positions["End"])
+            st.audio(audio.getvalue(), format="audio/mp3")
+
+st.markdown("---")
+
+import random
+
+# --- Section 4: Listening Quiz ---
+st.markdown("### [4] Listening Quiz")
+st.markdown("🎧 Listen to the word and type what you hear.")
+
+# Word list
+quiz_words = [
+    "chess", "Jess", "Jack", "Zack", "chew", "jew", "zoo", "jew",
+    "heads", "hedge", "zone", "Joan", "bays", "beige", "ruse", "rouge",
+    "Caesar", "seizure", "version", "virgin", "lesion", "legion", "pleasure", "pledger"
+]
+
+# Randomly choose a word (session state to keep it constant)
+if "quiz_word" not in st.session_state:
+    st.session_state.quiz_word = random.choice(quiz_words)
+
+# Generate audio for the chosen word
+quiz_audio = generate_audio_simple(st.session_state.quiz_word)
+st.audio(quiz_audio.getvalue(), format="audio/mp3")
+
+# Input box for answer
+user_input = st.text_input("Type the word you heard:")
+
+# Check the answer
+if user_input:
+    if user_input.strip().lower() == st.session_state.quiz_word.lower():
+        st.success("✅ Correct!")
+        if st.button("Next Word"):
+            st.session_state.quiz_word = random.choice(quiz_words)
+    else:
+        st.error("❌ Try again.")
+
