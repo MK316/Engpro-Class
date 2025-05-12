@@ -178,7 +178,7 @@ st.info("Lips are rounded when you make these sounds. The only difference betwee
 
 st.markdown("#### 🎤 Practice Words by Position")
 
-vowel_practice2 = {
+vowel_practice3 = {
     "[tʃ]": {
         "Beginning": "chain, church, cherry, champion",
         "Middle": "preacher, teacher, butcher, catcher",
