@@ -1,4 +1,0 @@
-Name  Score
-KJS  90
-MKS  67
-HKD  80
