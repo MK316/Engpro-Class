@@ -125,8 +125,8 @@ with tabs[2]:
     ]
 
     for i, sentence in enumerate(sentences, start=1):
-        st.markdown(f"**{i}. {sentence}**")
-        audio = generate_audio(sentence)
+        st.markdown(f"**{i}. {sentence2}**")
+        audio = generate_audio(sentence2)
         st.audio(audio, format="audio/mp3")
         st.markdown("---")
     
