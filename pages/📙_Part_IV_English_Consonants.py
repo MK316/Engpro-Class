@@ -1,4 +1,6 @@
 import streamlit as st
+import streamlit.components.v1 as components
+
 
 # Create four tabs
 tabs = st.tabs(["💧 Contents", "💧 IPA online", "💧 App2", "💧 App3"])
