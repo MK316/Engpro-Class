@@ -74,4 +74,4 @@ It is your responsibility to make your message clear, useful, and **worth listen
 """)
  
 
-st.markdown("The presenter <u>is responsible for ensuring the message is heard, understood, and remembered. </u>.", unsafe_allow_html=True)
+st.markdown("The presenter <u>is responsible for ensuring the message is <span style="color:green; font-weight:bold">heard, understood, and remembered.</span> </u>.", unsafe_allow_html=True)
