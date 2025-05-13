@@ -12,7 +12,7 @@ with tab1:
 
     Pronouncing [p/b, t/d, k/g] sounds is usually not a problem for Korean speakers.  
     However, English has specific consonant rules that affect how voiceless sounds behave:
-    
+
     - After the /s/ sound (e.g., **spy**, **skate**, **steam**), voiceless sounds may lose their aspiration.  
     - In unstressed syllables, consonants can sound weaker or different than expected.
 
