@@ -135,7 +135,24 @@ with tabs[2]:
             if audio:
                 st.audio(audio, format="audio/mp3")
 
+    st.markdown("---")
+    st.markdown("#### 🎤 Try it yourself: Type a sentence and hear the audio")
 
+    user_text = st.text_input("Enter a sentence to hear it:")
+
+    if user_text:
+        if st.button("▶️ Generate Audio"):
+            try:
+                tts = gTTS(user_text, lang='en')
+                audio_fp = BytesIO()
+                tts.write_to_fp(audio_fp)
+                audio_fp.seek(0)
+                st.audio(audio_fp, format="audio/mp3")
+            except Exception as e:
+                st.error("⚠️ Failed to generate audio. Try again later.")
+                st.exception(e)
+
+    
 
 
 with tabs[3]:
