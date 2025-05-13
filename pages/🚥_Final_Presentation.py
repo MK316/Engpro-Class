@@ -1,6 +1,6 @@
 import streamlit as st
 
-tab1, tab2 = st.tabs(["Presentation tip", "Final guideline"])
+tab1, tab2 = st.tabs(["🍃 Presentation tip", "🌹 Final guideline"])
 
 with tab1:
      st.markdown("### 💦 Presentation Guidelines for Future English Teachers")
