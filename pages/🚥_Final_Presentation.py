@@ -10,8 +10,8 @@ st.markdown("""
 
 ---
 
-### <span style='color:blue; font-weight:bold'>1. Know Your Audience: Think Like a Teacher</span>
-
+### st.markdown("<span style='color:blue; font-weight:bold'>1. Know Your Audience: Think Like a Teacher</span>, unsafe_allow_html=True)
+st.markdown("""
 - Assume your audience is a class of learners, not just classmates.
 - Use language that is clear, paced, and appropriate for learners.
 - Avoid jargon unless you explain it in simple terms.
