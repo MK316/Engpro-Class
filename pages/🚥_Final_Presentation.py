@@ -3,7 +3,7 @@ import streamlit as st
 st.markdown("### 💦 Presentation Guidelines for Future English Teachers")
 st.caption("🐥 This presentation is not just about showing what you know — it is a chance to **train yourself as a future teacher**. Use it as a **simulation of real classroom teaching**.")
 
-url = "https://github.com/MK316/Engpro-Class/blob/main/images/presenter.png"
+url = "https://github.com/MK316/Engpro-Class/raw/main/images/presenter.png"
 st.image(url, width=400)
 
 st.markdown("""
