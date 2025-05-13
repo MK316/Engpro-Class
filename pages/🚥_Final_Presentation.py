@@ -10,7 +10,7 @@ st.markdown("""
 
 ---
 
-### 1. Know Your Audience: Think Like a Teacher
+### <span style='color:blue; font-weight:bold'>1. Know Your Audience: Think Like a Teacher</span>
 
 - Assume your audience is a class of learners, not just classmates.
 - Use language that is clear, paced, and appropriate for learners.
