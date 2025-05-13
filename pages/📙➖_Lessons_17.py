@@ -11,16 +11,17 @@ with tab1:
   Pronouncing [p/b, t/d, k/g] sounds is not a problem for Koreans. However, we need to learn a consonant rule in English that changes the quality of the voiceless sounds after /s/, and when they are located in unstressed syllables.
   """)
   
-  col1, col2 = st.columns(2)
+    col1, col2 = st.columns(2)
 
-  with col1:
-    st.write("pie")
-    st.write("Kate")
-    st.write("team")
-  with col2:
-    st.write("spy")
-    st.write("skate")
-    st.write("steam")   
+    with col1:
+        st.write("pie")
+        st.write("Kate")
+        st.write("team")
+
+    with col2:
+        st.write("spy")
+        st.write("skate")
+        st.write("steam") 
 
 with tab2:
   st.markdown("### Past tense form -ed pronunciaiton")
