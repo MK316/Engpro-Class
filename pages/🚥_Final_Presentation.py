@@ -70,6 +70,8 @@ Your job is to help others learn — not just show what you know.
 Focus on clarity, engagement, and learner support.
 
 🌱 **Remember**: when you present, you are using your audience’s learning time.  
-It is your responsibility to make your message clear, useful, and worth listening to.  
-**The presenter is responsible for ensuring the message is heard, understood, and remembered.**
-  """)
+It is your responsibility to make your message clear, useful, and **worth listening to.**  
+""")
+ 
+
+st.markdown("The presenter <u>is responsible for ensuring the message is heard, understood, and remembered. </u>.", unsafe_allow_html=True)
