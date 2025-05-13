@@ -1,8 +1,8 @@
 import streamlit as st
 
-tabs = st.tabs(["Presentation tip", "Final guideline"])
+tab1, tab2 = st.tabs(["Presentation tip", "Final guideline"])
 
-with tabs[0]:
+with tab1:
      st.markdown("### 💦 Presentation Guidelines for Future English Teachers")
      st.caption("🐥 This presentation is not just about showing what you know — it is a chance to **train yourself as a future teacher**. Use it as a **simulation of real classroom teaching**.")
      
@@ -102,7 +102,7 @@ with tabs[0]:
      
      st.markdown("The presenter is responsible for ensuring the message is <span style='color:red; font-weight:bold'>heard, understood,</span> and <span style='color:green; font-weight:bold'>remembered.</span>.", unsafe_allow_html=True)
 
-with tabs[1]:
+with tab2:
 
      st.markdown("### Final presentation")
 
