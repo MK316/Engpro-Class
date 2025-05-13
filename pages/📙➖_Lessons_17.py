@@ -17,19 +17,7 @@ with tab1:
     Compare the following word pairs:
     """)
 
-    col1, col2 = st.columns(2)
 
-    with col1:
-        st.subheader("Strong Onset")
-        st.write("• pie")
-        st.write("• Kate")
-        st.write("• team")
-
-    with col2:
-        st.subheader("After /s/")
-        st.write("• spy")
-        st.write("• skate")
-        st.write("• steam")
 
 with tab2:
     st.markdown("### 📘 Past Tense Form: -ed Pronunciation")
