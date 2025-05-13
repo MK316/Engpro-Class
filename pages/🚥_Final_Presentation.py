@@ -8,7 +8,7 @@ st.image(url, width=400)
 
 st.markdown("---")
 
-st.markdown("### <span style='color:blue; font-weight:bold'>1. Know Your Audience: Think Like a Teacher</span>", unsafe_allow_html=True)
+st.markdown("### <span style='color:green; font-weight:bold'>1. Know Your Audience: Think Like a Teacher</span>", unsafe_allow_html=True)
 
 st.markdown("""
 - Assume your audience is a class of learners, not just classmates.
@@ -18,7 +18,7 @@ st.markdown("""
 ---
 """)
 
-st.markdown("### <span style='color:blue; font-weight:bold'>2. Structure Like a Mini Lesson</span>", unsafe_allow_html=True)
+st.markdown("### <span style='color:green; font-weight:bold'>2. Structure Like a Mini Lesson</span>", unsafe_allow_html=True)
 
 
 st.markdown("""
@@ -31,7 +31,7 @@ Follow a basic lesson format:
 ---
 """)
 
-st.markdown("### <span style='color:blue; font-weight:bold'>3. Practice Teacher Talk</span>", unsafe_allow_html=True)
+st.markdown("### <span style='color:green; font-weight:bold'>3. Practice Teacher Talk</span>", unsafe_allow_html=True)
 
 st.markdown("""
 - Speak clearly and confidently with natural pacing.
@@ -41,7 +41,7 @@ st.markdown("""
 ---
 """)
 
-st.markdown("### <span style='color:blue; font-weight:bold'>4. Use Visual Aids Wisely</span>", unsafe_allow_html=True)
+st.markdown("### <span style='color:green; font-weight:bold'>4. Use Visual Aids Wisely</span>", unsafe_allow_html=True)
 
 st.markdown("""
 
@@ -52,7 +52,7 @@ st.markdown("""
 ---
 """)
 
-st.markdown("### <span style='color:blue; font-weight:bold'>5. Manage Your Time</span>", unsafe_allow_html=True)
+st.markdown("### <span style='color:green; font-weight:bold'>5. Manage Your Time</span>", unsafe_allow_html=True)
 
 st.markdown("""
 
@@ -62,7 +62,7 @@ st.markdown("""
 ---
 """)
 
-st.markdown("### <span style='color:blue; font-weight:bold'>6. Record and Reflect (if possible)</span>", unsafe_allow_html=True)
+st.markdown("### <span style='color:green; font-weight:bold'>6. Record and Reflect (if possible)</span>", unsafe_allow_html=True)
 
 st.markdown("""
 
@@ -73,7 +73,7 @@ st.markdown("""
 
 """)
 
-st.markdown("### <span style='color:blue; font-weight:bold'>7. Think Like a Teacher, Reflect Like a Learner</span>", unsafe_allow_html=True)
+st.markdown("### <span style='color:green; font-weight:bold'>7. Think Like a Teacher, Reflect Like a Learner</span>", unsafe_allow_html=True)
 
 st.markdown("""
 
@@ -85,7 +85,7 @@ After your presentation:
 ---
 """)
 
-st.markdown("### <span style='color:blue; font-weight:bold'>8. Final Tip: Teach, Don’t Perform</span>", unsafe_allow_html=True)
+st.markdown("### <span style='color:green; font-weight:bold'>8. Final Tip: Teach, Don’t Perform</span>", unsafe_allow_html=True)
 
 st.markdown("""
 
