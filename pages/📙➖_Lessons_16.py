@@ -14,7 +14,7 @@ def generate_audio(text):
     return audio_fp
 
 # Create tab layout
-tabs = st.tabs(["🌱 e(s) Pronunciation", "🌀 Plural Nouns Generator","🍁 3rd person singular"])
+tabs = st.tabs(["🌱 e(s) Pronunciation", "🌀 Plural Nouns Generator","🌱 Possessive form", "🍁 3rd person singular"])
 
 # --- Tab 1: e(s) Pronunciation Rules ---
 with tabs[0]:
@@ -88,7 +88,57 @@ with tabs[1]:
         st.markdown(f"### 🔁 Plural: **{plural}**")
         st.audio(generate_audio(plural), format="audio/mp3")
 
+#! Tab 3
+
 with tabs[2]:
+    st.markdown("#### Possessive form follows the same rule")
+
+    # Define the phrases for each column
+    col1_phrases = ["Philip's car", "Kate's book"]
+    col2_phrases = ["Keith's brother", "Michael's idea"]
+    col3_phrases = ["Peter's home", "Jim's mom"]
+
+    def generate_audio(text):
+        try:
+            tts = gTTS(text=text, lang='en')
+            audio_fp = BytesIO()
+            tts.write_to_fp(audio_fp)
+            audio_fp.seek(0)
+            return audio_fp.read()
+        except Exception as e:
+            st.error(f"Error generating audio for '{text}'")
+            return None
+
+    col1, col2, col3 = st.columns(3)
+
+    # Column 1
+    with col1:
+        for phrase in col1_phrases:
+            st.markdown(f"**🔹 {phrase}**")
+            audio = generate_audio(phrase)
+            if audio:
+                st.audio(audio, format="audio/mp3")
+
+    # Column 2
+    with col2:
+        for phrase in col2_phrases:
+            st.markdown(f"**🔹 {phrase}**")
+            audio = generate_audio(phrase)
+            if audio:
+                st.audio(audio, format="audio/mp3")
+
+    # Column 3
+    with col3:
+        for phrase in col3_phrases:
+            st.markdown(f"**🔹 {phrase}**")
+            audio = generate_audio(phrase)
+            if audio:
+                st.audio(audio, format="audio/mp3")
+
+
+
+
+with tabs[3]:
     st.title("🗣️ Sentence Pronunciation Practice")
     st.markdown("Listen to how final **–s/-es** sounds are pronounced in connected speech.")
 
