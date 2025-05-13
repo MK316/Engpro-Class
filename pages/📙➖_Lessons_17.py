@@ -1,9 +1,7 @@
 import streamlit as st
 
-# Create tabs
 tab1, tab2, tab3 = st.tabs(["Lesson", "Past tense form -ed", "APP"])
 
-# --- Tab 1: Lesson ---
 with tab1:
     st.markdown("### 📙 Lesson 17. [p/b, t/d, k/g]")
 
@@ -19,7 +17,6 @@ with tab1:
     Compare the following word pairs:
     """)
 
-    # Display minimal pairs in columns
     col1, col2 = st.columns(2)
 
     with col1:
@@ -34,7 +31,6 @@ with tab1:
         st.write("• skate")
         st.write("• steam")
 
-# --- Tab 2: Past Tense Pronunciation ---
 with tab2:
     st.markdown("### 📘 Past Tense Form: -ed Pronunciation")
     st.markdown("""
@@ -43,11 +39,8 @@ with tab2:
     - /t/ as in **washed**
     - /d/ as in **played**
     - /ɪd/ as in **wanted**
-
-    The correct pronunciation depends on the final sound of the base verb.
     """)
 
-# --- Tab 3: Placeholder for App ---
 with tab3:
     st.markdown("### ⚙️ Interactive App Coming Soon")
     st.write("This section will include a pronunciation practice tool for voicing contrasts.")
