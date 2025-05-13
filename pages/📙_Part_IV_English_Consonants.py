@@ -18,7 +18,7 @@ with tabs[0]:
     - **Lesson 20**: Consonant clusters: strike, wasps, helped
     """)
 with tabs[1]:
-    st.markdown("### 🌐 Embedded Web Page")
+    st.markdown("### 🌐 Type IPA online")
     url = "https://ipa.typeit.org/full/"  # Replace with the actual URL you want to embed
     components.iframe(url, width=800, height=600)
 with tabs[2]:
