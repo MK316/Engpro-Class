@@ -1,8 +1,7 @@
 import streamlit as st
 
 st.markdown("### Presentation Guidelines for Future English Teachers")
-st.caption("This presentation is not just about showing what you know — it is a chance to **train yourself as a future teacher**. Use it as a **simulation of real classroom teaching**.
-")
+st.caption("This presentation is not just about showing what you know — it is a chance to **train yourself as a future teacher**. Use it as a **simulation of real classroom teaching**.")
            
 st.markdown("""
 
