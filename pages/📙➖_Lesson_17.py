@@ -85,7 +85,7 @@ with tab3:
     """)
 
 with tab4:
-    st.markdown("### Glottalization: /t, d/ becomes a glottal stop sound [ʔ]
+    st.markdown("### Glottalization: /t, d/ becomes a glottal stop sound [ʔ]")
     st.markdown("""
     
     + In English, /t, d/ sounds are pronouned as though there is no consonant at all. However, a consonant [ʔ], produced in the throuat, is indeed made. This sound is akin to the noise one might make when speaking suddenly with surprise, like 'uh'.
@@ -93,6 +93,7 @@ with tab4:
     + Where do we find this sound? For example, /t/ or /d/ sound before vowel in unstressed syllables when followed by /n/, as in 'button'.
 
     + Examples: written, eaten, mountain, captain, curtain, Manhattan, wooden, forbidden, hidden, etc.
+    
     """)
 
     st.caption("Note that it is not necessary for learners to produce this sound actively, but you will often hear it. Thus, recognizing it aid word recognition. For listening skills, understanding this rule in English is important.")
