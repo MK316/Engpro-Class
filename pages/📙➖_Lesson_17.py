@@ -46,5 +46,43 @@ The past tense ending **-ed** can be pronounced in three different ways in Engli
 
 # --- Tab 3: Placeholder ---
 with tab3:
-    st.markdown("### ⚙️ Interactive App Coming Soon")
-    st.write("This section will include a pronunciation practice tool for voicing contrasts.")
+    st.markdown("### 🔤 What is the Tapping Rule in English?")
+    
+    st.markdown("""
+    The **tapping rule** (also known as **flapping**) is a common pronunciation feature in **American English**.  
+    It occurs when the sounds **/t/** and **/d/** between two vowels are pronounced as a quick, soft **tap**, similar to a fast **/d/** sound.
+    """)
+    
+    st.markdown("#### 🧠 In simple terms:")
+    st.markdown("When **/t/** or **/d/** is between two vowel sounds, it sounds like a soft, quick **/d/** — this is called a **tap**.")
+    
+    st.markdown("#### ✅ Examples:")
+    
+    st.markdown("""
+    | Spelling     | Regular Pronunciation | Tap Pronunciation | Sounds Like |
+    |--------------|------------------------|-------------------|-------------|
+    | **butter**   | /ˈbʌtər/               | /ˈbʌɾər/          | *budder*    |
+    | **ladder**   | /ˈlædər/               | /ˈlæɾər/          | *ladder*    |
+    | **writer**   | /ˈraɪtər/              | /ˈraɪɾər/         | *rider*     |
+    | **pretty**   | /ˈprɪti/               | /ˈprɪɾi/          | *priddy*    |
+    """, unsafe_allow_html=True)
+    
+    st.markdown("#### 📌 When Does Tapping Happen?")
+    st.markdown("""
+    Tapping usually happens when:
+    1. A **/t/** or **/d/** comes **between two vowels**
+    2. The **second syllable is unstressed**
+    3. The **/t/** or **/d/** is **not at the start or end** of a word
+    """)
+    
+    st.markdown("#### 🛑 When It Doesn’t Happen:")
+    st.markdown("""
+    - If the **second syllable is stressed** (e.g., *attack*)  
+    - Or the **/t/** is at the **beginning or end** of the word
+    """)
+    
+    st.markdown("#### 📚 Summary")
+    st.markdown("""
+    The tapping rule helps make your pronunciation sound more **natural** and **fluent** in American English.  
+    It doesn’t change meaning, but it makes speech smoother and more native-like.
+    """)
