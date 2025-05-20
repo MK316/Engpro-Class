@@ -59,10 +59,10 @@ with tab3:
     st.markdown("""
     | Spelling     | Regular Pronunciation | Tap Pronunciation | Sounds Like |
     |--------------|------------------------|-------------------|-------------|
-    | **butter**   | /ˈbʌtər/               | /ˈbʌɾər/          | *budder*    |
-    | **ladder**   | /ˈlædər/               | /ˈlæɾər/          | *ladder*    |
-    | **writer**   | /ˈraɪtər/              | /ˈraɪɾər/         | *rider*     |
-    | **pretty**   | /ˈprɪti/               | /ˈprɪɾi/          | *priddy*    |
+    | **butter**   | [ˈbʌtər]               | [ˈbʌɾər]          | *budder*    |
+    | **ladder**   | [ˈlædər]               | [ˈlæɾər]          | *ladder*    |
+    | **writer**   | [ˈraɪtər]              | [ˈraɪɾər]         | *rider*     |
+    | **pretty**   | [ˈprɪti]               | [ˈprɪɾi]          | *priddy*    |
     """, unsafe_allow_html=True)
     
     st.markdown("#### 📌 When Does Tapping Happen?")
