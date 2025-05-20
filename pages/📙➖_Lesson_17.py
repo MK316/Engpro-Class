@@ -47,7 +47,7 @@ The past tense ending **-ed** can be pronounced in three different ways in Engli
 # --- Tab 3: Placeholder ---
 with tab3:
     st.markdown("### 🔤 What is the Tapping Rule in English?")
-    st.markdown("[APPs4U](https://apps4u.streamlit.app/): TCE Samples")
+    st.markdown("🐳 [APPs4U](https://apps4u.streamlit.app/): TCE Samples")
     
     st.markdown("""
     The **tapping rule** (also known as **flapping**) is a common pronunciation feature in **American English**.  
