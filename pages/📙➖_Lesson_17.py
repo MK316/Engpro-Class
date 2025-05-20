@@ -39,9 +39,9 @@ with tab2:
     st.markdown("""
 The past tense ending **-ed** can be pronounced in three different ways in English:
 
-- /t/ as in **washed**
-- /d/ as in **played**
-- /ɪd/ as in **wanted**
+- [t] as in **washed**
+- [d] as in **played**
+- [ɪd] as in **wanted**
 """)
 
 # --- Tab 3: Placeholder ---
@@ -50,11 +50,8 @@ with tab3:
     
     st.markdown("""
     The **tapping rule** (also known as **flapping**) is a common pronunciation feature in **American English**.  
-    It occurs when the sounds **/t/** and **/d/** between two vowels are pronounced as a quick, soft **tap**, similar to a fast **/d/** sound.
+    It occurs when the sounds **/t/** and **/d/** between two vowels are pronounced as a quick, soft **tap**, similar to a fast **[d]** sound.
     """)
-    
-    st.markdown("#### 🧠 In simple terms:")
-    st.markdown("When **/t/** or **/d/** is between two vowel sounds, it sounds like a soft, quick **/d/** — this is called a **tap**.")
     
     st.markdown("#### ✅ Examples:")
     
@@ -86,3 +83,16 @@ with tab3:
     The tapping rule helps make your pronunciation sound more **natural** and **fluent** in American English.  
     It doesn’t change meaning, but it makes speech smoother and more native-like.
     """)
+
+with tab4:
+    st.markdown("### Glottalization: /t, d/ becomes a glottal stop sound [ʔ]
+    st.markdown("""
+    
+    + In English, /t, d/ sounds are pronouned as though there is no consonant at all. However, a consonant [ʔ], produced in the throuat, is indeed made. This sound is akin to the noise one might make when speaking suddenly with surprise, like 'uh'.
+
+    + Where do we find this sound? For example, /t/ or /d/ sound before vowel in unstressed syllables when followed by /n/, as in 'button'.
+
+    + Examples: written, eaten, mountain, captain, curtain, Manhattan, wooden, forbidden, hidden, etc.
+    """)
+
+    st.caption("Note that it is not necessary for learners to produce this sound actively, but you will often hear it. Thus, recognizing it aid word recognition. For listening skills, understanding this rule in English is important.")
