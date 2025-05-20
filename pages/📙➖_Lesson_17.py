@@ -1,7 +1,7 @@
 import streamlit as st
 
 # Create tabs
-tab1, tab2, tab3 = st.tabs(["Lesson", "Past tense form -ed", "APP"])
+tab1, tab2, tab3 = st.tabs(["Lesson", "Past tense form -ed", "[t, d] Flapping/Tapping"])
 
 # --- Tab 1: Consonant Lesson ---
 with tab1:
