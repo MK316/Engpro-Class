@@ -31,7 +31,7 @@ with tabs[0]:
     
     # Words categorized by plural ending
     plural_examples = {
-        "/s/ sound (voiceless ending)": ["maps", "cats", "packs", "laughs", "paths"],
+        "/s/ sound (voiceless ending)": ["capps", "kits", "backs", "laughs", "paths"],
         "/z/ sound (voiced ending)": ["cabs", "kids", "bags", "caves", "pens", "bells", "teachers", "ways"],
         "/ɪz/ sound (sibilant ending)": ["cases", "roses", "fishes", "garages", "matches", "badges"]
     }
