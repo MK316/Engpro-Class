@@ -1,6 +1,6 @@
 import streamlit as st
 
-# Create three tabs
+# Create tabs
 tab1, tab2, tab3 = st.tabs(["Lesson", "Past tense form -ed", "APP"])
 
 # --- Tab 1: Consonant Lesson ---
@@ -44,7 +44,7 @@ The past tense ending **-ed** can be pronounced in three different ways in Engli
 - /ɪd/ as in **wanted**
 """)
 
-# --- Tab 3: Placeholder for Future App ---
+# --- Tab 3: Placeholder ---
 with tab3:
     st.markdown("### ⚙️ Interactive App Coming Soon")
     st.write("This section will include a pronunciation practice tool for voicing contrasts.")
