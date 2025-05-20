@@ -47,6 +47,7 @@ The past tense ending **-ed** can be pronounced in three different ways in Engli
 # --- Tab 3: Placeholder ---
 with tab3:
     st.markdown("### 🔤 What is the Tapping Rule in English?")
+    st.markdown("[APPs4U](https://apps4u.streamlit.app/): TCE Samples")
     
     st.markdown("""
     The **tapping rule** (also known as **flapping**) is a common pronunciation feature in **American English**.  
@@ -71,6 +72,8 @@ with tab3:
     2. The **second syllable is unstressed**
     3. The **/t/** or **/d/** is **not at the start or end** of a word
     """)
+
+    st.write("water, better, cutter, grader, greater, spider, autumn, monitor, humanity, comedy, competing, etc.")
     
     st.markdown("#### 🛑 When It Doesn’t Happen:")
     st.markdown("""
