@@ -93,7 +93,6 @@ with tab3:
     The tapping rule helps make your pronunciation sound more **natural** and **fluent** in American English.  
     It doesn’t change meaning, but it makes speech smoother and more native-like.
     """)
-######################
     st.markdown("---")
     st.markdown("Tapping practice app: with Level B vocabulary")
     
@@ -101,8 +100,6 @@ with tab3:
     st.markdown("### 👉 [🔗 Open Tapping Level B App](https://tapping-level-b.streamlit.app/)")
 
 
-
-#####################
 with tab4:
     st.markdown("### Glottalization: /t, d/ becomes a glottal stop sound [ʔ]")
     st.markdown("""
