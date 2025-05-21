@@ -16,7 +16,7 @@ def generate_certificate(user_name, score, total, start_time, end_time):
 
     # Image paths (must be local)
     trophy_path = "https://github.com/MK316/Engpro-Class/raw/main/images/trophy.png"
-    signature_path = "https://github.com/MK316/Engpro-Class/raw/main/images/signature.png"
+    signature_path = "https://github.com/MK316/Engpro-Class/raw/main/images/signature2.png"
 
     try:
         c.drawImage(trophy_path, x=260, y=height - 150, width=80, height=80)
