@@ -88,16 +88,9 @@ with tab3:
     - Or the **/t/** is at the **beginning or end** of the word
     """)
     
-    st.markdown("#### 📚 Summary")
-    st.markdown("""
-    The tapping rule helps make your pronunciation sound more **natural** and **fluent** in American English.  
-    It doesn’t change meaning, but it makes speech smoother and more native-like.
-    """)
-    st.markdown("---")
-    st.markdown("Tapping practice app: with Level B vocabulary")
-    
-    # Add a custom-styled button that links to the external Streamlit app
+    st.markdown("#### 📚 Practice with Level B vocabulary")
     st.markdown("### 👉 [🔗 Open Tapping Level B App](https://tapping-level-b.streamlit.app/)")
+
 
 
 with tab4:
