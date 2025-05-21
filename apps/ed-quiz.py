@@ -19,7 +19,7 @@ def generate_certificate(user_name, score, total, start_time, end_time):
     signature_path = "https://github.com/MK316/Engpro-Class/raw/main/images/signature2.png"
 
     try:
-        c.drawImage(trophy_path, x=260, y=height - 150, width=80, height=80)
+        c.drawImage(trophy_path, x=260, y=height - 150, width=80, height=100)
     except:
         c.setFont("Helvetica", 10)
         c.drawString(50, height - 150, "[Trophy image not found]")
@@ -45,7 +45,7 @@ def generate_certificate(user_name, score, total, start_time, end_time):
     c.drawCentredString(width / 2, height - 460, "🎉 Congratulations on your achievement!")
 
     try:
-        c.drawImage(signature_path, x=220, y=height - 550, width=160, height=30)
+        c.drawImage(signature_path, x=220, y=height - 550, width=150, height=100)
     except:
         c.drawString(50, height - 570, "[Signature image not found]")
 
