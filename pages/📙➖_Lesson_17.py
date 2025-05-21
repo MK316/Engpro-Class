@@ -91,7 +91,7 @@ with tab3:
     It doesn’t change meaning, but it makes speech smoother and more native-like.
     """)
 ######################
-    st.makrdown("---")
+    st.markdown("---")
     st.markdown("Tapping practice app: with Level B vocabulary")
 
     # --- Load data from GitHub ---
