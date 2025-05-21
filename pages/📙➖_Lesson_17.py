@@ -8,14 +8,6 @@ from io import BytesIO
 tab1, tab2, tab3, tab4 = st.tabs(["❄️ Lesson", "❄️ Past tense form -ed", "❄️ [t, d] Flapping/Tapping", "❄️ [t, d] Glottalization"])
 
 
-# --- Load data from GitHub ---
-@st.cache_data
-def load_data():
-    url = "https://raw.githubusercontent.com/MK316/Engpro-Class/refs/heads/main/data/tapping_dataB.csv"
-    df = pd.read_csv(url, encoding="utf-8-sig")
-    return df
-    
-df = load_data()
 
 
 # --- Tab 1: Consonant Lesson ---
@@ -104,94 +96,17 @@ with tab3:
 ######################
     st.markdown("---")
     st.markdown("Tapping practice app: with Level B vocabulary")
+    
+    # Add a custom-styled button that links to the external Streamlit app
+    st.markdown("""
+        <a href="https://tapping-level-b.streamlit.app/" target="_blank">
+            <button style='padding: 10px 20px; font-size: 16px; background-color: #008cba; color: white; border: none; border-radius: 5px;'>
+                🔗 Open Tapping Level B App
+            </button>
+        </a>
+    """, unsafe_allow_html=True)
+    
 
-
-    
-    # --- Initialize session state ---
-    if "selected_target" not in st.session_state:
-        st.session_state.selected_target = None
-    if "current_index" not in st.session_state:
-        st.session_state.current_index = 0
-    if "user_response" not in st.session_state:
-        st.session_state.user_response = None
-    if "show_word" not in st.session_state:
-        st.session_state.show_word = False
-    if "show_feedback" not in st.session_state:
-        st.session_state.show_feedback = False
-    
-    # --- Title for Tab 3 ---
-    st.title("🔁 Tapping Practice")
-    
-    # --- Target selection buttons ---
-    col1, col2 = st.columns(2)
-    with col1:
-        if st.button("🔵 T"):
-            st.session_state.selected_target = "T"
-            st.session_state.current_index = 0
-            st.session_state.show_word = False
-            st.session_state.show_feedback = False
-    with col2:
-        if st.button("🔴 D"):
-            st.session_state.selected_target = "D"
-            st.session_state.current_index = 0
-            st.session_state.show_word = False
-            st.session_state.show_feedback = False
-    
-    # --- Filter and interact if a target is selected ---
-    if st.session_state.selected_target:
-        target_df = df[df["Target"] == st.session_state.selected_target].reset_index(drop=True)
-        total_words = len(target_df)
-        st.markdown(f"### 📌 There are **{total_words}** words to practice.")
-    
-        if st.button("🎯 Show a word"):
-            st.session_state.show_word = True
-            st.session_state.show_feedback = False
-            st.session_state.user_response = None
-    
-        if st.session_state.show_word and st.session_state.current_index < total_words:
-            current_word = target_df.loc[st.session_state.current_index, "WORD"]
-            tapping_truth = target_df.loc[st.session_state.current_index, "Tapping"]
-    
-            # Display the word
-            st.markdown(f"<h1 style='font-size: 64px; text-align: center;'>{current_word}</h1>", unsafe_allow_html=True)
-    
-            # Generate and play audio
-            tts = gTTS(current_word)
-            audio_fp = BytesIO()
-            tts.write_to_fp(audio_fp)
-            audio_fp.seek(0)
-            st.audio(audio_fp, format="audio/mp3")
-    
-            # Ask tapping question
-            st.markdown("**Is tapping possible?**")
-            st.session_state.user_response = st.radio(
-                "Choose one:", ["YES", "NO", "YES/NO", "NO/YES"], index=0, key=f"radio_{st.session_state.current_index}"
-            )
-    
-            if st.button("✅ Show Feedback"):
-                st.session_state.show_feedback = True
-    
-            if st.session_state.show_feedback:
-                # Convert "YES"/"NO" in dataset to match option
-                expected = "YES" if tapping_truth.strip().upper() == "YES" else "NO"
-                if expected in st.session_state.user_response:
-                    st.success("🎉 Correct!")
-                else:
-                    st.error("❗ Try again.")
-    
-            # Next word button
-            if st.button("➡️ Next Word"):
-                if st.session_state.current_index + 1 < total_words:
-                    st.session_state.current_index += 1
-                    st.session_state.show_word = True
-                    st.session_state.show_feedback = False
-                    st.session_state.user_response = None
-                else:
-                    st.info("✅ You've completed all words.")
-                    st.session_state.current_index = 0
-                    st.session_state.show_word = False
-                    st.session_state.show_feedback = False
-                    st.session_state.user_response = None
 
 
 
