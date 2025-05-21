@@ -45,7 +45,7 @@ def generate_certificate(user_name, score, total, start_time, end_time):
     c.drawCentredString(width / 2, height - 460, "🎉 Congratulations on your achievement!")
 
     try:
-        c.drawImage(signature_path, x=220, y=height - 550, width=150, height=100)
+        c.drawImage(signature_path, x=220, y=height - 600, width=250, height=220)
     except:
         c.drawString(50, height - 570, "[Signature image not found]")
 
