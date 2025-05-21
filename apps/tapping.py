@@ -24,6 +24,16 @@ if "show_word" not in st.session_state:
 if "show_feedback" not in st.session_state:
     st.session_state.show_feedback = False
 
+# --- Function to move to next word ---
+def go_next():
+    if st.session_state.current_index + 1 < len(st.session_state.target_df):
+        st.session_state.current_index += 1
+    else:
+        st.session_state.current_index = 0
+    st.session_state.show_word = True
+    st.session_state.show_feedback = False
+    st.session_state.user_response = None
+
 # --- App Title ---
 st.title("🔁 Tapping Practice App")
 
@@ -45,22 +55,33 @@ with col2:
 
 # --- Filter based on selected target ---
 if st.session_state.selected_target:
-    target_df = df[df["Target"] == st.session_state.selected_target].reset_index(drop=True)
-    total_words = len(target_df)
+    st.session_state.target_df = df[df["Target"] == st.session_state.selected_target].reset_index(drop=True)
+    total_words = len(st.session_state.target_df)
     st.markdown(f"### 📌 There are **{total_words}** words to practice.")
 
-    # --- Show a word ---
     if st.button("🎯 Show a word"):
         st.session_state.show_word = True
         st.session_state.show_feedback = False
         st.session_state.user_response = None
 
-    # --- Word display and interaction ---
     if st.session_state.show_word and st.session_state.current_index < total_words:
-        current_word = target_df.loc[st.session_state.current_index, "WORD"]
-        tapping_truth = target_df.loc[st.session_state.current_index, "Tapping"]
+        current_word = st.session_state.target_df.loc[st.session_state.current_index, "WORD"]
+        tapping_truth = st.session_state.target_df.loc[st.session_state.current_index, "Tapping"]
+        target_letter = st.session_state.selected_target
 
-        st.markdown(f"<h1 style='font-size: 64px; text-align: center;'>{current_word}</h1>", unsafe_allow_html=True)
+        # --- Highlight target sound ---
+        def highlight_letter(word, target):
+            index = word.lower().find(target.lower())
+            if index == -1:
+                return word
+            return (
+                word[:index] +
+                f"<span style='color:red; font-weight:bold;'>{word[index]}</span>" +
+                word[index + 1:]
+            )
+
+        highlighted_word = highlight_letter(current_word, target_letter)
+        st.markdown(f"<h1 style='font-size: 64px; text-align: center;'>{highlighted_word}</h1>", unsafe_allow_html=True)
 
         # --- Audio generation ---
         try:
@@ -91,16 +112,5 @@ if st.session_state.selected_target:
             else:
                 st.error("❗ Try again.")
 
-        # --- Next word ---
-        if st.button("➡️ Next Word"):
-            if st.session_state.current_index + 1 < total_words:
-                st.session_state.current_index += 1
-                st.session_state.show_word = True
-                st.session_state.show_feedback = False
-                st.session_state.user_response = None
-            else:
-                st.info("✅ You've completed all words.")
-                st.session_state.current_index = 0
-                st.session_state.show_word = False
-                st.session_state.show_feedback = False
-                st.session_state.user_response = None
+        # --- Next word button (immediate click response)
+        st.button("➡️ Next Word", on_click=go_next)
