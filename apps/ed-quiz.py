@@ -18,30 +18,30 @@ def generate_certificate(user_name, score, total, time_str):
     # Trophy emoji image (ensure the image is present in the same folder or give full path)
     emoji_path = "https://github.com/MK316/Engpro-Class/raw/main/images/trophy.png"  # path to your emoji image
     try:
-        c.drawImage(emoji_path, x=260, y=height - 90, width=80, height=80)
+        c.drawImage(emoji_path, x=260, y=height - 150, width=80, height=80)
     except:
         c.setFont("Helvetica", 10)
-        c.drawString(50, height - 100, "[Trophy image could not be loaded]")
+        c.drawString(50, height - 200, "[Trophy image could not be loaded]")
 
     # Text content
     c.setFont("Helvetica-Bold", 24)
-    c.drawCentredString(width / 2, height - 130, "Certificate of Completion")
+    c.drawCentredString(width / 2, height - 230, "Certificate of Completion")
 
     c.setFont("Helvetica", 14)
-    c.drawCentredString(width / 2, height - 180, f"This certifies that")
+    c.drawCentredString(width / 2, height - 280, f"This certifies that")
 
     c.setFont("Helvetica-Bold", 18)
-    c.drawCentredString(width / 2, height - 210, user_name)
+    c.drawCentredString(width / 2, height - 310, user_name)
 
     c.setFont("Helvetica", 14)
-    c.drawCentredString(width / 2, height - 240, "has completed the -ed Pronunciation Quiz")
-    c.drawCentredString(width / 2, height - 270, f"with a score of {score} out of {total}.")
+    c.drawCentredString(width / 2, height - 340, "has completed the -ed Pronunciation Quiz")
+    c.drawCentredString(width / 2, height - 370, f"with a score of {score} out of {total}.")
 
     c.setFont("Helvetica-Oblique", 12)
-    c.drawCentredString(width / 2, height - 310, f"Completed on: {time_str}")
+    c.drawCentredString(width / 2, height - 410, f"Completed on: {time_str}")
 
     c.setFont("Helvetica", 12)
-    c.drawCentredString(width / 2, height - 350, "🎉 Congratulations on your achievement!")
+    c.drawCentredString(width / 2, height - 450, "🎉 Congratulations on your achievement!")
 
     c.showPage()
     c.save()
