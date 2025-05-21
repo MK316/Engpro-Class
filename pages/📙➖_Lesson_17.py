@@ -5,7 +5,7 @@ from io import BytesIO
 
 
 # Create tabs
-tab1, tab2, tab3, tab4 = st.tabs(["❄️ Lesson", "❄️ Past tense form -ed", "❄️ [t, d] Flapping/Tapping", "❄️ [t, d] Glottalization"])
+tab1, tab2, tab3, tab4, tab5 = st.tabs(["❄️ Lesson", "❄️ Past tense form -ed", "❄️ [t, d] Flapping/Tapping", "❄️ [t, d] Glottalization", "APPS"])
 
 
 
@@ -106,3 +106,6 @@ with tab4:
     """)
 
     st.caption("Note that it is not necessary for learners to produce this sound actively, but you will often hear it. Thus, recognizing it aid word recognition. For listening skills, understanding this rule in English is important.")
+
+with tab5:
+    st.write("Applications")
