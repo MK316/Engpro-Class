@@ -41,8 +41,15 @@ def generate_certificate(user_name, score, total, time_str):
     c.drawCentredString(width / 2, height - 410, f"Completed on: {time_str}")
 
     c.setFont("Helvetica", 12)
-    c.drawCentredString(width / 2, height - 450, "🎉 Congratulations on your achievement!")
+    c.drawCentredString(width / 2, height - 450, "Congratulations on your achievement!")
 
+    # Signature emoji image (ensure the image is present in the same folder or give full path)
+    emoji_path2 = "https://github.com/MK316/Engpro-Class/raw/main/images/signature.png"  # path to your emoji image
+    try:
+        c.drawImage(emoji_path, x=260, y=height - 550, width=80, height=80)
+    except:
+        c.setFont("Helvetica", 10)
+        c.drawString(50, height - 200, "[Trophy image could not be loaded]")
     c.showPage()
     c.save()
     buffer.seek(0)
