@@ -111,3 +111,4 @@ with tab5:
     st.markdown("#### 📚 Tapping Practice with Level B vocabulary")
     st.markdown("👉 [APP1: Tapping practice](https://tapping-level-b.streamlit.app/)")
     st.markdown("👉 [APP2: -ed pronunciation practice](https://ed-pronunciation.streamlit.app/)")
+    st.markdown("👉 [APP3: -ed pronunciation Quiz](https://ed-quiz.streamlit.app/)")
