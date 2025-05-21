@@ -11,7 +11,7 @@ def load_data():
 
 # Load dataset
 df = load_data()
-df = df[df['ED'].isin(['[t]', '[d]', '[ɪd]'])]  # Filter only valid rows
+df = df[df['ED'].isin(['t', 'd', 'ɪd'])]  # Filter only valid rows
 
 # ✅ Check for empty data
 if df.empty:
