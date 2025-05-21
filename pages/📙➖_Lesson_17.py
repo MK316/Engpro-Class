@@ -7,6 +7,17 @@ from io import BytesIO
 # Create tabs
 tab1, tab2, tab3, tab4 = st.tabs(["❄️ Lesson", "❄️ Past tense form -ed", "❄️ [t, d] Flapping/Tapping", "❄️ [t, d] Glottalization"])
 
+
+# --- Load data from GitHub ---
+@st.cache_data
+def load_data():
+    url = "https://raw.githubusercontent.com/MK316/Engpro-Class/refs/heads/main/data/tapping_dataB.csv"
+    df = pd.read_csv(url, encoding="utf-8-sig")
+    return df
+    
+df = load_data()
+
+
 # --- Tab 1: Consonant Lesson ---
 with tab1:
     st.markdown("### 📙 Lesson 17. [p/b, t/d, k/g]")
@@ -94,14 +105,7 @@ with tab3:
     st.markdown("---")
     st.markdown("Tapping practice app: with Level B vocabulary")
 
-    # --- Load data from GitHub ---
-    @st.cache_data
-    def load_data():
-        url = "https://raw.githubusercontent.com/MK316/Engpro-Class/refs/heads/main/data/tapping_dataB.csv"
-        df = pd.read_csv(url, encoding="utf-8-sig")
-        return df
-    
-    df = load_data()
+
     
     # --- Initialize session state ---
     if "selected_target" not in st.session_state:
