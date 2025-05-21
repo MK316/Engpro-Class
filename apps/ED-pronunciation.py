@@ -1,9 +1,17 @@
 import streamlit as st
 import pandas as pd
+import random
 from gtts import gTTS
 from io import BytesIO
 
-# Function to convert word to regular past tense
+# Load CSV from GitHub
+@st.cache_data
+def load_data():
+    url = "https://raw.githubusercontent.com/MK316/Engpro-Class/refs/heads/main/data/ed-pronunciation.csv"
+    df = pd.read_csv(url)
+    return df
+
+# Convert to regular past tense
 def to_past_tense(word):
     if word.endswith("e"):
         return word + "d"
@@ -18,41 +26,48 @@ def to_past_tense(word):
         return word + "ed"
 
 # Generate audio
-def generate_audio(text, lang='en'):
-    tts = gTTS(text=text, lang=lang)
+def generate_audio(text):
+    tts = gTTS(text=text, lang='en')
     audio_fp = BytesIO()
     tts.write_to_fp(audio_fp)
     audio_fp.seek(0)
     return audio_fp
 
-# Load CSV from GitHub
-@st.cache_data
-def load_data():
-    url = "https://raw.githubusercontent.com/MK316/Engpro-Class/refs/heads/main/data/ed-pronunciation.csv"  # Update if needed
-    df = pd.read_csv(url)
-    return df
-
-# Load and filter the dataset
+# Load data
 df = load_data()
+verbs = df[df['POS'].str.startswith("v", na=False)]["WORD"].dropna().unique().tolist()
 
-st.title("📝 Regular Verb Past Tense Converter + Audio")
+st.title("🎧 Regular Verb: Present + Past Form Audio Practice")
 
-# Filter just the verb entries
-verbs = df[df['POS'].str.startswith("v", na=False)]["WORD"].dropna().unique()
+# Selection: number of items
+num_choice = st.radio("How many words to practice?", [5, 10, 20, "All"], horizontal=True)
 
-# Display table
-st.markdown("### Base and Regular Past Forms")
+# Initialize session state
+if "selected_words" not in st.session_state:
+    st.session_state.selected_words = []
+    st.session_state.index = 0
+    st.session_state.started = False
 
-for word in verbs[:20]:  # Limit to first 20 to avoid overload
-    base = word.strip().lower()
-    past = to_past_tense(base)
+# Start Button
+if st.button("▶️ Start") or st.session_state.started:
+    if not st.session_state.started:
+        total = len(verbs)
+        count = total if num_choice == "All" else int(num_choice)
+        st.session_state.selected_words = random.sample(verbs, count)
+        st.session_state.index = 0
+        st.session_state.started = True
 
-    col1, col2 = st.columns(2)
-    with col1:
-        st.markdown(f"🔹 **{base}** → **{past}**")
-    with col2:
-        audio_base = generate_audio(base)
-        audio_past = generate_audio(past)
-        st.audio(audio_base, format="audio/mp3", start_time=0)
-        st.audio(audio_past, format="audio/mp3", start_time=0)
+    # Check if done
+    if st.session_state.index >= len(st.session_state.selected_words):
+        st.success("🎉 Completed!")
+    else:
+        current_word = st.session_state.selected_words[st.session_state.index].strip().lower()
+        past_form = to_past_tense(current_word)
+        combined_text = f"{current_word} and {past_form}"
+        
+        st.markdown(f"### 🔤 {combined_text}")
+        audio = generate_audio(combined_text)
+        st.audio(audio, format="audio/mp3")
 
+        if st.button("➡️ Next"):
+            st.session_state.index += 1
