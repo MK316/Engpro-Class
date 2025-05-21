@@ -182,3 +182,6 @@ if st.session_state.answered:
         st.rerun()
 
 st.markdown(f"### 🧾 Score: {st.session_state.score} / {st.session_state.trials}")
+
+st.markdown("---")
+st.markdown("🌱 [Padlet to post the result](https://padlet.com/mirankim316/S25Engpro)")
