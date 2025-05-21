@@ -18,7 +18,7 @@ def generate_certificate(user_name, score, total, time_str):
     # Trophy emoji image (ensure the image is present in the same folder or give full path)
     emoji_path = "https://github.com/MK316/Engpro-Class/raw/main/images/trophy.png"  # path to your emoji image
     try:
-        c.drawImage(emoji_path, x=260, y=height - 90, width=40, height=40)
+        c.drawImage(emoji_path, x=260, y=height - 90, width=80, height=80)
     except:
         c.setFont("Helvetica", 10)
         c.drawString(50, height - 100, "[Trophy image could not be loaded]")
