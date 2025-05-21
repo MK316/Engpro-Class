@@ -5,7 +5,7 @@ from io import BytesIO
 
 
 # Create tabs
-tab1, tab2, tab3, tab4, tab5 = st.tabs(["❄️ Lesson", "❄️ Past tense form -ed", "❄️ [t, d] Flapping/Tapping", "❄️ [t, d] Glottalization", "APPS"])
+tab1, tab2, tab3, tab4, tab5 = st.tabs(["❄️ Lesson", "❄️ Past tense form -ed", "❄️ [t, d] Flapping/Tapping", "❄️ [t, d] Glottalization", "🍰 APPS"])
 
 
 
@@ -88,8 +88,7 @@ with tab3:
     - Or the **/t/** is at the **beginning or end** of the word
     """)
     
-    st.markdown("#### 📚 Practice with Level B vocabulary")
-    st.markdown("### 👉 [🔗 Open Tapping Level B App](https://tapping-level-b.streamlit.app/)")
+
 
 
 
@@ -109,3 +108,5 @@ with tab4:
 
 with tab5:
     st.write("Applications")
+    st.markdown("#### 📚 Tapping Practice with Level B vocabulary")
+    st.markdown("### 👉 [Open Tapping Level B App](https://tapping-level-b.streamlit.app/)")
