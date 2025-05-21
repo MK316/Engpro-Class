@@ -11,3 +11,5 @@ pydub
 librosa
 soundfile
 selenium
+reportlab
+pytz
