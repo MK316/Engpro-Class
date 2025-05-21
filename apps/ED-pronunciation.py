@@ -41,6 +41,7 @@ st.markdown("### 🎧 Regular Verb: Present + Past Form Audio Practice")
 
 # Selection: number of items
 num_choice = st.radio("How many words to practice?", [5, 10, 20, "All"], horizontal=True)
+st.caption(f"📦 Total number of words in the file: {len(df)}")
 
 # Initialize session state
 if "selected_words" not in st.session_state:
