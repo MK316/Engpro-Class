@@ -38,7 +38,7 @@ def go_next():
 st.title("🔁 Tapping Practice App")
 
 # --- Target selection buttons ---
-st.markdown("### Step 1: Choose your target sound")
+st.markdown("### Instruction: Choose your target sound")
 col1, col2 = st.columns(2)
 with col1:
     if st.button("🔵 T"):
@@ -63,7 +63,8 @@ if st.session_state.selected_target:
         st.session_state.show_word = True
         st.session_state.show_feedback = False
         st.session_state.user_response = None
-
+        st.markdown("---")
+        
     if st.session_state.show_word and st.session_state.current_index < total_words:
         current_word = st.session_state.target_df.loc[st.session_state.current_index, "WORD"]
         tapping_truth = st.session_state.target_df.loc[st.session_state.current_index, "Tapping"]
