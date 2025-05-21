@@ -87,7 +87,8 @@ st.session_state.setdefault("end_time", None)
 # 🧾 Title
 st.title("🎯 -ed Pronunciation Quiz")
 st.caption(f"📚 Total words available: {len(df)}")
-
+st.markdown("🌱 [Visit our Padlet to post the result](https://padlet.com/mirankim316/S25Engpro)")
+st.markdown("---")
 # Step 1: Name input
 if not st.session_state.user_name:
     with st.form("name_form"):
@@ -183,5 +184,3 @@ if st.session_state.answered:
 
 st.markdown(f"### 🧾 Score: {st.session_state.score} / {st.session_state.trials}")
 
-st.markdown("---")
-st.markdown("🌱 [Padlet to post the result](https://padlet.com/mirankim316/S25Engpro)")
