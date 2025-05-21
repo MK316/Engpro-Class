@@ -38,8 +38,8 @@ def generate_certificate(user_name, score, total, start_time, end_time):
     c.drawCentredString(width / 2, height - 370, f"with a score of {score} out of {total}.")
 
     c.setFont("Helvetica-Oblique", 12)
-    c.drawCentredString(width / 2, height - 400, f"Start time: {start_time.strftime('%Y-%m-%d %H:%M:%S')}")
-    c.drawCentredString(width / 2, height - 420, f"End time: {end_time.strftime('%Y-%m-%d %H:%M:%S')}")
+    c.drawCentredString(width / 2, height - 400, f"- Start time: {start_time.strftime('%Y-%m-%d %H:%M:%S')}")
+    c.drawCentredString(width / 2, height - 420, f"- End time: {end_time.strftime('%Y-%m-%d %H:%M:%S')}")
 
     c.setFont("Helvetica", 12)
     c.drawCentredString(width / 2, height - 460, "🎉 Congratulations on your achievement!")
@@ -159,7 +159,7 @@ user_choice = st.radio(
     key=f"choice_{st.session_state.trials}"
 )
 
-col1, col2 = st.columns([2, 2])
+col1, col2, space = st.columns([2, 2, 3])
 
 if col1.button("✅ Check the Answer", key=f"check_{st.session_state.trials}"):
     user_raw = reverse_map[user_choice]
