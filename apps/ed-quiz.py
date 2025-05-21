@@ -14,10 +14,10 @@ def generate_certificate(user_name, score, total, time_str):
     width, height = A4
 
     c.setFont("Helvetica-Bold", 24)
-    c.drawCentredString(width / 2, height - 100, "Certificate of Completion")
+    c.drawCentredString(width / 2, height - 100, "💖 Certificate of Quiz Completion 💖")
 
     c.setFont("Helvetica", 14)
-    c.drawCentredString(width / 2, height - 150, f"This certifies that")
+    c.drawCentredString(width / 2, height - 150, f"👍 This certifies that")
 
     c.setFont("Helvetica-Bold", 18)
     c.drawCentredString(width / 2, height - 180, user_name)
