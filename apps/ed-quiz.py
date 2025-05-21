@@ -159,7 +159,7 @@ user_choice = st.radio(
     key=f"choice_{st.session_state.trials}"
 )
 
-col1, col2, space = st.columns([2, 2, 5])
+col1, col2, spacer = st.columns([2, 2, 3])
 
 if col1.button("✅ Check the Answer", key=f"check_{st.session_state.trials}"):
     user_raw = reverse_map[user_choice]
