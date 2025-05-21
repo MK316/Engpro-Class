@@ -9,14 +9,17 @@ def load_data():
     df = pd.read_csv(url)
     return df
 
-# Load dataset
+# Load and filter valid entries
 df = load_data()
-df = df[df['ED'].isin(['t', 'd', 'ɪd'])]  # Filter only valid rows
+df = df[df['ED'].isin(['t', 'd', 'ɪd'])]  # Match your data exactly
 
-# ✅ Check for empty data
 if df.empty:
-    st.error("⚠️ No valid entries with [t], [d], or [ɪd] found in the dataset.")
+    st.error("⚠️ No valid words with t, d, or ɪd in the dataset.")
     st.stop()
+
+# Display map for better UI (what user sees vs. what we compare)
+display_map = {'t': '[t]', 'd': '[d]', 'ɪd': '[ɪd]'}
+reverse_map = {v: k for k, v in display_map.items()}  # for checking answers
 
 # Initialize session state
 st.session_state.setdefault("user_name", "")
@@ -27,11 +30,11 @@ st.session_state.setdefault("current_word", None)
 st.session_state.setdefault("user_answer", None)
 st.session_state.setdefault("feedback", "")
 
-# App title
+# Title
 st.title("🎯 -ed Pronunciation Quiz")
 
-# ✅ Name input form
-if not st.session_state.get("user_name"):
+# Name input
+if not st.session_state.user_name:
     with st.form("name_form"):
         name_input = st.text_input("Enter your name to begin:")
         submitted = st.form_submit_button("Submit")
@@ -40,21 +43,23 @@ if not st.session_state.get("user_name"):
             st.rerun()
     st.stop()
 
-# ✅ Start button logic
+# Start button
 if not st.session_state.quiz_started:
     if st.button("▶️ Start Quiz"):
         st.session_state.quiz_started = True
         st.session_state.current_word = df.sample(1).iloc[0]
     st.stop()
 
-# ✅ Show the current quiz word
+# Show quiz word and options
 if st.session_state.current_word is not None:
     word = st.session_state.current_word["WORD"]
-    correct_answer = st.session_state.current_word["ED"]
+    correct_raw = st.session_state.current_word["ED"]
+    correct_display = display_map[correct_raw]
 
     st.markdown(f"### Word: **{word}**")
-    st.session_state.user_answer = st.radio(
-        "Select the correct -ed ending pronunciation:",
+
+    user_display_answer = st.radio(
+        "Select the correct -ed pronunciation:",
         options=["[t]", "[d]", "[ɪd]"],
         horizontal=True,
         key=f"choice_{st.session_state.trials}"
@@ -62,28 +67,21 @@ if st.session_state.current_word is not None:
 
     if st.button("✅ Check the Answer"):
         st.session_state.trials += 1
-        if st.session_state.user_answer == correct_answer:
+        user_raw_answer = reverse_map[user_display_answer]
+
+        if user_raw_answer == correct_raw:
             st.session_state.score += 1
             st.success("✅ Correct!")
         else:
-            st.error(f"❌ Incorrect. The correct answer was **{correct_answer}**.")
+            st.error(f"❌ Incorrect. The correct answer was **{correct_display}**.")
 
-        # ✅ Get the next word safely
-        if not df.empty:
-            st.session_state.current_word = df.sample(1).iloc[0]
-        else:
-            st.session_state.current_word = None
-            st.warning("No more words available.")
+        # Load next word
+        st.session_state.current_word = df.sample(1).iloc[0]
 
-    # Score display
     st.markdown(f"### 🧾 Score: {st.session_state.score} / {st.session_state.trials}")
 
-# ✅ Restart quiz
+# Restart
 if st.button("🔁 Restart Quiz"):
-    st.session_state.quiz_started = False
-    st.session_state.score = 0
-    st.session_state.trials = 0
-    st.session_state.current_word = None
-    st.session_state.user_answer = None
-    st.session_state.user_name = ""
+    for key in ["quiz_started", "score", "trials", "current_word", "user_answer", "user_name"]:
+        st.session_state[key] = "" if key == "user_name" else 0 if key in ["score", "trials"] else None
     st.rerun()
