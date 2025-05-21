@@ -33,9 +33,16 @@ if "feedback" not in st.session_state:
 st.title("🎯 -ed Pronunciation Quiz")
 
 # Get user name
-if not st.session_state.user_name:
-    st.session_state.user_name = st.text_input("Enter your name to begin:")
+# Get user name (proper flow)
+if not st.session_state.get("user_name"):
+    with st.form("name_form"):
+        name_input = st.text_input("Enter your name to begin:")
+        submitted = st.form_submit_button("Submit")
+        if submitted and name_input.strip():
+            st.session_state.user_name = name_input.strip()
+            st.rerun()
     st.stop()
+
 
 # Start button
 if not st.session_state.quiz_started:
