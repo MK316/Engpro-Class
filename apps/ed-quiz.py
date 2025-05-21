@@ -29,6 +29,7 @@ st.session_state.setdefault("trials", 0)
 st.session_state.setdefault("current_word", None)
 st.session_state.setdefault("user_answer", None)
 st.session_state.setdefault("feedback", "")
+st.session_state.setdefault("answered", False)
 
 # Title
 st.title("🎯 -ed Pronunciation Quiz")
@@ -58,16 +59,19 @@ if st.session_state.current_word is not None:
 
     st.markdown(f"### Word: **{word}**")
 
-    user_display_answer = st.radio(
+    st.session_state.user_answer = st.radio(
         "Select the correct -ed pronunciation:",
         options=["[t]", "[d]", "[ɪd]"],
         horizontal=True,
         key=f"choice_{st.session_state.trials}"
     )
 
-    if st.button("✅ Check the Answer"):
+    # Show Check and Next buttons in same row
+    col1, col2 = st.columns([1, 1])
+    if col1.button("✅ Check the Answer", key=f"check_{st.session_state.trials}"):
+        user_raw_answer = reverse_map[st.session_state.user_answer]
         st.session_state.trials += 1
-        user_raw_answer = reverse_map[user_display_answer]
+        st.session_state.answered = True
 
         if user_raw_answer == correct_raw:
             st.session_state.score += 1
@@ -75,13 +79,18 @@ if st.session_state.current_word is not None:
         else:
             st.error(f"❌ Incorrect. The correct answer was **{correct_display}**.")
 
-        # Load next word
-        st.session_state.current_word = df.sample(1).iloc[0]
+    # Show Next only after checking
+    if st.session_state.answered:
+        if col2.button("➡️ Next", key=f"next_{st.session_state.trials}"):
+            st.session_state.current_word = df.sample(1).iloc[0]
+            st.session_state.answered = False
+            st.rerun()
 
+    # Score display
     st.markdown(f"### 🧾 Score: {st.session_state.score} / {st.session_state.trials}")
 
 # Restart
 if st.button("🔁 Restart Quiz"):
-    for key in ["quiz_started", "score", "trials", "current_word", "user_answer", "user_name"]:
-        st.session_state[key] = "" if key == "user_name" else 0 if key in ["score", "trials"] else None
+    for key in ["quiz_started", "score", "trials", "current_word", "user_answer", "user_name", "answered"]:
+        st.session_state[key] = "" if key == "user_name" else 0 if key in ["score", "trials"] else None if key == "current_word" else False
     st.rerun()
