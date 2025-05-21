@@ -45,7 +45,7 @@ def generate_certificate(user_name, score, total, start_time, end_time):
     c.drawCentredString(width / 2, height - 460, "🎉 Congratulations on your achievement!")
 
     try:
-        c.drawImage(signature_path, x=220, y=height - 800, width=200, height=180)
+        c.drawImage(signature_path, x=220, y=height - 700, width=200, height=180)
     except:
         c.drawString(50, height - 570, "[Signature image not found]")
 
@@ -91,7 +91,10 @@ st.caption(f"📚 Total words available: {len(df)}")
 # Step 1: Name input
 if not st.session_state.user_name:
     with st.form("name_form"):
-        name_input = st.text_input("Enter your name to begin:")
+        name_input = st.text_input(
+            label="Enter your name to begin in English:",
+            placeholder="e.g., Gil-dong Kim"
+        )
         submitted = st.form_submit_button("Submit")
         if submitted and name_input.strip():
             st.session_state.user_name = name_input.strip()
