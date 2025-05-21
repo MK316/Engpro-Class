@@ -98,22 +98,7 @@ with tab3:
     st.markdown("Tapping practice app: with Level B vocabulary")
     
     # Add a custom-styled button that links to the external Streamlit app
-    st.markdown("""
-    <div style='text-align: left; margin-top: 10px;'>
-        <a href="https://tapping-level-b.streamlit.app/" target="_blank" style="
-            display: inline-block;
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #008cba;
-            color: white;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;">
-            🔗 Open Tapping Level B App
-        </a>
-    </div>
-    """, unsafe_allow_html=True)
-    
+    st.markdown("### 👉 [🔗 Open Tapping Level B App](https://tapping-level-b.streamlit.app/)")
 
 
 
