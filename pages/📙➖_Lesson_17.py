@@ -99,14 +99,21 @@ with tab3:
     
     # Add a custom-styled button that links to the external Streamlit app
     st.markdown("""
-        <a href="https://tapping-level-b.streamlit.app/" target="_blank">
-            <button style='padding: 10px 20px; font-size: 16px; background-color: #008cba; color: white; border: none; border-radius: 5px;'>
-                🔗 Open Tapping Level B App
-            </button>
+    <div style='text-align: left; margin-top: 10px;'>
+        <a href="https://tapping-level-b.streamlit.app/" target="_blank" style="
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #008cba;
+            color: white;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;">
+            🔗 Open Tapping Level B App
         </a>
+    </div>
     """, unsafe_allow_html=True)
     
-
 
 
 
