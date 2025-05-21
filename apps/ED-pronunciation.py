@@ -38,7 +38,7 @@ df = load_data()
 verbs = df[df['POS'].str.startswith("v", na=False)]["WORD"].dropna().unique().tolist()
 
 st.markdown("### 🎧 Regular Verb:")
-st.markdown("####  Present + Past Form Audio Practice
+st.markdown("####  Present + Past Form Audio Practice")
 
 # Selection: number of items
 num_choice = st.radio("How many words to practice?", [5, 10, 20, "All"], horizontal=True)
