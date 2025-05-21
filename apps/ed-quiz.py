@@ -8,40 +8,46 @@ from reportlab.lib.pagesizes import A4
 from reportlab.pdfgen import canvas
 from reportlab.platypus import Image
 
-# Inside generate_certificate:
-emoji_path = "https://github.com/MK316/Engpro-Class/raw/main/images/trophy.png"  # path to your emoji image
-c.drawImage(emoji_path, x=260, y=height - 90, width=30, height=30)
 
 
-# Function to generate certificate PDF
 def generate_certificate(user_name, score, total, time_str):
     buffer = BytesIO()
     c = canvas.Canvas(buffer, pagesize=A4)
     width, height = A4
 
+    # Trophy emoji image (ensure the image is present in the same folder or give full path)
+    emoji_path = "https://github.com/MK316/Engpro-Class/raw/main/images/trophy.png"  # path to your emoji image
+    try:
+        c.drawImage(emoji_path, x=260, y=height - 90, width=40, height=40)
+    except:
+        c.setFont("Helvetica", 10)
+        c.drawString(50, height - 100, "[Trophy image could not be loaded]")
+
+    # Text content
     c.setFont("Helvetica-Bold", 24)
-    c.drawCentredString(width / 2, height - 100, "💖 Certificate of Quiz Completion 💖")
+    c.drawCentredString(width / 2, height - 130, "Certificate of Completion")
 
     c.setFont("Helvetica", 14)
-    c.drawCentredString(width / 2, height - 150, f"👍 This certifies that")
+    c.drawCentredString(width / 2, height - 180, f"This certifies that")
 
     c.setFont("Helvetica-Bold", 18)
-    c.drawCentredString(width / 2, height - 180, user_name)
+    c.drawCentredString(width / 2, height - 210, user_name)
 
     c.setFont("Helvetica", 14)
-    c.drawCentredString(width / 2, height - 210, f"has completed the -ed Pronunciation Quiz")
-    c.drawCentredString(width / 2, height - 240, f"with a score of {score} out of {total}.")
+    c.drawCentredString(width / 2, height - 240, "has completed the -ed Pronunciation Quiz")
+    c.drawCentredString(width / 2, height - 270, f"with a score of {score} out of {total}.")
 
     c.setFont("Helvetica-Oblique", 12)
-    c.drawCentredString(width / 2, height - 280, f"Completed on: {time_str}")
+    c.drawCentredString(width / 2, height - 310, f"Completed on: {time_str}")
 
     c.setFont("Helvetica", 12)
-    c.drawCentredString(width / 2, height - 320, "🎉 Congratulations on your achievement!")
+    c.drawCentredString(width / 2, height - 350, "🎉 Congratulations on your achievement!")
 
     c.showPage()
     c.save()
     buffer.seek(0)
     return buffer
+
 
 # Load quiz data
 @st.cache_data
