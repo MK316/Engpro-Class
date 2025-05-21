@@ -1,6 +1,8 @@
 import streamlit as st
 import pandas as pd
 import random
+from datetime import datetime
+import pytz
 
 # Load data from GitHub
 @st.cache_data
@@ -33,6 +35,7 @@ st.session_state.setdefault("answered", False)
 
 # Title
 st.title("🎯 -ed Pronunciation Quiz")
+st.caption("A total number of questions: 103")
 
 # Name input
 if not st.session_state.user_name:
@@ -73,11 +76,15 @@ if st.session_state.current_word is not None:
         st.session_state.trials += 1
         st.session_state.answered = True
 
+        # Get current Seoul time
+        seoul_time = datetime.now(pytz.timezone("Asia/Seoul")).strftime("%Y-%m-%d %H:%M:%S")
+
+        # Feedback
         if user_raw_answer == correct_raw:
             st.session_state.score += 1
-            st.success("✅ Correct!")
+            st.success(f"✅ Correct! ({seoul_time})")
         else:
-            st.error(f"❌ Incorrect. The correct answer was **{correct_display}**.")
+            st.error(f"❌ Incorrect. The correct answer was **{correct_display}**. ({seoul_time})")
 
     # Show Next only after checking
     if st.session_state.answered:
