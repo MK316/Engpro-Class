@@ -71,5 +71,7 @@ if st.button("▶️ Start") or st.session_state.started:
         audio = generate_audio(combined_text)
         st.audio(audio, format="audio/mp3")
 
-        if st.button("➡️ Next"):
+        if st.button("➡️ Next", key="next_button"):
             st.session_state.index += 1
+            st.rerun()  # Immediate update on same click
+
