@@ -92,7 +92,7 @@ st.caption(f"📚 Total words available: {len(df)}")
 if not st.session_state.user_name:
     with st.form("name_form"):
         name_input = st.text_input(
-            label="Enter your name to begin in English:",
+            label="Enter your name to begin (in English):",
             placeholder="e.g., Gil-dong Kim"
         )
         submitted = st.form_submit_button("Submit")
