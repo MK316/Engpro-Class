@@ -6,6 +6,12 @@ import pytz
 from io import BytesIO
 from reportlab.lib.pagesizes import A4
 from reportlab.pdfgen import canvas
+from reportlab.platypus import Image
+
+# Inside generate_certificate:
+emoji_path = "https://github.com/MK316/Engpro-Class/raw/main/images/trophy.png"  # path to your emoji image
+c.drawImage(emoji_path, x=260, y=height - 90, width=30, height=30)
+
 
 # Function to generate certificate PDF
 def generate_certificate(user_name, score, total, time_str):
