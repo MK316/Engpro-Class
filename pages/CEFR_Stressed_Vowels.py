@@ -167,7 +167,7 @@ with tab3:
 with tab4:
     st.markdown("### 🍀 Vowel Odd-One-Out Quiz")
     st.caption("Q: Choose the word that has a different stressed vowel than the others.")
-
+    st.markdown("👀 [Error report here](https://padlet.com/mirankim316/QNA)")
     # Initialize session states for quiz logic
     for key in ["quiz_words", "correct_answer", "quiz_choice", "score", "attempts", "answered"]:
         if key not in st.session_state:
