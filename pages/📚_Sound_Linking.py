@@ -35,3 +35,13 @@ st.markdown("---")
 # --- Display the selected slide ---
 image_url = github_base_url + slide_filenames[st.session_state.slide_index]
 st.image(image_url, caption=f"📄 Slide {st.session_state.slide_index + 1} of {total_slides}", use_container_width=True)
+
+st.markdown("---")
+
+# --- YouTube video section ---
+st.markdown("### 🎥 Watch Explanation Video")
+
+# Example: starting at 60 seconds (1 minute)
+youtube_url = "https://youtu.be/cAhDjrc5s64?si=BP0DR8S-xlSSTOuv&t=58"  # replace with actual video ID and time
+
+st.video(youtube_url)
