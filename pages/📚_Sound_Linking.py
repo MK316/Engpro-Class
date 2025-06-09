@@ -19,7 +19,7 @@ st.session_state.slide_index = selected - 1
 
 # --- Display current slide
 image_url = github_base_url + slide_filenames[st.session_state.slide_index]
-st.image(image_url, caption=f"📄 Slide {st.session_state.slide_index + 1} of {total_slides}", use_column_width=True)
+st.image(image_url, caption=f"📄 Slide {st.session_state.slide_index + 1} of {total_slides}", use_container_width=True)
 
 # --- Navigation buttons
 col1, col2, col3 = st.columns([1, 6, 1])
