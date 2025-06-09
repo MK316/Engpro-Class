@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.markdown("---")
+
 # Base URL to GitHub raw content
 github_base_url = "https://raw.githubusercontent.com/MK316/Engpro-Class/main/soundlinking/"
 slide_filenames = [f"Sound linking.{i:03}.png" for i in range(1, 16)]
@@ -29,7 +29,7 @@ with col3:
         label_visibility="collapsed"
     )
     st.session_state.slide_index = selected - 1
-
+st.markdown("---")
 
 
 # --- Display the selected slide ---
