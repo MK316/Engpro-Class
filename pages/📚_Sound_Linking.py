@@ -39,7 +39,8 @@ st.image(image_url, caption=f"📄 Slide {st.session_state.slide_index + 1} of {
 st.markdown("---")
 
 # --- YouTube video section ---
-st.markdown("### 🎥 Watch Explanation Video")
+st.markdown("### 🎥 Watch an example video")
+st.caption("'My heart is drenched in wine.'")
 
 # Example: starting at 60 seconds (1 minute)
 youtube_url = "https://youtu.be/cAhDjrc5s64?si=BP0DR8S-xlSSTOuv&t=58"  # replace with actual video ID and time
