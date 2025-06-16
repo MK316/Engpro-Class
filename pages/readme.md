@@ -17,7 +17,7 @@
 |  W13    |May 27&29| In-class|English Consonants IV|        |       
 |  W14    |June 3&5|In-class |Sound rules I |        |       
 |  W15    |June 10[^1] & <br>12[^2]| In-class|Sound rules II |        |       
-|  W16    |June 17&19| In-class|Final presentation |        |       
+|  W16    |June 17&19| In-class|Final presentation | [Demographic](https://forms.gle/DmfbfWi2mAUR2w8A7)       |       
 
 [^1]: May 6 (make-up class)
 [^2]: May 1 (make-up class)
