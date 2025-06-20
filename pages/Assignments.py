@@ -49,7 +49,7 @@ with tab3:
     st.components.v1.iframe("https://padlet.com/mirankim316/S25Engpro", width=700, height=800)
 
 with tab4:
-    st.markdown("### 🔗 Go to Additional Application")
+    st.markdown("### 🔗 English Pronunciation Grade Details: Application")
 
     # Custom styled button using markdown and HTML
     link_url = "https://s25engpro.streamlit.app/"  # Replace with your actual app URL
