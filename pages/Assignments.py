@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 # Create a tab bar with three tabs
-tab1, tab2, tab3, tab4 = st.tabs(["🎱 Assignments", "👬 Group info", "🌵 Padlet", "Final Grade Details"])
+tab1, tab2, tab3, tab4 = st.tabs(["🎱 Assignments", "👬 Group info", "🌵 Padlet", "🌀 Final Grade Details"])
 
 
 with tab1:
