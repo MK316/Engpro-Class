@@ -65,7 +65,7 @@ with tab4:
                 border-radius: 6px;
                 cursor: pointer;
             ">
-                Visit Application
+                👀 Open Grade checking Application
             </button>
         </a>
     """, unsafe_allow_html=True)
