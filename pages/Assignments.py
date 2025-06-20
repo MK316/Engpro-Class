@@ -49,6 +49,22 @@ with tab3:
     st.components.v1.iframe("https://padlet.com/mirankim316/S25Engpro", width=700, height=800)
 
 with tab4:
-    # st.markdown("#### 🔗 English Pronunciation Grade Details: Application")
-    st.write("Passcode가 겹쳐서 30분 후에 다시 링크 열게요. 7시20부터 확인하세요.")
+    st.markdown("#### 🔗 English Pronunciation Grade Details: Application")
 
+    target_url = "https://20250620engpro.streamlit.app/"  # Replace with your real app URL
+
+    st.markdown(f"""
+        <a href="{target_url}" target="_blank">
+            <button style="
+                background-color: orange;
+                color: white;
+                padding: 0.6em 1.2em;
+                font-size: 1em;
+                border: none;
+                border-radius: 6px;
+                cursor: pointer;
+            ">
+                Open Application
+            </button>
+        </a>
+    """, unsafe_allow_html=True)
