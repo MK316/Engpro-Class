@@ -10,7 +10,7 @@ with tab1:
 
     # Sample data for the assignments table
     data = {
-        "Assignment": ["HW#1: Pre-recording", "HW#2: TED selection", "HW#3: 1 min's video recording", "HW#4: Hey Jude", "HW#5: TBA"],
+        "Assignment": ["HW#1: Pre-recording", "HW#2: TED selection", "HW#3: 1 min's video recording", "HW#4: Hey Jude", "HW#5: 3 mins video recording"],
         "Due Date": ["2025-03-09", "2025-03-18", "2025-04-22", "2025-05-13", "TBA"],
         "Status": ["Closed", "Closed", "Open", "TBA", "TBA"],
         "Grade": ["Complete/Incomplete", "C / I", "4 pts.", "4 pts.", "4 pts."],
