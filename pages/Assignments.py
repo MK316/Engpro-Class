@@ -12,9 +12,9 @@ with tab1:
     data = {
         "Assignment": ["HW#1: Pre-recording", "HW#2: TED selection", "HW#3: 1 min's video recording", "HW#4: Hey Jude", "HW#5: 3 mins video recording"],
         "Due Date": ["2025-03-09", "2025-03-18", "2025-04-22", "2025-05-13", "TBA"],
-        "Status": ["Closed", "Closed", "Open", "TBA", "TBA"],
+        "Status": ["Closed", "Closed", "Closed", "Closed", "Closed"],
         "Grade": ["Complete/Incomplete", "C / I", "4 pts.", "4 pts.", "4 pts."],
-        "Submission": ["[LMS](https://rec.ac.kr/gnu)", "[Google Sheet](https://docs.google.com/spreadsheets/d/1vi-wOJEFpXNWInfcKEZKqiuNFzOQtib5_1R3qyT6N9E/edit?usp=sharing)", "[Padlet](https://padlet.com/mirankim316/S25Engpro)", "[Padlet](https://padlet.com/mirankim316/S25Engpro)", "TBA"],
+        "Submission": ["[LMS](https://rec.ac.kr/gnu)", "[Google Sheet](https://docs.google.com/spreadsheets/d/1vi-wOJEFpXNWInfcKEZKqiuNFzOQtib5_1R3qyT6N9E/edit?usp=sharing)", "[Padlet](https://padlet.com/mirankim316/S25Engpro)", "[Padlet](https://padlet.com/mirankim316/S25Engpro)", "Padlet"],
         "Notes":["","","","",""]
     }
 
@@ -24,7 +24,7 @@ with tab1:
     # Display the DataFrame as a table in Streamlit
     st.table(assignments_df.set_index("Assignment"))
 
-    st.markdown("### 📝 Group Assignments Details")
+    st.markdown("### 📝 Group Activities Details")
     
     g_data = {
         "Assignment": ["1: Voca study (Level B & C)", "2: Help 1 min. TED recording"],
