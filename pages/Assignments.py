@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 # Create a tab bar with three tabs
-tab1, tab2, tab3 = st.tabs(["🎱 Assignments", "👬 Group info", "🌵 Padlet"])
+tab1, tab2, tab3, tab4 = st.tabs(["🎱 Assignments", "👬 Group info", "🌵 Padlet", "Final Grade Details"])
 
 
 with tab1:
@@ -47,3 +47,25 @@ with tab3:
     st.header("🐾 Files to share: on Padlet")
     st.write("This Padlet serves as a dynamic hub for our Acoustics course. Here, you'll find additional course materials, additional reading resources, and online tools. It's also a space for sharing files and submitting assignments.")
     st.components.v1.iframe("https://padlet.com/mirankim316/S25Engpro", width=700, height=800)
+
+with tab4:
+    st.markdown("### 🔗 Go to Additional Application")
+
+    # Custom styled button using markdown and HTML
+    link_url = "https://s25engpro.streamlit.app/"  # Replace with your actual app URL
+
+    st.markdown(f"""
+        <a href="{link_url}" target="_blank">
+            <button style="
+                background-color: #28a745;
+                color: white;
+                padding: 0.6em 1.2em;
+                font-size: 1em;
+                border: none;
+                border-radius: 6px;
+                cursor: pointer;
+            ">
+                Visit Application
+            </button>
+        </a>
+    """, unsafe_allow_html=True)
