@@ -50,5 +50,5 @@ with tab3:
 
 with tab4:
     # st.markdown("#### 🔗 English Pronunciation Grade Details: Application")
-    # st.write("Passcode가 겹쳐서 30분 후에 다시 링크 열게요. 7시20부터 확인하세요.")
+    st.write("Passcode가 겹쳐서 30분 후에 다시 링크 열게요. 7시20부터 확인하세요.")
 
