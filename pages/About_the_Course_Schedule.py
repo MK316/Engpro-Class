@@ -75,7 +75,7 @@ with tabs[1]:
 
     """)
 
-    st.markdown("[samples on Padlet](https://padlet.com/mirankim316/S25Engpro)")
+    st.markdown("[samples on Padlet](https://padlet.com/mirankim316/S26Engpro)")
 
 with tabs[2]:
     st.markdown("To be announced")
