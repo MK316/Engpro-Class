@@ -8,7 +8,7 @@
 |  W04    |Mar.24&26|English vowels III | |       
 |  W05    |Mar.31&Apr.2|English vowels IV |        |       
 |  W06    |Apr.7&9|| |       
-|  W07    |Apr.14&16| |  📌[HW#3 TED recording (Due by 4/22)](https://padlet.com/mirankim316/S26Engpro)     |       
+|  W07    |Apr.14&16| |  📌[HW#3 TED recording](Due by 4/22)](https://padlet.com/mirankim316/S26Engpro)     |       
 |  W08    |Apr.21&23| **Midterm(TBA)**       |        
 |  W09    |Apr.28&30|English Consonants I |        |       
 |  W10    |💜 May 5[^1]&7| English Consonants II |        |       
