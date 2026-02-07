@@ -9,15 +9,15 @@
 |  W05    |Mar.31&Apr.2|In-class| English vowels IV |        |       
 |  W06    |Apr.7&9||  | |       
 |  W07    |Apr.14&16|| |  📌[HW#3 TED recording (Due by 4/22)](https://padlet.com/mirankim316/S26Engpro)     |       
-|  W08    |Apr.21&23| |       |       
-|  W09    |Apr.29& May 1||  |       
-|  W10    |Apr.28&30|In-class|**Midterm** English Consonants I |        |       
-|  W11    |May 13&15| |English Consonants II |        |       
-|  W12    |May 20&22|In-class |English Consonants III |        |       
-|  W13    |May 27&29| In-class|English Consonants IV|        |       
-|  W14    |June 3&5|In-class |Sound rules I |        |       
-|  W15    |June 10[^1] & <br>12[^2]| In-class|Sound rules II |        |       
-|  W16    |June 17&19| In-class|Final presentation |  |       
+|  W08    |Apr.21&23| |**Midterm(TBA)**       |        
+|  W09    |Apr.28&30|In-class| English Consonants I |        |       
+|  W10    |💜 May 5[^1]&7| |English Consonants II |        |       
+|  W11    |May 12&14|In-class |English Consonants III |        |       
+|  W12    |May 19&21| In-class|English Consonants IV|        |     
+|  W13    |May 26&28| In-class|English Consonants V|        |
+|  W14    |June 2&4|In-class |Sound rules |        |       
+|  W15    |June 9&11| In-class|Though grouping |        |       
+|  W16    |June 16&18| In-class|Final presentation |        | 
 
-[^1]: May 6 (make-up class)
+[^1]: May 5 (No class)
 [^2]: May 1 (make-up class)
