@@ -8,10 +8,10 @@
 |  W04    |Mar.24&26|English vowels III | |       
 |  W05    |Mar.31&Apr.2|English vowels IV |        |       
 |  W06    |Apr.7&9|| |       
-|  W07    |Apr.14&16| |  📌[HW#3 TED recording](https://padlet.com/mirankim316/S26Engpro)     |       
+|  W07    |Apr.14&16| |  📌[HW#3 TED recording](https://padlet.com/mirankim316/S26Engpro) |       
 |  W08    |Apr.21&23| **Midterm(TBA)**       |        
 |  W09    |Apr.28&30|English Consonants I |        |       
-|  W10    |💜 May 5[^1]&7| English Consonants II |        |       
+|  W10    |💜 May 5[^1]&💜7[^2]| English Consonants II |        |       
 |  W11    |May 12&14|English Consonants III |        |       
 |  W12    |May 19&21| English Consonants IV|        |     
 |  W13    |May 26&28| English Consonants V|        |
@@ -20,4 +20,4 @@
 |  W16    |June 16&18| Final presentation |        | 
 
 [^1]: May 5 (No class)
-[^2]: May 1 (make-up class)
+[^2]: May 7 (TED recording in groups)
