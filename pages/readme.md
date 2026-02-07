@@ -11,7 +11,7 @@
 |  W07    |Apr.14&16| |  📌[HW#3 TED recording](https://padlet.com/mirankim316/S26Engpro) |       
 |  W08    |Apr.21&23| **Midterm(TBA)**       |        
 |  W09    |Apr.28&30|English Consonants I |        |       
-|  W10    |💜 May 5[^1]&💜7[^2]| English Consonants II |        |       
+|  W10    |💜 May 5[^1] & 💜 7[^2]| English Consonants II |        |       
 |  W11    |May 12&14|English Consonants III |        |       
 |  W12    |May 19&21| English Consonants IV|        |     
 |  W13    |May 26&28| English Consonants V|        |
