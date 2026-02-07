@@ -222,7 +222,7 @@ with tabs[5]:
     # Embed the URL using an iframe
     components.iframe(url_to_embed, width=600, height=600, scrolling=True)
 
-with tabs[5]:
+with tabs[6]:
 
    
     # Function to generate audio from text
