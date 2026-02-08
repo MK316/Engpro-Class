@@ -34,7 +34,7 @@ def main():
     st.title('Bookmarks & Apps')
     
     # Create tabs
-    tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(["🔆 Weblinks", "🌈 Oxford5K", "🌈 Padlet", " 🔆 Digital tools" ,"🔆 Customized apps","🔆 More web resources"])
+    tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(["🔆 Weblinks", "🌈 Oxford5K", " 🔆 Digital tools" ,"🔆 Customized apps","🔆 More web resources"])
     
     with tab1:
 
@@ -139,12 +139,7 @@ def main():
             st.error("❌ No data available for this wordlist.")
 
     with tab3:
-        st.markdown("#### 🐾 Class activities and assignment submission: on Padlet")
-        st.caption("This Padlet serves as a dynamic hub for class activities. Secure submissions will be managed through the LMS.")
-        st.markdown("To access the page, click 🌀 [here](https://padlet.com/mirankim316/S25Engpro)")
-        st.components.v1.iframe("https://padlet.com/mirankim316/S26Engpro", width=700, height=800)
-    
-    with tab4:
+
         st.header('Digital & AI tools')
         st.write("Get familiar with digital tools online")
         st.markdown("---")
@@ -171,7 +166,7 @@ def main():
             st.markdown(info['description'])
             st.write(" ")  # Add some space between entries
     
-    with tab5:
+    with tab4:
         st.header('Customized Applications')
         # CSS to style the markdown links as buttons
         button_style = """
@@ -208,7 +203,7 @@ def main():
         st.markdown('<a href="https://mk-316-wer-recording.hf.space/" class="button_link" target="_blank">👄 App 7: WER speech feedback</a>', unsafe_allow_html=True)
 
         
-    with tab6:
+    with tab5:
         st.header('Explore the resources below')
         st.write("to improve your English pronunciation skills.")
         st.markdown("---")
