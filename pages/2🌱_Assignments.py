@@ -7,9 +7,10 @@ tabs = st.tabs(["💧 HW#1","💧 HW#2","💧 HW#3 Hey Jude", "💧 HW#4", "💧
 ##############################
 # Content for the Schedule tab
 with tabs[0]:
-
+    st.caption("To be updated")
 
 with tabs[1]:
+    st.caption("To be updated")
     
 with tabs[2]:
     st.markdown("### 🎼  Hey Jude (HW #4)")
