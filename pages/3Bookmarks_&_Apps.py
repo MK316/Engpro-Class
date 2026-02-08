@@ -53,7 +53,7 @@ def main():
                 "description": "Online dictionary."
             },
             "👫 Grouping - Google sheet": {
-                "url": "https://docs.google.com/spreadsheets/d/1vi-wOJEFpXNWInfcKEZKqiuNFzOQtib5_1R3qyT6N9E/edit?usp=sharing",
+                "url": "https://docs.google.com/spreadsheets/d/1kJhL5BBxHovkYkzfHXtA93TTfqVu1hvIl5DZZKgnMB4/edit?usp=sharing",
                 "description": "Engpro Grouping."
             }
             
@@ -142,7 +142,7 @@ def main():
         st.markdown("#### 🐾 Class activities and assignment submission: on Padlet")
         st.caption("This Padlet serves as a dynamic hub for class activities. Secure submissions will be managed through the LMS.")
         st.markdown("To access the page, click 🌀 [here](https://padlet.com/mirankim316/S25Engpro)")
-        st.components.v1.iframe("https://padlet.com/mirankim316/S25Engpro", width=700, height=800)
+        st.components.v1.iframe("https://padlet.com/mirankim316/S26Engpro", width=700, height=800)
     
     with tab4:
         st.header('Digital & AI tools')
