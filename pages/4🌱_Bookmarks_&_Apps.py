@@ -34,7 +34,7 @@ def main():
     st.title('Bookmarks & Apps')
     
     # Create tabs
-    tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(["🔆 Weblinks", "🌈 Oxford5K", " 🔆 Digital tools" ,"🔆 Customized apps","🔆 More web resources"])
+    tab1, tab2, tab3, tab4, tab5 = st.tabs(["🔆 Weblinks", "🌈 Oxford5K", " 🔆 Digital tools" ,"🔆 Customized apps","🔆 More web resources"])
     
     with tab1:
 
