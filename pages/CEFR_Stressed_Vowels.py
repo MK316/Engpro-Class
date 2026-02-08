@@ -21,7 +21,7 @@ def generate_audio(text, lang='en'):
 df = load_data()
 
 # Create tabs
-tab1, tab2, tab3, tab4 = st.tabs(["🔤 Search by Word", "📘 Monophthongs", "📗 Diphthongs", "🌈 Quiz"])
+tab1, tab2, tab3, tab4 = st.tabs(["🔤 Search by Word", "📘 Monophthongs", "📗 Diphthongs", "Practice", "🌈 Quiz"])
 
 # --- Tab 1: Flashcard App ---
 with tab1:
@@ -161,10 +161,88 @@ with tab3:
 
 # --- Tab 4: Minimal Vowel Quiz ---
 
-
-
-
 with tab4:
+    # ---------------------------
+    # PRACTICE (does NOT affect the real quiz)
+    # ---------------------------
+    st.markdown("#### 🧪 Practice (Try a sample question)")
+    st.caption("Practice as much as you want. This does not affect your quiz score/report.")
+    
+    # Practice-only session states
+    practice_keys = [
+        "practice_words", "practice_correct_answer", "practice_choice",
+        "practice_score", "practice_attempts", "practice_answered"
+    ]
+    for k in practice_keys:
+        if k not in st.session_state:
+            st.session_state[k] = None if k in ["practice_words", "practice_correct_answer", "practice_choice"] else 0
+    
+    def make_practice_question():
+        st.session_state.practice_answered = False
+        st.session_state.practice_choice = None
+    
+        vowels = df["Stressed_Vowel"].dropna().unique().tolist()
+        if len(vowels) < 2:
+            st.warning("Not enough vowel categories to generate a practice question.")
+            return
+    
+        vowel1 = random.choice(vowels)
+        group1 = df[df["Stressed_Vowel"] == vowel1]["WORD"].dropna().unique().tolist()
+        if len(group1) < 4:
+            st.warning("Not enough words to form a practice question. Try again.")
+            return
+    
+        group1_words = random.sample(group1, 4)
+    
+        different_vowels = [v for v in vowels if v != vowel1]
+        odd_word, odd_vowel = None, None
+    
+        for v2 in random.sample(different_vowels, len(different_vowels)):
+            group2 = df[df["Stressed_Vowel"] == v2]["WORD"].dropna().unique().tolist()
+            if group2:
+                odd_word = random.choice(group2)
+                odd_vowel = v2
+                break
+    
+        if not odd_word:
+            st.warning("Could not find an odd-one-out word. Try again.")
+            return
+    
+        combined = [(w, vowel1) for w in group1_words] + [(odd_word, odd_vowel)]
+        random.shuffle(combined)
+    
+        st.session_state.practice_words = [w for w, _ in combined]
+        st.session_state.practice_correct_answer = odd_word
+    
+    if st.button("🎯 Practice question", key="practice_make_btn"):
+        make_practice_question()
+    
+    if st.session_state.practice_words:
+        st.session_state.practice_choice = st.radio(
+            "Which word has a different stressed vowel?",
+            st.session_state.practice_words,
+            key="practice_choice_radio"  # ✅ different widget key
+        )
+    
+        if st.button("✅ Check answer", key="practice_check_btn"):
+            if not st.session_state.practice_answered:
+                st.session_state.practice_attempts += 1
+                st.session_state.practice_answered = True
+    
+                if st.session_state.practice_choice == st.session_state.practice_correct_answer:
+                    st.session_state.practice_score += 1
+                    st.success(f"Correct! The odd word is **{st.session_state.practice_correct_answer}**.")
+                else:
+                    st.error(f"Incorrect. The correct answer is **{st.session_state.practice_correct_answer}**.")
+    
+    # Optional: show or hide practice score (this is separate anyway)
+    # st.caption(f"Practice score: {st.session_state.practice_score} / {st.session_state.practice_attempts}")
+    
+    st.markdown("---")
+
+
+
+with tab5:
     st.markdown("### 🍀 Vowel Odd-One-Out Quiz")
     st.caption("Q: Choose the word that has a different stressed vowel than the others.")
     st.markdown("👀 [Error report here](https://padlet.com/mirankim316/QNA)")
