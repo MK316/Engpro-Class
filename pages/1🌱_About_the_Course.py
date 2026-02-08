@@ -191,7 +191,7 @@ with tabs[5]:
     month_to_number = {"March": 3, "April": 4, "May": 5, "June": 6}
     # Get selected month number
     month_number = month_to_number[month_option]
-    year = 2025  # Define the year
+    year = 2026  # Define the year
 
     # Define a list of holidays as tuples (day, month)
     holidays = [
