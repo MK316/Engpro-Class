@@ -88,7 +88,7 @@ with tabs[1]:
     # ---------------------------
     # UI: internal tabs (4 sections)
     # ---------------------------
-    st.write("🧩 Practice 1: Introduce yourself in 30 seconds.")
+    st.markdown("#### 🧩 Practice 1: Introduce yourself in 30 seconds.")
 
     inner_tabs = st.tabs(["📖 Scripts", "🔎 Introduce (Audio)", "🌀 TTS"])
 
@@ -103,7 +103,6 @@ with tabs[1]:
 
     # ---- Inner Tab 2: Introduce Yourself with Audio ----
     with inner_tabs[1]:
-        st.subheader("Introduce Yourself in 30 seconds!")
 
         choice = st.selectbox(
             "Select an introduction",
