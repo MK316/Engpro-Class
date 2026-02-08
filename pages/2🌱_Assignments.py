@@ -90,7 +90,7 @@ with tabs[1]:
     # ---------------------------
     st.header("🧩 ENGPRO Practice Hub")
 
-    inner_tabs = st.tabs(["📖 Scripts", "🔎 Introduce (Audio)", "🌀 TTS", "🌀 Padlet Submit"])
+    inner_tabs = st.tabs(["📖 Scripts", "🔎 Introduce (Audio)", "🌀 TTS"])
 
     # ---- Inner Tab 1: Scripts (GitHub Markdown) ----
     with inner_tabs[0]:
@@ -143,21 +143,7 @@ with tabs[1]:
                 except Exception as e:
                     st.error(f"TTS failed: {e}")
 
-    # ---- Inner Tab 4: Padlet embed ----
-    with inner_tabs[3]:
-        st.subheader("Padlet Submission")
-        padlet_url = "https://padlet.com/mirankim316/S26Engpro"
-
-        st.markdown(
-            f"Click + sign to make a new post. "
-            f"[Open in a new tab]({padlet_url})"
-        )
-
-        components.iframe(padlet_url, width=900, height=700, scrolling=True)
-
-
-
-
+################################
 
 with tabs[3]:
     st.caption("To be updated")
