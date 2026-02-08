@@ -21,7 +21,7 @@ def generate_audio(text, lang='en'):
 df = load_data()
 
 # Create tabs
-tab1, tab2, tab3, tab4 = st.tabs(["🔤 Search by Word", "📘 Monophthongs", "📗 Diphthongs", "Practice", "🌈 Quiz"])
+tab1, tab2, tab3, tab4, tab5 = st.tabs(["🔤 Search by Word", "📘 Monophthongs", "📗 Diphthongs", "Practice", "🌈 Quiz"])
 
 # --- Tab 1: Flashcard App ---
 with tab1:
