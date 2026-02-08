@@ -195,10 +195,11 @@ with tabs[5]:
 
     # Define a list of holidays as tuples (day, month)
     holidays = [
-        (1, 3),  # Example: March 1
-        (3, 3),  # Example: May 25
+        (2, 3),  # Example: March 1
+        (1, 5),  # Example: May 25
         (5, 5),
-        (6, 5),
+        (25, 5),
+        (3, 6),
         (6, 6)
         # Add more holidays as needed
     ]
