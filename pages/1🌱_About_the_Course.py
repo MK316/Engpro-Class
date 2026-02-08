@@ -68,7 +68,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Create tabs for different sections of the course
-tabs = st.tabs(["🍐 Course Overview", "🍓 Schedule", "🐥 Intro_Slides", "💙 Padlet", "🍏 Evaluation", "🍒 Assignments", "📆 Calendar"])
+tabs = st.tabs(["🍐 Course Overview", "🍓 Schedule", "🐥 Intro_Slides", "🍏 Evaluation", "🍒 Assignments", "📆 Calendar"])
 
 # Content for the Course Overview tab
 with tabs[0]:
@@ -155,14 +155,10 @@ with tabs[2]:
 ##############################
 # Content for the Schedule tab
 
-with tabs[3]:
-    st.header("🐾 Files to share: on Padlet")
-    st.write("This Padlet serves as a dynamic hub for our Acoustics course. Here, you'll find additional course materials, additional reading resources, and online tools. It's also a space for sharing files and submitting assignments.")
-    st.components.v1.iframe("https://padlet.com/mirankim316/S26Engpro", width=700, height=800)
 
 
 # Content for the Evaluation tab
-with tabs[4]:
+with tabs[3]:
     st.header("Evaluation")
     st.write("This section outlines the evaluation criteria and methods, such as grading rubrics, tests, projects, and participation requirements.")
     # Bulleted List using Markdown
@@ -174,7 +170,7 @@ with tabs[4]:
     """)
     st.caption("Students can earn up to 105% in total, with an additional 5% available through extra credit.")
 # Content for the Assignments tab
-with tabs[5]:
+with tabs[4]:
     st.header("Assignments")
     st.write("List and detail the assignments for the course here, providing due dates and submission guidelines.")
     # Bulleted List using Markdown
@@ -188,7 +184,7 @@ with tabs[5]:
     st.caption("Details will be announced in time.")
 
 # Content for the Calendar tab
-with tabs[6]:
+with tabs[5]:
     # Dropdown for selecting a month
     month_option = st.selectbox("Select a Month", options=["March", "April", "May", "June"], index=0)
     # Dictionary to map month names to their corresponding numbers
