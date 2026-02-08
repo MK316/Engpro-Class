@@ -88,7 +88,7 @@ with tabs[1]:
     # ---------------------------
     # UI: internal tabs (4 sections)
     # ---------------------------
-    st.header("🧩 ENGPRO Practice Hub")
+    st.write("🧩 Practice 1: Introduce yourself in 30 seconds.")
 
     inner_tabs = st.tabs(["📖 Scripts", "🔎 Introduce (Audio)", "🌀 TTS"])
 
