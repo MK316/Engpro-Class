@@ -88,7 +88,7 @@ with tabs[1]:
     # ---------------------------
     # UI: internal tabs (4 sections)
     # ---------------------------
-    st.markdown("#### 🧩 Practice 1: Introduce yourself in 30 seconds.")
+    st.markdown("#### 🧩 Making a video: Getting to know each other")
 
     inner_tabs = st.tabs(["📖 Scripts", "🔎 Introduce (Audio)", "🌀 TTS"])
 
