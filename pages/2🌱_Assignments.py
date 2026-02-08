@@ -1,12 +1,17 @@
 import streamlit as st
 import requests
 
-tabs = st.tabs(["💧 Hey Jude", "Todolist", "💧 Schedule"])
+tabs = st.tabs(["💧 HW#1","💧 HW#2","💧 HW#3 Hey Jude", "💧 HW#4", "💧 HW#5"])
 
 
 ##############################
 # Content for the Schedule tab
 with tabs[0]:
+
+
+with tabs[1]:
+    
+with tabs[2]:
     st.markdown("### 🎼  Hey Jude (HW #4)")
 
     # Define the URLs for the YouTube videos
@@ -62,8 +67,8 @@ with tabs[0]:
 
     st.markdown("[samples on Padlet](https://padlet.com/mirankim316/S26Engpro)")
 
-with tabs[1]:
+with tabs[3]:
     st.markdown("To be announced")
 
-with tabs[2]:
+with tabs[4]:
     st.write("To be updated")
