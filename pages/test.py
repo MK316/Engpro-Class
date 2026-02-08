@@ -476,26 +476,23 @@ with tab4:
     st.markdown("---")
 
     # Active quiz
+    # Active quiz
     if st.session_state["quiz_active"] and st.session_state["quiz_items"]:
         items = st.session_state["quiz_items"]
         idx = st.session_state["quiz_index"]
         n = len(items)
-
-        # Progress (bottom later too, but show here for clarity)
-        progress = (idx) / n
-        st.progress(progress)
-
+    
         st.subheader(f"Item {idx+1} of {n}")
         st.write("Choose the word that has a different stressed vowel than the others.")
-
+    
         q = items[idx]
-        choice = st.radio(
+        st.radio(
             "Select one:",
             q["options"],
             index=None,
             key="quiz_choice_radio"
         )
-
+    
         # Feedback
         fb = st.session_state.get("quiz_feedback", None)
         if fb:
@@ -508,7 +505,7 @@ with tab4:
                 st.warning(msg)
             else:
                 st.info(msg)
-
+    
         # Controls (one-click via callbacks)
         b1, b2 = st.columns([1, 1])
         with b1:
@@ -516,21 +513,17 @@ with tab4:
         with b2:
             label = "Next" if (idx + 1 < n) else "Finish"
             st.button(label, on_click=next_item, use_container_width=True)
-
-        # Score summary
+    
+        # Bottom progress bar only
         st.markdown("---")
-        st.write(f"**Score:** {st.session_state['quiz_score']} / {n}")
-        st.write(f"**Total trials (Submit clicks):** {st.session_state['quiz_total_trials']}")
-
-        # Bottom progress bar (as requested)
         st.progress((idx + (1 if st.session_state.get("quiz_submitted") else 0)) / n)
-
+    
         # PDF button appears only after last item is finished
         if st.session_state.get("quiz_end_time") is not None:
             st.markdown("---")
             st.subheader("📄 Final report")
             st.caption("Click the button below to download your PDF report (name, timestamps, incorrect items, score, and trials).")
-
+    
             pdf_bytes = build_pdf_report()
             st.download_button(
                 "Generate PDF report",
@@ -541,3 +534,4 @@ with tab4:
             )
     else:
         st.info("Set your name and number of items, then click **Start** to begin.")
+
