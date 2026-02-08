@@ -1,18 +1,21 @@
 import streamlit as st
 import requests
 
-tabs = st.tabs(["💧 HW#1","💧 HW#2","💧 HW#3 Hey Jude", "💧 HW#4", "💧 HW#5"])
+tabs = st.tabs(["💙 Padlet", "💧 HW#1","💧 HW#2","💧 HW#3 Hey Jude", "💧 HW#4", "💧 HW#5"])
 
 
 ##############################
 # Content for the Schedule tab
 with tabs[0]:
-    st.caption("To be updated")
-
+    st.header("🐾 Files to share: on Padlet")
+    st.write("This Padlet serves as a dynamic hub for our Acoustics course. Here, you'll find additional course materials, additional reading resources, and online tools. It's also a space for sharing files and submitting assignments.")
+    st.components.v1.iframe("https://padlet.com/mirankim316/S26Engpro", width=700, height=800)
 with tabs[1]:
     st.caption("To be updated")
-    
 with tabs[2]:
+    st.caption("To be updated")
+    
+with tabs[3]:
     st.markdown("### 🎼  Hey Jude (HW #4)")
 
     # Define the URLs for the YouTube videos
@@ -68,8 +71,8 @@ with tabs[2]:
 
     st.markdown("[samples on Padlet](https://padlet.com/mirankim316/S26Engpro)")
 
-with tabs[3]:
+with tabs[4]:
     st.markdown("To be announced")
 
-with tabs[4]:
+with tabs[5]:
     st.write("To be updated")
