@@ -95,9 +95,6 @@ with tabs[1]:
     # ---- Inner Tab 1: Scripts (GitHub Markdown) ----
     with inner_tabs[0]:
         RAW_MD_URL = "https://raw.githubusercontent.com/MK316/Engpro-Class/refs/heads/main/practice/readme.md"
-        st.caption("Source (GitHub raw)")
-        st.code(RAW_MD_URL, language="text")
-
         md_text, err = fetch_markdown(RAW_MD_URL)
         if err:
             st.error(f"Could not load the markdown file.\n\n{err}")
