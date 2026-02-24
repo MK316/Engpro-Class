@@ -66,88 +66,240 @@ with tabs[1]:
         <iframe src="{huggingface_space_url}" width="100%" height="600px" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     """, height=600)
 
+# ==============================
 # Grouping tab
+# ==============================
 with tabs[2]:
+    import pandas as pd
+    from io import BytesIO
+
     st.subheader("👥 Grouping Tool")
     st.caption("Your csv file must have 'Names' column")
-    st.markdown("[S25 Roster](https://raw.githubusercontent.com/MK316/Engpro-Class/refs/heads/main/data/Engpro-roster25.csv)")
+    st.markdown(
+        "[S25 Roster](https://raw.githubusercontent.com/MK316/Engpro-Class/refs/heads/main/data/Engpro-roster25.csv)"
+    )
 
-    # Upload file section
+    # ------------------------------
+    # Helper: robust CSV reader
+    # (handles UTF-8 / Korean encodings)
+    # ------------------------------
+    def read_csv_robust(uploaded_file):
+        raw = uploaded_file.getvalue()
+
+        for enc in ("utf-8", "utf-8-sig", "cp949", "euc-kr"):
+            try:
+                return pd.read_csv(BytesIO(raw), encoding=enc)
+            except Exception:
+                pass
+
+        # fallback (raise error normally)
+        return pd.read_csv(BytesIO(raw))
+
+    # ------------------------------
+    # Upload section
+    # ------------------------------
     uploaded_file = st.file_uploader("Upload CSV File", type=["csv"])
-    
-    # User input for group size
-    members_per_group = st.number_input("Members per Group", min_value=1, value=5)
-    
-    # Input for fixed groups (optional)
-    fixed_groups_input = st.text_input("Fixed Groups (separated by semicolon;)", placeholder="Name1, Name2; Name3, Name4")
 
-    # Submit button to trigger grouping process
+    members_per_group = st.number_input(
+        "Members per Group",
+        min_value=1,
+        value=5
+    )
+
+    fixed_groups_input = st.text_input(
+        "Fixed Groups (separated by semicolon;)",
+        placeholder="Name1, Name2; Name3, Name4"
+    )
+
+    # ------------------------------
+    # Grouping function
+    # ------------------------------
+    def group_names(file, members_per_group, fixed_groups_input):
+
+        df = read_csv_robust(file)
+
+        if "Names" not in df.columns:
+            st.error("CSV must contain a column named 'Names'.")
+            return None
+
+        fixed_groups = [
+            g.strip() for g in fixed_groups_input.split(";") if g.strip()
+        ]
+
+        fixed_groups_df_list = []
+        remaining_df = df.copy()
+
+        # Process fixed groups
+        for group in fixed_groups:
+            group_names_list = [
+                name.strip() for name in group.split(",") if name.strip()
+            ]
+
+            matched_rows = remaining_df[
+                remaining_df["Names"].isin(group_names_list)
+            ]
+
+            fixed_groups_df_list.append(matched_rows)
+
+            remaining_df = remaining_df[
+                ~remaining_df["Names"].isin(group_names_list)
+            ]
+
+        # Shuffle remaining students
+        remaining_df = remaining_df.sample(frac=1).reset_index(drop=True)
+
+        # Fill fixed groups to required size
+        for i, group_df in enumerate(fixed_groups_df_list):
+            while len(group_df) < members_per_group and not remaining_df.empty:
+                group_df = pd.concat(
+                    [group_df, remaining_df.iloc[[0]]],
+                    ignore_index=True
+                )
+                remaining_df = remaining_df.iloc[1:].reset_index(drop=True)
+
+            fixed_groups_df_list[i] = group_df
+
+        # Create remaining groups
+        groups = fixed_groups_df_list
+
+        for i in range(0, len(remaining_df), members_per_group):
+            groups.append(remaining_df.iloc[i:i + members_per_group])
+
+        # Determine max group size
+        max_group_size = max(len(g) for g in groups) if groups else 0
+
+        # Build output dataframe
+        grouped_data = {
+            "Group": [f"Group {i+1}" for i in range(len(groups))]
+        }
+
+        for i in range(max_group_size):
+            grouped_data[f"Member{i+1}"] = [
+                g["Names"].tolist()[i] if i < len(g) else ""
+                for g in groups
+            ]
+
+        return pd.DataFrame(grouped_data)
+
+    # ------------------------------
+    # Run grouping
+    # ------------------------------
     if st.button("Submit"):
-        if uploaded_file is not None:
-            # Function to group names
-            def group_names(file, members_per_group, fixed_groups_input):
-                # Read the CSV file
-                df = pd.read_csv(file)
-
-                # Parse fixed groups input
-                fixed_groups = [group.strip() for group in fixed_groups_input.split(';') if group.strip()]
-                fixed_groups_df_list = []
-                remaining_df = df.copy()
-
-                # Process fixed groups and create a list for additional members to be added
-                for group in fixed_groups:
-                    group_names = [name.strip() for name in group.split(',') if name.strip()]
-                    # Find these names in the DataFrame
-                    matched_rows = remaining_df[remaining_df['Names'].isin(group_names)]
-                    fixed_groups_df_list.append(matched_rows)
-                    # Remove these names from the pool of remaining names
-                    remaining_df = remaining_df[~remaining_df['Names'].isin(group_names)]
-
-                # Shuffle the remaining DataFrame
-                remaining_df = remaining_df.sample(frac=1).reset_index(drop=True)
-                
-                # Adjusting fixed groups to include additional members if they're under the specified group size
-                for i, group_df in enumerate(fixed_groups_df_list):
-                    while len(group_df) < members_per_group and not remaining_df.empty:
-                        group_df = pd.concat([group_df, remaining_df.iloc[[0]]])
-                        remaining_df = remaining_df.iloc[1:].reset_index(drop=True)
-                    fixed_groups_df_list[i] = group_df  # Update the group with added members
-
-                # Grouping the remaining names
-                groups = fixed_groups_df_list  # Start with adjusted fixed groups
-                for i in range(0, len(remaining_df), members_per_group):
-                    groups.append(remaining_df[i:i + members_per_group])
-
-                # Determine the maximum group size
-                max_group_size = max(len(group) for group in groups)
-                
-                # Creating a new DataFrame for grouped data with separate columns for each member
-                grouped_data = {'Group': [f'Group {i+1}' for i in range(len(groups))]}
-                # Add columns for each member
-                for i in range(max_group_size):
-                    grouped_data[f'Member{i+1}'] = [group['Names'].tolist()[i] if i < len(group) else "" for group in groups]
-
-                grouped_df = pd.DataFrame(grouped_data)
-                
-                return grouped_df
-
-            # Call the group_names function and display the grouped names
-            grouped_df = group_names(uploaded_file, members_per_group, fixed_groups_input)
-            
-            # Display the grouped names
-            st.write(grouped_df)
-            
-            # Option to download the grouped names as CSV
-            csv = grouped_df.to_csv(index=False).encode('utf-8')
-            st.download_button(
-                label="Download Grouped Names as CSV",
-                data=csv,
-                file_name='grouped_names.csv',
-                mime='text/csv',
+        if uploaded_file is None:
+            st.error("Please upload a CSV file before submitting.")
+        else:
+            grouped_df = group_names(
+                uploaded_file,
+                members_per_group,
+                fixed_groups_input
             )
 
-        else:
-            st.error("Please upload a CSV file before submitting.")
+            if grouped_df is not None:
+                st.write(grouped_df)
+
+                # ------------------------------
+                # Excel download (NO encoding issues)
+                # ------------------------------
+                output = BytesIO()
+
+                with pd.ExcelWriter(output, engine="openpyxl") as writer:
+                    grouped_df.to_excel(
+                        writer,
+                        index=False,
+                        sheet_name="Groups"
+                    )
+
+                output.seek(0)
+
+                st.download_button(
+                    label="Download Grouped Names as Excel (.xlsx)",
+                    data=output,
+                    file_name="grouped_names.xlsx",
+                    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                )
+
+# Grouping tab
+# with tabs[2]:
+#     st.subheader("👥 Grouping Tool")
+#     st.caption("Your csv file must have 'Names' column")
+#     st.markdown("[S25 Roster](https://raw.githubusercontent.com/MK316/Engpro-Class/refs/heads/main/data/Engpro-roster25.csv)")
+
+#     # Upload file section
+#     uploaded_file = st.file_uploader("Upload CSV File", type=["csv"])
+    
+#     # User input for group size
+#     members_per_group = st.number_input("Members per Group", min_value=1, value=5)
+    
+#     # Input for fixed groups (optional)
+#     fixed_groups_input = st.text_input("Fixed Groups (separated by semicolon;)", placeholder="Name1, Name2; Name3, Name4")
+
+#     # Submit button to trigger grouping process
+#     if st.button("Submit"):
+#         if uploaded_file is not None:
+#             # Function to group names
+#             def group_names(file, members_per_group, fixed_groups_input):
+#                 # Read the CSV file
+#                 df = pd.read_csv(file)
+
+#                 # Parse fixed groups input
+#                 fixed_groups = [group.strip() for group in fixed_groups_input.split(';') if group.strip()]
+#                 fixed_groups_df_list = []
+#                 remaining_df = df.copy()
+
+#                 # Process fixed groups and create a list for additional members to be added
+#                 for group in fixed_groups:
+#                     group_names = [name.strip() for name in group.split(',') if name.strip()]
+#                     # Find these names in the DataFrame
+#                     matched_rows = remaining_df[remaining_df['Names'].isin(group_names)]
+#                     fixed_groups_df_list.append(matched_rows)
+#                     # Remove these names from the pool of remaining names
+#                     remaining_df = remaining_df[~remaining_df['Names'].isin(group_names)]
+
+#                 # Shuffle the remaining DataFrame
+#                 remaining_df = remaining_df.sample(frac=1).reset_index(drop=True)
+                
+#                 # Adjusting fixed groups to include additional members if they're under the specified group size
+#                 for i, group_df in enumerate(fixed_groups_df_list):
+#                     while len(group_df) < members_per_group and not remaining_df.empty:
+#                         group_df = pd.concat([group_df, remaining_df.iloc[[0]]])
+#                         remaining_df = remaining_df.iloc[1:].reset_index(drop=True)
+#                     fixed_groups_df_list[i] = group_df  # Update the group with added members
+
+#                 # Grouping the remaining names
+#                 groups = fixed_groups_df_list  # Start with adjusted fixed groups
+#                 for i in range(0, len(remaining_df), members_per_group):
+#                     groups.append(remaining_df[i:i + members_per_group])
+
+#                 # Determine the maximum group size
+#                 max_group_size = max(len(group) for group in groups)
+                
+#                 # Creating a new DataFrame for grouped data with separate columns for each member
+#                 grouped_data = {'Group': [f'Group {i+1}' for i in range(len(groups))]}
+#                 # Add columns for each member
+#                 for i in range(max_group_size):
+#                     grouped_data[f'Member{i+1}'] = [group['Names'].tolist()[i] if i < len(group) else "" for group in groups]
+
+#                 grouped_df = pd.DataFrame(grouped_data)
+                
+#                 return grouped_df
+
+#             # Call the group_names function and display the grouped names
+#             grouped_df = group_names(uploaded_file, members_per_group, fixed_groups_input)
+            
+#             # Display the grouped names
+#             st.write(grouped_df)
+            
+#             # Option to download the grouped names as CSV
+#             csv = grouped_df.to_csv(index=False).encode('utf-8')
+#             st.download_button(
+#                 label="Download Grouped Names as CSV",
+#                 data=csv,
+#                 file_name='grouped_names.csv',
+#                 mime='text/csv',
+#             )
+
+#         else:
+#             st.error("Please upload a CSV file before submitting.")
 
 # Text-to-Speech tab
 with tabs[3]:
