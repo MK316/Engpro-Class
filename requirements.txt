@@ -13,3 +13,4 @@ soundfile
 selenium
 reportlab
 pytz
+openpyxl
