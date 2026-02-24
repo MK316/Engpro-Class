@@ -74,7 +74,7 @@ with tabs[2]:
     from io import BytesIO
 
     st.subheader("👥 Grouping Tool")
-    st.caption("Your csv file must have 'Names' column")
+    st.caption("Your csv file must have at least one column named as'Names.'")
     st.markdown(
         "[S25 Roster](https://raw.githubusercontent.com/MK316/Engpro-Class/refs/heads/main/data/Engpro-roster25.csv)"
     )
