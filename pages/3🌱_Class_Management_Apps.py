@@ -69,154 +69,95 @@ with tabs[1]:
 # ==============================
 # Grouping tab
 # ==============================
+# Grouping tab
 with tabs[2]:
-    import pandas as pd
-    from io import BytesIO
-
     st.subheader("👥 Grouping Tool")
-    st.caption("Your csv file must have at least one column named as'Names.'")
-    st.markdown(
-        "[S25 Roster](https://raw.githubusercontent.com/MK316/Engpro-Class/refs/heads/main/data/Engpro-roster25.csv)"
-    )
+    st.caption("Your CSV should have at least the column `Course` and `Names`.")
 
-    # ------------------------------
-    # Helper: robust CSV reader
-    # (handles UTF-8 / Korean encodings)
-    # ------------------------------
-    def read_csv_robust(uploaded_file):
-        raw = uploaded_file.getvalue()
+    default_url = "https://raw.githubusercontent.com/MK316/english-phonetics/refs/heads/main/pages/data/Roster_2026b_0302.csv"
 
-        for enc in ("utf-8", "utf-8-sig", "cp949", "euc-kr"):
-            try:
-                return pd.read_csv(BytesIO(raw), encoding=enc)
-            except Exception:
-                pass
+    uploaded_file = st.file_uploader("🌱 Step 1: Upload your CSV file (optional)", type=["csv"])
 
-        # fallback (raise error normally)
-        return pd.read_csv(BytesIO(raw))
+    if uploaded_file is not None:
+        df = pd.read_csv(uploaded_file)
+        source_label = "✅ File uploaded"
+    else:
+        df = pd.read_csv(default_url)
+        source_label = "📂 Using default GitHub data"
 
-    # ------------------------------
-    # Upload section
-    # ------------------------------
-    uploaded_file = st.file_uploader("Upload CSV File", type=["csv"])
+    if all(col in df.columns for col in ['Course', 'Names']):
+        # Step 2: Select Course
+        course_list = df['Course'].dropna().unique().tolist()
+        selected_course = st.selectbox("🌱 Step 2: Select Course for Grouping", course_list)
 
-    members_per_group = st.number_input(
-        "Members per Group",
-        min_value=1,
-        value=5
-    )
+        # 코스별 데이터 필터링 및 인원수 계산
+        course_df = df[df['Course'] == selected_course]
+        names = course_df['Names'].dropna().tolist()
+        total_students = len(names)
 
-    fixed_groups_input = st.text_input(
-        "Fixed Groups (separated by semicolon;)",
-        placeholder="Name1, Name2; Name3, Name4"
-    )
+        # [수정 포인트] 안내 박스에 전체 인원수 추가
+        st.info(f"{source_label} | 🎓 **{selected_course}**: Total **{total_students}** students available for grouping.")
 
-    # ------------------------------
-    # Grouping function
-    # ------------------------------
-    def group_names(file, members_per_group, fixed_groups_input):
+        # Step 3: Group size input
+        st.markdown(f"##### 🌱 Step 3: Group Settings")
+        col_in1, col_in2 = st.columns(2)
+        with col_in1:
+            num_group3 = st.number_input("Number of 3-member groups", min_value=0, value=0, step=1)
+        with col_in2:
+            num_group4 = st.number_input("Number of 4-member groups", min_value=0, value=0, step=1)
 
-        df = read_csv_robust(file)
+        if st.button("🌱 Step 4: Generate Groups"):
+            random.shuffle(names)
+            grouped_data = []
+            group_num = 1
+            assigned_count = 0
 
-        if "Names" not in df.columns:
-            st.error("CSV must contain a column named 'Names'.")
-            return None
+            # 1. 3인 그룹 생성
+            for _ in range(num_group3):
+                if len(names) >= 3:
+                    members = names[:3]
+                    names = names[3:]
+                    grouped_data.append({"Group": f"Group {group_num}", **{f"Member{i+1}": m for i, m in enumerate(members)}})
+                    group_num += 1
+                    assigned_count += 3
 
-        fixed_groups = [
-            g.strip() for g in fixed_groups_input.split(";") if g.strip()
-        ]
+            # 2. 4인 그룹 생성
+            for _ in range(num_group4):
+                if len(names) >= 4:
+                    members = names[:4]
+                    names = names[4:]
+                    grouped_data.append({"Group": f"Group {group_num}", **{f"Member{i+1}": m for i, m in enumerate(members)}})
+                    group_num += 1
+                    assigned_count += 4
 
-        fixed_groups_df_list = []
-        remaining_df = df.copy()
+            # 3. 남은 인원 처리
+            remaining_count = len(names)
+            if remaining_count > 0:
+                grouped_data.append({"Group": f"Group {group_num} (Remainder)", **{f"Member{i+1}": m for i, m in enumerate(names)}})
+                assigned_count += remaining_count
 
-        # Process fixed groups
-        for group in fixed_groups:
-            group_names_list = [
-                name.strip() for name in group.split(",") if name.strip()
-            ]
+            if not grouped_data:
+                st.warning("No groups were created. Please check your settings.")
+            else:
+                grouped_df = pd.DataFrame(grouped_data)
+                cols = ['Group'] + [c for c in grouped_df.columns if c.startswith('Member')]
+                grouped_df = grouped_df[cols].fillna("")
 
-            matched_rows = remaining_df[
-                remaining_df["Names"].isin(group_names_list)
-            ]
-
-            fixed_groups_df_list.append(matched_rows)
-
-            remaining_df = remaining_df[
-                ~remaining_df["Names"].isin(group_names_list)
-            ]
-
-        # Shuffle remaining students
-        remaining_df = remaining_df.sample(frac=1).reset_index(drop=True)
-
-        # Fill fixed groups to required size
-        for i, group_df in enumerate(fixed_groups_df_list):
-            while len(group_df) < members_per_group and not remaining_df.empty:
-                group_df = pd.concat(
-                    [group_df, remaining_df.iloc[[0]]],
-                    ignore_index=True
-                )
-                remaining_df = remaining_df.iloc[1:].reset_index(drop=True)
-
-            fixed_groups_df_list[i] = group_df
-
-        # Create remaining groups
-        groups = fixed_groups_df_list
-
-        for i in range(0, len(remaining_df), members_per_group):
-            groups.append(remaining_df.iloc[i:i + members_per_group])
-
-        # Determine max group size
-        max_group_size = max(len(g) for g in groups) if groups else 0
-
-        # Build output dataframe
-        grouped_data = {
-            "Group": [f"Group {i+1}" for i in range(len(groups))]
-        }
-
-        for i in range(max_group_size):
-            grouped_data[f"Member{i+1}"] = [
-                g["Names"].tolist()[i] if i < len(g) else ""
-                for g in groups
-            ]
-
-        return pd.DataFrame(grouped_data)
-
-    # ------------------------------
-    # Run grouping
-    # ------------------------------
-    if st.button("Submit"):
-        if uploaded_file is None:
-            st.error("Please upload a CSV file before submitting.")
-        else:
-            grouped_df = group_names(
-                uploaded_file,
-                members_per_group,
-                fixed_groups_input
-            )
-
-            if grouped_df is not None:
+                # 결과 요약 출력
+                st.success(f"✅ Grouping Complete! (Total {assigned_count} students assigned to {len(grouped_data)} groups)")
                 st.write(grouped_df)
 
-                # ------------------------------
-                # Excel download (NO encoding issues)
-                # ------------------------------
-                output = BytesIO()
-
-                with pd.ExcelWriter(output, engine="openpyxl") as writer:
-                    grouped_df.to_excel(
-                        writer,
-                        index=False,
-                        sheet_name="Groups"
-                    )
-
-                output.seek(0)
-
+                # Download button
+                csv_buffer = io.StringIO()
+                grouped_df.to_csv(csv_buffer, index=False)
                 st.download_button(
-                    label="Download Grouped Names as Excel (.xlsx)",
-                    data=output,
-                    file_name="grouped_names.xlsx",
-                    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                    label="📥 Download Grouped CSV",
+                    data=csv_buffer.getvalue().encode('utf-8'),
+                    file_name=f"grouped_{selected_course.replace(' ', '_')}.csv",
+                    mime="text/csv"
                 )
+    else:
+        st.error("The file must contain both `Course` and `Names` columns.")
 
 # Grouping tab
 # with tabs[2]:
