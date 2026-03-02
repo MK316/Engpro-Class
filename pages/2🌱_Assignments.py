@@ -148,7 +148,8 @@ with tabs[2]:
     st.write("Submit HW#1 to [LMS](https://rec.ac.kr/gnu)")
 
 with tabs[3]:
-    st.caption("To be updated")
+    st.caption("Choose a TED talk for practice")
+    st.markdown("[TED.com](https://ted.com)
     
 with tabs[4]:
     st.markdown("### 🎼  Hey Jude (HW #4)")
