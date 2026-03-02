@@ -26,7 +26,7 @@ lesson_videos = {
 }
 
 supplementary_videos = {
-    "Extra explanation": "https://youtu.be/aaaa",
+    "What Korean sounds like to Americans?": "https://www.youtube.com/watch?v=9qOjgPnorH8",
 }
 
 # ---------------------------
