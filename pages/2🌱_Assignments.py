@@ -149,7 +149,7 @@ with tabs[2]:
 
 with tabs[3]:
     st.caption("Choose a TED talk for practice")
-    st.markdown("[TED.com](https://ted.com)
+    st.markdown("[TED.com](https://ted.com)")
     
 with tabs[4]:
     st.markdown("### 🎼  Hey Jude (HW #4)")
