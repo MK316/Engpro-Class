@@ -140,6 +140,12 @@ with tabs[1]:
                     st.error(f"TTS failed: {e}")
 
 ################################
+with tabs[2]:
+    st.markdown("[📥 Recording material to download](https://github.com/MK316/Engpro-Class/raw/main/data/Recording-material.pdf)")
+    st.write("1. 18 Sentences")
+    st.write("2. Rainbow passage")
+    st.info("Note: Save your recordings as 2 files")
+    st.write("Submit HW#1 to [LMS](https://rec.ac.kr/gnu)")
 
 with tabs[3]:
     st.caption("To be updated")
