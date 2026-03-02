@@ -27,6 +27,8 @@ lesson_videos = {
 
 supplementary_videos = {
     "What Korean sounds like to Americans?": "https://www.youtube.com/watch?v=9qOjgPnorH8",
+    "I would like to buy a hamburger - Pnk Panther": "https://www.youtube.com/watch?v=lz0IT4Uk2xQ",
+    "The English language in 65 accents": "https://www.youtube.com/watch?v=UZuHE9m3a8Y&t=205s"
 }
 
 # ---------------------------
