@@ -149,11 +149,15 @@ with tabs[2]:
                 st.write(grouped_df)
 
                 # Download button
+# [수정된 부분] Download button 로직
                 csv_buffer = io.StringIO()
-                grouped_df.to_csv(csv_buffer, index=False)
+                
+                # index=False와 함께 encoding='utf-8-sig'를 지정하여 엑셀 한글 깨짐 방지
+                grouped_df.to_csv(csv_buffer, index=False, encoding='utf-8-sig')
+                
                 st.download_button(
                     label="📥 Download Grouped CSV",
-                    data=csv_buffer.getvalue().encode('utf-8'),
+                    data=csv_buffer.getvalue(), # encode('utf-8')를 따로 하지 않아도 StringIO에서 처리됨
                     file_name=f"grouped_{selected_course.replace(' ', '_')}.csv",
                     mime="text/csv"
                 )
