@@ -68,7 +68,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Create tabs for different sections of the course
-tabs = st.tabs(["🍐 Course Overview", "🍓 Schedule", "🐥 Intro_Slides", "🍏 Evaluation", "🍒 Assignments", "📆 Calendar"])
+tabs = st.tabs(["🍐 Course Overview", "🍓 Schedule", "🐥 Intro_Slides", "🍏 Evaluation", "🍒 Assignment details", "📆 Calendar", "Googlesheet"])
 
 # Content for the Course Overview tab
 with tabs[0]:
@@ -227,4 +227,11 @@ with tabs[5]:
     cal_html += "</tbody></table>"
 
     st.markdown(cal_html, unsafe_allow_html=True)
+
+with tabs[6]:
+    st.markdown("""
+        ### Google sheet [link](https://docs.google.com/spreadsheets/d/1Fy0bn8pdQqVGmQgSlEfHzztLK4-J8SxSaIqLuC0fUNE/edit?usp=sharing)
+
+    + Class Information Board: Collaborative Google Sheet (Open access / No login needed).
+    """)
 
