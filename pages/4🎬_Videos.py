@@ -15,9 +15,9 @@ tabs = st.tabs([
 # Video lists (tab별로 분리)
 # 👉 나중에 여기만 추가하면 됨
 # ---------------------------
+#"Overview": "https://youtu.be/np2O9vzGFmA",
 course_videos = {
-    "Overview": "https://youtu.be/np2O9vzGFmA",
-    "Course Introduction[5m52s]": "https://youtu.be/58PaKMPd9G4",
+    "Course Introduction[5m52s]": "https://youtu.be/58PaKMPd9G4"
 }
 
 lesson_videos = {
