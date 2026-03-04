@@ -17,7 +17,7 @@ tabs = st.tabs([
 # ---------------------------
 course_videos = {
     "Overview": "https://youtu.be/np2O9vzGFmA",
-    # "Course Introduction": "https://youtu.be/xxxx",
+    "Course Introduction[5m52s]": "https://youtu.be/58PaKMPd9G4",
 }
 
 lesson_videos = {
