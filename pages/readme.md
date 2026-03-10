@@ -5,7 +5,7 @@
 |  W01    |Mar.3&5|Introduction| Grouping, HW#1 (Mar.10)       |       
 |  W02    |Mar.10&12|English vowels I |        |       
 |  W03    |Mar.17&19|English vowels II |        |       
-|  W04    |Mar.24&26|English vowels III | [HW#2: TED (Mar.24)](https://docs.google.com/spreadsheets/d/1kJhL5BBxHovkYkzfHXtA93TTfqVu1hvIl5DZZKgnMB4/edit?usp=sharing)|       
+|  W04    |Mar.24&26|English vowels III | [HW#2: TED (Mar.24)](https://docs.google.com/spreadsheets/d/1Fy0bn8pdQqVGmQgSlEfHzztLK4-J8SxSaIqLuC0fUNE/edit?usp=sharing)|       
 |  W05    |Mar.31&Apr.2|English vowels IV |        |       
 |  W06    |Apr.7&9|| |       
 |  W07    |Apr.14&16| |  📌[HW#3 TED recording](https://padlet.com/mirankim316/S26Engpro) |       
