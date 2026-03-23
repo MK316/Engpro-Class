@@ -154,10 +154,11 @@ with tabs[3]:
     st.markdown("### [Google sheet to share your selection](https://docs.google.com/spreadsheets/d/1Fy0bn8pdQqVGmQgSlEfHzztLK4-J8SxSaIqLuC0fUNE/edit?usp=sharing)")
     
 with tabs[4]:
-    st.markdown("### 🎼  Hey Jude (HW #4)")
+    st.markdown("### 🎼  Hey Jude (HW #3)")
 
     # Define the URLs for the YouTube videos
     st.markdown("#### 1. Hey Jude (Beatles)")
+    st.markdown("[Submission to our Padlet](https://padlet.com/mirankim316/s26engpro)")
     video_url1 = "https://www.youtube.com/embed/mQER0A0ej0M?si=eSi7vtIJzot9cqAf"
     st.video(video_url1, format="video/mp4", start_time=0)
 
