@@ -26,7 +26,7 @@ tab1, tab2, tab3, tab4, tab5 = st.tabs(["🔤 Search by Word", "🌀 Monophthong
 # --- Tab 1: Flashcard App ---
 with tab1:
     st.header("🔤 Search by word")
-    st.caption("A total of 2,106 words from CEFR level B and level C")
+    st.caption("A total of 2,105 words from CEFR level B and level C")
     st.markdown("🌺 [Go to the CEFR application](https://mk316voca.streamlit.app/)")
 
     # User input
