@@ -27,7 +27,7 @@ tab1, tab2, tab3, tab4, tab5 = st.tabs(["🔤 Search by Word", "🌀 Monophthong
 with tab1:
     st.header("🔤 Search by word")
     st.caption("A total of 2,106 words from CEFR level B and level C")
-    st.markdown("🔴 [Go to the CEFR application](https://mk316voca.streamlit.app/)")
+    st.markdown("🌺 [Go to the CEFR application](https://mk316voca.streamlit.app/)")
 
     # User input
     user_input = st.text_input("Enter a word to look up:", "").strip().lower()
