@@ -468,3 +468,7 @@ with tabs[5]:
     video_url2 = "https://www.youtube.com/watch?v=UCxOZCc2gMQ"
     st.video(video_url2, format="video/mp4", start_time=0)
 
+    # Display the YouTube videos with specified width
+    st.markdown("#### 3. I would like to buy a hamburgh! (The Pink Panther)")
+    video_url2 = "https://www.youtube.com/watch?v=Z6oeAdemFZw&t=1s"
+    st.video(video_url2, format="video/mp4", start_time=0)
