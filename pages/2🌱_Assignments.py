@@ -224,8 +224,9 @@ with tabs[5]:
 5. Repeat the same process for all five levels.
 6. Submit your results using the Google Sheet below.
 
-### [Google Sheet for reporting/uploading your practice results](https://docs.google.com/spreadsheets/d/1Fy0bn8pdQqVGmQgSlEfHzztLK4-J8SxSaIqLuC0fUNE/edit?usp=sharing)
+#### [Google Sheet for reporting/uploading your practice results](https://docs.google.com/spreadsheets/d/1Fy0bn8pdQqVGmQgSlEfHzztLK4-J8SxSaIqLuC0fUNE/edit?usp=sharing)
     """)
+    st.info("Google sheet > Select the tab named 'HW#4-SayWords'")
     
 with tabs[6]:
     st.write("To be updated")
