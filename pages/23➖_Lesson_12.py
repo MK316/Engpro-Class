@@ -2,7 +2,7 @@ import streamlit as st
 from gtts import gTTS
 import io
 # Create four tabs
-tabs = st.tabs(["📙 Lesson 12-1", "📙 Lesson 12-2", "❄️ Intonation contour", "❄️ APP"])
+tabs = st.tabs(["📙 Lesson 12-1", "📙 Lesson 12-2", "❄️ Intonation contour", "❄️ Speechnotes"])
 
 # Content for each tab
 with tabs[0]:
@@ -296,4 +296,6 @@ with tabs[2]:
     st.markdown("Goto App: visible intonation contour")
     st.markdown("**[APP](https://mrkim21.github.io/appfolder/tts-pitch.html)**")
 with tabs[3]:
-    st.markdown("### Application")
+    st.markdown("### Try out the following application to check how much of your speech could easily be recognized.")
+
+    st.markdown("[Speechnotes](https://speechnotes.co)
