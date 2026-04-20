@@ -211,7 +211,21 @@ with tabs[4]:
     st.markdown("[samples on Padlet](https://padlet.com/mirankim316/S26Engpro)")
 
 with tabs[5]:
-    st.markdown("To be announced")
+    st.caption("HW#4: Say This Word Application")
+    st.markdown("[Open the application](https://saythisword.lovable.app/)")
 
+    st.markdown("""
+#### Instructions
+
+1. Open the web app: https://saythisword.lovable.app/
+2. Select **Practice** and choose a level (**Level 1** to **Level 5**).
+3. At each level, practice **50 words**.
+4. After completing a level, click **Download Report** to save the PDF file.
+5. Repeat the same process for all five levels.
+6. Submit your results using the Google Sheet below.
+
+### [Google Sheet for reporting/uploading your practice results](https://docs.google.com/spreadsheets/d/1Fy0bn8pdQqVGmQgSlEfHzztLK4-J8SxSaIqLuC0fUNE/edit?usp=sharing)
+    """)
+    
 with tabs[6]:
     st.write("To be updated")
