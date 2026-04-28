@@ -58,14 +58,14 @@ with tabs[0]:
 
 
 # Timer tab
+# Timer tab
 with tabs[1]:
-    # Embed the Hugging Face space as an iframe
-    huggingface_space_url = "https://mytimer.streamlit.app"
-    
-    # Use Streamlit components to embed the external page
-    st.components.v1.html(f"""
-        <iframe src="{huggingface_space_url}" width="100%" height="600px" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    """, height=600)
+    st.subheader("⏳ Timer")
+
+    timer_url = "https://mytimer.streamlit.app"
+
+    st.write("Open the timer app in a new tab:")
+    st.link_button("Open Timer App", timer_url)
 
 # ==============================
 # Grouping tab
