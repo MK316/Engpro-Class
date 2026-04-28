@@ -58,14 +58,29 @@ with tabs[0]:
 
 
 # Timer tab
+from datetime import datetime
+import pytz
+
 # Timer tab
 with tabs[1]:
     st.subheader("⏳ Timer")
 
+    seoul_tz = pytz.timezone("Asia/Seoul")
+    current_time = datetime.now(seoul_tz).strftime("%H:%M:%S")
+
+    st.markdown(
+        f"""
+        <div style="text-align:center; font-size:60px; font-weight:700; color:#5785A4;">
+            {current_time}
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
     timer_url = "https://mytimer.streamlit.app"
 
     st.write("Open the timer app in a new tab:")
-    st.link_button("Open Timer App", timer_url)
+    st.link_button("Open Stopwatch App", timer_url)
 
 # ==============================
 # Grouping tab
