@@ -62,25 +62,46 @@ from datetime import datetime
 import pytz
 
 # Timer tab
+import streamlit as st
+import streamlit.components.v1 as components
+
 with tabs[1]:
     st.subheader("⏳ Current Time in Korea:")
 
-    seoul_tz = pytz.timezone("Asia/Seoul")
-    current_time = datetime.now(seoul_tz).strftime("%H:%M:%S")
-
-    st.markdown(
-        f"""
-        <div style="text-align:center; font-size:60px; font-weight:700; color:#5785A4;">
-            {current_time}
+    components.html(
+        """
+        <div id="clock" style="
+            text-align:center;
+            font-size:60px;
+            font-weight:700;
+            color:#5785A4;
+            font-family:Arial, sans-serif;
+            margin:20px 0;">
         </div>
+
+        <script>
+        function updateClock() {
+            const now = new Date();
+            const koreaTime = new Intl.DateTimeFormat('en-GB', {
+                timeZone: 'Asia/Seoul',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: false
+            }).format(now);
+
+            document.getElementById("clock").innerHTML = koreaTime;
+        }
+
+        updateClock();
+        setInterval(updateClock, 1000);
+        </script>
         """,
-        unsafe_allow_html=True
+        height=120
     )
 
-    timer_url = "https://mytimer.streamlit.app"
-
     st.write("Open the timer app in a new tab:")
-    st.link_button("Open Stopwatch App", timer_url)
+    st.link_button("Open Stopwatch App", "https://mytimer.streamlit.app")
 
 # ==============================
 # Grouping tab
