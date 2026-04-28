@@ -63,7 +63,7 @@ import pytz
 
 # Timer tab
 with tabs[1]:
-    st.subheader("⏳ Timer")
+    st.subheader("⏳ Current Time in Korea:")
 
     seoul_tz = pytz.timezone("Asia/Seoul")
     current_time = datetime.now(seoul_tz).strftime("%H:%M:%S")
