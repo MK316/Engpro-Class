@@ -60,7 +60,7 @@ with tabs[0]:
 # Timer tab
 with tabs[1]:
     # Embed the Hugging Face space as an iframe
-    huggingface_space_url = "https://MK-316-mytimer.hf.space"
+    huggingface_space_url = "https://mytimer.streamlit.app"
     
     # Use Streamlit components to embed the external page
     st.components.v1.html(f"""
